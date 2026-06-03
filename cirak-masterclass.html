@@ -1,801 +1,1218 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lumos | Cirak Masterclass</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+      media="screen"
+    />
+    <link rel="stylesheet" type="text/css" href="custom.css" />
+    <!-- AOS CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cirak Masterclass</title>
-    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="lib/bootstrap-icons/font/bootstrap-icons.min.css" />
-    <link rel="icon" type="ico" href="static/lumos-in/favicon.ico">
-
-    
-    <link rel="stylesheet" href="/root-site.css" />
-</head>
-
-
-<body>
+  <body>
     <header>
-        <!DOCTYPE html>
-        <html lang="en">
-
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <title>Lumos | Cirak Masterclass</title>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-                integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-                crossorigin="anonymous">
-            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-                integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-                crossorigin="anonymous" media="screen">
-            <link rel="stylesheet" type="text/css" href="custom.css">
-            <!-- AOS CSS -->
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-        </head>
-
-        <body>
-
-            <div class="container-fluid p-0">
-                <div class="menu" id="inner-menu">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                            <a href="index.html">
-                                <img src="static/lumos-in/lumos-logo.webp"
-                                    alt="Lumos India company logo - branding and business strategy" class="img-fluid">
-                            </a>
-                        </div>
-                        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-                            <nav class="navbar navbar-expand-lg">
-                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                    aria-expanded="false" aria-label="Toggle navigation">
-                                    <span class="bar"></span>
-                                    <span class="bar"></span>
-                                    <span class="bar"></span>
-                                </button>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                    <ul class="navbar-nav">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="index.html" aria-label="Go to Home">
-                                                <i class="fa fa-home" aria-hidden="true"></i>
-                                                <span class="visually-hidden">Home</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false"
-                                                aria-label="About Lumos dropdown menu">About
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item" href="about-lumos.html">About Lumos
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="lumos-team.html">Leadership
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="industries.html"
-                                                aria-label="Explore Industries">Industries
-                                            </a>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false"
-                                                aria-label="Services dropdown menu">Services
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item" href="brandingservices.html">Branding
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="technologyservices.html">Technology
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="marketingservices.html">Marketing
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="contentservices.html">Content
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="content-seostrategy.html">Content & SEO
-                                                        Strategy
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false"
-                                                aria-label="Consultative Services dropdown menu">Consultative Services
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item" href="thought-leadership.html">Thought
-                                                        Leadership
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="social-impact-marketing.html">Social
-                                                        Impact
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="advisory-and-consulting.html">Advisory &
-                                                        Consulting
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                                data-bs-toggle="dropdown" aria-expanded="false"
-                                                aria-label="Resources dropdown menu">Resources
-                                            </a>
-                                            <ul class="dropdown-menu">
-                                                <li>
-                                                    <a class="dropdown-item" href="services-articles.html">Articles</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="clients.html">Clients</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="publication-design.html">Publications
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="lumos-events.html">Events</a>
-                                                </li>
-                                                <li>
-                                                    <a class="dropdown-item" href="videos.html">Videos</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="contact.html" aria-label="Contact Lumos India">Contact
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
+      <div class="container-fluid p-0">
+        <div class="menu" id="inner-menu">
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <a href="index.html">
+                <img
+                  src="static/lumos-in/lumos-logo.webp"
+                  alt="Lumos India company logo - branding and business strategy"
+                  class="img-fluid"
+                />
+              </a>
             </div>
-            
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag() { dataLayer.push(arguments); }
-                gtag('js', new Date());
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+              <nav class="navbar navbar-expand-lg">
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                  <span class="bar"></span>
+                </button>
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarSupportedContent"
+                >
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="index.html"
+                        aria-label="Go to Home"
+                      >
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        <span class="visually-hidden">Home</span>
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        aria-label="About Lumos dropdown menu"
+                        >About
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="about-lumos.html"
+                            >About Lumos
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="lumos-team.html"
+                            >Leadership
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="industries.html"
+                        aria-label="Explore Industries"
+                        >Industries
+                      </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        aria-label="Services dropdown menu"
+                        >Services
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="brandingservices.html"
+                            >Branding
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="technologyservices.html"
+                            >Technology
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="marketingservices.html"
+                            >Marketing
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="contentservices.html"
+                            >Content
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="content-seostrategy.html"
+                            >Content & SEO Strategy
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        aria-label="Consultative Services dropdown menu"
+                        >Consultative Services
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="thought-leadership.html"
+                            >Thought Leadership
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="social-impact-marketing.html"
+                            >Social Impact
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="advisory-and-consulting.html"
+                            >Advisory & Consulting
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a
+                        class="nav-link dropdown-toggle"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                        aria-label="Resources dropdown menu"
+                        >Resources
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a class="dropdown-item" href="services-articles.html"
+                            >Articles</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="clients.html"
+                            >Clients</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="publication-design.html"
+                            >Publications
+                          </a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="lumos-events.html"
+                            >Events</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item" href="videos.html">Videos</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        class="nav-link"
+                        href="contact.html"
+                        aria-label="Contact Lumos India"
+                        >Contact
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
 
-                gtag('config', 'G-GNJXB748QB');
-            </script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-GNJXB748QB");
+      </script>
     </header>
     <div class="container-fluid brdcrmb">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Events</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Events
+                </li>
+              </ol>
+            </nav>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="container-fluid p-0">
-        <div class="container">
-            <div class="heading" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                <h2>Events</h2>
-            </div>
+      <div class="container">
+        <div
+          class="heading"
+          data-aos="fade-down"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+        >
+          <h2>Events</h2>
         </div>
-        <div class="cirak-banner">
-            <img src="static/lumos-in/bengaluru-header.webp" class="img-fluid" alt="banner">
-            <div class="cb-bg"></div>
-            <div class="cb-txt">
-                <h2>Making Life Meaningful</h2>
-                <span>One Day Master Class June 07, 2025</span>
-                <p>Nirguna Mandir, Koramangala – Bengaluru</p>
-                <div class="cirak-button">
-                    <a href="/payment/razorpay/checkout/catalogue/cirak-masterclass"><button
-                            class="btn btn-primary">Register Now</button></a>
-                </div>
-            </div>
+      </div>
+      <div class="cirak-banner">
+        <img
+          src="static/lumos-in/bengaluru-header.webp"
+          class="img-fluid"
+          alt="banner"
+        />
+        <div class="cb-bg"></div>
+        <div class="cb-txt">
+          <h2>Making Life Meaningful</h2>
+          <span>One Day Master Class June 07, 2025</span>
+          <p>Nirguna Mandir, Koramangala – Bengaluru</p>
+          <div class="cirak-button">
+            <a href="/payment/razorpay/checkout/catalogue/cirak-masterclass"
+              ><button class="btn btn-primary">Register Now</button></a
+            >
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="container-fluid">
-        <div class="heading" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-            <h2>ABOUT THE EVENT</h2>
-        </div>&nbsp;
-        <div id="carouselExampleAutoplayingc" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="row" id="padding">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <img src="static/lumos-in/carousel-1.webp" class="img-fluid" alt="banner">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <h3>MAKING LIFE MEANINGFUL</h3>
-                            <p><b>Date:</b> Saturday, June 07, 2025</p>
-                            <p><b>Time:</b> 10.00 AM – 5.00 PM</p>
-                            <p><b>Venue</b>: Nirguna Mandir, Koramangala, Bengaluru</p>
-                            <p><b>Type:</b> 1-Day Masterclass</p>
-                            <p><b>For:</b> Professionals, Students, and Homemakers</p>&nbsp;
-                            <p><b>Cost: ₹5,000.00 + GST</b></p>
-                            <p><a href="/payment/razorpay/checkout/catalogue/cirak-masterclass">Early Bird Offers
-                                    !!!</a> Till 18 May 2025</p>&nbsp;
-                            <div class="cirak-button">
-                                <a href="/payment/razorpay/checkout/catalogue/cirak-masterclass"><button
-                                        class="btn btn-primary">Register Now</button></a>
-                            </div>
-                        </div>
-                    </div>
+      <div
+        class="heading"
+        data-aos="fade-down"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="1000"
+      >
+        <h2>ABOUT THE EVENT</h2>
+      </div>
+      &nbsp;
+      <div
+        id="carouselExampleAutoplayingc"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <img
+                  src="static/lumos-in/carousel-1.webp"
+                  class="img-fluid"
+                  alt="banner"
+                />
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <h3>MAKING LIFE MEANINGFUL</h3>
+                <p><b>Date:</b> Saturday, June 07, 2025</p>
+                <p><b>Time:</b> 10.00 AM – 5.00 PM</p>
+                <p><b>Venue</b>: Nirguna Mandir, Koramangala, Bengaluru</p>
+                <p><b>Type:</b> 1-Day Masterclass</p>
+                <p><b>For:</b> Professionals, Students, and Homemakers</p>
+                &nbsp;
+                <p><b>Cost: ₹5,000.00 + GST</b></p>
+                <p>
+                  <a
+                    href="/payment/razorpay/checkout/catalogue/cirak-masterclass"
+                    >Early Bird Offers !!!</a
+                  >
+                  Till 18 May 2025
+                </p>
+                &nbsp;
+                <div class="cirak-button">
+                  <a
+                    href="/payment/razorpay/checkout/catalogue/cirak-masterclass"
+                    ><button class="btn btn-primary">Register Now</button></a
+                  >
                 </div>
-                <div class="carousel-item">
-                    <div class="row" id="padding">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <img src="static/lumos-in/carousel-2.webp" class="img-fluid" alt="banner">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <h3>Why You Should Attend</h3>
-                            <p><b>Discover the true meaning of life, beyond just existing.</b></p>
-                            <p>A meaningful life holds the key to a life lived with fulfilment, a sense of purpose and
-                                value.</p>
-                            <p><b>Learn</b> the mechanisms and tools, equip yourself with the inner power to make life
-                                more meaningful, develop your full potential and create a clearly defined life purpose,
-                                in this power-packed one-day workshop at the Swami Sukhbodananda Nirguna Mandir,
-                                Koramangala, Bengaluru.</p>&nbsp;
-                            <p><b>Cost: ₹5,000.00 + GST</b></p>
-                            <p><a href="/payment/razorpay/checkout/catalogue/cirak-masterclass">Early Bird Offers
-                                    !!!</a> Till 18 May 2025</p>&nbsp;
-                            <div class="cirak-button">
-                                <a href="/payment/razorpay/checkout/catalogue/cirak-masterclass"><button
-                                        class="btn btn-primary">Register Now</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row" id="padding">
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <img src="static/lumos-in/carousel-3.webp" class="img-fluid" alt="banner">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                            <h3>Event Highlights</h3>
-                            <p><b>A day of discovery and delight.</b></p>
-                            <p>An immersive experience awaits you, with a blend of self-exploration, tools, and
-                                discussions to navigate your life to a newer realm. Welcome drinks, a <i>satvik</i>
-                                lunch, an energy cleansing session, and some ‘me-time’ with the Coach!</p>&nbsp;
-                            <p><b>Cost: ₹5,000.00 + GST</b></p>
-                            <p><a href="/payment/razorpay/checkout/catalogue/cirak-masterclass">Early Bird Offers
-                                    !!!</a> Till 18 May 2025</p>&nbsp;
-                            <div class="cirak-button">
-                                <a href="/payment/razorpay/checkout/catalogue/cirak-masterclass"><button
-                                        class="btn btn-primary">Register Now</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplayingc"
-                data-bs-slide="prev">
-                <svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-left" viewBox="0 0 1000 1000"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z">
-                    </path>
-                </svg>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplayingc"
-                data-bs-slide="next">
-                <svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-right" viewBox="0 0 1000 1000"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M696 533C708 521 713 504 713 487 713 471 708 454 696 446L400 146C388 133 375 125 354 125 338 125 325 129 313 142 300 154 292 171 292 187 292 204 296 221 308 233L563 492 304 771C292 783 288 800 288 817 288 833 296 850 308 863 321 871 338 875 354 875 371 875 388 867 400 854L696 533Z">
-                    </path>
-                </svg>
-            </button>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <img
+                  src="static/lumos-in/carousel-2.webp"
+                  class="img-fluid"
+                  alt="banner"
+                />
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <h3>Why You Should Attend</h3>
+                <p>
+                  <b
+                    >Discover the true meaning of life, beyond just existing.</b
+                  >
+                </p>
+                <p>
+                  A meaningful life holds the key to a life lived with
+                  fulfilment, a sense of purpose and value.
+                </p>
+                <p>
+                  <b>Learn</b> the mechanisms and tools, equip yourself with the
+                  inner power to make life more meaningful, develop your full
+                  potential and create a clearly defined life purpose, in this
+                  power-packed one-day workshop at the Swami Sukhbodananda
+                  Nirguna Mandir, Koramangala, Bengaluru.
+                </p>
+                &nbsp;
+                <p><b>Cost: ₹5,000.00 + GST</b></p>
+                <p>
+                  <a
+                    href="/payment/razorpay/checkout/catalogue/cirak-masterclass"
+                    >Early Bird Offers !!!</a
+                  >
+                  Till 18 May 2025
+                </p>
+                &nbsp;
+                <div class="cirak-button">
+                  <a
+                    href="/payment/razorpay/checkout/catalogue/cirak-masterclass"
+                    ><button class="btn btn-primary">Register Now</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <img
+                  src="static/lumos-in/carousel-3.webp"
+                  class="img-fluid"
+                  alt="banner"
+                />
+              </div>
+              <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <h3>Event Highlights</h3>
+                <p><b>A day of discovery and delight.</b></p>
+                <p>
+                  An immersive experience awaits you, with a blend of
+                  self-exploration, tools, and discussions to navigate your life
+                  to a newer realm. Welcome drinks, a <i>satvik</i> lunch, an
+                  energy cleansing session, and some ‘me-time’ with the Coach!
+                </p>
+                &nbsp;
+                <p><b>Cost: ₹5,000.00 + GST</b></p>
+                <p>
+                  <a
+                    href="/payment/razorpay/checkout/catalogue/cirak-masterclass"
+                    >Early Bird Offers !!!</a
+                  >
+                  Till 18 May 2025
+                </p>
+                &nbsp;
+                <div class="cirak-button">
+                  <a
+                    href="/payment/razorpay/checkout/catalogue/cirak-masterclass"
+                    ><button class="btn btn-primary">Register Now</button></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleAutoplayingc"
+          data-bs-slide="prev"
+        >
+          <svg
+            aria-hidden="true"
+            class="e-font-icon-svg e-eicon-chevron-left"
+            viewBox="0 0 1000 1000"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z"
+            ></path>
+          </svg>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleAutoplayingc"
+          data-bs-slide="next"
+        >
+          <svg
+            aria-hidden="true"
+            class="e-font-icon-svg e-eicon-chevron-right"
+            viewBox="0 0 1000 1000"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M696 533C708 521 713 504 713 487 713 471 708 454 696 446L400 146C388 133 375 125 354 125 338 125 325 129 313 142 300 154 292 171 292 187 292 204 296 221 308 233L563 492 304 771C292 783 288 800 288 817 288 833 296 850 308 863 321 871 338 875 354 875 371 875 388 867 400 854L696 533Z"
+            ></path>
+          </svg>
+        </button>
+      </div>
     </div>
 
     <div class="container-fluid" id="padding-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
-                    <p><b>Cost: ₹5000.00 + 18% GST</b></p>
-                    <div class="cirak-button">
-                        <a href="/payment/razorpay/checkout/catalogue/cirak-masterclass"><button
-                                class="btn btn-primary">Register Now</button></a>
-                    </div>
-                </div>
-                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
-                    <p><b>Early Bird Offers !!! Till 15 May 2025</b></p>
-                    <p><b>Discount 10% (Cost: ₹4500.00 + 18% GST)</b></p>
-                    <div class="cirak-button">
-                        <a href="/payment/razorpay/checkout/catalogue/cirak-masterclass"><button
-                                class="btn btn-primary">Register Now</button></a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12">
+            <p><b>Cost: ₹5000.00 + 18% GST</b></p>
+            <div class="cirak-button">
+              <a href="/payment/razorpay/checkout/catalogue/cirak-masterclass"
+                ><button class="btn btn-primary">Register Now</button></a
+              >
             </div>
+          </div>
+          <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+            <p><b>Early Bird Offers !!! Till 15 May 2025</b></p>
+            <p><b>Discount 10% (Cost: ₹4500.00 + 18% GST)</b></p>
+            <div class="cirak-button">
+              <a href="/payment/razorpay/checkout/catalogue/cirak-masterclass"
+                ><button class="btn btn-primary">Register Now</button></a
+              >
+            </div>
+          </div>
         </div>
+      </div>
     </div>
 
     <div class="container-fluid about-cirak">
-        <div class="container">
-            <div class="heading" data-aos="fade-down" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                <h2>ABOUT CIRAK</h2>
-            </div>&nbsp;
-            <div class="row">
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Cirak is a spiritual
-                        teacher, writer, and speaker dedicated to helping people create meaning in their everyday lives.
-                        Blending ancient wisdom with modern practicality, Cirak offers a fresh, no-nonsense approach to
-                        spirituality—one that isn’t about chasing enlightenment but about understanding the design of
-                        life and making better decisions.</p>
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Through books,
-                        workshops, and live teachings, Cirak guides you toward clarity, purpose, and a deeper connection
-                        to the present moment. His work is for those seeking more than surface-level answers—those ready
-                        to see life through a sharper lens and step into a deeper, more meaningful way of living.</p>
-                    <div class="accordion" id="myAccordion">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button">Read More</button>
-                            </h2>
-                            <div class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <p>Primarily influenced by Eckhart Tolle, Alan Watts, J. Krishnamurti, Thich Nhat
-                                        Hanh, Osho, Ram Daas, Deepak Chopra, Bob Proctor, and Wayne Dyer, Cirak divides
-                                        his time between writing books, hosting workshops and retreats, and giving talks
-                                        on mindfulness.</p>
-                                    <p>He is a certified meditation teacher, trained in Reiki and Ba Duan Jin Qi Gong,
-                                        and a graduate and facilitator of the Eckhart Tolle School of Awakening. He is
-                                        also available for private energy clearing and life coaching sessions.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <img src="static/lumos-in/cirak6.webp" class="img-fluid" alt="banner" data-aos="fade-left"
-                        data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                </div>
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-            </div>
+      <div class="container">
+        <div
+          class="heading"
+          data-aos="fade-down"
+          data-aos-easing="ease-out-cubic"
+          data-aos-duration="1000"
+        >
+          <h2>ABOUT CIRAK</h2>
         </div>
+        &nbsp;
+        <div class="row">
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              Cirak is a spiritual teacher, writer, and speaker dedicated to
+              helping people create meaning in their everyday lives. Blending
+              ancient wisdom with modern practicality, Cirak offers a fresh,
+              no-nonsense approach to spirituality—one that isn’t about chasing
+              enlightenment but about understanding the design of life and
+              making better decisions.
+            </p>
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              Through books, workshops, and live teachings, Cirak guides you
+              toward clarity, purpose, and a deeper connection to the present
+              moment. His work is for those seeking more than surface-level
+              answers—those ready to see life through a sharper lens and step
+              into a deeper, more meaningful way of living.
+            </p>
+            <div class="accordion" id="myAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button">
+                    Read More
+                  </button>
+                </h2>
+                <div class="accordion-collapse collapse">
+                  <div class="accordion-body">
+                    <p>
+                      Primarily influenced by Eckhart Tolle, Alan Watts, J.
+                      Krishnamurti, Thich Nhat Hanh, Osho, Ram Daas, Deepak
+                      Chopra, Bob Proctor, and Wayne Dyer, Cirak divides his
+                      time between writing books, hosting workshops and
+                      retreats, and giving talks on mindfulness.
+                    </p>
+                    <p>
+                      He is a certified meditation teacher, trained in Reiki and
+                      Ba Duan Jin Qi Gong, and a graduate and facilitator of the
+                      Eckhart Tolle School of Awakening. He is also available
+                      for private energy clearing and life coaching sessions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <img
+              src="static/lumos-in/cirak6.webp"
+              class="img-fluid"
+              alt="banner"
+              data-aos="fade-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            />
+          </div>
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+        </div>
+      </div>
     </div>
 
     <div class="container-fluid">
-        <div class="container">
-            <div class="heading">
-                <h2>KEY TAKEAWAYS</h2>
-            </div>&nbsp;
-            <div class="row">
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">You will learn how
-                        to navigate life with clarity, purpose, and a sense of ease. This Masterclass will equip you
-                        with deep insights, practical tools, and interactive discussions.</p>
-                    <ul data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                        <li>Stop reacting to life and start responding with intention.</li>
-                        <li>Break free from the mental loops that keep you stuck.</li>
-                        <li>See beyond surface-level problems to the deeper patterns at play.</li>
-                        <li>Make decisions with clarity, confidence, and purpose.</li>
-                        <li>Find meaning in every moment—not just in big milestones.</li>
-                    </ul>
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">This Masterclass is
-                        for those ready to step beyond the ordinary, see life through a sharper lens, and cultivate a
-                        sense of meaning that is not dependent on circumstances. Whether you feel stuck, uninspired, or
-                        simply want to experience life more deeply, this is your opportunity to reframe your
-                        understanding of what truly matters.</p>
-                    <p>If you are ready to stop searching and start living, this is where it begins.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <div class="key-images">
-                        <img src="static/lumos-in/india5-300x200.webp" class="img-fluid" alt="banner"
-                            data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                        <img src="static/lumos-in/india1-300x200.webp" class="img-fluid" alt="banner"
-                            data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                    </div>
-                    <div class="key-images">
-                        <img src="static/lumos-in/india2-300x200.webp" class="img-fluid" alt="banner"
-                            data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                        <img src="static/lumos-in/india3-300x200.webp" class="img-fluid" alt="banner"
-                            data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                    </div>
-                    <div class="key-images">
-                        <img src="static/lumos-in/india4-300x200.webp" class="img-fluid" alt="banner"
-                            data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                        <img src="static/lumos-in/india6-300x200.webp" class="img-fluid" alt="banner"
-                            data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-            </div>
+      <div class="container">
+        <div class="heading">
+          <h2>KEY TAKEAWAYS</h2>
         </div>
+        &nbsp;
+        <div class="row">
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              You will learn how to navigate life with clarity, purpose, and a
+              sense of ease. This Masterclass will equip you with deep insights,
+              practical tools, and interactive discussions.
+            </p>
+            <ul
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              <li>
+                Stop reacting to life and start responding with intention.
+              </li>
+              <li>Break free from the mental loops that keep you stuck.</li>
+              <li>
+                See beyond surface-level problems to the deeper patterns at
+                play.
+              </li>
+              <li>Make decisions with clarity, confidence, and purpose.</li>
+              <li>Find meaning in every moment—not just in big milestones.</li>
+            </ul>
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              This Masterclass is for those ready to step beyond the ordinary,
+              see life through a sharper lens, and cultivate a sense of meaning
+              that is not dependent on circumstances. Whether you feel stuck,
+              uninspired, or simply want to experience life more deeply, this is
+              your opportunity to reframe your understanding of what truly
+              matters.
+            </p>
+            <p>
+              If you are ready to stop searching and start living, this is where
+              it begins.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <div class="key-images">
+              <img
+                src="static/lumos-in/india5-300x200.webp"
+                class="img-fluid"
+                alt="banner"
+                data-aos="fade-right"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+              />
+              <img
+                src="static/lumos-in/india1-300x200.webp"
+                class="img-fluid"
+                alt="banner"
+                data-aos="fade-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+              />
+            </div>
+            <div class="key-images">
+              <img
+                src="static/lumos-in/india2-300x200.webp"
+                class="img-fluid"
+                alt="banner"
+                data-aos="fade-right"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+              />
+              <img
+                src="static/lumos-in/india3-300x200.webp"
+                class="img-fluid"
+                alt="banner"
+                data-aos="fade-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+              />
+            </div>
+            <div class="key-images">
+              <img
+                src="static/lumos-in/india4-300x200.webp"
+                class="img-fluid"
+                alt="banner"
+                data-aos="fade-right"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+              />
+              <img
+                src="static/lumos-in/india6-300x200.webp"
+                class="img-fluid"
+                alt="banner"
+                data-aos="fade-left"
+                data-aos-easing="ease-out-cubic"
+                data-aos-duration="1000"
+              />
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+        </div>
+      </div>
     </div>
 
     <div class="container-fluid benifits">
-        <div class="container">
-            <div class="heading">
-                <h2>BENEFITS</h2>
-            </div>&nbsp;
-            <div class="row">
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <img src="static/lumos-in/meditation-400x267-1.webp" class="img-fluid" alt="banner"
-                        data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000"><b>Clarity and
-                            Direction</b></p>
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Gain a sharper lens
-                        through which to view your life—one that cuts through confusion and noise. When you’re aligned
-                        with your inner truth and deeper purpose, decision-making becomes effortless and life feels more
-                        meaningful. You’ll begin to chart a path forward that reflects who you truly are and where you
-                        truly want to go.</p>
-                </div>
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000"><b>Resilience in
-                            Challenges</b></p>
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Learn how to stop
-                        reacting and start responding—with intention. Challenges no longer have to knock you off center.
-                        By understanding the deeper patterns behind your reactions, you begin to respond to life with
-                        grounded intention. With this resilience, even difficult moments become opportunities for
-                        growth, transformation, and inner strength.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <img src="static/lumos-in/testimonial-400x267-1.webp" class="img-fluid" alt="banner"
-                        data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                </div>
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <img src="static/lumos-in/arnold-600x400-filter.webp" class="img-fluid" alt="banner"
-                        data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000"><b>Deeper
-                            Fulfilment</b></p>
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Move beyond
-                        surface-level satisfaction and tap into what truly brings you joy. This is an invitation to live
-                        with purpose and presence—where each moment holds depth, value, and a renewed sense of
-                        self-worth. Exhilaration and contentment await the seeker who dares to live meaningfully.</p>
-                </div>
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000"><b>Stronger
-                            Relationships</b></p>
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">When you cultivate
-                        clarity and self-awareness within, your outer connections naturally begin to flourish. Discover
-                        deeper, more meaningful connections that lead to richer engagements and a more diverse,
-                        fulfilling experience of life through authentic relationships.</p>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <img src="static/lumos-in/community-600x400-1.webp" class="img-fluid" alt="banner"
-                        data-aos="fade-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                </div>
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <img src="static/lumos-in/sauna-400x267-1.webp" class="img-fluid" alt="banner"
-                        data-aos="fade-right" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000"><b>Inner Peace and
-                            Stability</b></p>
-                    <p data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">Step out of the
-                        chaos, fear, and uncertainty that cloud the mind and into a space of calm clarity. With the
-                        right mindset and inner tools, apathy is replaced by confidence, and a deep sense of peace and
-                        stability becomes your natural state—unshaken by external circumstances.</p>
-                </div>
-                <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
-                <div class="cirak-button1" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
-                    &nbsp;
-                    <p><b>Cost: ₹5,000.00 + GST</b></p>
-                    <a href="/payment/razorpay/checkout/catalogue/cirak-masterclass"><button
-                            class="btn btn-primary">Regiser Now</button></a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="heading">
+          <h2>BENEFITS</h2>
         </div>
+        &nbsp;
+        <div class="row">
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <img
+              src="static/lumos-in/meditation-400x267-1.webp"
+              class="img-fluid"
+              alt="banner"
+              data-aos="fade-right"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            />
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              <b>Clarity and Direction</b>
+            </p>
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              Gain a sharper lens through which to view your life—one that cuts
+              through confusion and noise. When you’re aligned with your inner
+              truth and deeper purpose, decision-making becomes effortless and
+              life feels more meaningful. You’ll begin to chart a path forward
+              that reflects who you truly are and where you truly want to go.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              <b>Resilience in Challenges</b>
+            </p>
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              Learn how to stop reacting and start responding—with intention.
+              Challenges no longer have to knock you off center. By
+              understanding the deeper patterns behind your reactions, you begin
+              to respond to life with grounded intention. With this resilience,
+              even difficult moments become opportunities for growth,
+              transformation, and inner strength.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <img
+              src="static/lumos-in/testimonial-400x267-1.webp"
+              class="img-fluid"
+              alt="banner"
+              data-aos="fade-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            />
+          </div>
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <img
+              src="static/lumos-in/arnold-600x400-filter.webp"
+              class="img-fluid"
+              alt="banner"
+              data-aos="fade-right"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            />
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              <b>Deeper Fulfilment</b>
+            </p>
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              Move beyond surface-level satisfaction and tap into what truly
+              brings you joy. This is an invitation to live with purpose and
+              presence—where each moment holds depth, value, and a renewed sense
+              of self-worth. Exhilaration and contentment await the seeker who
+              dares to live meaningfully.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              <b>Stronger Relationships</b>
+            </p>
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              When you cultivate clarity and self-awareness within, your outer
+              connections naturally begin to flourish. Discover deeper, more
+              meaningful connections that lead to richer engagements and a more
+              diverse, fulfilling experience of life through authentic
+              relationships.
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <img
+              src="static/lumos-in/community-600x400-1.webp"
+              class="img-fluid"
+              alt="banner"
+              data-aos="fade-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            />
+          </div>
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <img
+              src="static/lumos-in/sauna-400x267-1.webp"
+              class="img-fluid"
+              alt="banner"
+              data-aos="fade-right"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            />
+          </div>
+          <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              <b>Inner Peace and Stability</b>
+            </p>
+            <p
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              Step out of the chaos, fear, and uncertainty that cloud the mind
+              and into a space of calm clarity. With the right mindset and inner
+              tools, apathy is replaced by confidence, and a deep sense of peace
+              and stability becomes your natural state—unshaken by external
+              circumstances.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-12 col-sm-2 col-xs-12"></div>
+          <div
+            class="cirak-button1"
+            data-aos="zoom-in"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="1000"
+          >
+            &nbsp;
+            <p><b>Cost: ₹5,000.00 + GST</b></p>
+            <a href="/payment/razorpay/checkout/catalogue/cirak-masterclass"
+              ><button class="btn btn-primary">Regiser Now</button></a
+            >
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="container-fluid" id="inner-padding">
-        <!--<div class="cirak-footer">
-    <img src="static/lumos-in/bg-footer.webp" class="img-fluid" alt="banner">
-  </div>-->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="cirak-f-txt" data-aos="zoom-in" data-aos-easing="ease-out-cubic"
-                        data-aos-duration="1000">
-                        <p><b>Organizer Info:</b></p>
-                        <p>Lumos</p>
-                        <p>#353, 7th Main, HAL 2nd Stage,</p>
-                        <p>Indiranagar, Bengaluru - 560008,</p>
-                        <p>Karnataka, India.</p>
-                        <p>Mobile no: +91 9845322445</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                    <div class="cirak-f-txt">
-                        <p><b>Follow Cirak</b></p>
-                    </div>
-                    <div class="cirak-media">
-                        <div class="insta">
-                            <a href="https://www.instagram.com/cirakteachings" target="blank"><svg
-                                    class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                                    </path>
-                                </svg></a>
-                        </div>
-                        <div class="twitter">
-                            <a href="https://x.com/cirakteachings" target="blank"><svg
-                                    class="e-font-icon-svg e-fab-twitter" viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
-                                    </path>
-                                </svg></a>
-                        </div>
-                        <div class="youtube">
-                            <a href="https://www.youtube.com/@cirakteachings" target="blank"><svg
-                                    class="e-font-icon-svg e-fab-youtube" viewBox="0 0 576 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z">
-                                    </path>
-                                </svg></a>
-                        </div>
-                        <div class="tiktok">
-                            <a href="https://www.tiktok.com/@cirakteachings" target="blank"><svg
-                                    class="e-font-icon-svg e-fab-tiktok" viewBox="0 0 448 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z">
-                                    </path>
-                                </svg></a>
-                        </div>
-                        <div class="facebook">
-                            <a href="https://www.facebook.com/cirakteachings/" target="blank"><svg
-                                    class="e-font-icon-svg e-fab-facebook" viewBox="0 0 512 512"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z">
-                                    </path>
-                                </svg></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div
+              class="cirak-f-txt"
+              data-aos="zoom-in"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="1000"
+            >
+              <p><b>Organizer Info:</b></p>
+              <p>Lumos</p>
+              <p>#353, 7th Main, HAL 2nd Stage,</p>
+              <p>Indiranagar, Bengaluru - 560008,</p>
+              <p>Karnataka, India.</p>
+              <p>Mobile no: +91 9845322445</p>
             </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+            <div class="cirak-f-txt">
+              <p><b>Follow Cirak</b></p>
+            </div>
+            <div class="cirak-media">
+              <div class="insta">
+                <a
+                  href="https://www.instagram.com/cirakteachings"
+                  target="blank"
+                  ><svg
+                    class="e-font-icon-svg e-fab-instagram"
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
+                    ></path></svg></a>
+              </div>
+              <div class="twitter">
+                <a href="https://x.com/cirakteachings" target="blank"
+                  ><svg
+                    class="e-font-icon-svg e-fab-twitter"
+                    viewBox="0 0 512 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
+                    ></path></svg></a>
+              </div>
+              <div class="youtube">
+                <a href="https://www.youtube.com/@cirakteachings" target="blank"
+                  ><svg
+                    class="e-font-icon-svg e-fab-youtube"
+                    viewBox="0 0 576 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
+                    ></path></svg></a>
+              </div>
+              <div class="tiktok">
+                <a href="https://www.tiktok.com/@cirakteachings" target="blank"
+                  ><svg
+                    class="e-font-icon-svg e-fab-tiktok"
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"
+                    ></path></svg></a>
+              </div>
+              <div class="facebook">
+                <a
+                  href="https://www.facebook.com/cirakteachings/"
+                  target="blank"
+                  ><svg
+                    class="e-font-icon-svg e-fab-facebook"
+                    viewBox="0 0 512 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"
+                    ></path></svg></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
         </div>
+      </div>
     </div>
 
-    
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', 'G-GNJXB748QB');
+      gtag("config", "G-GNJXB748QB");
     </script>
     <footer>
-        <div class="container-fluid layer-8" id="triggerSection">
-            <div class="container">
-                <div class="row">
-                    <h2 data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic">
-                        Fueling Your Business Breakthrough​
-                    </h2>
-                    <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="900" data-aos-easing="ease-out-cubic">
-                        We offer full-services to unlock exceptional growth for your business.
-                        From creating brand and product videos, designing your coffee table
-                        book, building your leadership profile, showcasing your client work and
-                        expertise to coaching and mentoring, we have it covered for you! ​
-                    </p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf92JuAqoBrhV-KG4soqTE-xuq0fxQq78jLoGo4LeZYRBIksA/viewform"
-                        target="blank" rel="noopener noreferrer" class="button" data-aos="fade-up" data-aos-delay="200"
-                        data-aos-duration="800" data-aos-easing="ease-out-cubic">
-                        Let's chat
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid footer">
-            <div class="container">
-                <div class="footer-txt">
-                    <span data-aos="fade-up" data-aos-duration="800" data-aos-easing="ease-out-cubic">
-                        We transform complex customer challenges to simple solutions that
-                        hastens your success.
-                    </span>
-                    <!-- "Get in Touch" circular link -->
-                    <div id="container">
-                        <a href="https://forms.gle/3V62Xq6tVKMgEUL47" target="_blank" rel="noopener noreferrer"
-                            aria-label="Get in Touch">
-                            <div id="circle">
-                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-                                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px"
-                                    height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300"
-                                    xml:space="preserve">
-                                    <defs>
-                                        <path id="circlePath"
-                                            d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "></path>
-                                    </defs>
-                                    <circle cx="150" cy="100" r="75" fill="none"></circle>
-                                    <g>
-                                        <use xlink:href="#circlePath" fill="none"></use>
-                                        <text fill="#000">
-                                            <textPath xlink:href="#circlePath">
-                                                GET IN TOUCH • GET IN TOUCH •
-                                            </textPath>
-                                        </text>
-                                    </g>
-                                </svg>
-                            </div>
-                            <div class="arrow">
-                                <i class="fas fa-arrow-right"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                        <div class="links">
-                            <a href="about-lumos.html">About</a>
-                            <a href="industries.html">Industries</a>
-                            <a href="thought-leadership.html">Thought Leadership</a>
-                            <a href="social-impact-marketing.html">Social Impact Marketing</a>
-                            <a href="advisory-and-consulting.html">Advisory and Consulting</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                        <div class="links">
-                            <a href="brandingservices.html">Branding</a>
-                            <a href="marketingservices.html">Marketing</a>
-                            <a href="technologyservices.html">Technology</a>
-                            <a href="contentservices.html">Content</a>
-                            <a href="content-seostrategy.html">SEO Strategy</a>
-                        </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
-                        <div class="links">
-                            <a href="sitemap.html">Sitemap</a>
-                            <a href="terms-and-conditions.html">Terms & Conditions</a>
-                            <a href="privacy-policy.html">Privacy Policy</a>
-                            <a href="cancellation-and-refund-policy.html">
-                                Cancellation & Refund Policy
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12"></div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                        <div class="address">
-                            <!-- <p>Connect</p> -->
-                            <p>
-                                <strong>LUMOS</strong>
-                            </p>
-                            <p>A Division of Animika Studios</p>
-                            <p>#353, 7th Main, HAL 2nd Stage, Indiranagar,</p>
-                            <p>Bengaluru-560008, Karnataka, India.</p>
-                            <p>Mobile: +91 9980806803</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copy">
-                <p>
-                    © Lumos 2003-2026. A Division Of Animika Studios Pvt. Ltd. All Rights
-                    Reserved.​
-                </p>
-                <!-- Social icons -->
-                <p class="social-icons" aria-label="Follow Lumos India on social media">
-                    <a href="https://www.linkedin.com/company/animika-studios" aria-label="Follow us on LinkedIn"
-                        title="Follow us on LinkedIn" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
-                        <span class="visually-hidden">LinkedIn</span>
-                    </a>
-                    <a href="https://www.instagram.com/lumosanimikastudios/?next=%2F"
-                        aria-label="Follow us on Instagram" title="Follow us on Instagram" target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fab fa-instagram"></i>
-                        <span class="visually-hidden">Instagram</span>
-                    </a>
-                    <a href="https://www.facebook.com/share/1DbsSV1mrX/?mibextid=LQQJ4d"
-                        aria-label="Follow us on Facebook" title="Follow us on Facebook" target="_blank"
-                        rel="noopener noreferrer">
-                        <i class="fab fa-facebook"></i>
-                        <span class="visually-hidden">Facebook</span>
-                    </a>
-                    <a href="https://www.youtube.com/@lumosindia7010" aria-label="Subscribe to our YouTube channel"
-                        title="Subscribe to our YouTube channel" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-youtube"></i>
-                        <span class="visually-hidden">YouTube</span>
-                    </a>
-                </p>
-            </div>
-        </div>
-        <!-- Back to Top -->
-        <div id="backToTop">
-            <button aria-label="Back to top">
-                <i class="fas fa-arrow-up"></i>
-                <p>Top</p>
-            </button>
-        </div>
-        <div id="cookie-popup" role="dialog" aria-label="Cookie consent popup" aria-live="polite">
-            <p>
-                Our site uses cookies to store user data so that we can remember you. If you
-                agree, please click the Accept button.
-                <a href="privacy-policy.html">Privacy Policy</a>
+      <div class="container-fluid layer-8" id="triggerSection">
+        <div class="container">
+          <div class="row">
+            <h2
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-easing="ease-out-cubic"
+            >
+              Fueling Your Business Breakthrough​
+            </h2>
+            <p
+              data-aos="fade-up"
+              data-aos-delay="100"
+              data-aos-duration="900"
+              data-aos-easing="ease-out-cubic"
+            >
+              We offer full-services to unlock exceptional growth for your
+              business. From creating brand and product videos, designing your
+              coffee table book, building your leadership profile, showcasing
+              your client work and expertise to coaching and mentoring, we have
+              it covered for you! ​
             </p>
-            <button onclick="acceptCookies()" aria-label="Accept cookies">Accept</button>
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSf92JuAqoBrhV-KG4soqTE-xuq0fxQq78jLoGo4LeZYRBIksA/viewform"
+              target="blank"
+              rel="noopener noreferrer"
+              class="button"
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-duration="800"
+              data-aos-easing="ease-out-cubic"
+            >
+              Let's chat
+            </a>
+          </div>
         </div>
-        <script>
-            (function () {
-                document.addEventListener("DOMContentLoaded", function () {
-                    const scrollBtn = document.getElementById("backToTop");
-                    const triggerSection = document.getElementById("triggerSection");
+      </div>
+      <div class="container-fluid footer">
+        <div class="container">
+          <div class="footer-txt">
+            <span
+              data-aos="fade-up"
+              data-aos-duration="800"
+              data-aos-easing="ease-out-cubic"
+            >
+              We transform complex customer challenges to simple solutions that
+              hastens your success.
+            </span>
+            <!-- "Get in Touch" circular link -->
+            <div id="container">
+              <a
+                href="https://forms.gle/3V62Xq6tVKMgEUL47"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get in Touch"
+              >
+                <div id="circle">
+                  <svg
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px"
+                    y="0px"
+                    width="300px"
+                    height="300px"
+                    viewBox="0 0 300 300"
+                    enable-background="new 0 0 300 300"
+                    xml:space="preserve"
+                  >
+                    <defs>
+                      <path
+                        id="circlePath"
+                        d="M 150, 150 m -60, 0 a 60,60 0 0,1 120,0 a 60,60 0 0,1 -120,0 "
+                      ></path>
+                    </defs>
+                    <circle cx="150" cy="100" r="75" fill="none"></circle>
+                    <g>
+                      <use xlink:href="#circlePath" fill="none"></use>
+                      <text fill="#000">
+                        <textPath xlink:href="#circlePath">
+                          GET IN TOUCH • GET IN TOUCH •
+                        </textPath>
+                      </text>
+                    </g>
+                  </svg>
+                </div>
+                <div class="arrow">
+                  <i class="fas fa-arrow-right"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+              <div class="links">
+                <a href="about-lumos.html">About</a>
+                <a href="industries.html">Industries</a>
+                <a href="thought-leadership.html">Thought Leadership</a>
+                <a href="social-impact-marketing.html"
+                  >Social Impact Marketing</a
+                >
+                <a href="advisory-and-consulting.html"
+                  >Advisory and Consulting</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+              <div class="links">
+                <a href="brandingservices.html">Branding</a>
+                <a href="marketingservices.html">Marketing</a>
+                <a href="technologyservices.html">Technology</a>
+                <a href="contentservices.html">Content</a>
+                <a href="content-seostrategy.html">SEO Strategy</a>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+              <div class="links">
+                <a href="sitemap.html">Sitemap</a>
+                <a href="terms-and-conditions.html">Terms & Conditions</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cancellation-and-refund-policy.html">
+                  Cancellation & Refund Policy
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1 col-xs-12"></div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <div class="address">
+                <!-- <p>Connect</p> -->
+                <p>
+                  <strong>LUMOS</strong>
+                </p>
+                <p>A Division of Animika Studios</p>
+                <p>#353, 7th Main, HAL 2nd Stage, Indiranagar,</p>
+                <p>Bengaluru-560008, Karnataka, India.</p>
+                <p>Mobile: +91 9980806803</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copy">
+          <p>
+            © Lumos 2003-2026. A Division Of Animika Studios Pvt. Ltd. All
+            Rights Reserved.​
+          </p>
+          <!-- Social icons -->
+          <p
+            class="social-icons"
+            aria-label="Follow Lumos India on social media"
+          >
+            <a
+              href="https://www.linkedin.com/company/animika-studios"
+              aria-label="Follow us on LinkedIn"
+              title="Follow us on LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-linkedin"></i>
+              <span class="visually-hidden">LinkedIn</span>
+            </a>
+            <a
+              href="https://www.instagram.com/lumosanimikastudios/?next=%2F"
+              aria-label="Follow us on Instagram"
+              title="Follow us on Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-instagram"></i>
+              <span class="visually-hidden">Instagram</span>
+            </a>
+            <a
+              href="https://www.facebook.com/share/1DbsSV1mrX/?mibextid=LQQJ4d"
+              aria-label="Follow us on Facebook"
+              title="Follow us on Facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-facebook"></i>
+              <span class="visually-hidden">Facebook</span>
+            </a>
+            <a
+              href="https://www.youtube.com/@lumosindia7010"
+              aria-label="Subscribe to our YouTube channel"
+              title="Subscribe to our YouTube channel"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fab fa-youtube"></i>
+              <span class="visually-hidden">YouTube</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Back to Top -->
+    <div id="backToTop">
+      <button aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+        <p>Top</p>
+      </button>
+    </div>
+    <div
+      id="cookie-popup"
+      role="dialog"
+      aria-label="Cookie consent popup"
+      aria-live="polite"
+    >
+      <p>
+        Our site uses cookies to store user data so that we can remember you. If
+        you agree, please click the Accept button.
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </p>
+      <button onclick="acceptCookies()" aria-label="Accept cookies">
+        Accept
+      </button>
+    </div>
+    <script>
+      (function () {
+        document.addEventListener("DOMContentLoaded", function () {
+          const scrollBtn = document.getElementById("backToTop");
+          const triggerSection = document.getElementById("triggerSection");
 
-                    if (!scrollBtn || !triggerSection) return;
+          if (!scrollBtn || !triggerSection) return;
 
-                    scrollBtn.style.display = "none";
+          scrollBtn.style.display = "none";
 
-                    window.addEventListener("scroll", function () {
-                        const sectionTop = triggerSection.offsetTop;
-                        const scrollY = window.scrollY || window.pageYOffset;
+          window.addEventListener("scroll", function () {
+            const sectionTop = triggerSection.offsetTop;
+            const scrollY = window.scrollY || window.pageYOffset;
 
-                        if (scrollY >= sectionTop) {
-                            scrollBtn.style.display = "block";
-                        } else {
-                            scrollBtn.style.display = "none";
-                        }
-                    });
-                    scrollBtn.addEventListener("click", function () {
-                        window.scrollTo({ top: 0, behavior: "smooth" });
-                    });
-                });
-            })();
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-        
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="custom.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script>
-            AOS.init();
-        </script>
-</body>
+            if (scrollY >= sectionTop) {
+              scrollBtn.style.display = "block";
+            } else {
+              scrollBtn.style.display = "none";
+            }
+          });
+          scrollBtn.addEventListener("click", function () {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        });
+      })();
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
-</html>
-</footer>
-
-
-<script src="lib/jquery/dist/jquery.min.js"></script>
-<script src="lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))    
-</script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
