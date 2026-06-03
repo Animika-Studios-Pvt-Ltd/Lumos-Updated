@@ -1,0 +1,214 @@
+/* 1. Apply to all form inputs and text */
+#contactForm,
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+  font-weight: 300; /* lighter */
+  color: #6a6a6a;   /* soft gray */
+}
+
+/* 2. Lighten placeholders */
+input::placeholder,
+textarea::placeholder,
+select option,
+select option[disabled] {
+  color: #aaaaaa;
+  font-weight: 300;
+}
+
+/* 3. Override font-weight in inputs (was bold) */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  font-weight: 300 !important;
+  color: #6a6a6a !important;
+}
+
+/* 4. Optional: Make button text match font style */
+button {
+  font-weight: 500;
+}
+
+/* New Code */
+
+            #form-message {
+              font-weight: bold;
+              transition: all 0.3s ease-in-out;
+            }
+            #inner-padding {
+              padding-bottom: 100px;
+            }
+
+            .frame-info p {
+              margin: 0;
+            }
+
+            .contact-container {
+              padding: 0px 40px;
+              border-radius: 8px;
+              max-width: 500px;
+              width: 100%;
+            }
+
+            h1 {
+              font-size: 45px;
+              margin-bottom: 10px;
+              color: #333;
+              padding-bottom: 10px;
+            }
+
+            input::placeholder {
+              font-weight: lighter;
+            }
+            option:first {
+              font-weight: lighter;
+            }
+
+            select option[disabled] {
+              font-weight: lighter;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            select,
+            textarea {
+              width: 100%;
+              padding: 10px 0 5px 10px;
+              margin-bottom: 20px;
+              border: none;
+              border-bottom: 1px solid #faa14a;
+              border-radius: 0;
+              resize: vertical;
+              font-size: 15px;
+              box-sizing: border-box;
+              font-weight: bold;
+              color: #9d9d9d;
+            }
+
+            select:focus {
+              outline: none;
+              border-color: var(--primary-color);
+              box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+            }
+
+            .select-wrapper::after {
+              content: "▼";
+              font-size: 12px;
+              color: black;
+              position: absolute;
+              right: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              pointer-events: none;
+            }
+
+            textarea {
+              min-height: 10px;
+            }
+
+            button {
+              background-color: #faa14a;
+              color: white;
+              border: none;
+              padding: 12px 20px;
+              font-size: 16px;
+              border-radius: 25px;
+              cursor: pointer;
+              width: auto;
+              display: block;
+              margin: 0 auto;
+            }
+
+            button:hover {
+              background-color: black;
+            }
+
+            .popup-title-success {
+              color: green !important;
+            }
+
+            .popup-title-error {
+              color: red !important;
+            }
+
+/*-----------------Cookies-------------*/
+#cookie-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f1f5fb;
+  color: #333;
+  padding: 10px;
+  max-width: 300px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 9999;
+  border: 1px solid orange;
+  pointer-events: none;
+  font-size: 14px;
+  font-family: 'barlow-regular';
+}
+
+#cookie-popup.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+#cookie-popup p {
+  font-family: 'barlow-regular';
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+#cookie-popup a {
+  color: #007BFF;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+#cookie-popup a:hover {
+  text-decoration: underline;
+}
+
+#cookie-popup button {
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-family: 'barlow-regular';
+  border-radius: 20px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto 0;
+  transition: transform 0.3s ease;
+}
+
+#cookie-popup button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  #cookie-popup {
+    right: 10px;
+    bottom: 10px;
+    max-width: 60%;
+    font-size: 13px !important;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  #cookie-popup {
+    max-width: 70%;
+    border-radius: 6px;
+  }
+}

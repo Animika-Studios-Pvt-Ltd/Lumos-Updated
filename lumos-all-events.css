@@ -1,0 +1,26 @@
+.event-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.event-card:hover {
+  transform: translateY(-2px);
+}
+.section-alt {
+  background: #f8f9fa;
+}
+.event-title {
+  margin-bottom: 10px;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  background: linear-gradient(to right, rgb(244, 118, 39), rgb(252, 169, 81)) text;
+}
+.event-gallery img {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+  cursor: pointer;
+}
+.event-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}

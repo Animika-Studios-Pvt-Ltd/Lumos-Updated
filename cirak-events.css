@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "barlow-regular";
+  font-style: normal;
+  font-weight: 400;
+  src: local("barlow-regular"), local("barlow-regular"),
+    url("/static/lumos-in/barlow-regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* Sticky button container */
+.sticky-side-buttons {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 9999;
+}
+
+/* Common button styles */
+.side-btn {
+  writing-mode: sideways-lr;
+  text-orientation: mixed;
+  color: rgb(255, 255, 255);
+  font-family: barlow-regular;
+  background: linear-gradient(45deg, rgb(243, 112, 34), rgb(251, 170, 79));
+  padding: 10px 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "barlow-regular";
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  margin: 6px 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* WhatsApp button */
+.sticky-whatsapp-btn {
+  background: #1ebe57;
+  font-size: 20px;
+  writing-mode: horizontal-tb;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px 0 0 8px;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+
+/* Large tablets (max-width: 1199px) */
+@media (max-width: 1199px) {
+  .side-btn {
+    font-size: 13px;
+  }
+  .sticky-whatsapp-btn {
+    width: 40px;
+    height: 42px;
+  }
+}
+
+/* Tablets (max-width: 991px) */
+@media (max-width: 991px) {
+  .side-btn {
+    font-size: 12px;
+  }
+  .sticky-whatsapp-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Small tablets / phones (max-width: 767px) */
+@media (max-width: 767px) {
+  .side-btn {
+    font-size: 11px;
+    margin: 4px 0;
+  }
+  .sticky-whatsapp-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+}
+
+/* Small mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .side-btn {
+    font-size: 10px;
+  }
+  .sticky-whatsapp-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+/* Extra small (max-width: 360px) */
+@media (max-width: 360px) {
+  .side-btn {
+    font-size: 9px;
+  }
+  .sticky-whatsapp-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+}

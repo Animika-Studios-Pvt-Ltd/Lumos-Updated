@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "figtree-light";
+  font-style: normal;
+  font-weight: 100;
+  src: local("figtree-light"), local("figtree-light"),
+    url("static/lumos-in/figtree-light.ttf") format("truetype");
+  font-display: swap;
+}
+
+.industries-text {
+  font-family: "figtree-light" !important;
+  font-size: 22px !important;
+  margin-bottom: 10px !important;
+}
+
+@media (min-width: 1321px) and (max-width: 1400px) {
+  .industries-text {
+    font-size: 22px !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1320px) {
+  .industries-text {
+    font-size: 22px !important;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1199px) {
+  .industries-text {
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1099px) {
+  .industries-text {
+    font-size: 20px !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .industries-text {
+    font-size: 21px !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .industries-text {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .industries-text {
+    font-size: 16px !important;
+  }
+}

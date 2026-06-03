@@ -1,0 +1,40 @@
+ .why-content .benefits {
+   display: block;
+   margin: 20px 0;
+ }
+
+ .brand-s {
+   background: linear-gradient(to right, #0853b5, #f36f21);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+ }
+
+ .why-content li {
+   font-family: "figtree-light", sans-serif;
+   font-size: 22px;
+   color: #333;
+ }
+
+ .why-content .benefits li {
+   margin-bottom: 12px;
+   font-size: 22px;
+   font-family: "figtree-light", sans-serif;
+   color: #333;
+ }
+
+ .why-content .benefits li span {
+   font-family: "barlowcondensed-medium", sans-serif;
+   background: linear-gradient(to right, #f47627, #fca951);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 26px;
+   font-weight: 400;
+   margin-right: 10px;
+ }
+
+ @media (max-width: 991px) {
+   .why-content .benefits li,
+   .why-content .benefits li span {
+     font-size: 18px;
+   }
+ }

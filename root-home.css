@@ -1,0 +1,53 @@
+h1 {
+   line-height: 1.0 !important;
+   margin-bottom: 30px !important;
+}
+
+@media (max-width: 575px) {
+   h1 {
+   font-size: 30px !important;
+   }
+}
+
+.scroll-container {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: auto;
+}
+
+ .slide {
+    scroll-snap-align: start;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+.slides {
+    display: flex;
+    flex-direction: column;
+} 
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.banner-button {
+    padding-bottom: 0px !important;
+}
+
+.inner_content h1 {
+    margin-bottom: 10px !important;
+}
+
+@media (max-width: 767px) {
+.banner-button {
+    padding-bottom: 20px !important;
+}
+}
