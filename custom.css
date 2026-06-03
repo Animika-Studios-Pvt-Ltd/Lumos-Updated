@@ -209,7 +209,7 @@ li a.active {
   color: #c14b00;
 }
 
-/* ====== CONTAINER & SLIDER SECTION ====== */
+/* Container and Slider Section */
 .slider {
   position: relative;
   color: #fff;
@@ -221,16 +221,12 @@ li a.active {
   align-items: baseline;
 }
 
-/* ====== CONTENT CONTAINER ====== */
+/* Content Container */
 .slider .content_container {
   padding: 90px;
 }
 
-/* ====== SLIDE NAVIGATION ====== */
-.slide_navigation {
-}
-
-/* ====== SLIDES WRAPPER ====== */
+/* Slides Wrapper */
 .slider .slides {
   overflow-y: auto;
   max-height: 790px;
@@ -243,7 +239,7 @@ li a.active {
   display: none;
 }
 
-/* ====== INDIVIDUAL SLIDES ====== */
+/* Individual Slides */
 .slider .slides .slide {
   display: flex;
   color: #333;
@@ -270,7 +266,7 @@ li a.active {
   z-index: 2;
 }
 
-/* ====== INNER CONTENT ====== */
+/* Inner Content */
 .inner_content {
   height: auto;
   min-height: 790px;
@@ -285,7 +281,7 @@ li a.active {
   font-size: 55px;
 }
 
-/* ====== CENTER SCROLL INDICATOR ====== */
+/* Center Scroll Indicator */
 .center {
   position: fixed;
   bottom: 50px;
@@ -347,7 +343,7 @@ li a.active {
   border-radius: 3px;
 }
 
-/* ====== ANIMATION ====== */
+/* Animation */
 @keyframes animate {
   0% {
     transform: translate(-50%, 0px);
@@ -1933,7 +1929,6 @@ li a.active {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .menu img {
-    /* width: 100%; */
     width: 70%;
   }
 
@@ -3302,9 +3297,7 @@ li a.active {
   bottom: 20px;
   right: 20px;
   background-color: #ffffff;
-  /* White background for better contrast */
   color: #222;
-  /* Darker text */
   padding: 12px 14px;
   max-width: 300px;
   width: 100%;
@@ -3317,7 +3310,6 @@ li a.active {
     transform 0.4s ease;
   z-index: 9999;
   border: 1px solid #f37022;
-  /* Your brand orange */
   pointer-events: none;
   font-size: 14px;
   font-family: "barlow-regular";
@@ -3335,19 +3327,16 @@ li a.active {
   font-size: 14px;
   line-height: 1.5;
   color: #222;
-  /* Ensures readability */
 }
 
 #cookie-popup a {
   color: #0056b3;
-  /* Darker blue (WCAG AA compliant) */
   text-decoration: underline;
   font-size: 14px;
 }
 
 #cookie-popup a:hover {
   color: #003366;
-  /* Even darker on hover */
 }
 
 #cookie-popup button {
@@ -3368,7 +3357,6 @@ li a.active {
 #cookie-popup button:hover {
   transform: scale(1.1);
   background: linear-gradient(45deg, #d95c1a, #f8922e);
-  /* Darker hover state */
 }
 
 @media (max-width: 768px) {
