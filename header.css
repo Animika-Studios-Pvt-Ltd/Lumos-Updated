@@ -294,7 +294,7 @@
   }
 
   .bar {
-    background: #f26f17; /* Brand color */
+    background: #f26f17;
     border-radius: 5px;
     display: block;
     height: 2px;
@@ -306,7 +306,6 @@
     width: 30px;
   }
 
-  /* Morph hamburger to close (X) icon when open */
   .navbar-toggler[aria-expanded="true"] .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
