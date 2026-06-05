@@ -4,23 +4,30 @@
   color: #fff;
   background-color: #ebebeb;
   height: 790px;
-  padding-left: 170px;
+  padding: 0 65px;
   display: flex;
   flex-direction: row-reverse;
-  align-items: baseline;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .slider .content_container {
-  padding: 90px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* ------------------------- Slides Scroll Wrapper ------------------------- */
 .slider .slides {
+  flex: 1;
+  height: 100%;
   overflow-y: auto;
-  max-height: 790px;
   scrollbar-width: none;
   overflow-x: hidden;
   box-sizing: border-box;
+}
+
+.slider .slides::-webkit-scrollbar {
+  display: none;
 }
 
 .slider .slides .slide {
@@ -30,15 +37,12 @@
 }
 
 .slides .slide {
-  min-height: 790px;
+  height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   flex: 0 0 100%;
-}
-
-.slide {
-  padding: 0 0 0 225px;
+  box-sizing: border-box;
 }
 
 .slide.slide-1,
@@ -51,9 +55,11 @@
 
 /* ------------------------- Inner Slide Content ------------------------- */
 .inner_content {
-  height: auto;
-  min-height: 790px;
+  height: 100%;
+  display: flex;
+  align-items: center;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .inner_content .row {
@@ -61,6 +67,12 @@
   width: 100%;
   margin: 0;
 }
+
+/* Move text column closer to image by offsetting left padding */
+.inner_content .row > div:first-child {
+  padding-left: 120px;
+}
+
 
 .inner_content h1 {
   font-family: "barlowcondensed-medium";
@@ -89,9 +101,10 @@
 }
 
 .inner_content img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 /* ------------------------- Center Scroll Down Indicator ------------------------- */
@@ -174,35 +187,23 @@
 @media (max-width: 1440px) {
   .slider {
     height: 700px;
-    padding-left: 140px;
-  }
-
-  .slider .slides {
-    max-height: 700px;
-  }
-
-  .slides .slide {
-    min-height: 700px;
-  }
-
-  .slide {
-    padding-left: 150px;
-  }
-
-  .inner_content {
-    min-height: 700px;
+    padding: 0 50px;
   }
 
   .inner_content h1 {
     font-size: 70px;
   }
 
+  .inner_content a {
+    font-size: 17px;
+  }
+
   .inner_content span {
     font-size: 45px;
   }
 
-  .inner_content a {
-    font-size: 17px;
+  .inner_content .row > div:first-child {
+    padding-left: 100px;
   }
 
   .center {
@@ -214,23 +215,7 @@
 @media (max-width: 1366px) {
   .slider {
     height: 650px;
-    padding-left: 120px;
-  }
-
-  .slider .slides {
-    max-height: 650px;
-  }
-
-  .slides .slide {
-    min-height: 650px;
-  }
-
-  .slide {
-    padding-left: 100px;
-  }
-
-  .inner_content {
-    min-height: 650px;
+    padding: 0 40px;
   }
 
   .inner_content h1 {
@@ -245,6 +230,10 @@
     font-size: 16px;
   }
 
+  .inner_content .row > div:first-child {
+    padding-left: 80px;
+  }
+
   .center {
     bottom: auto;
     margin-top: -85px;
@@ -254,23 +243,7 @@
 @media (max-width: 1200px) {
   .slider {
     height: 600px;
-    padding-left: 80px;
-  }
-
-  .slider .slides {
-    max-height: 600px;
-  }
-
-  .slides .slide {
-    min-height: 600px;
-  }
-
-  .slide {
-    padding-left: 50px;
-  }
-
-  .inner_content {
-    min-height: 600px;
+    padding: 0 30px;
   }
 
   .inner_content h1 {
@@ -282,6 +255,10 @@
     font-size: 35px;
   }
 
+  .inner_content .row > div:first-child {
+    padding-left: 60px;
+  }
+
   .center {
     bottom: auto;
     margin-top: -80px;
@@ -291,27 +268,7 @@
 @media (max-width: 1024px) {
   .slider {
     height: 550px;
-    padding-left: 50px;
-  }
-
-  .slider .content_container {
-    padding: 50px;
-  }
-
-  .slider .slides {
-    max-height: 550px;
-  }
-
-  .slides .slide {
-    min-height: 550px;
-  }
-
-  .slide {
-    padding-left: 30px;
-  }
-
-  .inner_content {
-    min-height: 550px;
+    padding: 0 20px;
   }
 
   .inner_content h1 {
@@ -327,6 +284,10 @@
     font-size: 15px;
   }
 
+  .inner_content .row > div:first-child {
+    padding-left: 40px;
+  }
+
   .center {
     bottom: auto;
     margin-top: -80px;
@@ -336,27 +297,7 @@
 @media (max-width: 991px) {
   .slider {
     height: 500px;
-    padding-left: 20px;
-  }
-
-  .slider .content_container {
-    padding: 30px;
-  }
-
-  .slider .slides {
-    max-height: 500px;
-  }
-
-  .slides .slide {
-    min-height: 500px;
-  }
-
-  .slide {
-    padding-left: 0;
-  }
-
-  .inner_content {
-    min-height: 500px;
+    padding: 0 20px;
   }
 
   .inner_content h1 {
@@ -373,6 +314,10 @@
     padding: 6px 12px;
   }
 
+  .inner_content .row > div:first-child {
+    padding-left: 20px;
+  }
+
   .center {
     bottom: auto;
     margin-top: -70px;
@@ -383,26 +328,6 @@
   .slider {
     height: 600px;
     padding: 0 15px;
-  }
-
-  .slider .content_container {
-    padding: 0;
-  }
-
-  .slider .slides {
-    max-height: 600px;
-  }
-
-  .slides .slide {
-    min-height: 600px;
-  }
-
-  .slide {
-    padding-left: 0;
-  }
-
-  .inner_content {
-    min-height: 600px;
   }
 
   .inner_content h1 {
@@ -419,6 +344,10 @@
     padding: 4px 12px;
   }
 
+  .inner_content .row > div:first-child {
+    padding-left: 0;
+  }
+
   .center {
     bottom: auto;
     margin-top: -60px;
@@ -428,19 +357,10 @@
 @media (max-width: 575px) {
   .slider {
     height: 600px;
-    padding: 0 10px;
-  }
-
-  .slider .slides {
-    max-height: 600px;
-  }
-
-  .slides .slide {
-    min-height: 600px;
+    padding: 0 15px;
   }
 
   .inner_content {
-    min-height: 600px;
     text-align: center;
   }
 
@@ -463,7 +383,7 @@
   }
 
   .inner_content img {
-    max-width: 250px;
+    max-width: 220px;
     margin: 0 auto;
   }
 
@@ -481,18 +401,15 @@
 @media (max-width: 480px) {
   .slider {
     height: 550px;
+    padding: 0 12px;
   }
 
   .slider .slides {
-    max-height: 550px;
+    height: 550px;
   }
 
   .slides .slide {
-    min-height: 550px;
-  }
-
-  .inner_content {
-    min-height: 550px;
+    height: 550px;
   }
 
   .inner_content h1 {
@@ -506,7 +423,7 @@
   }
 
   .inner_content img {
-    max-width: 200px;
+    max-width: 170px;
   }
 
   .inner_content a {
@@ -523,19 +440,15 @@
 @media (max-width: 360px) {
   .slider {
     height: 500px;
-    padding: 0 5px;
+    padding: 0 10px;
   }
 
   .slider .slides {
-    max-height: 500px;
+    height: 500px;
   }
 
   .slides .slide {
-    min-height: 500px;
-  }
-
-  .inner_content {
-    min-height: 500px;
+    height: 500px;
   }
 
   .inner_content h1 {
@@ -549,7 +462,7 @@
   }
 
   .inner_content img {
-    max-width: 170px;
+    max-width: 140px;
   }
 
   .center {
