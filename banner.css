@@ -1,0 +1,390 @@
+/* ------------------------- Slider Container ------------------------- */
+.slider {
+  position: relative;
+  color: #fff;
+  background-color: #ebebeb;
+  height: 790px;
+  padding-left: 170px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: baseline;
+}
+
+.slider .content_container {
+  padding: 90px;
+}
+
+/* ------------------------- Slides Scroll Wrapper ------------------------- */
+.slider .slides {
+  overflow-y: auto;
+  max-height: 790px;
+  scrollbar-width: none;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.slider .slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slider .slides .slide {
+  display: flex;
+  color: #333;
+  align-items: center;
+}
+
+.slides .slide {
+  min-height: 790px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex: 0 0 100%;
+}
+
+.slide {
+  padding: 0 0 0 225px;
+}
+
+.slide.slide-1,
+.slide.slide-2,
+.slide.slide-3 {
+  background-color: #ebebeb !important;
+  position: relative;
+  z-index: 2;
+}
+
+/* ------------------------- Inner Slide Content ------------------------- */
+.inner_content {
+  height: auto;
+  min-height: 790px;
+}
+
+.inner_content .row {
+  align-items: center;
+}
+
+.inner_content span {
+  font-family: "barlowcondensed-light";
+  font-size: 55px;
+}
+
+/* Discover/Explore Banner Buttons */
+.inner_content a {
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #fff;
+  font-family: "barlow-regular";
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* ------------------------- Center Scroll Down Indicator ------------------------- */
+.center {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.wire {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  height: 150px;
+  transform: translateX(-50%);
+}
+
+.wire path {
+  stroke: #000;
+  stroke-width: 1;
+  fill: none;
+}
+
+.down {
+  position: relative;
+  width: 30px;
+  height: 45px;
+  border-radius: 25px;
+  background: transparent;
+  border: 2px solid #000;
+  overflow: hidden;
+}
+
+.down:before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #000;
+  left: 50%;
+  top: 10px;
+  transform: translate(-50%, 0);
+  animation: animate 1s linear infinite;
+}
+
+.down:after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 15px;
+  border-radius: 50%;
+  background: #000;
+  left: 50%;
+  top: 5px;
+  transform: translate(-50%, 0);
+  border-radius: 3px;
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, 40px);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, 80px);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider {
+    padding: 0px 15px;
+    height: 600px;
+  }
+
+  .slide {
+    padding: 0 0 0 0px;
+  }
+
+  .slider .content_container {
+    padding: 0px;
+  }
+
+  .slider .slides {
+    max-height: 600px;
+  }
+
+  .inner_content {
+    height: 600px;
+  }
+
+  .center {
+    bottom: auto;
+    margin-top: -60px;
+  }
+
+  .inner_content span {
+    font-size: 25px;
+  }
+
+  .inner_content a {
+    padding: 4px 12px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .slider {
+    height: 400px;
+    padding-left: 20px;
+  }
+
+  .slider .content_container {
+    padding: 50px;
+  }
+
+  .slider .slides {
+    max-height: 400px;
+  }
+
+  .slide {
+    padding: 0 0 0 0px;
+  }
+
+  .inner_content span {
+    font-size: 28px;
+  }
+
+  .center {
+    bottom: auto;
+    margin-top: -70px;
+  }
+
+  .inner_content {
+    height: 400px;
+  }
+
+  .inner_content a {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1099px) {
+  .slider {
+    height: 500px;
+    padding-left: 35px;
+    flex-direction: row-reverse;
+  }
+
+  .slider .slides {
+    max-height: 500px;
+  }
+
+  .slider .slides .slide {
+    height: 500px;
+    flex-direction: column-reverse;
+  }
+
+  .slide {
+    padding: 0 0 0 0px;
+  }
+
+  .inner_content {
+    height: 500px;
+  }
+
+  .inner_content span {
+    font-size: 30px;
+  }
+
+  .center {
+    bottom: auto;
+    margin-top: -65px;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1199px) {
+  .slider {
+    height: 550px;
+    padding-left: 45px;
+  }
+
+  .slider .slides {
+    max-height: 550px;
+  }
+
+  .slide {
+    padding: 0 0 0 0px;
+  }
+
+  .inner_content {
+    height: 550px;
+  }
+
+  .inner_content span {
+    font-size: 32px;
+  }
+
+  .center {
+    bottom: auto;
+    margin-top: -80px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1320px) {
+  .slider {
+    height: 500px;
+    padding-left: 100px;
+    padding-top: 20px;
+  }
+
+  .slider .slides {
+    max-height: 500px;
+  }
+
+  .inner_content span {
+    font-size: 35px;
+  }
+
+  .slide {
+    padding: 0 0 0 0px;
+  }
+
+  .inner_content {
+    height: 500px;
+  }
+
+  .center {
+    bottom: auto;
+    margin-top: -80px;
+  }
+}
+
+@media (min-width: 1321px) and (max-width: 1400px) {
+  .slider {
+    height: 600px;
+    padding-left: 120px;
+  }
+
+  .slider .slides {
+    max-height: 600px;
+  }
+
+  .slide {
+    padding: 0 0 0 0px;
+  }
+
+  .inner_content {
+    height: 600px;
+  }
+
+  .inner_content span {
+    font-size: 35px;
+  }
+
+  .center {
+    bottom: auto;
+    margin-top: -80px;
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1499px) {
+  .slide {
+    padding: 0 0 0 0px;
+  }
+
+  .slider,
+  .inner_content {
+    height: 600px;
+  }
+
+  .slider .slides {
+    max-height: 600px;
+  }
+
+  .center {
+    bottom: auto;
+    margin-top: -100px;
+  }
+
+  .inner_content span {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1599px) {
+  .slide {
+    padding: 0 0 0 0px;
+  }
+
+  .inner_content span {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1730px) {
+  .slide {
+    padding: 0 0 0 0px;
+  }
+}
