@@ -1,11 +1,142 @@
-// Navbar active toggle
-document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
-  link.addEventListener("click", () => {
-    document
-      .querySelectorAll(".navbar-nav .nav-link")
-      .forEach((nav) => nav.classList.remove("active"));
-    link.classList.add("active");
+/* Navbar & Navigation Section */
+
+document.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname;
+  const page = path.split("/").pop() || "index.html";
+
+  // Helper to remove active class from all navigation links
+  const clearActiveLinks = () => {
+    document.querySelectorAll(".navbar-nav .nav-link").forEach((nav) => {
+      nav.classList.remove("active");
+    });
+  };
+
+  let matched = false;
+  const navbarLinks = document.querySelectorAll(
+    ".navbar-nav a:not(.dropdown-toggle)",
+  );
+
+  // 1. Direct matching: check dropdown items and direct links
+  navbarLinks.forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href) {
+      // Extract clean filename from link href (ignoring hash anchors)
+      const linkPage = href.split("#")[0].split("/").pop();
+      if (linkPage && page === linkPage) {
+        clearActiveLinks();
+        const parentDropdown = link.closest(".dropdown");
+        if (parentDropdown) {
+          const toggle = parentDropdown.querySelector(
+            ".nav-link.dropdown-toggle",
+          );
+          if (toggle) {
+            toggle.classList.add("active");
+            matched = true;
+          }
+        } else {
+          link.classList.add("active");
+          matched = true;
+        }
+      }
+    }
   });
+
+  // 2. Section-based fallback matching for subpages or case studies
+  if (!matched && page !== "index.html") {
+    clearActiveLinks();
+
+    // Check if it's an industry page
+    if (page.includes("-industry") || page === "industries.html") {
+      const indLink = Array.from(
+        document.querySelectorAll(".navbar-nav .nav-link"),
+      ).find((link) => {
+        const href = link.getAttribute("href");
+        return href && href.includes("industries.html");
+      });
+      if (indLink) indLink.classList.add("active");
+    }
+    // Check if it's under the "Services" section (branding, technology, marketing, content, seo, etc.)
+    else if (
+      page.includes("services") ||
+      page.includes("brand-") ||
+      page.includes("branding-") ||
+      page.includes("technology-") ||
+      page.includes("marketing-") ||
+      page.includes("website-") ||
+      page.includes("casestudy")
+    ) {
+      const servicesToggle = Array.from(
+        document.querySelectorAll(".navbar-nav .dropdown-toggle"),
+      ).find((link) => link.textContent.trim().toLowerCase() === "services");
+      if (servicesToggle) servicesToggle.classList.add("active");
+    }
+    // Check if it's under "Consultative Services"
+    else if (
+      page.includes("thought-") ||
+      page.includes("social-impact") ||
+      page.includes("advisory-")
+    ) {
+      const consultativeToggle = Array.from(
+        document.querySelectorAll(".navbar-nav .dropdown-toggle"),
+      ).find(
+        (link) =>
+          link.textContent.trim().toLowerCase() === "consultative services",
+      );
+      if (consultativeToggle) consultativeToggle.classList.add("active");
+    }
+    // Check if it's under "Resources"
+    else if (
+      page.includes("article") ||
+      page.includes("event") ||
+      page.includes("video") ||
+      page.includes("publication") ||
+      page.includes("client")
+    ) {
+      const resourcesToggle = Array.from(
+        document.querySelectorAll(".navbar-nav .dropdown-toggle"),
+      ).find((link) => link.textContent.trim().toLowerCase() === "resources");
+      if (resourcesToggle) resourcesToggle.classList.add("active");
+    }
+  }
+
+  // 3. Auto-close mobile hamburger menu when clicking outside or scrolling
+  const navCollapse = document.getElementById("navbarSupportedContent");
+  if (navCollapse) {
+    const toggler = document.querySelector(".navbar-toggler");
+    // Ensure toggler has collapsed class initially on load if closed
+    if (toggler && toggler.getAttribute("aria-expanded") !== "true") {
+      toggler.classList.add("collapsed");
+    }
+
+    const closeMenu = () => {
+      if (navCollapse.classList.contains("show")) {
+        const t = document.querySelector(".navbar-toggler");
+        if (t && !t.classList.contains("collapsed")) {
+          t.click();
+        }
+      }
+    };
+
+    // Close on click outside
+    document.addEventListener("click", (event) => {
+      const togglerBtn = document.querySelector(".navbar-toggler");
+      const isClickInside =
+        navCollapse.contains(event.target) ||
+        (togglerBtn && togglerBtn.contains(event.target));
+      if (!isClickInside) {
+        closeMenu();
+      }
+    });
+
+    // Close on scroll
+    window.addEventListener(
+      "scroll",
+      () => {
+        closeMenu();
+      },
+      { passive: true },
+    );
+  }
 });
 
 (function () {
