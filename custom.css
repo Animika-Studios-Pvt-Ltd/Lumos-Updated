@@ -1,3 +1,5 @@
+@import "header.css";
+
 @font-face {
   font-family: "barlowcondensed-medium";
   font-style: normal;
@@ -98,96 +100,6 @@ a {
   text-decoration: none;
 }
 
-.menu {
-  background-color: #ebebeb;
-  padding: 20px 0 20px 65px;
-}
-
-.menu .row {
-  margin: 0;
-}
-
-.menu img {
-  width: 36%;
-  transition: transform 0.4s ease;
-}
-
-.menu img:hover {
-  transform: scale(1.05);
-}
-
-.navbar {
-  margin-top: 20px;
-}
-
-.nav-item {
-  margin: 0 15px;
-}
-
-.navbar-nav a {
-  font-family: "barlow-regular";
-  color: #272a32;
-  text-transform: uppercase;
-  font-size: 18px;
-}
-
-.navbar-expand-lg .navbar-collapse {
-  justify-content: end;
-  position: relative;
-  left: -60px;
-}
-
-.dropend {
-  margin: 0;
-}
-
-.dropend .dropdown-toggle,
-.dropend ul a,
-.dropdown-menu a {
-  text-transform: capitalize;
-  padding: 0;
-  margin: 0;
-}
-
-.dropdown-item:hover {
-  background-color: transparent;
-  color: #f97126;
-}
-
-.dropdown .dropdown-menu {
-  display: none;
-}
-
-.dropdown:hover > .dropdown-menu,
-.dropend:hover > .dropdown-menu {
-  display: block;
-  padding: 10px 10px;
-  border: 0;
-  border-radius: 0;
-  background: #222b35;
-}
-
-.nav-link:focus,
-.nav-link:hover {
-  color: #f5782e;
-}
-
-.dropdown-menu a {
-  color: #fff;
-  text-transform: uppercase;
-}
-
-@media screen and (min-width: 769px) {
-  .dropend:hover > .dropdown-menu {
-    position: absolute;
-    top: 0;
-    left: 100%;
-  }
-
-  .dropend .dropdown-toggle {
-    margin-left: 0.5em;
-  }
-}
 
 ul {
   list-style: none;
@@ -860,28 +772,6 @@ li a.active {
   width: 100%;
 }
 
-.navbar-nav .nav-link {
-  position: relative;
-  display: inline-block;
-}
-
-.navbar-nav .nav-link::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  height: 3px;
-  width: 0;
-  background-color: #f26f17;
-  transition: width 0.3s ease-in-out;
-}
-
-.navbar-nav .nav-link:hover::before,
-.navbar-nav .nav-link.active::before {
-  width: 100%;
-}
 
 .tech-2,
 .content-2,
@@ -889,29 +779,6 @@ li a.active {
   display: none;
 }
 
-#inner-menu {
-  background-color: transparent;
-  border-radius: 1ps solid transarent;
-  border-bottom: 1px solid #000;
-  border-image: linear-gradient(90deg, #34039d, #e5642b, #f68c38, #fdac50);
-  border-image-slice: 1;
-  width: 100%;
-}
-
-.breadcrumb {
-  margin-top: 10px;
-}
-
-.breadcrumb-item a {
-  font-family: "barlow-regular";
-  font-size: 18px;
-  color: #000;
-}
-
-.breadcrumb .active {
-  font-family: "barlow-regular";
-  font-size: 18px;
-}
 
 .about-img,
 .brand-txt {
@@ -1514,60 +1381,6 @@ li a.active {
 }
 
 @media (max-width: 767px) {
-  .menu {
-    padding: 10px 0 10px 0px;
-  }
-
-  .menu img {
-    width: 200px;
-  }
-
-  .navbar {
-    position: absolute;
-    left: auto;
-    width: 100%;
-    right: 25px;
-    top: 0px;
-    justify-content: flex-end;
-  }
-
-  .navbar-toggler {
-    border: 0;
-    padding: 0;
-    margin: 0;
-  }
-
-  .bar {
-    background: #012348;
-    border-radius: 5px;
-    display: block;
-    height: 2px;
-    margin: 8px 0;
-    transition:
-      background-color 0.4s ease-in,
-      transform 0.4s ease-in,
-      width 0.4s ease-in;
-    width: 40px;
-  }
-
-  .navbar-expand-lg .navbar-collapse {
-    position: absolute;
-    top: 65px;
-    background: rgb(248 236 223);
-    z-index: 3;
-    left: 25px;
-    width: 100%;
-    padding: 10px 10px 0px;
-  }
-
-  .navbar-toggler:focus {
-    box-shadow: none;
-  }
-
-  .SMN_effect-2 a:hover:after,
-  .SMN_effect-2 a:focus:after {
-    display: none;
-  }
 
   .slider {
     padding: 0px 15px;
@@ -1928,48 +1741,6 @@ li a.active {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .menu img {
-    width: 70%;
-  }
-
-  .bar {
-    background: #012348;
-    border-radius: 5px;
-    display: block;
-    height: 2px;
-    margin: 8px 0;
-    transition:
-      background-color 0.4s ease-in,
-      transform 0.4s ease-in,
-      width 0.4s ease-in;
-    width: 40px;
-  }
-
-  .navbar-toggler {
-    border: 0;
-    padding: 0 20px;
-    margin: 0;
-    position: absolute;
-    right: 0;
-  }
-
-  .navbar-toggler:focus {
-    box-shadow: none;
-  }
-
-  .navbar-expand-lg .navbar-collapse {
-    position: absolute;
-    top: -5px;
-    background: rgb(200, 235, 248);
-    z-index: 2;
-    left: 0px;
-    width: 100%;
-    padding: 10px 10px 0px;
-  }
-
-  .menu {
-    padding: 20px 0 20px 15px;
-  }
 
   .slider {
     height: 400px;
@@ -2280,25 +2051,6 @@ li a.active {
 }
 
 @media (min-width: 992px) and (max-width: 1099px) {
-  .menu {
-    padding: 20px 0 20px 15px;
-  }
-
-  .navbar-expand-lg .navbar-collapse {
-    left: -50px;
-  }
-
-  .nav-item {
-    margin: 0 5px;
-  }
-
-  .navbar {
-    margin-top: 0px;
-  }
-
-  .navbar-nav a {
-    font-size: 16px;
-  }
 
   .slider {
     height: 500px;
@@ -2524,21 +2276,6 @@ li a.active {
 }
 
 @media (min-width: 1100px) and (max-width: 1199px) {
-  .menu {
-    padding: 20px 0 20px 20px;
-  }
-
-  .navbar-expand-lg .navbar-collapse {
-    left: -30px;
-  }
-
-  .navbar {
-    margin-top: 0px;
-  }
-
-  .nav-item {
-    margin: 0 5px;
-  }
 
   .slider {
     height: 550px;
@@ -2727,25 +2464,6 @@ li a.active {
 }
 
 @media (min-width: 1200px) and (max-width: 1320px) {
-  .nav-item {
-    margin: 0 8px;
-  }
-
-  .navbar-expand-lg .navbar-collapse {
-    left: 0px;
-  }
-
-  .navbar-nav a {
-    font-size: 16px;
-  }
-
-  .menu {
-    padding: 20px 0 20px 30px;
-  }
-
-  .navbar {
-    margin-top: 10px;
-  }
 
   .slider {
     height: 500px;
@@ -2897,17 +2615,8 @@ li a.active {
 }
 
 @media (min-width: 1321px) and (max-width: 1400px) {
-  .navbar {
-    margin-top: 10px;
-  }
 
-  .navbar-expand-lg .navbar-collapse {
-    left: -10px;
-  }
 
-  .nav-item {
-    margin: 0 10px;
-  }
 
   .slider {
     height: 600px;
@@ -3068,13 +2777,7 @@ li a.active {
 }
 
 @media (min-width: 1401px) and (max-width: 1499px) {
-  .navbar {
-    margin-top: 15px;
-  }
 
-  .nav-item {
-    margin: 0 10px;
-  }
 
   .slide {
     padding: 0 0 0 0px;
@@ -3498,9 +3201,6 @@ li a.active {
     margin: 0 auto;
   }
 
-  .menu img {
-    width: 120px;
-  }
 }
 
 /* --------------------- BRANDING PAGE SECTION ------------------------- */
