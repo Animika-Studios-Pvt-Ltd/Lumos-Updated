@@ -139,6 +139,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+/* Banner/Hero Section */
+
 (function () {
   "use strict";
 
@@ -171,14 +173,56 @@ document.addEventListener("DOMContentLoaded", () => {
       const navigation_items = slider.querySelectorAll(".slide_navigation a");
       const slide_container = slider.querySelector(".slides");
       const slides = slide_container.querySelectorAll(".slide");
+      let currentSlide = 0;
+      let isScrolling = false;
 
+      // Helper: scroll to a given slide index and update nav
+      const goToSlide = (index) => {
+        if (index < 0 || index >= slides.length) return;
+        currentSlide = index;
+        slide_container.scrollTo({
+          top: slides[index].offsetTop,
+          behavior: "smooth",
+        });
+        navigation_items.forEach((item, i) => {
+          item.classList.toggle("active", i === index);
+        });
+      };
+
+      // Navigation link clicks
       navigation_items.forEach((item, index) => {
         item.onclick = (e) => {
           e.preventDefault();
-          this.show_slide(index, item);
+          goToSlide(index);
         };
       });
 
+      // Wheel event: intercept while banner is visible and snap slide-by-slide
+      slider.addEventListener(
+        "wheel",
+        (e) => {
+          const rect = slider.getBoundingClientRect();
+          const inView = rect.top < window.innerHeight && rect.bottom > 0;
+          if (!inView) return;
+
+          e.preventDefault();
+
+          if (isScrolling) return;
+          isScrolling = true;
+          setTimeout(() => {
+            isScrolling = false;
+          }, 750);
+
+          if (e.deltaY > 0) {
+            goToSlide(currentSlide + 1);
+          } else {
+            goToSlide(currentSlide - 1);
+          }
+        },
+        { passive: false }
+      );
+
+      // Keep currentSlide in sync when snap CSS or other means change scroll position
       slide_container.addEventListener("scroll", () => {
         let closestIndex = 0;
         let minDistance = Infinity;
@@ -186,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         slides.forEach((slide, index) => {
           const distance = Math.abs(
-            slide.getBoundingClientRect().top - containerTop,
+            slide.getBoundingClientRect().top - containerTop
           );
           if (distance < minDistance) {
             minDistance = distance;
@@ -194,9 +238,12 @@ document.addEventListener("DOMContentLoaded", () => {
           }
         });
 
-        navigation_items.forEach((item, i) => {
-          item.classList.toggle("active", i === closestIndex);
-        });
+        if (closestIndex !== currentSlide) {
+          currentSlide = closestIndex;
+          navigation_items.forEach((item, i) => {
+            item.classList.toggle("active", i === closestIndex);
+          });
+        }
       });
     },
 

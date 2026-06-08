@@ -16,14 +16,42 @@
   box-sizing: border-box;
 }
 
+/* ------------------------- Slide Navigation Numbers ------------------------- */
+.slide_navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.slide_navigation li a {
+  display: block;
+  font-family: "barlowcondensed-medium", sans-serif;
+  font-size: 24px;
+  text-decoration: none;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.slide_navigation li a.active {
+  font-size: 28px;
+}
+
 /* ------------------------- Slides Scroll Wrapper ------------------------- */
 .slider .slides {
   flex: 1;
   height: 100%;
   overflow-y: auto;
-  scrollbar-width: none;
   overflow-x: hidden;
+  scrollbar-width: none;
   box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .slider .slides::-webkit-scrollbar {
@@ -43,6 +71,8 @@
   align-items: center;
   flex: 0 0 100%;
   box-sizing: border-box;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
 .slide.slide-1,
@@ -68,11 +98,9 @@
   margin: 0;
 }
 
-/* Move text column closer to image by offsetting left padding */
 .inner_content .row > div:first-child {
   padding-left: 120px;
 }
-
 
 .inner_content h1 {
   font-family: "barlowcondensed-medium";
@@ -87,7 +115,6 @@
   font-size: 55px;
 }
 
-/* Discover/Explore Banner Buttons */
 .inner_content a {
   background: linear-gradient(45deg, #f37022, #fbaa4f);
   padding: 8px 15px;
@@ -206,6 +233,14 @@
     padding-left: 100px;
   }
 
+  .slide_navigation li a {
+    font-size: 23px;
+  }
+
+  .slide_navigation li a.active {
+    font-size: 24px;
+  }
+
   .center {
     bottom: auto;
     margin-top: -95px;
@@ -234,6 +269,14 @@
     padding-left: 80px;
   }
 
+  .slide_navigation li a {
+    font-size: 22px;
+  }
+
+  .slide_navigation li a.active {
+    font-size: 23px;
+  }
+
   .center {
     bottom: auto;
     margin-top: -85px;
@@ -257,6 +300,14 @@
 
   .inner_content .row > div:first-child {
     padding-left: 60px;
+  }
+
+  .slide_navigation li a {
+    font-size: 21px;
+  }
+
+  .slide_navigation li a.active {
+    font-size: 22px;
   }
 
   .center {
@@ -285,7 +336,15 @@
   }
 
   .inner_content .row > div:first-child {
-    padding-left: 40px;
+    padding-left: 80px;
+  }
+
+  .slide_navigation li a {
+    font-size: 20px;
+  }
+
+  .slide_navigation li a.active {
+    font-size: 21px;
   }
 
   .center {
@@ -296,7 +355,7 @@
 
 @media (max-width: 991px) {
   .slider {
-    height: 500px;
+    height: 450px;
     padding: 0 20px;
   }
 
@@ -315,7 +374,23 @@
   }
 
   .inner_content .row > div:first-child {
-    padding-left: 20px;
+    padding-left: 80px;
+  }
+
+  .inner_content .row > div:last-child {
+    padding-right: 60px;
+  }
+
+  .inner_content img {
+    max-width: 280px;
+  }
+
+  .slide_navigation li a {
+    font-size: 18px;
+  }
+
+  .slide_navigation li a.active {
+    font-size: 19px;
   }
 
   .center {
@@ -326,7 +401,7 @@
 
 @media (max-width: 767px) {
   .slider {
-    height: 600px;
+    height: 400px;
     padding: 0 15px;
   }
 
@@ -339,13 +414,29 @@
     font-size: 25px;
   }
 
+  .inner_content img {
+    max-width: 240px;
+  }
+
   .inner_content a {
     font-size: 14px;
     padding: 4px 12px;
   }
 
   .inner_content .row > div:first-child {
-    padding-left: 0;
+    padding-left: 40px;
+  }
+
+  .inner_content .row > div:last-child {
+    padding-right: 60px;
+  }
+
+  .slide_navigation li a {
+    font-size: 17px;
+  }
+
+  .slide_navigation li a.active {
+    font-size: 18px;
   }
 
   .center {
@@ -356,26 +447,17 @@
 
 @media (max-width: 575px) {
   .slider {
-    height: 600px;
+    height: 400px;
     padding: 0 15px;
   }
 
-  .inner_content {
-    text-align: center;
-  }
-
   .inner_content .row {
-    flex-direction: column-reverse;
-  }
-
-  .inner_content .col-12 {
-    text-align: center;
+    flex-direction: column;
   }
 
   .inner_content h1 {
     font-size: 26px;
-    margin-top: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
   }
 
   .inner_content span {
@@ -392,6 +474,18 @@
     padding: 4px 10px;
   }
 
+  .inner_content .row > div:last-child {
+    padding-right: 0px;
+  }
+
+  .slide_navigation li a {
+    font-size: 16px;
+  }
+
+  .slide_navigation li a.active {
+    font-size: 17px;
+  }
+
   .center {
     bottom: auto;
     margin-top: -60px;
@@ -400,21 +494,20 @@
 
 @media (max-width: 480px) {
   .slider {
-    height: 550px;
+    height: 380px;
     padding: 0 12px;
   }
 
   .slider .slides {
-    height: 550px;
+    height: 380px;
   }
 
   .slides .slide {
-    height: 550px;
+    height: 380px;
   }
 
   .inner_content h1 {
     font-size: 22px;
-    margin-top: 10px;
     margin-bottom: 15px;
   }
 
@@ -423,12 +516,24 @@
   }
 
   .inner_content img {
-    max-width: 170px;
+    max-width: 200px;
   }
 
   .inner_content a {
     font-size: 12px;
     padding: 4px 8px;
+  }
+
+  .slide_navigation {
+    gap: 6px;
+  }
+
+  .slide_navigation li a {
+    font-size: 15px;
+  }
+
+  .slide_navigation li a.active {
+    font-size: 16px;
   }
 
   .center {
@@ -439,22 +544,21 @@
 
 @media (max-width: 360px) {
   .slider {
-    height: 500px;
+    height: 350px;
     padding: 0 10px;
   }
 
   .slider .slides {
-    height: 500px;
+    height: 350px;
   }
 
   .slides .slide {
-    height: 500px;
+    height: 350px;
   }
 
   .inner_content h1 {
     font-size: 20px;
     margin-top: 8px;
-    margin-bottom: 10px;
   }
 
   .inner_content span {
@@ -462,7 +566,19 @@
   }
 
   .inner_content img {
-    max-width: 140px;
+    max-width: 180px;
+  }
+
+  .slide_navigation {
+    gap: 4px;
+  }
+
+  .slide_navigation li a {
+    font-size: 14px;
+  }
+
+  .slide_navigation li a.active {
+    font-size: 15px;
   }
 
   .center {
