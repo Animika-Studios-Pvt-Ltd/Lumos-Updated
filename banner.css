@@ -243,7 +243,7 @@
 
   .center {
     bottom: auto;
-    margin-top: -95px;
+    margin-top: -65px;
   }
 }
 
@@ -279,7 +279,7 @@
 
   .center {
     bottom: auto;
-    margin-top: -85px;
+    margin-top: -55px;
   }
 }
 
@@ -312,7 +312,7 @@
 
   .center {
     bottom: auto;
-    margin-top: -80px;
+    margin-top: -45px;
   }
 }
 
@@ -349,7 +349,7 @@
 
   .center {
     bottom: auto;
-    margin-top: -80px;
+    margin-top: -40px;
   }
 }
 
@@ -395,7 +395,7 @@
 
   .center {
     bottom: auto;
-    margin-top: -70px;
+    margin-top: -45px;
   }
 }
 
@@ -441,13 +441,13 @@
 
   .center {
     bottom: auto;
-    margin-top: -60px;
+    margin-top: -40px;
   }
 }
 
 @media (max-width: 575px) {
   .slider {
-    height: 400px;
+    height: 350px;
     padding: 0 15px;
   }
 
@@ -457,7 +457,7 @@
 
   .inner_content h1 {
     font-size: 26px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .inner_content span {
@@ -465,13 +465,17 @@
   }
 
   .inner_content img {
-    max-width: 220px;
+    max-width: 240px;
     margin: 0 auto;
   }
 
   .inner_content a {
     font-size: 13px;
-    padding: 4px 10px;
+    padding: 3px 10px;
+  }
+
+  .inner_content .row > div:first-child {
+    padding-left: 30px;
   }
 
   .inner_content .row > div:last-child {
@@ -487,28 +491,26 @@
   }
 
   .center {
-    bottom: auto;
-    margin-top: -60px;
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
   .slider {
-    height: 380px;
+    height: 320px;
     padding: 0 12px;
   }
 
   .slider .slides {
-    height: 380px;
+    height: 320px;
   }
 
   .slides .slide {
-    height: 380px;
+    height: 320px;
   }
 
   .inner_content h1 {
     font-size: 22px;
-    margin-bottom: 15px;
   }
 
   .inner_content span {
@@ -516,12 +518,12 @@
   }
 
   .inner_content img {
-    max-width: 200px;
+    max-width: 220px;
   }
 
   .inner_content a {
     font-size: 12px;
-    padding: 4px 8px;
+    padding: 2px 8px;
   }
 
   .slide_navigation {
@@ -536,28 +538,24 @@
     font-size: 16px;
   }
 
-  .center {
-    bottom: auto;
-    margin-top: -55px;
-  }
 }
 
 @media (max-width: 360px) {
   .slider {
-    height: 350px;
+    height: 300px;
     padding: 0 10px;
   }
 
   .slider .slides {
-    height: 350px;
+    height: 300px;
   }
 
   .slides .slide {
-    height: 350px;
+    height: 300px;
   }
 
   .inner_content h1 {
-    font-size: 20px;
+    font-size: 21px;
     margin-top: 8px;
   }
 
@@ -566,7 +564,7 @@
   }
 
   .inner_content img {
-    max-width: 180px;
+    max-width: 200px;
   }
 
   .slide_navigation {
@@ -579,10 +577,5 @@
 
   .slide_navigation li a.active {
     font-size: 15px;
-  }
-
-  .center {
-    bottom: auto;
-    margin-top: -50px;
   }
 }
