@@ -417,21 +417,89 @@ li a.active {
 }
 
 /* --------------------- ISOBEL AWARD SECTION ------------------------- */
+.award-section {
+  padding: 20px 0;
+}
+
 .award-inner {
   background: #ffffff;
-  padding: 20px 30px;
-  margin: 18px 0px 0 0px;
+  padding: 15px 20px;
   border-radius: 20px;
-  box-shadow: -2px 3px 10px 4px #9f9b9bb0;
+  box-shadow: -2px 3px 10px 4px rgba(159, 155, 155, 0.7);
+}
+
+.award-content {
+  margin: 0;
+}
+
+.award-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.award-col-center {
+  text-align: left;
+}
+
+.award-text-wrap {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.award-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.award-icon {
+  width: 65px;
+  height: auto;
+  margin-right: 20px;
 }
 
 .award-text {
-  margin: 0 20px;
+  margin: 0;
+  line-height: 1.6;
 }
 
-@media (max-width: 1200px) {
-  .award-inner {
-    margin: 0;
+.award-text a {
+  display: inline-block;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+@media (max-width: 991px) {
+  .award-col {
+    margin-bottom: 15px;
+  }
+
+  .award-col-left,
+  .award-col-icon {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+
+  .award-col-center,
+  .award-col-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .award-col-center {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .award-col-left,
+  .award-col-icon,
+  .award-col-center,
+  .award-col-right {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
