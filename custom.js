@@ -353,10 +353,12 @@ function acceptCookies() {
     scrollBtn.style.display = "none";
 
     window.addEventListener("scroll", function () {
-      const sectionTop = triggerSection.offsetTop;
+      const rect = triggerSection.getBoundingClientRect();
       const scrollY = window.scrollY || window.pageYOffset;
-
-      if (scrollY >= sectionTop) {
+      const scrollHeight = document.documentElement.scrollHeight;
+      const clientHeight = document.documentElement.clientHeight;
+      const isAtBottom = (scrollY + clientHeight) >= (scrollHeight - 20);
+      if (rect.top <= 0 || isAtBottom) {
         scrollBtn.style.display = "block";
       } else {
         scrollBtn.style.display = "none";
