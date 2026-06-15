@@ -368,7 +368,7 @@ li a.active {
 
 @media (max-width: 575px) {
   .lumos-and-palowise-section {
-    padding: 25px 15px;
+    padding: 15px 15px;
   }
 
   .lumos-and-palowise-section h2 {
@@ -477,6 +477,10 @@ li a.active {
 }
 
 @media (max-width: 575px) {
+  .isobel-award-section {
+    padding: 10px 0;
+  }
+
   .isobel-award-icon {
     width: 50px;
   }
@@ -624,7 +628,7 @@ li a.active {
 @media (max-width: 575px) {
   .lumos-anil-kumar-section {
     padding: 15px 10px;
-    margin: 10px 0px;
+    margin: 0px 0px;
   }
 
   .lumos-anil-kumar-section img {
