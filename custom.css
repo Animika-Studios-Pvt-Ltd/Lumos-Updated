@@ -101,7 +101,6 @@ a {
   text-decoration: none;
 }
 
-
 ul {
   list-style: none;
   padding: 0;
@@ -417,89 +416,78 @@ li a.active {
 }
 
 /* --------------------- ISOBEL AWARD SECTION ------------------------- */
-.award-section {
+.isobel-award-section {
   padding: 20px 0;
 }
 
-.award-inner {
-  background: #ffffff;
+.isobel-award-inner {
+  background: #fff;
   padding: 15px 20px;
   border-radius: 20px;
   box-shadow: -2px 3px 10px 4px rgba(159, 155, 155, 0.7);
 }
 
-.award-content {
-  margin: 0;
-}
-
-.award-col {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.award-col-center {
-  text-align: left;
-}
-
-.award-text-wrap {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.award-img {
+.isobel-award-logo,
+.isobel-award-designrush {
   max-width: 100%;
   height: auto;
 }
 
-.award-icon {
+.isobel-award-icon {
   width: 65px;
   height: auto;
-  margin-right: 20px;
 }
 
-.award-text {
+.isobel-award-text {
   margin: 0;
   line-height: 1.6;
 }
 
-.award-text a {
+.isobel-award-text a {
   display: inline-block;
   margin-top: 5px;
   text-decoration: none;
 }
 
 @media (max-width: 991px) {
-  .award-col {
-    margin-bottom: 15px;
+  .isobel-award-logo {
+    max-width: 240px;
+    margin: 0 auto;
   }
 
-  .award-col-left,
-  .award-col-icon {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  .award-col-center,
-  .award-col-right {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .award-col-center {
-    text-align: center;
+  .isobel-award-designrush {
+    max-width: 220px;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 767px) {
-  .award-col-left,
-  .award-col-icon,
-  .award-col-center,
-  .award-col-right {
-    flex: 0 0 100%;
-    max-width: 100%;
+  .isobel-award-icon {
+    width: 60px;
+  }
+
+  .isobel-award-logo {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .isobel-award-designrush {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 575px) {
+  .isobel-award-icon {
+    width: 50px;
+  }
+
+  .isobel-award-logo {
+    max-width: 160px;
+    margin: 0 auto;
+  }
+
+  .isobel-award-designrush {
+    max-width: 150px;
   }
 }
 
@@ -1172,13 +1160,11 @@ li a.active {
   width: 100%;
 }
 
-
 .tech-2,
 .content-2,
 .vision-2 {
   display: none;
 }
-
 
 .about-img,
 .brand-txt {
@@ -1781,7 +1767,6 @@ li a.active {
 }
 
 @media (max-width: 767px) {
-
   h1 {
     font-size: 35px;
     line-height: 35px;
@@ -2100,12 +2085,10 @@ li a.active {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-
   h1 {
     font-size: 34px;
     line-height: 40px;
   }
-
 
   .indus-txt {
     width: auto;
@@ -2370,7 +2353,6 @@ li a.active {
 }
 
 @media (min-width: 992px) and (max-width: 1099px) {
-
   h1 {
     font-size: 43px;
     line-height: 43px;
@@ -2557,7 +2539,6 @@ li a.active {
 }
 
 @media (min-width: 1100px) and (max-width: 1199px) {
-
   h1 {
     font-size: 50px;
     line-height: 50px;
@@ -2709,12 +2690,10 @@ li a.active {
 }
 
 @media (min-width: 1200px) and (max-width: 1320px) {
-
   h1 {
     font-size: 50px;
     line-height: 50px;
   }
-
 
   h3 {
     font-size: 20px;
@@ -2822,7 +2801,6 @@ li a.active {
 }
 
 @media (min-width: 1321px) and (max-width: 1400px) {
-
   h1 {
     font-size: 56px;
   }
@@ -2830,7 +2808,6 @@ li a.active {
   h3 {
     font-size: 20px;
   }
-
 
   .wwd-txt-1 {
     width: 390px;
@@ -2948,7 +2925,6 @@ li a.active {
 }
 
 @media (min-width: 1401px) and (max-width: 1499px) {
-
   h1 {
     font-size: 59px;
     line-height: 55px;
@@ -3067,7 +3043,6 @@ li a.active {
 }
 
 @media (min-width: 1600px) and (max-width: 1730px) {
-
   .layer-5 {
     padding: 20px 80px;
   }
@@ -3252,11 +3227,6 @@ li a.active {
 }
 
 @media (max-width: 991px) {
-  .award-text {
-    margin: 10px 0;
-    text-align: center;
-  }
-
   .rec {
     margin: 0 auto 10px auto;
     display: block;
@@ -3319,7 +3289,6 @@ li a.active {
   .img-wrapper img {
     margin: 0 auto;
   }
-
 }
 
 /* --------------------- BRANDING PAGE SECTION ------------------------- */
