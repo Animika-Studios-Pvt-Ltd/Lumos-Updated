@@ -1,5 +1,4 @@
-/* Navbar & Navigation Section */
-
+/* ------------------------ Navbar & Navigation Section ------------------------ */
 document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname;
   const page = path.split("/").pop() || "index.html";
@@ -139,8 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-/* Banner/Hero Section */
-
+/* ------------------------ Banner/Hero Section------------------------ */
 (function () {
   "use strict";
 
@@ -219,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
             goToSlide(currentSlide - 1);
           }
         },
-        { passive: false }
+        { passive: false },
       );
 
       // Keep currentSlide in sync when snap CSS or other means change scroll position
@@ -230,7 +228,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         slides.forEach((slide, index) => {
           const distance = Math.abs(
-            slide.getBoundingClientRect().top - containerTop
+            slide.getBoundingClientRect().top - containerTop,
           );
           if (distance < minDistance) {
             minDistance = distance;
@@ -298,7 +296,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initCarouselPagination("carouselCaptionsInner", "pagination-status");
   initCarouselPagination("carouselCaptionsInner1", "pagination-status1");
 
-  // Accordion
+  /* ------------------------ Accordion Section ------------------------ */
   const headers = document.querySelectorAll(".accordion-header");
   headers.forEach((header) => {
     header.addEventListener("click", () => {
@@ -318,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Back to Top
+  /* ------------------------ Back to Top ------------------------ */
   const btn = document.getElementById("backToTop");
   if (btn) {
     const showAfter = 500;
@@ -332,7 +330,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Cookies
+/* ------------------------ Cookies Section ------------------------ */
 window.onload = function () {
   if (!localStorage.getItem("cookiesAccepted")) {
     document.getElementById("cookie-popup").classList.add("visible");
@@ -343,3 +341,29 @@ function acceptCookies() {
   localStorage.setItem("cookiesAccepted", "true");
   document.getElementById("cookie-popup").classList.remove("visible");
 }
+
+/* ------------------------ Side Button Section ------------------------ */
+(function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.getElementById("backToTop");
+    const triggerSection = document.getElementById("triggerSection");
+
+    if (!scrollBtn || !triggerSection) return;
+
+    scrollBtn.style.display = "none";
+
+    window.addEventListener("scroll", function () {
+      const sectionTop = triggerSection.offsetTop;
+      const scrollY = window.scrollY || window.pageYOffset;
+
+      if (scrollY >= sectionTop) {
+        scrollBtn.style.display = "block";
+      } else {
+        scrollBtn.style.display = "none";
+      }
+    });
+    scrollBtn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+})();
