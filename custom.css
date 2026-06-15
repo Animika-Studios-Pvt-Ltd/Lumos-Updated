@@ -850,6 +850,127 @@ li a.active {
   }
 }
 
+/* --------------------- LET'S CONNECT SECTION ------------------------- */
+.lets-connect-section {
+  background: linear-gradient(45deg, #f47526, #fcac53);
+  color: #fff;
+  padding: 40px 0;
+}
+
+.lets-connect-section h2 {
+  line-height: 1.1;
+}
+
+.lets-connect-section p {
+  font-size: 24px;
+  width: 80%;
+  margin-bottom: 0px;
+}
+
+.lets-connect-section a {
+  border: 1px solid #fff;
+  padding: 8px 15px;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #fff;
+  font-family: "barlow-regular";
+  text-transform: uppercase;
+  display: inline-block;
+  width: fit-content;
+  margin-top: 20px;
+}
+
+@media (max-width: 1440px) {
+  .lets-connect-section p {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1366px) {
+  .lets-connect-section p {
+    width: 85%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .lets-connect-section {
+    padding: 35px 0;
+  }
+
+  .lets-connect-section p {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  .lets-connect-section a {
+    padding: 7px 14px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 991px) {
+  .lets-connect-section {
+    padding: 30px 0;
+  }
+
+  .lets-connect-section p {
+    font-size: 18px;
+    width: 100%;
+  }
+
+  .lets-connect-section a {
+    padding: 7px 13px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .lets-connect-section {
+    padding: 25px 0;
+  }
+
+  .lets-connect-section p {
+    font-size: 17px;
+    width: 100%;
+  }
+
+  .lets-connect-section a {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 575px) {
+  .lets-connect-section {
+    padding: 20px 0;
+  }
+
+  .lets-connect-section p {
+    font-size: 16px;
+  }
+
+  .lets-connect-section a {
+    padding: 6px 11px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lets-connect-section a {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .lets-connect-section a {
+    padding: 5px 9px;
+    font-size: 11px;
+  }
+}
+
 /* ---------------------  PALOWISE PAGE SECTION ------------------------- */
 /* HERO SECTION */
 .palowise-hero {
@@ -2017,18 +2138,6 @@ li a.active {
   text-transform: uppercase;
 }
 
-.layer-8 a {
-  border: 1px solid #fff;
-  padding: 8px 15px;
-  border-radius: 25px;
-  font-size: 18px;
-  color: #fff;
-  font-family: "barlow-regular";
-  text-transform: uppercase;
-  width: fit-content;
-  margin: 0 auto;
-}
-
 .layer-3 {
   margin: 70px 0;
 }
@@ -2227,21 +2336,6 @@ li a.active {
 .layer-6 a {
   position: relative;
   left: 250px;
-}
-
-.layer-8 {
-  background: linear-gradient(45deg, #f47526, #fcac53);
-  color: #fff;
-  padding: 40px 0;
-}
-
-.layer-8 p {
-  font-size: 25px;
-  padding-right: 220px;
-}
-
-.layer-8 a {
-  margin: 20px 0;
 }
 
 .footer {
@@ -3049,7 +3143,6 @@ li a.active {
     margin-bottom: 10px;
   }
 
-  .layer-8 a,
   .layer-4 a,
   .layer-6 a {
     padding: 4px 12px;
@@ -3160,15 +3253,6 @@ li a.active {
 
   .layer-6 a {
     left: 0px;
-  }
-
-  .layer-8 p {
-    font-size: 20px;
-    padding-right: 0px;
-  }
-
-  .layer-8 a {
-    margin: 0px 10px;
   }
 
   .footer-txt span {
@@ -3428,7 +3512,6 @@ li a.active {
   .layer-4 a,
   .layer-6 a,
   .indus-more a,
-  .layer-8 a,
   .links a,
   .nav-pills-custom .nav-link {
     font-size: 15px;
@@ -3446,15 +3529,6 @@ li a.active {
 
   .wwd-img-2 {
     margin-top: 30px;
-  }
-
-  .layer-8 p {
-    font-size: 20px;
-    padding-right: 0px;
-  }
-
-  .layer-8 {
-    padding: 20px 0;
   }
 
   .footer-txt span {
@@ -3618,7 +3692,6 @@ li a.active {
   p,
   .wwd-txt-1 a,
   .wwd-txt-2 a,
-  .layer-8 a,
   .links a,
   .brand-slide li,
   .brand-slide li,
@@ -3679,11 +3752,6 @@ li a.active {
   .sim-txt {
     padding: 40px 140px 60px 60px;
     margin-left: -270px;
-  }
-
-  .layer-8 p {
-    font-size: 20px;
-    padding-right: 170px;
   }
 
   .footer-txt span {
@@ -3792,7 +3860,6 @@ li a.active {
     line-height: 50px;
   }
 
-  .layer-8 a,
   .indus-more a,
   .wwd-txt-1 a,
   .wwd-txt-2 a {
@@ -3862,11 +3929,6 @@ li a.active {
   .sim-txt {
     padding: 50px 170px 50px 85px;
     margin-left: -290px;
-  }
-
-  .layer-8 p {
-    font-size: 22px;
-    padding-right: 100px;
   }
 
   .footer-txt span {
@@ -3990,11 +4052,6 @@ li a.active {
     margin-left: -320px;
   }
 
-  .layer-8 p {
-    font-size: 23px;
-    padding-right: 230px;
-  }
-
   .about-txt-1 {
     margin-left: -230px;
     padding: 0px 50px 30px 50px;
@@ -4093,11 +4150,6 @@ li a.active {
 
   .sim-txt {
     margin-left: -320px;
-  }
-
-  .layer-8 p {
-    font-size: 23px;
-    padding-right: 255px;
   }
 
   .arrow {
