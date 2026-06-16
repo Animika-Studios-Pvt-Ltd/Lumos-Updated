@@ -125,8 +125,7 @@ li a.active {
 }
 
 /* ALL SECTIONS CODE */
-.back a,
-.palowise a {
+.back a {
   background: linear-gradient(45deg, #f37022, #fbaa4f);
   padding: 8px 15px;
   border-radius: 25px;
@@ -180,8 +179,7 @@ li a.active {
   transform: rotate(315deg);
 }
 
-.layer-3 p,
-.palowise span {
+.layer-3 p {
   font-family: "barlowcondensed-regular";
   font-size: 30px;
 }
@@ -731,10 +729,6 @@ li a.active {
 
 .portfolio-container {
   padding: 0 205px;
-}
-
-.palowise {
-  padding: 40px 0 10px 0;
 }
 
 @media (max-width: 767px) {
