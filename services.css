@@ -8,7 +8,7 @@
 }
 
 .content-2 {
-  display: none;
+  display: none !important;
 }
 
 .content-txt {
@@ -47,7 +47,7 @@
 }
 
 .tech-2 {
-  display: none;
+  display: none !important;
 }
 
 .tech-txt {
@@ -74,13 +74,13 @@
   -webkit-text-fill-color: #0000;
 }
 
-@media (min-width: 1731px) and (max-width: 1830px) {
+@media (max-width: 1830px) {
   .content-txt {
     width: 450px;
   }
 }
 
-@media (min-width: 1600px) and (max-width: 1730px) {
+@media (max-width: 1730px) {
   .services-section {
     padding: 20px 80px;
   }
@@ -98,7 +98,7 @@
   }
 }
 
-@media (min-width: 1500px) and (max-width: 1599px) {
+@media (max-width: 1599px) {
   .services-section {
     padding: 20px 50px;
   }
@@ -119,7 +119,7 @@
   }
 }
 
-@media (min-width: 1401px) and (max-width: 1499px) {
+@media (max-width: 1499px) {
   .services-section {
     padding: 20px 50px;
   }
@@ -139,7 +139,7 @@
   }
 }
 
-@media (min-width: 1321px) and (max-width: 1400px) {
+@media (max-width: 1400px) {
   .services-section {
     padding: 20px 50px;
   }
@@ -165,7 +165,7 @@
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1320px) {
+@media (max-width: 1320px) {
   .services-section {
     padding: 20px 20px;
   }
@@ -191,7 +191,7 @@
   }
 }
 
-@media (min-width: 1100px) and (max-width: 1199px) {
+@media (max-width: 1199px) {
   .services-section {
     padding: 20px 20px;
   }
@@ -217,7 +217,7 @@
   }
 }
 
-@media (min-width: 992px) and (max-width: 1099px) {
+@media (max-width: 1099px) {
   .services-section {
     padding: 20px 20px;
   }
@@ -244,104 +244,256 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
   .services-section {
-    padding: 20px 0px;
+    padding: 20px 15px;
   }
 
-  .content-txt {
-    top: -250px;
-    width: 400px;
-    left: 320px;
+  .content,
+  .market,
+  .tech-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   }
 
-  .market {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .market-txt {
-    top: -280px;
-    padding: 0 37px;
-  }
-
-  .tech-1 {
-    display: none;
-  }
-
-  .tech-2 {
+  .services-section img {
+    width: 100%;
+    height: auto;
     display: block;
   }
 
-  .tech-txt {
-    top: -230px;
-    padding: 0 40px;
-    width: 500px;
+  .services-section .tech-1 {
+    display: none !important;
   }
 
-  .tech-txt h3 {
-    margin-bottom: 15px;
+  .services-section .tech-2 {
+    display: block !important;
+  }
+
+  .market {
+    padding-top: 0px;
+  }
+
+  .content-txt,
+  .market-txt,
+  .tech-txt {
+    position: absolute;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 20px !important;
+    box-sizing: border-box;
+    border-radius: 15px;
+    color: #fff;
+    margin: 0 !important;
+  }
+
+  .content-txt {
+    width: 50% !important;
+    left: auto !important;
+    right: 0 !important;
+  }
+
+  .tech-txt {
+    width: 60% !important;
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  .market-txt {
+    justify-content: flex-start !important;
+    padding-top: 25px !important;
   }
 
   .content-txt h3,
   .market-txt h3,
   .tech-txt h3 {
-    font-size: 16px;
+    font-size: 24px !important;
+    margin-top: 0 !important;
+    margin-bottom: 12px !important;
+    line-height: 1.2 !important;
   }
 
-  .content-txt h3,
-  .market-txt h3 {
-    font-size: 15px;
+  .content-txt p,
+  .market-txt p,
+  .tech-txt p {
+    font-size: 16px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .tech-txt a,
+  .content-txt a,
+  .market-txt a {
+    color: #85cef9;
   }
 }
 
 @media (max-width: 767px) {
-  .services-section {
-    padding: 20px 0px;
-  }
-
-  .content-1 {
-    display: none;
-  }
-
-  .content-2 {
-    display: block;
-  }
-
-  .content-txt {
-    top: -360px;
-    width: auto;
-    left: 0px;
-    margin: 0 20px;
-    padding: 0 0 10px 0;
-  }
-
-  .content-txt h3 {
-    margin-top: 10px;
-  }
-
-  .market {
-    font-size: 16px;
+  .content-txt,
+  .market-txt,
+  .tech-txt {
+    padding: 20px 25px !important;
   }
 
   .market-txt {
-    top: -270px;
-    padding: 0 20px;
+    padding-top: 20px !important;
   }
 
-  .market-txt h3 {
-    margin-top: 10px;
+  .content-txt h3,
+  .market-txt h3,
+  .tech-txt h3 {
+    font-size: 20px !important;
+    margin-bottom: 8px !important;
+  }
+
+  .content-txt p,
+  .market-txt p,
+  .tech-txt p {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    margin-bottom: 8px !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .content,
+  .market,
+  .tech-card {
+    width: 95% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .content-txt,
+  .tech-txt {
+    width: 100% !important;
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  .services-section .content-1 {
+    display: none !important;
+  }
+
+  .services-section .content-2 {
+    display: block !important;
+  }
+
+  .services-section .tech-1 {
+    display: block !important;
+  }
+
+  .services-section .tech-2 {
+    display: none !important;
+  }
+
+  .content-txt,
+  .market-txt,
+  .tech-txt {
+    padding: 15px 20px !important;
+  }
+
+  .content-txt {
+    justify-content: flex-end !important;
+    padding-bottom: 80px !important;
+  }
+
+  .market-txt {
+    padding-top: 15px !important;
   }
 
   .tech-txt {
-    margin-top: -580px;
-    height: 606px;
-    top: 0;
-    padding: 0 20px;
+    justify-content: flex-start !important;
+    padding-top: 45px !important;
   }
 
+  .content-txt h3,
+  .market-txt h3,
   .tech-txt h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 24px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .content-txt p,
+  .market-txt p,
+  .tech-txt p {
+    font-size: 18px !important;
+    line-height: 1.35 !important;
+    margin-bottom: 6px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .market-txt {
+    justify-content: center !important;
+  }
+
+  .content-txt,
+  .market-txt,
+  .tech-txt {
+    padding: 10px 15px !important;
+  }
+
+  .content-txt {
+    padding-bottom: 80px !important;
+  }
+
+  .tech-txt {
+    padding-top: 25px !important;
+  }
+
+  .content-txt h3,
+  .market-txt h3,
+  .tech-txt h3 {
+    font-size: 20px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .content-txt p,
+  .market-txt p,
+  .tech-txt p {
+    font-size: 14px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 4px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  .content-txt,
+  .market-txt,
+  .tech-txt {
+    padding: 8px 12px !important;
+  }
+
+  .content-txt {
+    padding-bottom: 80px !important;
+  }
+
+  .tech-txt {
+    padding-top: 15px !important;
+  }
+
+  .content-txt h3,
+  .market-txt h3,
+  .tech-txt h3 {
+    font-size: 18px !important;
+    margin-bottom: 3px !important;
+  }
+
+  .content-txt p,
+  .market-txt p,
+  .tech-txt p {
+    font-size: 14px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 3px !important;
   }
 }
