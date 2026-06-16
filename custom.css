@@ -3,6 +3,7 @@
 @import "extra.css";
 @import "footer.css";
 @import "example.css";
+@import "services.css";
 
 @font-face {
   font-family: "barlowcondensed-medium";
@@ -203,56 +204,6 @@ li a.active {
   text-transform: uppercase;
 }
 
-.layer-5 {
-  padding: 20px 155px;
-}
-
-.market {
-  padding-top: 16px;
-}
-
-.layer-5 img {
-  border-radius: 15px;
-}
-
-.content-txt {
-  position: relative;
-  height: 0;
-  top: -310px;
-  color: #fff;
-  width: 510px;
-  left: 500px;
-}
-
-.market-txt {
-  position: relative;
-  top: -385px;
-  height: 0;
-  color: #fff;
-  padding: 0 50px;
-}
-
-.content-txt h3,
-.market-txt h3,
-.tech-txt h3 {
-  font-size: 25px;
-  margin-bottom: 35px;
-}
-
-.content-txt a,
-.market-txt a,
-.tech-txt a {
-  color: #85cef9;
-}
-
-.tech-txt {
-  position: relative;
-  height: 0;
-  color: #fff;
-  top: -800px;
-  padding: 0 60px;
-}
-
 .down:hover {
   border: 2px solid #f56712;
 }
@@ -272,8 +223,6 @@ li a.active {
   border-color: #fff;
 }
 
-.tech-2,
-.content-2,
 .vision-2 {
   display: none;
 }
@@ -703,15 +652,6 @@ li a.active {
   margin-bottom: 15px;
 }
 
-.content-txt a:hover,
-.market-txt a:hover,
-.tech-txt a:hover {
-  background: linear-gradient(45deg, #e95c01, #f4a304);
-  background: fill;
-  background-clip: text;
-  -webkit-text-fill-color: #0000;
-}
-
 .team h2 {
   position: relative;
   top: 40px;
@@ -762,53 +702,16 @@ li a.active {
     width: auto;
   }
 
-  .layer-5 {
-    padding: 20px 0px;
-  }
-
-  .content-1,
   .vision-1 {
     display: none;
   }
 
-  .content-2,
   .vision-2 {
     display: block;
   }
 
-  .content-txt {
-    top: -360px;
-    width: auto;
-    left: 0px;
-    margin: 0 20px;
-  }
-
-  .market-txt {
-    top: -270px;
-    padding: 0 20px;
-  }
-
-  .tech-txt {
-    margin-top: -580px;
-    height: 606px;
-    top: 0;
-    padding: 0 20px;
-  }
-
-  .market,
-  .content-txt {
-    padding: 0 0 10px 0;
-  }
-
   p {
     font-size: 16px;
-  }
-
-  .content-txt h3,
-  .market-txt h3,
-  .tech-txt h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
   }
 
   .about-img {
@@ -956,9 +859,6 @@ li a.active {
   }
 
   h3,
-  .content-txt h3,
-  .market-txt h3,
-  .tech-txt h3,
   .brand-txt p,
   .indus-txt p {
     font-size: 16px;
@@ -969,46 +869,6 @@ li a.active {
   .brand-slide li,
   .benefits li {
     font-size: 16px;
-  }
-
-  .layer-5 {
-    padding: 20px 0px;
-  }
-
-  .content-txt {
-    top: -250px;
-    width: 400px;
-    left: 320px;
-  }
-
-  .content-txt h3,
-  .market-txt h3,
-  .tech-txt h3 {
-    margin-bottom: 15px;
-  }
-
-  .tech-txt {
-    top: -230px;
-    padding: 0 40px;
-    width: 500px;
-  }
-
-  .market-txt {
-    top: -280px;
-    padding: 0 37px;
-  }
-
-  .market {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .tech-1 {
-    display: none;
-  }
-
-  .tech-2 {
-    display: block;
   }
 
   .indus-more a,
@@ -1171,33 +1031,6 @@ li a.active {
     width: auto;
   }
 
-  .layer-5 {
-    padding: 20px 20px;
-  }
-
-  .content-txt {
-    top: -230px;
-    width: 340px;
-    left: 260px;
-  }
-
-  .content-txt h3,
-  .market-txt h3,
-  .tech-txt h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .market-txt {
-    top: -250px;
-    padding: 0 15px;
-  }
-
-  .tech-txt {
-    top: -500px;
-    padding: 0 15px;
-  }
-
   .about-txt-1 {
     margin-left: -200px;
     margin-top: 35px;
@@ -1312,32 +1145,6 @@ li a.active {
     font-size: 16px;
   }
 
-  .layer-5 {
-    padding: 20px 20px;
-  }
-
-  .content-txt {
-    top: -265px;
-    width: 400px;
-    left: 320px;
-  }
-
-  .market-txt {
-    top: -275px;
-    padding: 0 15px;
-  }
-
-  .content-txt h3,
-  .market-txt h3,
-  .tech-txt h3 {
-    margin-bottom: 20px;
-  }
-
-  .tech-txt {
-    top: -575px;
-    padding: 0 15px;
-  }
-
   .about-txt-1 {
     margin-left: -200px;
     padding: 0px 65px 30px 65px;
@@ -1402,32 +1209,6 @@ li a.active {
     font-size: 20px;
   }
 
-  .layer-5 {
-    padding: 20px 20px;
-  }
-
-  .content-txt {
-    top: -290px;
-    width: 400px;
-    left: 340px;
-  }
-
-  .content-txt h3,
-  .market-txt h3,
-  .tech-txt h3 {
-    margin-bottom: 10px;
-  }
-
-  .market-txt {
-    top: -300px;
-    padding: 0 26px;
-  }
-
-  .tech-txt {
-    top: -615px;
-    padding: 0 15px;
-  }
-
   .about-txt-1 {
     margin-left: -230px;
     padding: 0px 50px 30px 50px;
@@ -1487,32 +1268,6 @@ li a.active {
 
   h3 {
     font-size: 20px;
-  }
-
-  .layer-5 {
-    padding: 20px 50px;
-  }
-
-  .content-txt {
-    top: -280px;
-    width: 410px;
-    left: 360px;
-  }
-
-  .content-txt h3,
-  .market-txt h3,
-  .tech-txt h3 {
-    margin-bottom: 10px;
-  }
-
-  .market-txt {
-    top: -310px;
-    padding: 0 37px;
-  }
-
-  .tech-txt {
-    top: -625px;
-    padding: 0 20px;
   }
 
   .about-txt-1 {
@@ -1587,24 +1342,6 @@ li a.active {
     line-height: 55px;
   }
 
-  .layer-5 {
-    padding: 20px 50px;
-  }
-
-  .content-txt {
-    width: 420px;
-    left: 390px;
-  }
-
-  .market-txt {
-    top: -340px;
-  }
-
-  .tech-txt {
-    top: -680px;
-    padding: 0 30px;
-  }
-
   .about-txt-1 {
     padding: 0px 80px 30px 80px;
   }
@@ -1641,25 +1378,6 @@ li a.active {
     font-size: 80px;
   }
 
-  .layer-5 {
-    padding: 20px 50px;
-  }
-
-  .content-txt {
-    width: 440px;
-    left: 440px;
-  }
-
-  .market-txt {
-    top: -350px;
-    padding: 0 25px;
-  }
-
-  .tech-txt {
-    top: -705px;
-    padding: 0 30px;
-  }
-
   .layer-3 {
     margin: 30px 0;
   }
@@ -1691,22 +1409,6 @@ li a.active {
 }
 
 @media (min-width: 1600px) and (max-width: 1730px) {
-  .layer-5 {
-    padding: 20px 80px;
-  }
-
-  .content-txt {
-    width: 410px;
-  }
-
-  .market-txt {
-    top: -360px;
-  }
-
-  .tech-txt {
-    top: -730px;
-  }
-
   .portfolio-images {
     margin: 0 80px 30px 80px;
   }
@@ -1721,10 +1423,6 @@ li a.active {
 }
 
 @media (min-width: 1731px) and (max-width: 1830px) {
-  .content-txt {
-    width: 450px;
-  }
-
   .portfolio-inner-images {
     justify-content: flex-start;
     gap: 20px;
