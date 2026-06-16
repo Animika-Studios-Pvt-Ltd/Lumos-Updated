@@ -1,4 +1,4 @@
-/* About Section */
+/* --------------------- ABOUT SECTION ------------------------- */
 .about-section {
   background: linear-gradient(45deg, #fcac53, #f47526);
   padding: 60px 0px;
@@ -121,7 +121,7 @@
   }
 }
 
-/* LUMOS AND PALOWISE HOME PAGE SECTION */
+/* --------------------- LUMOS AND PALOWISE HOME PAGE SECTION ------------------------- */
 .lumos-and-palowise-section {
   background: #fff;
   padding: 50px 0;
@@ -555,6 +555,468 @@
   .lumos-anil-kumar-section .lumos-anil-kumar-button {
     font-size: 12px;
     padding: 4px 10px;
+  }
+}
+
+/* --------------------- WHAT WE DO SECTION ------------------------- */
+.what-we-do-section {
+  background-color: #012348;
+  color: #fff;
+  padding: 40px 0 100px 0;
+}
+
+.what-we-do-section h2 {
+  margin-bottom: 10px;
+}
+
+.what-we-do-section p {
+  margin-bottom: 20px;
+}
+
+.what-we-do-section .button {
+  display: inline-block;
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-family: "barlow-regular";
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.what-we-do-section .row > div {
+  position: relative;
+}
+
+.what-we-do-business-img img {
+  border-radius: 40px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.what-we-do-branding-img img {
+  border-radius: 40px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+}
+
+.what-we-do-business-txt {
+  background: #012348;
+  border-radius: 15px;
+  width: 430px;
+  position: absolute;
+  top: -15px;
+  left: 210px;
+  padding: 30px 0 15px 15px;
+  z-index: 2;
+}
+
+.what-we-do-business-txt p {
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.what-we-do-business-txt a {
+  margin-bottom: 0px;
+  line-height: 1.2;
+}
+
+.what-we-do-branding-img {
+  text-align: right;
+}
+
+.what-we-do-branding-txt {
+  background: #012348;
+  border-radius: 15px;
+  width: 410px;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  padding: 15px 10px 30px 0;
+  z-index: 2;
+}
+
+.what-we-do-branding-txt p {
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.what-we-do-branding-txt a {
+  margin-bottom: 0px;
+  line-height: 1.2;
+}
+
+.what-we-do-business-txt a,
+.what-we-do-branding-txt a {
+  display: inline-block;
+  line-height: 1.2;
+  font-family: "figtree-light";
+  text-transform: unset;
+  background: transparent;
+  color: #85cef9;
+  border: 0px;
+  padding: 0px;
+  border-radius: 0px;
+  font-size: 18px;
+  margin: auto;
+}
+
+.what-we-do-business-txt a:hover,
+.what-we-do-branding-txt a:hover {
+  background: linear-gradient(45deg, #e95c01, #f4a304);
+  background: fill;
+  background-clip: text;
+  -webkit-text-fill-color: #0000;
+}
+
+@media (max-width: 1440px) {
+  .what-we-do-section .button {
+    font-size: 18px;
+    padding: 8px 18px;
+  }
+
+  .what-we-do-business-txt {
+    width: 410px;
+    left: 200px;
+    padding: 22px 22px;
+  }
+
+  .what-we-do-branding-txt {
+    width: 390px;
+    padding: 22px 22px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .what-we-do-section .button {
+    font-size: 17px;
+    padding: 7px 16px;
+  }
+
+  .what-we-do-business-txt {
+    width: 380px;
+    left: 190px;
+    padding: 20px 20px;
+  }
+
+  .what-we-do-branding-txt {
+    width: 360px;
+    padding: 20px 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .what-we-do-section .button {
+    font-size: 16px;
+    padding: 6px 14px;
+  }
+
+  .what-we-do-business-txt {
+    width: 330px;
+    left: 170px;
+    padding: 30px 0 15px 15px;
+  }
+
+  .what-we-do-branding-txt {
+    width: 310px;
+    padding: 15px 15px 30px 0;
+  }
+
+  .what-we-do-business-txt h3,
+  .what-we-do-branding-txt h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .what-we-do-business-txt p,
+  .what-we-do-branding-txt p {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .what-we-do-business-txt a,
+  .what-we-do-branding-txt a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .what-we-do-section {
+    padding: 30px 0 50px 0;
+  }
+
+  .what-we-do-section .button {
+    font-size: 15px;
+    padding: 5px 12px;
+  }
+
+  .what-we-do-section p {
+    margin-bottom: 10px;
+  }
+
+  .what-we-do-business-img {
+    text-align: left;
+  }
+
+  .what-we-do-branding-img {
+    text-align: right;
+    margin-top: 50px;
+  }
+
+  .what-we-do-business-img img {
+    margin-left: 0;
+    border-radius: 25px;
+  }
+
+  .what-we-do-branding-img img {
+    margin-left: auto;
+    border-radius: 25px;
+  }
+
+  .what-we-do-business-txt {
+    position: absolute;
+    top: -15px;
+    left: 210px;
+    right: auto;
+    bottom: auto;
+    width: 420px;
+    padding: 20px 25px;
+    z-index: 2;
+    text-align: left;
+  }
+
+  .what-we-do-branding-txt {
+    position: absolute;
+    bottom: -15px;
+    right: 210px;
+    left: auto;
+    top: auto;
+    width: 400px;
+    padding: 20px 25px;
+    z-index: 2;
+    text-align: left;
+  }
+
+  .what-we-do-business-txt h3,
+  .what-we-do-branding-txt h3 {
+    font-size: 20px;
+  }
+
+  .what-we-do-business-txt p,
+  .what-we-do-branding-txt p {
+    font-size: 17px;
+  }
+
+  .what-we-do-business-txt a,
+  .what-we-do-branding-txt a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .what-we-do-section {
+    padding: 20px 0 20px 0;
+  }
+
+  .what-we-do-section .button {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
+  .what-we-do-business-img img,
+  .what-we-do-branding-img img {
+    max-width: 320px;
+    border-radius: 15px;
+  }
+
+  .what-we-do-branding-img {
+    margin-top: 30px;
+  }
+
+  .what-we-do-business-txt {
+    position: absolute;
+    top: -10px;
+    left: 160px;
+    right: auto;
+    bottom: auto;
+    width: 300px;
+    padding: 15px 15px;
+  }
+
+  .what-we-do-branding-txt {
+    position: absolute;
+    bottom: -10px;
+    right: 160px;
+    left: auto;
+    top: auto;
+    width: 290px;
+    padding: 15px 15px;
+  }
+
+  .what-we-do-business-txt h3,
+  .what-we-do-branding-txt h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .what-we-do-business-txt p,
+  .what-we-do-branding-txt p {
+    font-size: 15px;
+  }
+
+  .what-we-do-business-txt a,
+  .what-we-do-branding-txt a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .what-we-do-section {
+    padding: 15px 0 20px 0;
+    text-align: center;
+  }
+
+  .what-we-do-section h2 {
+    margin-bottom: 6px;
+  }
+
+  .what-we-do-section .button {
+    font-size: 13px;
+    padding: 4px 10px;
+    margin-bottom: 20px;
+  }
+
+  .what-we-do-business-img {
+    text-align: left;
+  }
+
+  .what-we-do-branding-img {
+    text-align: right;
+    margin-top: 20px;
+  }
+
+  .what-we-do-business-img img {
+    width: 70%;
+    max-width: 100%;
+    margin-left: 0;
+    border-radius: 15px;
+  }
+
+  .what-we-do-branding-img img {
+    width: 70%;
+    max-width: 100%;
+    margin-left: auto;
+    border-radius: 15px;
+  }
+
+  .what-we-do-business-txt,
+  .what-we-do-branding-txt {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: auto;
+    max-width: 420px;
+    margin: -90px 10px 0px 30px;
+    padding: 12px 18px;
+    text-align: left;
+    z-index: 2;
+  }
+
+  .what-we-do-business-txt h3,
+  .what-we-do-branding-txt h3 {
+    font-size: 17px;
+    margin-bottom: 6px;
+  }
+
+  .what-we-do-business-txt p,
+  .what-we-do-branding-txt p {
+    font-size: 15px;
+    margin-bottom: 3px;
+  }
+
+  .what-we-do-business-txt a,
+  .what-we-do-branding-txt a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .what-we-do-section {
+    padding: 10px 0;
+  }
+
+  .what-we-do-section .button {
+    font-size: 12px;
+    padding: 4px 10px;
+    margin-bottom: 15px;
+  }
+
+  .what-we-do-branding-img {
+    margin-top: 15px;
+  }
+
+  .what-we-do-business-txt {
+    margin: -80px 5px 0px 20px;
+    padding: 12px 15px;
+  }
+
+  .what-we-do-branding-txt {
+    margin: -80px 20px 0px 5px;
+    padding: 12px 15px;
+  }
+
+  .what-we-do-business-txt h3,
+  .what-we-do-branding-txt h3 {
+    font-size: 16px;
+  }
+
+  .what-we-do-business-txt p,
+  .what-we-do-branding-txt p {
+    font-size: 14px;
+  }
+
+  .what-we-do-business-txt a,
+  .what-we-do-branding-txt a {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 360px) {
+  .what-we-do-section .button {
+    font-size: 11px;
+    padding: 3px 8px;
+    margin-bottom: 10px;
+  }
+
+  .what-we-do-branding-img {
+    margin-top: 10px;
+  }
+
+  .what-we-do-business-txt,
+  .what-we-do-branding-txt {
+    margin: -60px 0 10px 0;
+    padding: 10px 12px;
+  }
+
+  .what-we-do-business-txt h3,
+  .what-we-do-branding-txt h3 {
+    font-size: 15px;
+  }
+
+  .what-we-do-business-txt p,
+  .what-we-do-branding-txt p {
+    font-size: 13px;
+  }
+
+  .what-we-do-business-txt a,
+  .what-we-do-branding-txt a {
+    font-size: 12px;
   }
 }
 
