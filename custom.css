@@ -2,6 +2,7 @@
 @import "banner.css";
 @import "extra.css";
 @import "footer.css";
+@import "example.css";
 
 @font-face {
   font-family: "barlowcondensed-medium";
@@ -125,7 +126,6 @@ li a.active {
 
 /* ALL SECTIONS CODE */
 .layer-4 a,
-.layer-6 a,
 .back a,
 .palowise a {
   background: linear-gradient(45deg, #f37022, #fbaa4f);
@@ -317,28 +317,6 @@ li a.active {
   color: #fff;
   top: -800px;
   padding: 0 60px;
-}
-
-.layer-6 {
-  background: #ebebeb;
-  padding: 60px 0;
-}
-
-.layer-6 img {
-  border-radius: 50%;
-}
-
-.sim-txt {
-  background: #ebebeb;
-  padding: 60px 200px 60px 100px;
-  border-radius: 0px 0 0px 20px;
-  position: relative;
-  margin-left: -400px;
-}
-
-.layer-6 a {
-  position: relative;
-  left: 250px;
 }
 
 .down:hover {
@@ -832,8 +810,7 @@ li a.active {
     margin-bottom: 10px;
   }
 
-  .layer-4 a,
-  .layer-6 a {
+  .layer-4 a {
     padding: 4px 12px;
     font-size: 14px;
   }
@@ -895,8 +872,7 @@ li a.active {
     padding: 15px 20px;
   }
 
-  .layer-5,
-  .layer-6 {
+  .layer-5 {
     padding: 20px 0px;
   }
 
@@ -932,16 +908,6 @@ li a.active {
   .market,
   .content-txt {
     padding: 0 0 10px 0;
-  }
-
-  .sim-txt {
-    padding: 10px 0px 0px 0px;
-    border-radius: 0px 0 0px 20px;
-    margin-left: 0px;
-  }
-
-  .layer-6 a {
-    left: 0px;
   }
 
   p {
@@ -1155,17 +1121,7 @@ li a.active {
     display: block;
   }
 
-  .sim-txt {
-    padding: 25px 35px 25px 35px;
-    margin-left: -200px;
-  }
-
-  .layer-6 a {
-    left: 120px;
-  }
-
   .layer-4 a,
-  .layer-6 a,
   .indus-more a,
   .links a,
   .nav-pills-custom .nav-link {
@@ -1384,11 +1340,6 @@ li a.active {
     padding: 0 15px;
   }
 
-  .sim-txt {
-    padding: 40px 140px 60px 60px;
-    margin-left: -270px;
-  }
-
   .about-txt-1 {
     margin-left: -200px;
     margin-top: 35px;
@@ -1547,11 +1498,6 @@ li a.active {
     padding: 0 15px;
   }
 
-  .sim-txt {
-    padding: 50px 170px 50px 85px;
-    margin-left: -290px;
-  }
-
   .about-txt-1 {
     margin-left: -200px;
     padding: 0px 65px 30px 65px;
@@ -1655,11 +1601,6 @@ li a.active {
     padding: 0 15px;
   }
 
-  .sim-txt {
-    padding: 60px 200px 60px 100px;
-    margin-left: -320px;
-  }
-
   .about-txt-1 {
     margin-left: -230px;
     padding: 0px 50px 30px 50px;
@@ -1756,10 +1697,6 @@ li a.active {
     padding: 0 20px;
   }
 
-  .sim-txt {
-    margin-left: -320px;
-  }
-
   .about-txt-1 {
     margin-left: -250px;
     padding: 0px 60px 30px 60px;
@@ -1850,10 +1787,6 @@ li a.active {
     padding: 0 30px;
   }
 
-  .sim-txt {
-    margin-left: -380px;
-  }
-
   .about-txt-1 {
     padding: 0px 80px 30px 80px;
   }
@@ -1907,11 +1840,6 @@ li a.active {
   .tech-txt {
     top: -705px;
     padding: 0 30px;
-  }
-
-  .sim-txt {
-    padding: 60px 210px 60px 100px;
-    margin-left: -370px;
   }
 
   .layer-3 {
