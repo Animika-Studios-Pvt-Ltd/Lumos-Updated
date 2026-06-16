@@ -91,6 +91,8 @@
 
 .what-we-do-business-txt a,
 .what-we-do-branding-txt a {
+  display: inline-block;
+  line-height: 1.2;
   font-family: "figtree-light";
   text-transform: unset;
   background: transparent;
@@ -111,6 +113,11 @@
 }
 
 @media (max-width: 1440px) {
+  .what-we-do-section .button {
+    font-size: 18px;
+    padding: 8px 18px;
+  }
+
   .what-we-do-business-txt {
     width: 410px;
     left: 200px;
@@ -124,6 +131,11 @@
 }
 
 @media (max-width: 1366px) {
+  .what-we-do-section .button {
+    font-size: 17px;
+    padding: 7px 16px;
+  }
+
   .what-we-do-business-txt {
     width: 380px;
     left: 190px;
@@ -137,6 +149,11 @@
 }
 
 @media (max-width: 1200px) {
+  .what-we-do-section .button {
+    font-size: 16px;
+    padding: 6px 14px;
+  }
+
   .what-we-do-business-txt {
     width: 330px;
     left: 170px;
@@ -163,13 +180,21 @@
   .what-we-do-business-txt a,
   .what-we-do-branding-txt a {
     font-size: 16px;
-    line-height: 1.1;
   }
 }
 
 @media (max-width: 991px) {
   .what-we-do-section {
     padding: 30px 0 50px 0;
+  }
+
+  .what-we-do-section .button {
+    font-size: 15px;
+    padding: 5px 12px;
+  }
+
+  .what-we-do-section p {
+    margin-bottom: 10px;
   }
 
   .what-we-do-business-img {
@@ -236,6 +261,11 @@
     padding: 20px 0 20px 0;
   }
 
+  .what-we-do-section .button {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
   .what-we-do-business-img img,
   .what-we-do-branding-img img {
     max-width: 320px;
@@ -284,6 +314,21 @@
 }
 
 @media (max-width: 575px) {
+  .what-we-do-section {
+    padding: 15px 0 20px 0;
+    text-align: center;
+  }
+
+  .what-we-do-section h2 {
+    margin-bottom: 6px;
+  }
+
+  .what-we-do-section .button {
+    font-size: 13px;
+    padding: 4px 10px;
+    margin-bottom: 20px;
+  }
+
   .what-we-do-business-img {
     text-align: left;
   }
@@ -331,7 +376,7 @@
   .what-we-do-business-txt p,
   .what-we-do-branding-txt p {
     font-size: 15px;
-    margin-bottom: 0px;
+    margin-bottom: 3px;
   }
 
   .what-we-do-business-txt a,
@@ -341,6 +386,20 @@
 }
 
 @media (max-width: 480px) {
+  .what-we-do-section {
+    padding: 10px 0;
+  }
+
+  .what-we-do-section .button {
+    font-size: 12px;
+    padding: 4px 10px;
+    margin-bottom: 15px;
+  }
+
+  .what-we-do-branding-img {
+    margin-top: 15px;
+  }
+
   .what-we-do-business-txt {
     margin: -80px 5px 0px 20px;
     padding: 12px 15px;
@@ -368,6 +427,16 @@
 }
 
 @media (max-width: 360px) {
+  .what-we-do-section .button {
+    font-size: 11px;
+    padding: 3px 8px;
+    margin-bottom: 10px;
+  }
+
+  .what-we-do-branding-img {
+    margin-top: 10px;
+  }
+
   .what-we-do-business-txt,
   .what-we-do-branding-txt {
     margin: -60px 0 10px 0;
