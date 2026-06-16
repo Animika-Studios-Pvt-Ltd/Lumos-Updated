@@ -4,14 +4,24 @@
   padding: 40px 0 100px 0;
 }
 
-.what-we-do-section a {
+.what-we-do-section h2 {
+  margin-bottom: 10px;
+}
+
+.what-we-do-section p {
+  margin-bottom: 20px;
+}
+
+.what-we-do-section .button {
+  display: inline-block;
   background: linear-gradient(45deg, #f37022, #fbaa4f);
-  padding: 8px 15px;
+  padding: 8px 18px;
   border-radius: 25px;
+  font-family: "barlow-regular";
   font-size: 18px;
   color: #fff;
-  font-family: "barlow-regular";
   text-transform: uppercase;
+  margin-bottom: 40px;
 }
 
 .what-we-do-business-img img,
