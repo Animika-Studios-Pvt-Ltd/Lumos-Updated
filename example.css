@@ -170,35 +170,48 @@
 @media (max-width: 991px) {
   .what-we-do-section {
     padding: 30px 0 50px 0;
-    text-align: center;
   }
 
-  .what-we-do-business-img,
+  .what-we-do-business-img {
+    text-align: left;
+  }
+
   .what-we-do-branding-img {
-    text-align: center;
+    text-align: right;
+    margin-top: 50px;
   }
 
-  .what-we-do-business-img img,
-  .what-we-do-branding-img img {
-    margin: 0 auto;
+  .what-we-do-business-img img {
+    margin-left: 0;
     border-radius: 25px;
   }
 
-  .what-we-do-branding-img {
-    margin-top: 30px;
+  .what-we-do-branding-img img {
+    margin-left: auto;
+    border-radius: 25px;
   }
 
-  .what-we-do-business-txt,
-  .what-we-do-branding-txt {
-    position: relative;
-    top: auto;
-    bottom: auto;
-    left: auto;
+  .what-we-do-business-txt {
+    position: absolute;
+    top: -15px;
+    left: 210px;
     right: auto;
-    width: auto;
-    max-width: 420px;
-    margin: -130px 0 0 0;
+    bottom: auto;
+    width: 420px;
     padding: 20px 25px;
+    z-index: 2;
+    text-align: left;
+  }
+
+  .what-we-do-branding-txt {
+    position: absolute;
+    bottom: -15px;
+    right: 210px;
+    left: auto;
+    top: auto;
+    width: 400px;
+    padding: 20px 25px;
+    z-index: 2;
     text-align: left;
   }
 
@@ -223,24 +236,40 @@
     padding: 20px 0 20px 0;
   }
 
-  .what-we-do-section a {
-    font-size: 14px;
-  }
-
   .what-we-do-business-img img,
   .what-we-do-branding-img img {
+    max-width: 320px;
     border-radius: 15px;
   }
 
-  .what-we-do-business-txt,
+  .what-we-do-branding-img {
+    margin-top: 30px;
+  }
+
+  .what-we-do-business-txt {
+    position: absolute;
+    top: -10px;
+    left: 160px;
+    right: auto;
+    bottom: auto;
+    width: 300px;
+    padding: 15px 15px;
+  }
+
   .what-we-do-branding-txt {
-    margin: -130px 10px 0px 10px;
-    padding: 15px 20px;
+    position: absolute;
+    bottom: -10px;
+    right: 160px;
+    left: auto;
+    top: auto;
+    width: 290px;
+    padding: 15px 15px;
   }
 
   .what-we-do-business-txt h3,
   .what-we-do-branding-txt h3 {
     font-size: 18px;
+    margin-bottom: 6px;
   }
 
   .what-we-do-business-txt p,
@@ -255,10 +284,42 @@
 }
 
 @media (max-width: 575px) {
+  .what-we-do-business-img {
+    text-align: left;
+  }
+
+  .what-we-do-branding-img {
+    text-align: right;
+    margin-top: 20px;
+  }
+
+  .what-we-do-business-img img {
+    width: 70%;
+    max-width: 100%;
+    margin-left: 0;
+    border-radius: 15px;
+  }
+
+  .what-we-do-branding-img img {
+    width: 70%;
+    max-width: 100%;
+    margin-left: auto;
+    border-radius: 15px;
+  }
+
   .what-we-do-business-txt,
   .what-we-do-branding-txt {
-    margin: -90px 10px 0px 10px;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    width: auto;
+    max-width: 420px;
+    margin: -90px 10px 0px 30px;
     padding: 12px 18px;
+    text-align: left;
+    z-index: 2;
   }
 
   .what-we-do-business-txt h3,
@@ -269,20 +330,24 @@
 
   .what-we-do-business-txt p,
   .what-we-do-branding-txt p {
-    font-size: 14.5px;
-    margin-bottom: 10px;
+    font-size: 15px;
+    margin-bottom: 0px;
   }
 
   .what-we-do-business-txt a,
   .what-we-do-branding-txt a {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 480px) {
-  .what-we-do-business-txt,
+  .what-we-do-business-txt {
+    margin: -80px 5px 0px 20px;
+    padding: 12px 15px;
+  }
+
   .what-we-do-branding-txt {
-    margin: -80px 5px 0px 5px;
+    margin: -80px 20px 0px 5px;
     padding: 12px 15px;
   }
 
@@ -293,7 +358,7 @@
 
   .what-we-do-business-txt p,
   .what-we-do-branding-txt p {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 
   .what-we-do-business-txt a,
@@ -321,6 +386,6 @@
 
   .what-we-do-business-txt a,
   .what-we-do-branding-txt a {
-    font-size: 12.5px;
+    font-size: 12px;
   }
 }
