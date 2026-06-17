@@ -3248,7 +3248,7 @@
 #backToTop {
   position: fixed;
   right: 0;
-  bottom: 50%;
+  bottom: 35%;
   background-color: #000;
   color: #fff;
   width: fit-content;
