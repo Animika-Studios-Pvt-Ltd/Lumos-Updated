@@ -5978,9 +5978,9 @@ li a.active {
   padding: 40px 0;
 }
 
-.advisory-capabilities-header {
+.advisory-capabilities-sec h2 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 .advisory-capabilities-grid {
@@ -5995,7 +5995,7 @@ li a.active {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  padding: 25px 20px;
+  padding: 10px 15px 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   display: flex;
@@ -6009,30 +6009,20 @@ li a.active {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
 }
 
-.advisory-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(90deg, #f47627, #fca951);
-}
-
 .advisory-card .card-num {
   font-family: "barlowcondensed-medium";
-  font-size: 32px;
+  font-size: 36px;
   background: linear-gradient(to right, #f47627, #fca951);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .advisory-card h4 {
   font-family: "barlow-regular";
   text-transform: uppercase;
   color: #111;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   letter-spacing: 0.3px;
 }
 
@@ -6040,13 +6030,13 @@ li a.active {
   font-family: "figtree-light";
   color: #555;
   line-height: 1.5;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .advisory-card ul {
   list-style: none;
   padding-left: 0;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .advisory-card li {
@@ -6158,8 +6148,7 @@ li a.active {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 600;
+  gap: 15px;
 }
 
 .why-lumos-card h4 i {
@@ -6220,8 +6209,184 @@ li a.active {
   box-shadow: 0 8px 25px rgba(243, 112, 34, 0.3);
 }
 
+@media (max-width: 1200px) {
+  .advisory-approach-sec .approach-highlight {
+    font-size: 26px;
+  }
+  .advisory-capabilities-grid {
+    row-gap: 15px;
+  }
+  .advisory-capabilities-grid > [class*="col-"] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .advisory-card .card-num {
+    font-size: 32px;
+  }
+  .advisory-cta-content {
+    max-width: 90%;
+  }
+}
+
 @media (max-width: 991px) {
+  .advisory-hero-sec {
+    padding-bottom: 30px;
+  }
+  .advisory-approach-sec {
+    padding: 30px 0;
+  }
+  .advisory-approach-sec .approach-highlight {
+    font-size: 24px;
+  }
+  .advisory-approach-content .approach-desc {
+    width: 90%;
+  }
+  .advisory-capabilities-sec {
+    padding: 30px 0;
+  }
+  .advisory-capabilities-sec h2 {
+    margin-bottom: 30px;
+  }
+  .advisory-card .card-num {
+    font-size: 30px;
+  }
   .work-with-list {
     padding-right: 0;
+  }
+  .advisory-work-with h2,
+  .advisory-why-lumos h2 {
+    margin-bottom: 20px;
+  }
+  .advisory-highlights-sec {
+    padding: 30px 0;
+  }
+  .advisory-cta-sec {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .advisory-hero-sec {
+    padding-bottom: 25px;
+  }
+  .advisory-hero-img {
+    margin-top: 0 !important;
+    margin-bottom: 20px;
+  }
+  .advisory-txt {
+    margin: 25px 0 45px 0;
+  }
+  .advisory-approach-sec {
+    padding: 20px 0;
+  }
+  .advisory-approach-sec .approach-highlight {
+    font-size: 22px;
+  }
+  .advisory-approach-content .approach-desc {
+    width: 100%;
+    font-size: 16px;
+  }
+  .advisory-capabilities-sec {
+    padding: 20px 0;
+  }
+  .advisory-capabilities-sec h2 {
+    margin-bottom: 25px;
+  }
+  .advisory-card {
+    padding: 20px 15px;
+  }
+  .advisory-card .card-num {
+    font-size: 26px;
+  }
+  .advisory-card h4 {
+    font-size: 20px;
+  }
+  .advisory-highlights-sec {
+    padding: 20px 0;
+  }
+  .work-with-item {
+    padding: 12px 20px;
+  }
+  .work-with-item span {
+    font-size: 18px;
+  }
+  .why-lumos-card {
+    padding: 20px 15px;
+  }
+  .why-lumos-card h4 {
+    font-size: 18px;
+  }
+  .why-lumos-card h4 i {
+    font-size: 20px;
+  }
+  .advisory-cta-sec {
+    padding: 20px 0;
+  }
+  .advisory-cta-content .cta-primary-text {
+    font-size: 20px;
+  }
+  .advisory-cta-content .cta-secondary-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .advisory-hero-sec {
+    padding-bottom: 20px;
+  }
+  .advisory-txt {
+    margin: 20px 0 30px 0;
+  }
+  .advisory-approach-sec {
+    padding: 15px 0;
+  }
+  .advisory-approach-sec .approach-highlight {
+    font-size: 20px;
+  }
+  .advisory-approach-content .approach-desc {
+    font-size: 15px;
+  }
+  .advisory-capabilities-sec {
+    padding: 15px 0;
+  }
+  .advisory-capabilities-sec h2 {
+    margin-bottom: 20px;
+  }
+  .advisory-card {
+    padding: 10px 15px 15px; 
+  }
+  .advisory-card .card-num {
+    font-size: 24px;
+  }
+  .advisory-card h4 {
+    font-size: 18px;
+  }
+  .work-with-item {
+    padding: 10px 15px;
+  }
+  .work-with-item span {
+    font-size: 16px;
+  }
+  .work-with-item i {
+    font-size: 20px;
+  }
+  .why-lumos-card {
+    padding: 15px;
+  }
+  .advisory-highlights-sec {
+    padding: 15px 0;
+  }
+  .advisory-cta-sec {
+    padding: 15px 0;
+  }
+  .advisory-cta-content .cta-primary-text {
+    font-size: 18px;
+  }
+  .advisory-cta-content .cta-secondary-text {
+    font-size: 15px;
+  }
+  .advisory-cta-btn {
+    padding: 8px 15px;
+    font-size: 15px;
   }
 }
