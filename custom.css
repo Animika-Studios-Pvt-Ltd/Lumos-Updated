@@ -263,7 +263,7 @@ li a.active {
 
 .slide_navigation li a {
   display: block;
-  font-family: "barlowcondensed-medium", sans-serif;
+  font-family: "barlowcondensed-medium";
   font-size: 24px;
   text-decoration: none;
   background: none;
@@ -5778,12 +5778,12 @@ li a.active {
 .why-branding .benefits li {
   margin-bottom: 12px;
   font-size: 20px;
-  font-family: "figtree-light", sans-serif;
+  font-family: "figtree-light";
   color: #333;
 }
 
 .why-branding .benefits li span {
-  font-family: "barlowcondensed-medium", sans-serif;
+  font-family: "barlowcondensed-medium";
   background: linear-gradient(to right, #f47627, #fca951);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5895,7 +5895,7 @@ li a.active {
 }
 
 .why-content li {
-  font-family: "figtree-light", sans-serif;
+  font-family: "figtree-light";
   font-size: 22px;
   color: #333;
 }
@@ -5903,12 +5903,12 @@ li a.active {
 .why-content .benefits li {
   margin-bottom: 12px;
   font-size: 22px;
-  font-family: "figtree-light", sans-serif;
+  font-family: "figtree-light";
   color: #333;
 }
 
 .why-content .benefits li span {
-  font-family: "barlowcondensed-medium", sans-serif;
+  font-family: "barlowcondensed-medium";
   background: linear-gradient(to right, #f47627, #fca951);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -5921,5 +5921,307 @@ li a.active {
   .why-content .benefits li,
   .why-content .benefits li span {
     font-size: 18px;
+  }
+}
+
+/* --------------------- ADVISORY & CONSULTING PAGE SECTION ------------------------- */
+.advisory-hero-sec {
+  padding-bottom: 50px;
+}
+
+.advisory-hero-sec .row {
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .advisory-hero-img {
+    margin-top: 5px;
+  }
+}
+
+/* Our Approach */
+.advisory-approach-sec {
+  background: linear-gradient(45deg, #f47526, #fcac53);
+  color: #fff;
+  padding: 40px 0;
+}
+
+.advisory-approach-content {
+  text-align: center;
+}
+
+.advisory-approach-content h2 {
+  color: #fff;
+}
+
+.advisory-approach-sec .approach-highlight {
+ font-family: "barlow-regular";
+  font-size: 28px;
+  color: #fff;
+  background: none;
+  -webkit-text-fill-color: initial;
+  display: inline-block;
+  margin: 0px 0 10px 0;
+  letter-spacing: 0.5px;
+}
+
+.advisory-approach-content .approach-desc {
+  width: 80%;
+  margin: 0 auto;
+  line-height: 1.6;
+  font-family: "figtree-light";
+  color: #fff;
+}
+
+/* What we do */
+.advisory-capabilities-sec {
+  padding: 40px 0;
+}
+
+.advisory-capabilities-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.advisory-capabilities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  justify-content: center;
+}
+
+.advisory-card {
+  position: relative;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 25px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.advisory-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.advisory-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #f47627, #fca951);
+}
+
+.advisory-card .card-num {
+  font-family: "barlowcondensed-medium";
+  font-size: 32px;
+  background: linear-gradient(to right, #f47627, #fca951);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+
+.advisory-card h4 {
+  font-family: "barlow-regular";
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 15px;
+  letter-spacing: 0.3px;
+}
+
+.advisory-card .card-intro {
+  font-family: "figtree-light";
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.advisory-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.advisory-card li {
+  position: relative;
+  padding-left: 20px;
+  font-family: "figtree-light";
+  color: #444;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.advisory-card li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #f47627;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.advisory-card .outcome-box {
+  background: #fafafa;
+  border-left: 3px solid #fca951;
+  padding: 12px 15px;
+  border-radius: 4px;
+  color: #333;
+  font-family: "figtree-light";
+  margin-top: auto;
+}
+
+.advisory-card .outcome-box strong {
+  color: #f47627;
+  font-family: "barlow-semi-bold";
+}
+
+/* Who we work with and Why Lumos */
+.advisory-highlights-sec {
+  background-color: #f8f9fa;
+  padding: 40px 0;
+}
+
+.advisory-work-with h2,
+.advisory-why-lumos h2 {
+  margin-bottom: 35px;
+}
+
+.work-with-list {
+  padding-right: 30px;
+}
+
+.work-with-item {
+   background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  padding: 15px 25px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.work-with-item:hover {
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border-color: #fca951;
+}
+
+.work-with-item i {
+  font-size: 24px;
+  background: linear-gradient(135deg, #f47627, #fca951);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.work-with-item span {
+  font-family: "barlow-regular";
+  font-size: 20px;
+  color: #222;
+}
+
+.advisory-why-grid {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 18px;
+}
+
+.why-lumos-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px 20px;
+  height: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.why-lumos-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.why-lumos-card h4 {
+  font-family: "barlow-regular";
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+}
+
+.why-lumos-card h4 i {
+  color: #f47627;
+  font-size: 24px;
+}
+
+.why-lumos-card p {
+  font-family: "figtree-light";
+  color: #555;
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+/* Cta */
+.advisory-cta-sec {
+  padding: 40px 0;
+}
+
+.advisory-cta-content {
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.advisory-cta-content .cta-primary-text {
+  font-family: 'barlow-regular';
+  color: #222;
+  font-size: 24px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.advisory-cta-content .cta-secondary-text {
+  font-family: 'figtree-light';
+  color: #6c757d;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.advisory-cta-btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
+  color: #fff !important;
+  font-family: 'barlow-regular';
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 16px;
+  box-shadow: 0 4px 15px rgba(243, 112, 34, 0.2);
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.advisory-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(243, 112, 34, 0.3);
+}
+
+@media (max-width: 991px) {
+  .work-with-list {
+    padding-right: 0;
   }
 }
