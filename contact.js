@@ -1,5 +1,58 @@
 let turnstilePassed = false;
 
+document.addEventListener("DOMContentLoaded", function () {
+  const selectContainer = document.querySelector(".custom-select-container");
+  if (selectContainer) {
+    const trigger = selectContainer.querySelector(".custom-select-trigger");
+    const triggerText = trigger.querySelector("span");
+    const hiddenInput = selectContainer.querySelector("#contact-method");
+    const options = selectContainer.querySelectorAll(".custom-options-list li");
+
+    // Toggle dropdown on trigger click
+    trigger.addEventListener("click", function (e) {
+      e.stopPropagation();
+      selectContainer.classList.toggle("active");
+    });
+
+    // Handle option selection
+    options.forEach(option => {
+      option.addEventListener("click", function (e) {
+        e.stopPropagation();
+        const value = this.getAttribute("data-value");
+        const text = this.textContent;
+
+        hiddenInput.value = value;
+        triggerText.textContent = text;
+        selectContainer.classList.add("selected");
+        selectContainer.classList.remove("active");
+
+        // Remove selected class from other options
+        options.forEach(opt => opt.classList.remove("selected"));
+        this.classList.add("selected");
+      });
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", function () {
+      selectContainer.classList.remove("active");
+    });
+
+    // Handle form reset events
+    const formElement = document.getElementById("contactForm");
+    if (formElement) {
+      formElement.addEventListener("reset", function () {
+        setTimeout(() => {
+          hiddenInput.value = "";
+          triggerText.textContent = "Select Services*";
+          selectContainer.classList.remove("selected");
+          selectContainer.classList.remove("active");
+          options.forEach(opt => opt.classList.remove("selected"));
+        }, 0);
+      });
+    }
+  }
+});
+
 function onTurnstileSuccess(token) {
   turnstilePassed = true;
   checkReadyToEnable();
@@ -28,6 +81,23 @@ const submitBtn = document.getElementById("submit-button");
 
 function resetFormState() {
   form.reset();
+  
+  // Reset custom select dropdown state
+  const hiddenInput = document.getElementById("contact-method");
+  if (hiddenInput) {
+    hiddenInput.value = "";
+    const selectContainer = document.querySelector(".custom-select-container");
+    if (selectContainer) {
+      selectContainer.classList.remove("selected");
+      const triggerText = selectContainer.querySelector(".custom-select-trigger span");
+      if (triggerText) {
+        triggerText.textContent = "Select Services*";
+      }
+      const options = selectContainer.querySelectorAll(".custom-options-list li");
+      options.forEach(opt => opt.classList.remove("selected"));
+    }
+  }
+
   grecaptcha.reset();
   turnstile.reset("myForm");
   turnstilePassed = false;

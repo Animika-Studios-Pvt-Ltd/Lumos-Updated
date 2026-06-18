@@ -16,8 +16,7 @@
 
 /* Base card styling shared across layout blocks */
 .lumos-contact-page .contact-info-card,
-.lumos-contact-page .contact-map-card,
-.lumos-contact-page .contact-form-card {
+.lumos-contact-page .contact-map-card {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 16px;
@@ -48,9 +47,11 @@
 }
 
 .lumos-contact-page .contact-form-card {
-  padding: 30px 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
-  height: 100%;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0px 0px;
 }
 
 .lumos-contact-page .contact-column-left {
@@ -60,6 +61,10 @@
 @media (min-width: 992px) {
   .lumos-contact-page .contact-column-left {
     margin-bottom: 0;
+    padding-right: 40px;
+  }
+  .lumos-contact-page .contact-column-right {
+    padding-left: 40px;
   }
 }
 
@@ -69,7 +74,6 @@
   margin-top: 8px;
 }
 
-.lumos-contact-page .contact-info-title,
 .lumos-contact-page .contact-form-card h3 {
   font-family: "barlowcondensed-medium";
   text-transform: uppercase;
@@ -77,25 +81,12 @@
   letter-spacing: 0.5px;
 }
 
-.lumos-contact-page .contact-info-title {
-  font-size: 32px;
-  margin-bottom: 25px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.lumos-contact-page .contact-info-title i {
-  color: #f37022;
-  font-size: 24px;
-}
-
 .lumos-contact-page .contact-form-intro {
   font-family: "figtree-light";
   font-size: 15px;
   color: #555;
   line-height: 1.6;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   border-left: 3px solid #f37022;
   padding-left: 15px;
 }
@@ -142,7 +133,7 @@
 
 .lumos-contact-page .contact-info-icon i {
   color: #f37022;
-  font-size: 14px;
+  font-size: 18px;
   transition: color 0.3s ease;
 }
 
@@ -284,45 +275,56 @@
 /* Form Element Wrappers */
 .lumos-contact-page .input-group-custom {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 22px;
 }
 
 .lumos-contact-page .input-group-custom i {
   position: absolute;
-  left: 16px;
-  top: 15px;
-  color: #888;
-  font-size: 16px;
+  left: 0px;
+  top: 12px;
+  color: #f37022;
+  font-size: 15px;
   transition: color 0.3s ease;
 }
 
 .lumos-contact-page .input-group-custom textarea ~ i {
-  top: 18px;
+  top: 15px;
 }
 
 .lumos-contact-page .input-group-custom input,
 .lumos-contact-page .input-group-custom select,
 .lumos-contact-page .input-group-custom textarea {
-  width: 100% !important;
-  padding: 13px 16px 13px 44px !important;
-  border: 1px solid rgba(0, 0, 0, 0.08) !important;
-  background-color: #fafafa !important;
-  border-radius: 10px !important;
+  width: 100%;
+  padding: 12px 0px 8px 28px;
+  border: none;
+  border-bottom: 1px solid #f37022;
+  background-color: transparent;
+  border-radius: 0px;
   font-family: "figtree-light";
-  font-size: 15px !important;
-  color: #333 !important;
-  font-weight: normal !important;
-  outline: none !important;
-  box-sizing: border-box !important;
-  transition:
-    border-color 0.3s ease,
-    box-shadow 0.3s ease,
-    background-color 0.3s ease !important;
-  margin-bottom: 0 !important;
+  font-size: 15px;
+  color: #333;
+  font-weight: normal;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  margin-bottom: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lumos-contact-page .input-group-custom select {
+  color-scheme: light;
+}
+
+/* Custom Autofill overrides to prevent blue backgrounds */
+.lumos-contact-page .input-group-custom input:-webkit-autofill,
+.lumos-contact-page .input-group-custom select:-webkit-autofill,
+.lumos-contact-page .input-group-custom textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset !important;
+  -webkit-text-fill-color: #333 !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .lumos-contact-page .input-group-custom textarea {
-  min-height: 120px !important;
   resize: vertical !important;
 }
 
@@ -332,16 +334,92 @@
   font-weight: 300 !important;
 }
 
-/* Custom Dropdown Arrow */
-.lumos-contact-page .input-group-custom select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+/* Custom select container styles */
+.lumos-contact-page .custom-select-container {
+  cursor: pointer;
 }
 
-.lumos-contact-page .input-group-custom select:invalid,
-.lumos-contact-page .input-group-custom select option[value=""] {
+.lumos-contact-page .custom-select-trigger {
+  width: 100% !important;
+  padding: 12px 0px 8px 28px !important;
+  border-bottom: 1px solid #f37022 !important;
+  font-family: "figtree-light";
+  font-size: 15px !important;
   color: #999 !important;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.lumos-contact-page .custom-select-container.active .custom-select-trigger {
+  border-bottom: 1.5px solid #f37022 !important;
+}
+
+.lumos-contact-page .custom-select-container.selected .custom-select-trigger {
+  color: #333 !important;
+}
+
+.lumos-contact-page .custom-options-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-top: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 8px 8px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  z-index: 100;
+  display: none;
+  max-height: 250px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #f1f1f1;
+}
+
+.lumos-contact-page .custom-options-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.lumos-contact-page .custom-options-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.lumos-contact-page .custom-options-list::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.lumos-contact-page .custom-options-list::-webkit-scrollbar-thumb:hover {
+  background: #f37022;
+}
+
+.lumos-contact-page .custom-select-container.active .custom-options-list {
+  display: block;
+}
+
+.lumos-contact-page .custom-options-list li {
+  padding: 10px 16px;
+  font-family: "figtree-light";
+  font-size: 14.5px;
+  color: #333;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  text-align: left;
+}
+
+.lumos-contact-page .custom-options-list li:hover {
+  background-color: #f37022;
+  color: #ffffff;
+}
+
+.lumos-contact-page .custom-options-list li.selected {
+  background-color: #f37022;
+  color: #ffffff;
 }
 
 .lumos-contact-page .input-group-custom.select-wrapper::after {
@@ -351,15 +429,15 @@
   font-size: 12px;
   color: #888;
   position: absolute;
-  right: 18px;
-  top: 16px;
+  right: 0px;
+  top: 14px;
   pointer-events: none;
   transition:
     transform 0.3s ease,
     color 0.3s ease;
 }
 
-.lumos-contact-page .input-group-custom.select-wrapper:focus-within::after {
+.lumos-contact-page .select-wrapper.custom-select-container.active::after {
   color: #f37022;
   transform: rotate(180deg);
 }
@@ -368,15 +446,16 @@
 .lumos-contact-page .input-group-custom input:focus,
 .lumos-contact-page .input-group-custom select:focus,
 .lumos-contact-page .input-group-custom textarea:focus {
-  border-color: #f37022 !important;
-  box-shadow: 0 0 0 4px rgba(243, 112, 34, 0.12) !important;
-  background-color: #ffffff !important;
+  border-bottom: 1.5px solid #f37022;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
 }
 
 .lumos-contact-page .input-group-custom input:focus ~ i,
 .lumos-contact-page .input-group-custom select:focus ~ i,
 .lumos-contact-page .input-group-custom textarea:focus ~ i {
-  color: #f37022 !important;
+  color: #f37022;
 }
 
 .lumos-contact-page .g-recaptcha,
@@ -388,40 +467,40 @@
 
 /* Submit Button Rules */
 .lumos-contact-page button[type="submit"] {
-  background: linear-gradient(135deg, #f37022, #fbaa4f) !important;
-  color: #ffffff !important;
-  border: none !important;
-  padding: 10px 20px !important;
+  background: linear-gradient(135deg, #f37022, #fbaa4f);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
   font-family: "barlow-semi-bold";
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  border-radius: 30px !important;
-  cursor: pointer !important;
-  width: auto !important;
-  display: inline-flex !important;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  width: auto;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
-  box-shadow: 0 4px 15px rgba(243, 112, 34, 0.25) !important;
-  margin: 0 !important;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 15px rgba(243, 112, 34, 0.25);
+  margin: 0;
 }
 
 .lumos-contact-page button[type="submit"]:hover:not(:disabled) {
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 25px rgba(243, 112, 34, 0.35) !important;
-  background: linear-gradient(135deg, #e05e10, #fa9b3b) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(243, 112, 34, 0.35);
+  background: linear-gradient(135deg, #e05e10, #fa9b3b);
 }
 
 .lumos-contact-page button[type="submit"]:active:not(:disabled) {
-  transform: translateY(1px) !important;
-  box-shadow: 0 2px 10px rgba(243, 112, 34, 0.2) !important;
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(243, 112, 34, 0.2);
 }
 
 .lumos-contact-page button[type="submit"]:disabled {
-  background: #e0e0e0 !important;
-  color: #a0a0a0 !important;
-  cursor: not-allowed !important;
-  box-shadow: none !important;
+  background: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
 /* Form Success/Error Alert Message */
@@ -457,33 +536,28 @@
   .lumos-contact-page .heading {
     margin-bottom: 25px;
   }
-  
+
   .lumos-contact-page .heading h2 {
     font-size: 44px;
   }
-  
+
   .lumos-contact-page .contact-info-card {
     padding: 20px 25px;
     margin-bottom: 25px;
   }
 
   .lumos-contact-page .contact-map-card {
-  margin-bottom: 0px;
+    margin-bottom: 0px;
   }
-  
+
   .lumos-contact-page .contact-column-left {
     margin-bottom: 25px;
   }
-  
+
   .lumos-contact-page .contact-form-card {
-    padding: 25px 20px;
+    padding: 10px 0px;
   }
-  
-  .lumos-contact-page .contact-info-title {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-  
+
   .lumos-contact-page .contact-form-card h3 {
     font-size: 32px;
   }
@@ -493,52 +567,61 @@
   .lumos-contact-page .heading {
     margin-bottom: 20px;
   }
-  
+
   .lumos-contact-page .heading h2 {
     font-size: 38px;
   }
-  
-  .lumos-contact-page .contact-info-card,
-  .lumos-contact-page .contact-form-card {
+
+  .lumos-contact-page .contact-info-card {
     padding: 20px;
   }
-  
+
+  .lumos-contact-page .contact-form-card {
+    padding: 10px 0px;
+  }
+
   .lumos-contact-page .contact-info-card,
   .lumos-contact-page .contact-column-left {
     margin-bottom: 20px;
   }
-  
-  .lumos-contact-page .contact-info-title,
+
   .lumos-contact-page .contact-form-card h3 {
     font-size: 26px;
     margin-bottom: 15px;
   }
-  
+
   .lumos-contact-page .contact-info-content h4 {
     font-size: 14px;
   }
-  
+
   .lumos-contact-page .contact-info-content p {
     font-size: 15px;
   }
-  
+
+  .lumos-contact-page .input-group-custom {
+    margin-bottom: 18px;
+  }
+
+  .lumos-contact-page .input-group-custom i {
+    top: 10px;
+    font-size: 14px;
+  }
+
+  .lumos-contact-page .input-group-custom textarea ~ i {
+    top: 13px;
+  }
+
   .lumos-contact-page .input-group-custom input,
   .lumos-contact-page .input-group-custom select,
-  .lumos-contact-page .input-group-custom textarea {
-    padding: 12px 16px 12px 42px !important;
-    font-size: 14px !important;
+  .lumos-contact-page .input-group-custom textarea,
+  .lumos-contact-page .custom-select-trigger {
+    padding: 10px 0px 6px 24px;
+    font-size: 14px;
   }
-  
-  .lumos-contact-page .input-group-custom i {
-    top: 14px;
-  }
-  
-  .lumos-contact-page .input-group-custom textarea ~ i {
-    top: 16px;
-  }
-  
+
   .lumos-contact-page .input-group-custom.select-wrapper::after {
-    top: 14px;
+    right: 0px;
+    top: 10px;
   }
 }
 
@@ -546,51 +629,53 @@
   .lumos-contact-page .heading {
     margin-bottom: 15px;
   }
-  
+
   .lumos-contact-page .heading h2 {
     font-size: 32px;
   }
-  
-  .lumos-contact-page .contact-info-card,
-  .lumos-contact-page .contact-form-card {
+
+  .lumos-contact-page .contact-info-card {
     padding: 20px 15px;
   }
-  
+
+  .lumos-contact-page .contact-form-card {
+    padding: 10px 0px;
+  }
+
   .lumos-contact-page .contact-info-card,
   .lumos-contact-page .contact-column-left {
     margin-bottom: 15px;
   }
-  
-  .lumos-contact-page .contact-info-title,
+
   .lumos-contact-page .contact-form-card h3 {
     font-size: 24px;
   }
-  
+
   .lumos-contact-page .contact-info-icon {
-    width: 32px;
-    height: 32px;
-    margin-right: 14px;
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
   }
-  
+
   .lumos-contact-page .contact-info-icon i {
     font-size: 12px;
   }
-  
+
   .lumos-contact-page .contact-info-item {
     margin-bottom: 18px;
   }
-  
+
   .lumos-contact-page .contact-custom-map {
     height: 280px;
   }
-  
+
   .lumos-contact-page .contact-map-badge {
     top: 15px;
     left: 15px;
     padding: 5px 12px;
     font-size: 11px;
   }
-  
+
   .lumos-contact-page#inner-padding,
   .lumos-contact-page {
     padding-bottom: 30px;
@@ -601,61 +686,67 @@
   .lumos-contact-page .heading {
     margin-bottom: 10px;
   }
-  
+
   .lumos-contact-page .heading h2 {
     font-size: 28px;
   }
-  
-  .lumos-contact-page .contact-info-title,
+
   .lumos-contact-page .contact-form-card h3 {
     font-size: 22px;
   }
-  
-  .lumos-contact-page .contact-info-card,
-  .lumos-contact-page .contact-form-card {
+
+  .lumos-contact-page .contact-info-card {
     padding: 15px;
   }
-  
+
+  .lumos-contact-page .contact-form-card {
+    padding: 10px 0px;
+  }
+
   .lumos-contact-page .contact-info-card,
   .lumos-contact-page .contact-column-left {
     margin-bottom: 12px;
   }
-  
+
   .lumos-contact-page .contact-info-content h4 {
     font-size: 13px;
   }
-  
+
   .lumos-contact-page .contact-info-content p {
     font-size: 14px;
   }
-  
+
   .lumos-contact-page .contact-custom-map {
     height: 240px;
   }
-  
+
+  .lumos-contact-page .input-group-custom {
+    margin-bottom: 16px;
+  }
+
+  .lumos-contact-page .input-group-custom i {
+    top: 8px;
+    font-size: 13px;
+  }
+
+  .lumos-contact-page .input-group-custom textarea ~ i {
+    top: 11px;
+  }
+
   .lumos-contact-page .input-group-custom input,
   .lumos-contact-page .input-group-custom select,
-  .lumos-contact-page .input-group-custom textarea {
-    padding: 10px 12px 10px 38px !important;
-    font-size: 13.5px !important;
+  .lumos-contact-page .input-group-custom textarea,
+  .lumos-contact-page .custom-select-trigger {
+    padding: 8px 0px 6px 22px;
+    font-size: 13.5px;
   }
-  
-  .lumos-contact-page .input-group-custom i {
-    left: 12px;
-    top: 12px;
-    font-size: 14px;
-  }
-  
-  .lumos-contact-page .input-group-custom textarea ~ i {
-    top: 14px;
-  }
-  
+
   .lumos-contact-page .input-group-custom.select-wrapper::after {
-    right: 14px;
-    top: 12px;
+    right: 0px;
+    top: 8px;
     font-size: 10px;
   }
-  
+
   .lumos-contact-page#inner-padding,
   .lumos-contact-page {
     padding-bottom: 20px;
