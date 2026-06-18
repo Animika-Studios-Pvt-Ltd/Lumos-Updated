@@ -1,0 +1,188 @@
+/* --------------------- LUMOS AND PALOWISE PR PAGE SECTION ------------------------- */
+.lumos-and-palowise-pr-section {
+  padding: 30px 0;
+}
+
+.lumos-and-palowise-pr-section-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.lumos-and-palowise-pr-section-content {
+  padding: 0 20px;
+}
+
+.lumos-and-palowise-pr-section-content h2 {
+  margin-bottom: 30px;
+}
+
+.lumos-and-palowise-pr-section-content p {
+  font-family: "figtree-light";
+  font-size: 27px;
+  margin-bottom: 0;
+}
+
+.lumos-and-palowise-pr-section-details {
+  margin-top: 30px;
+}
+
+.lumos-and-palowise-pr-section-details h3 {
+  font-size: 28px;
+}
+
+@media (max-width: 1440px) {
+  .lumos-and-palowise-pr-section-content h2 {
+    margin-bottom: 20px;
+    font-size: 45px;
+  }
+
+  .lumos-and-palowise-pr-section-content p {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .lumos-and-palowise-pr-section-content h2 {
+    margin-bottom: 15px;
+    font-size: 40px;
+  }
+
+  .lumos-and-palowise-pr-section-content p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .lumos-and-palowise-pr-section {
+    padding: 25px 0;
+  }
+
+  .lumos-and-palowise-pr-section-content {
+    padding: 0 10px;
+  }
+
+  .lumos-and-palowise-pr-section-content h2 {
+    margin-bottom: 10px;
+    font-size: 36px;
+  }
+
+  .lumos-and-palowise-pr-section-content p {
+    font-size: 20px;
+  }
+
+  .lumos-and-palowise-pr-section-details h3 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 991px) {
+  .lumos-and-palowise-pr-section {
+    padding: 20px 0;
+  }
+
+  .lumos-and-palowise-pr-section-content {
+    padding: 0;
+  }
+
+  .lumos-and-palowise-pr-section-content h2 {
+    margin-bottom: 6px;
+    font-size: 32px;
+  }
+
+  .lumos-and-palowise-pr-section-content p {
+    font-size: 18px;
+  }
+
+  .lumos-and-palowise-pr-section-details {
+    margin-top: 20px;
+  }
+
+  .lumos-and-palowise-pr-section-details h3 {
+    font-size: 24px;
+  }
+
+  .lumos-and-palowise-pr-section .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lumos-and-palowise-pr-section .col-lg-7 {
+    order: 1;
+  }
+
+  .lumos-and-palowise-pr-section .col-lg-5 {
+    order: 2;
+  }
+
+  .lumos-and-palowise-pr-section .col-lg-12 {
+    order: 3;
+  }
+
+  .lumos-and-palowise-pr-section-image {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .lumos-and-palowise-pr-section-image img {
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .lumos-and-palowise-pr-section-content {
+    text-align: left;
+  }
+}
+
+@media (max-width: 767px) {
+  .lumos-and-palowise-pr-section {
+    padding: 15px 0;
+  }
+
+  .lumos-and-palowise-pr-section-image img {
+    width: 80%;
+    margin: 0 auto 15px;
+  }
+
+  .lumos-and-palowise-pr-section-content h2 {
+    margin-bottom: 6px;
+    font-size: 28px;
+  }
+
+  .lumos-and-palowise-pr-section-content p {
+    font-size: 16px;
+  }
+
+  .lumos-and-palowise-pr-section-details {
+    margin-top: 10px;
+  }
+
+  .lumos-and-palowise-pr-section-details h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .lumos-and-palowise-pr-section {
+    padding: 10px 0;
+  }
+
+  .lumos-and-palowise-pr-section-image img {
+    width: 80%;
+    margin: 0 auto 10px;
+  }
+
+  .lumos-and-palowise-pr-section-content h2 {
+    margin-bottom: 6px;
+    font-size: 24px;
+  }
+
+  .lumos-and-palowise-pr-section-content p {
+    font-size: 15px;
+  }
+
+  .lumos-and-palowise-pr-section-details h3 {
+    font-size: 18px;
+  }
+}

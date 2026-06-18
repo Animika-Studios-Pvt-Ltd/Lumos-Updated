@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <!-- Background (Clean warm off-white matching Lumos design system) -->
+  <rect width="600" height="400" fill="#FAF9F5"/>
+  
+  <!-- Subtle Grid Lines for Premium UI styling -->
+  <g stroke="rgba(243, 112, 34, 0.03)" stroke-width="0.8" stroke-dasharray="4,8">
+    <line x1="50" y1="0" x2="50" y2="400" />
+    <line x1="100" y1="0" x2="100" y2="400" />
+    <line x1="150" y1="0" x2="150" y2="400" />
+    <line x1="200" y1="0" x2="200" y2="400" />
+    <line x1="250" y1="0" x2="250" y2="400" />
+    <line x1="300" y1="0" x2="300" y2="400" />
+    <line x1="350" y1="0" x2="350" y2="400" />
+    <line x1="400" y1="0" x2="400" y2="400" />
+    <line x1="450" y1="0" x2="450" y2="400" />
+    <line x1="500" y1="0" x2="500" y2="400" />
+    <line x1="550" y1="0" x2="550" y2="400" />
+    
+    <line x1="0" y1="50" x2="600" y2="50" />
+    <line x1="0" y1="100" x2="600" y2="100" />
+    <line x1="0" y1="150" x2="600" y2="150" />
+    <line x1="0" y1="200" x2="600" y2="200" />
+    <line x1="0" y1="250" x2="600" y2="250" />
+    <line x1="0" y1="300" x2="600" y2="300" />
+    <line x1="0" y1="350" x2="600" y2="350" />
+  </g>
+  
+  <!-- Urban Blocks (Soft warm beige background for block layout) -->
+  <g fill="#F3EFE6" stroke="#E5DAC3" stroke-width="0.5" opacity="0.5">
+    <!-- Blocks left of Double Road -->
+    <rect x="-10" y="105" width="135" height="40" rx="2"/>
+    <rect x="-10" y="155" width="135" height="40" rx="2"/>
+    <rect x="-10" y="215" width="135" height="40" rx="2"/>
+    <rect x="-10" y="265" width="135" height="40" rx="2"/>
+    
+    <!-- Blocks between Double Road & 7th Main -->
+    <rect x="225" y="105" width="60" height="40" rx="2"/>
+    <rect x="225" y="155" width="60" height="40" rx="2"/>
+    <rect x="225" y="215" width="60" height="40" rx="2"/>
+    <rect x="225" y="265" width="60" height="40" rx="2"/>
+    
+    <!-- Blocks between 7th Main & 9th Main -->
+    <rect x="315" y="105" width="35" height="40" rx="2"/>
+    <rect x="315" y="155" width="35" height="40" rx="2"/>
+    <rect x="315" y="215" width="35" height="40" rx="2"/>
+    <rect x="315" y="265" width="35" height="40" rx="2"/>
+    
+    <!-- Blocks between 9th Main & 12th Main -->
+    <rect x="395" y="215" width="40" height="40" rx="2"/>
+    <rect x="395" y="265" width="40" height="40" rx="2"/>
+    
+    <!-- Blocks between 12th Main & 100 Feet Road -->
+    <rect x="470" y="105" width="45" height="80" rx="2"/>
+    <rect x="470" y="215" width="45" height="40" rx="2"/>
+    <rect x="470" y="265" width="45" height="40" rx="2"/>
+    
+    <!-- Blocks between 100 Feet Road & 80 Feet Road -->
+    <rect x="545" y="105" width="65" height="80" rx="2"/>
+    <rect x="545" y="215" width="65" height="80" rx="2"/>
+  </g>
+
+  <!-- Detailed Architectural Plot Textures (Lighter filled plots inside blocks) -->
+  <g fill="#FFFFFF" opacity="0.6">
+    <!-- Block plots left of Double Road -->
+    <rect x="10" y="112" width="15" height="10" rx="0.5"/>
+    <rect x="30" y="112" width="15" height="10" rx="0.5"/>
+    <rect x="50" y="112" width="15" height="10" rx="0.5"/>
+    <rect x="10" y="127" width="20" height="10" rx="0.5"/>
+    <rect x="35" y="127" width="15" height="10" rx="0.5"/>
+    
+    <!-- Block plots between Double Road & 7th Main -->
+    <rect x="230" y="112" width="12" height="10" rx="0.5"/>
+    <rect x="246" y="112" width="12" height="10" rx="0.5"/>
+    <rect x="262" y="112" width="12" height="10" rx="0.5"/>
+    <rect x="230" y="162" width="15" height="10" rx="0.5"/>
+    <rect x="250" y="162" width="15" height="10" rx="0.5"/>
+    <rect x="230" y="222" width="12" height="10" rx="0.5"/>
+    <rect x="246" y="222" width="12" height="10" rx="0.5"/>
+    <rect x="262" y="222" width="12" height="10" rx="0.5"/>
+    
+    <!-- Block plots between 7th Main & 9th Main -->
+    <rect x="320" y="112" width="10" height="10" rx="0.5"/>
+    <rect x="333" y="112" width="10" height="10" rx="0.5"/>
+    <rect x="320" y="162" width="10" height="10" rx="0.5"/>
+    <rect x="333" y="162" width="10" height="10" rx="0.5"/>
+    <rect x="320" y="222" width="10" height="10" rx="0.5"/>
+    <rect x="333" y="222" width="10" height="10" rx="0.5"/>
+  </g>
+
+  <!-- Parks / Green Areas (Pastel brand-aligned green) -->
+  <!-- ESI Hospital Park (Top left area) -->
+  <path d="M-10 15 C 30 10, 80 20, 95 40 C 105 65, 40 80, 10 75 C -10 70, -20 45, -10 15 Z" fill="#E2ECE0" stroke="#D3E0CE" stroke-width="0.8" opacity="0.9"/>
+  <!-- Indiranagar Club Grounds (Center right area) -->
+  <rect x="395" y="105" width="40" height="80" rx="3" fill="#E2ECE0" stroke="#D3E0CE" stroke-width="0.8"/>
+  <!-- Defense Colony Park (Bottom right corner) -->
+  <rect x="545" y="305" width="45" height="40" rx="4" fill="#E2ECE0" stroke="#D3E0CE" stroke-width="0.8" opacity="0.9"/>
+  
+  <!-- Water Body / Halasuru Lake (Soft pastel blue-teal on the far left) -->
+  <path d="M-20 220 C 15 230, 45 255, 40 300 C 35 345, 5 365, -20 375 Z" fill="#E1EFF2" stroke="#D2E2E5" stroke-width="1"/>
+  
+  <!-- Road Network (Thinner, double-lined layout with white fill and warm gray borders) -->
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Street Borders/Casing (Underlay) -->
+    <!-- Major Arterials (casing: 8) -->
+    <g stroke="#EAE5DB" stroke-width="8">
+      <!-- 100 Feet Road (Vertical - Right side) -->
+      <line x1="530" y1="-20" x2="530" y2="420" />
+      <!-- CMH Road / CMH Hospital Road (Horizontal - Top) -->
+      <line x1="-20" y1="90" x2="620" y2="90" />
+      <!-- Old Madras Road (Horizontal - Very Top) -->
+      <line x1="-20" y1="30" x2="620" y2="30" stroke-width="10" />
+      <!-- Old Airport Road (Horizontal - Bottom) -->
+      <line x1="-20" y1="360" x2="620" y2="360" stroke-width="10" />
+    </g>
+    
+    <!-- Secondary Roads (casing: 5.5) -->
+    <g stroke="#EAE5DB" stroke-width="5.5">
+      <!-- 80 Feet Road (Vertical - Far Right) -->
+      <line x1="610" y1="-20" x2="610" y2="420" />
+      <!-- 12th Main Road (Vertical - Right Center) -->
+      <line x1="455" y1="-20" x2="455" y2="420" />
+      <!-- 9th Main Road (Vertical - Center) -->
+      <line x1="375" y1="-20" x2="375" y2="420" />
+      <!-- 7th Main Road (Vertical - Center-Left) -->
+      <line x1="300" y1="-20" x2="300" y2="420" stroke-width="6.5" />
+      <!-- Indiranagar Double Road (Vertical - Left) -->
+      <line x1="210" y1="-20" x2="210" y2="420" />
+      <!-- 2nd Main Road (Vertical - Far Left) -->
+      <line x1="140" y1="-20" x2="140" y2="420" />
+      
+      <!-- Horizontal Cross Streets -->
+      <!-- 12th A Cross (Horizontal) -->
+      <line x1="-20" y1="150" x2="620" y2="150" />
+      <!-- 10th Cross Road (Horizontal - Center) -->
+      <line x1="-20" y1="200" x2="620" y2="200" stroke-width="6.5" />
+      <!-- 8th Cross Road (Horizontal) -->
+      <line x1="-20" y1="250" x2="620" y2="250" />
+      <!-- 6th Cross Road (Horizontal) -->
+      <line x1="-20" y1="300" x2="620" y2="300" />
+    </g>
+
+    <!-- Tertiary Roads/Lanes (casing: 3) -->
+    <g stroke="#F0EBE0" stroke-width="3">
+      <!-- Vertical Lanes -->
+      <line x1="80" y1="-20" x2="80" y2="420" />
+      <line x1="175" y1="-20" x2="175" y2="420" />
+      <line x1="255" y1="-20" x2="255" y2="420" />
+      <line x1="340" y1="-20" x2="340" y2="420" />
+      <line x1="500" y1="-20" x2="500" y2="420" />
+      
+      <!-- Horizontal Lanes -->
+      <line x1="-20" y1="60" x2="620" y2="60" />
+      <line x1="-20" y1="120" x2="620" y2="120" />
+      <line x1="-20" y1="175" x2="620" y2="175" />
+      <line x1="-20" y1="225" x2="620" y2="225" />
+      <line x1="-20" y1="275" x2="620" y2="275" />
+      <line x1="-20" y1="330" x2="620" y2="330" />
+    </g>
+    
+    <!-- Street Fills (Overlay) -->
+    <!-- Major Road Fills (fill: 5) -->
+    <g stroke="#FFFFFF" stroke-width="5">
+      <line x1="530" y1="-20" x2="530" y2="420" />
+      <line x1="-20" y1="90" x2="620" y2="90" />
+      <line x1="-20" y1="30" x2="620" y2="30" stroke-width="7" />
+      <line x1="-20" y1="360" x2="620" y2="360" stroke-width="7" />
+    </g>
+    
+    <!-- Secondary Road Fills (fill: 3) -->
+    <g stroke="#FFFFFF" stroke-width="3">
+      <line x1="610" y1="-20" x2="610" y2="420" />
+      <line x1="455" y1="-20" x2="455" y2="420" />
+      <line x1="375" y1="-20" x2="375" y2="420" />
+      <line x1="300" y1="-20" x2="300" y2="420" stroke-width="4" />
+      <line x1="210" y1="-20" x2="210" y2="420" />
+      <line x1="140" y1="-20" x2="140" y2="420" />
+      
+      <line x1="-20" y1="150" x2="620" y2="150" />
+      <line x1="-20" y1="200" x2="620" y2="200" stroke-width="4" />
+      <line x1="-20" y1="250" x2="620" y2="250" />
+      <line x1="-20" y1="300" x2="620" y2="300" />
+    </g>
+
+    <!-- Tertiary Road Fills (fill: 1.2) -->
+    <g stroke="#FFFFFF" stroke-width="1.2">
+      <line x1="80" y1="-20" x2="80" y2="420" />
+      <line x1="175" y1="-20" x2="175" y2="420" />
+      <line x1="255" y1="-20" x2="255" y2="420" />
+      <line x1="340" y1="-20" x2="340" y2="420" />
+      <line x1="500" y1="-20" x2="500" y2="420" />
+      
+      <line x1="-20" y1="60" x2="620" y2="60" />
+      <line x1="-20" y1="120" x2="620" y2="120" />
+      <line x1="-20" y1="175" x2="620" y2="175" />
+      <line x1="-20" y1="225" x2="620" y2="225" />
+      <line x1="-20" y1="275" x2="620" y2="275" />
+      <line x1="-20" y1="330" x2="620" y2="330" />
+    </g>
+  </g>
+
+  <!-- Highlight Area (Lumos Location Radar Glow using Lumos brand colors) -->
+  <defs>
+    <!-- Radial gradient transitioning from Lumos brand orange (#f37022) to peach (#fbaa4f) to transparent -->
+    <radialGradient id="lumosGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f37022" stop-opacity="0.32"/>
+      <stop offset="50%" stop-color="#fbaa4f" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#fbaa4f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Glow concentric rings centered exactly at X:300, Y:200 (Center of Map Card) -->
+  <circle cx="300" cy="200" r="55" fill="url(#lumosGlow)" />
+  <circle cx="300" cy="200" r="24" fill="rgba(243, 112, 34, 0.09)" />
+  
+  <!-- Road & Landmark Labels (Clean sans-serif fonts, elegant color) -->
+  <g font-family="barlow-regular, sans-serif" font-size="7" fill="#8C8270" letter-spacing="0.8" font-weight="500">
+    <!-- Verticals -->
+    <text x="536" y="55" transform="rotate(90 536 55)" fill="#7A705E" font-weight="bold">100 FEET ROAD</text>
+    <text x="381" y="240" transform="rotate(90 381 240)">9TH MAIN RD</text>
+    <text x="306" y="50" transform="rotate(90 306 50)" fill="#f37022" font-weight="bold">7TH MAIN RD</text>
+    <text x="461" y="250" transform="rotate(90 461 250)">12TH MAIN RD</text>
+    <text x="216" y="55" transform="rotate(90 216 55)">DOUBLE ROAD</text>
+    
+    <!-- Horizontals -->
+    <text x="440" y="24">OLD MADRAS RD</text>
+    <text x="440" y="84">CMH ROAD</text>
+    <text x="235" y="194">10TH CROSS RD</text>
+    <text x="235" y="144">12TH A CROSS</text>
+    <text x="235" y="244">8TH CROSS RD</text>
+    <text x="235" y="294">6TH CROSS RD</text>
+    <text x="440" y="354">OLD AIRPORT RD</text>
+  </g>
+
+  <!-- Landmark text (inside park blocks) -->
+  <g font-family="barlow-semi-bold, sans-serif" font-size="6.5" fill="#60705B" letter-spacing="0.5">
+    <text x="400" y="135" transform="rotate(90 400 135)">INDIRANAGAR CLUB</text>
+    <text x="15" y="44">ESI PARK &amp; HOSP.</text>
+    <text x="550" y="322" font-size="6">DEFENSE</text>
+    <text x="550" y="330" font-size="6">COLONY</text>
+  </g>
+  
+  <!-- Compass Rose with Lumos orange-peach brand accent -->
+  <g transform="translate(545, 75)" opacity="0.85">
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#E5DCD0" stroke-width="1.2"/>
+    <line x1="0" y1="-20" x2="0" y2="20" stroke="#E5DCD0" stroke-width="1"/>
+    <line x1="-20" y1="0" x2="20" y2="0" stroke="#E5DCD0" stroke-width="1"/>
+    <polygon points="0,-14 3.5,0 0,2 -3.5,0" fill="#f37022"/>
+    <polygon points="0,14 3.5,0 0,-2 -3.5,0" fill="#fbaa4f"/>
+    <text x="-4" y="-22" font-family="barlowcondensed-medium, sans-serif" font-size="9" fill="#f37022" font-weight="bold">N</text>
+  </g>
+  
+  <!-- Office Landmark (Small orange dot precisely at x=300, y=200 on 7th Main Road) -->
+  <circle cx="300" cy="200" r="5.5" fill="#f37022" stroke="#FFFFFF" stroke-width="1.8" />
+  <circle cx="300" cy="200" r="2" fill="#FFFFFF" />
+</svg>
