@@ -1,0 +1,663 @@
+/* --------------------- LUMOS CONTACT PAGE SECTION ------------------------- */
+.lumos-contact-page .heading {
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.lumos-contact-page .heading h2 {
+  font-family: "barlowcondensed-medium";
+  font-size: 50px;
+  color: #111;
+  text-transform: uppercase;
+  margin: 0;
+  display: inline-block;
+}
+
+/* Base card styling shared across layout blocks */
+.lumos-contact-page .contact-info-card,
+.lumos-contact-page .contact-map-card,
+.lumos-contact-page .contact-form-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.lumos-contact-page .contact-info-card,
+.lumos-contact-page .contact-map-card {
+  margin-bottom: 30px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.lumos-contact-page .contact-info-card:hover,
+.lumos-contact-page .contact-map-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.lumos-contact-page .contact-info-card {
+  padding: 20px 30px;
+}
+
+.lumos-contact-page .contact-map-card {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.lumos-contact-page .contact-form-card {
+  padding: 30px 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+  height: 100%;
+}
+
+.lumos-contact-page .contact-column-left {
+  margin-bottom: 24px;
+}
+
+@media (min-width: 992px) {
+  .lumos-contact-page .contact-column-left {
+    margin-bottom: 0;
+  }
+}
+
+.lumos-contact-page .submit-btn-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.lumos-contact-page .contact-info-title,
+.lumos-contact-page .contact-form-card h3 {
+  font-family: "barlowcondensed-medium";
+  text-transform: uppercase;
+  color: #111;
+  letter-spacing: 0.5px;
+}
+
+.lumos-contact-page .contact-info-title {
+  font-size: 32px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lumos-contact-page .contact-info-title i {
+  color: #f37022;
+  font-size: 24px;
+}
+
+.lumos-contact-page .contact-form-intro {
+  font-family: "figtree-light";
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  border-left: 3px solid #f37022;
+  padding-left: 15px;
+}
+
+.lumos-contact-page .contact-info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lumos-contact-page .contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+
+.lumos-contact-page .contact-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.lumos-contact-page .contact-info-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(243, 112, 34, 0.08),
+    rgba(251, 170, 79, 0.08)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 18px;
+  flex-shrink: 0;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.lumos-contact-page .contact-info-item:hover .contact-info-icon {
+  background: linear-gradient(135deg, #f37022, #fbaa4f);
+  transform: scale(1.05);
+}
+
+.lumos-contact-page .contact-info-icon i {
+  color: #f37022;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.lumos-contact-page .contact-info-item:hover .contact-info-icon i {
+  color: #ffffff;
+}
+
+.lumos-contact-page .contact-info-content {
+  flex-grow: 1;
+}
+
+.lumos-contact-page .contact-info-content h4 {
+  font-family: "barlow-regular";
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #222;
+  margin: 0 0 4px 0;
+  letter-spacing: 0.5px;
+}
+
+.lumos-contact-page .contact-info-content p {
+  font-family: "figtree-light";
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Map Card and Bouncing Pin Styling */
+.lumos-contact-page .contact-custom-map {
+  display: block;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fdfcf9;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  height: 320px;
+  width: 100%;
+}
+
+.lumos-contact-page .contact-map-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.95;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.lumos-contact-page .contact-custom-map:hover .contact-map-bg {
+  opacity: 1;
+  transform: scale(1.03);
+}
+
+.lumos-contact-page .contact-map-pin {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.lumos-contact-page .contact-map-pin-motion {
+  animation: map-pin-bounce 2s ease-in-out infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lumos-contact-page .contact-map-pin-motion i {
+  color: #f37022;
+  font-size: 36px;
+  text-shadow: 0 4px 10px rgba(243, 112, 34, 0.4);
+}
+
+.lumos-contact-page .contact-map-pin-shadow {
+  width: 16px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  margin: 4px auto 0 auto;
+  animation: map-pin-shadow 2s ease-in-out infinite;
+}
+
+@keyframes map-pin-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes map-pin-shadow {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(0.7);
+    opacity: 0.3;
+  }
+}
+
+.lumos-contact-page .contact-map-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(243, 112, 34, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-family: "barlow-semi-bold";
+  font-size: 12px;
+  box-shadow: 0 4px 12px rgba(243, 112, 34, 0.25);
+  z-index: 10;
+  pointer-events: none;
+  transition: background-color 0.3s ease;
+}
+
+.lumos-contact-page .contact-custom-map:hover .contact-map-badge {
+  background: #f37022;
+}
+
+.lumos-contact-page .contact-form-card h3 {
+  font-size: 36px;
+  color: #111;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+/* Form Element Wrappers */
+.lumos-contact-page .input-group-custom {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.lumos-contact-page .input-group-custom i {
+  position: absolute;
+  left: 16px;
+  top: 15px;
+  color: #888;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.lumos-contact-page .input-group-custom textarea ~ i {
+  top: 18px;
+}
+
+.lumos-contact-page .input-group-custom input,
+.lumos-contact-page .input-group-custom select,
+.lumos-contact-page .input-group-custom textarea {
+  width: 100% !important;
+  padding: 13px 16px 13px 44px !important;
+  border: 1px solid rgba(0, 0, 0, 0.08) !important;
+  background-color: #fafafa !important;
+  border-radius: 10px !important;
+  font-family: "figtree-light";
+  font-size: 15px !important;
+  color: #333 !important;
+  font-weight: normal !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease !important;
+  margin-bottom: 0 !important;
+}
+
+.lumos-contact-page .input-group-custom textarea {
+  min-height: 120px !important;
+  resize: vertical !important;
+}
+
+.lumos-contact-page .input-group-custom input::placeholder,
+.lumos-contact-page .input-group-custom textarea::placeholder {
+  color: #999 !important;
+  font-weight: 300 !important;
+}
+
+/* Custom Dropdown Arrow */
+.lumos-contact-page .input-group-custom select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.lumos-contact-page .input-group-custom select:invalid,
+.lumos-contact-page .input-group-custom select option[value=""] {
+  color: #999 !important;
+}
+
+.lumos-contact-page .input-group-custom.select-wrapper::after {
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 12px;
+  color: #888;
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  pointer-events: none;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.lumos-contact-page .input-group-custom.select-wrapper:focus-within::after {
+  color: #f37022;
+  transform: rotate(180deg);
+}
+
+/* Form Element Focus Rules */
+.lumos-contact-page .input-group-custom input:focus,
+.lumos-contact-page .input-group-custom select:focus,
+.lumos-contact-page .input-group-custom textarea:focus {
+  border-color: #f37022 !important;
+  box-shadow: 0 0 0 4px rgba(243, 112, 34, 0.12) !important;
+  background-color: #ffffff !important;
+}
+
+.lumos-contact-page .input-group-custom input:focus ~ i,
+.lumos-contact-page .input-group-custom select:focus ~ i,
+.lumos-contact-page .input-group-custom textarea:focus ~ i {
+  color: #f37022 !important;
+}
+
+.lumos-contact-page .g-recaptcha,
+.lumos-contact-page .cf-turnstile {
+  margin: 15px 0 25px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Submit Button Rules */
+.lumos-contact-page button[type="submit"] {
+  background: linear-gradient(135deg, #f37022, #fbaa4f) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 10px 20px !important;
+  font-family: "barlow-semi-bold";
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  border-radius: 30px !important;
+  cursor: pointer !important;
+  width: auto !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  box-shadow: 0 4px 15px rgba(243, 112, 34, 0.25) !important;
+  margin: 0 !important;
+}
+
+.lumos-contact-page button[type="submit"]:hover:not(:disabled) {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(243, 112, 34, 0.35) !important;
+  background: linear-gradient(135deg, #e05e10, #fa9b3b) !important;
+}
+
+.lumos-contact-page button[type="submit"]:active:not(:disabled) {
+  transform: translateY(1px) !important;
+  box-shadow: 0 2px 10px rgba(243, 112, 34, 0.2) !important;
+}
+
+.lumos-contact-page button[type="submit"]:disabled {
+  background: #e0e0e0 !important;
+  color: #a0a0a0 !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+}
+
+/* Form Success/Error Alert Message */
+.lumos-contact-page #form-message {
+  margin-top: 20px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-family: "figtree-light";
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lumos-contact-page#inner-padding,
+.lumos-contact-page {
+  padding-bottom: 40px;
+}
+
+@media (max-width: 991px) {
+  .lumos-contact-page .heading {
+    margin-bottom: 25px;
+  }
+  
+  .lumos-contact-page .heading h2 {
+    font-size: 44px;
+  }
+  
+  .lumos-contact-page .contact-info-card {
+    padding: 20px 25px;
+    margin-bottom: 25px;
+  }
+
+  .lumos-contact-page .contact-map-card {
+  margin-bottom: 0px;
+  }
+  
+  .lumos-contact-page .contact-column-left {
+    margin-bottom: 25px;
+  }
+  
+  .lumos-contact-page .contact-form-card {
+    padding: 25px 20px;
+  }
+  
+  .lumos-contact-page .contact-info-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .lumos-contact-page .contact-form-card h3 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .lumos-contact-page .heading {
+    margin-bottom: 20px;
+  }
+  
+  .lumos-contact-page .heading h2 {
+    font-size: 38px;
+  }
+  
+  .lumos-contact-page .contact-info-card,
+  .lumos-contact-page .contact-form-card {
+    padding: 20px;
+  }
+  
+  .lumos-contact-page .contact-info-card,
+  .lumos-contact-page .contact-column-left {
+    margin-bottom: 20px;
+  }
+  
+  .lumos-contact-page .contact-info-title,
+  .lumos-contact-page .contact-form-card h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  
+  .lumos-contact-page .contact-info-content h4 {
+    font-size: 14px;
+  }
+  
+  .lumos-contact-page .contact-info-content p {
+    font-size: 15px;
+  }
+  
+  .lumos-contact-page .input-group-custom input,
+  .lumos-contact-page .input-group-custom select,
+  .lumos-contact-page .input-group-custom textarea {
+    padding: 12px 16px 12px 42px !important;
+    font-size: 14px !important;
+  }
+  
+  .lumos-contact-page .input-group-custom i {
+    top: 14px;
+  }
+  
+  .lumos-contact-page .input-group-custom textarea ~ i {
+    top: 16px;
+  }
+  
+  .lumos-contact-page .input-group-custom.select-wrapper::after {
+    top: 14px;
+  }
+}
+
+@media (max-width: 575px) {
+  .lumos-contact-page .heading {
+    margin-bottom: 15px;
+  }
+  
+  .lumos-contact-page .heading h2 {
+    font-size: 32px;
+  }
+  
+  .lumos-contact-page .contact-info-card,
+  .lumos-contact-page .contact-form-card {
+    padding: 20px 15px;
+  }
+  
+  .lumos-contact-page .contact-info-card,
+  .lumos-contact-page .contact-column-left {
+    margin-bottom: 15px;
+  }
+  
+  .lumos-contact-page .contact-info-title,
+  .lumos-contact-page .contact-form-card h3 {
+    font-size: 24px;
+  }
+  
+  .lumos-contact-page .contact-info-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 14px;
+  }
+  
+  .lumos-contact-page .contact-info-icon i {
+    font-size: 12px;
+  }
+  
+  .lumos-contact-page .contact-info-item {
+    margin-bottom: 18px;
+  }
+  
+  .lumos-contact-page .contact-custom-map {
+    height: 280px;
+  }
+  
+  .lumos-contact-page .contact-map-badge {
+    top: 15px;
+    left: 15px;
+    padding: 5px 12px;
+    font-size: 11px;
+  }
+  
+  .lumos-contact-page#inner-padding,
+  .lumos-contact-page {
+    padding-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lumos-contact-page .heading {
+    margin-bottom: 10px;
+  }
+  
+  .lumos-contact-page .heading h2 {
+    font-size: 28px;
+  }
+  
+  .lumos-contact-page .contact-info-title,
+  .lumos-contact-page .contact-form-card h3 {
+    font-size: 22px;
+  }
+  
+  .lumos-contact-page .contact-info-card,
+  .lumos-contact-page .contact-form-card {
+    padding: 15px;
+  }
+  
+  .lumos-contact-page .contact-info-card,
+  .lumos-contact-page .contact-column-left {
+    margin-bottom: 12px;
+  }
+  
+  .lumos-contact-page .contact-info-content h4 {
+    font-size: 13px;
+  }
+  
+  .lumos-contact-page .contact-info-content p {
+    font-size: 14px;
+  }
+  
+  .lumos-contact-page .contact-custom-map {
+    height: 240px;
+  }
+  
+  .lumos-contact-page .input-group-custom input,
+  .lumos-contact-page .input-group-custom select,
+  .lumos-contact-page .input-group-custom textarea {
+    padding: 10px 12px 10px 38px !important;
+    font-size: 13.5px !important;
+  }
+  
+  .lumos-contact-page .input-group-custom i {
+    left: 12px;
+    top: 12px;
+    font-size: 14px;
+  }
+  
+  .lumos-contact-page .input-group-custom textarea ~ i {
+    top: 14px;
+  }
+  
+  .lumos-contact-page .input-group-custom.select-wrapper::after {
+    right: 14px;
+    top: 12px;
+    font-size: 10px;
+  }
+  
+  .lumos-contact-page#inner-padding,
+  .lumos-contact-page {
+    padding-bottom: 20px;
+  }
+}
