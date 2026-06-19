@@ -797,3 +797,8 @@
     padding-bottom: 20px;
   }
 }
+
+.lumos-contact-page .fa-phone {
+  transform: scaleX(-1);
+  display: inline-block;
+}
