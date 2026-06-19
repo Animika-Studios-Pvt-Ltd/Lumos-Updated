@@ -1,0 +1,21 @@
+/* --------------------- TEAM SECTION ------------------------- */
+.lumos-team-section h2 {
+  margin-bottom: 30px;
+}
+
+.team-img img {
+  border-radius: 15px;
+}
+
+.lumos-team-section span {
+  font-family: "barlow-regular";
+  font-size: 35px;
+}
+
+.lumos-team-mobile-1 {
+  display: block;
+}
+
+.lumos-team-mobile-2 {
+  display: none;
+}

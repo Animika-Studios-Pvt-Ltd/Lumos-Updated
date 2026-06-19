@@ -8,6 +8,7 @@
 @import "advisory-and-consulting.css";
 @import "lumos-strategic-partnership.css";
 @import "sitemap.css";
+@import "lumos-team.css";
 
 @font-face {
   font-family: "barlowcondensed-medium";
@@ -1539,90 +1540,6 @@ li a.active {
   }
   .nav-pills-custom .nav-link {
     font-size: 18px;
-  }
-}
-
-/* --------------------- TEAM SECTION ------------------------- */
-.team-txt-1 {
-  margin: 60px 100px 0 30px;
-}
-
-.team-txt-1 span {
-  font-family: "barlow-regular";
-  font-size: 35px;
-}
-
-.team-txt-3 {
-  margin: 30px 0 100px 0;
-}
-
-.mobile-1 {
-  display: block;
-}
-
-.mobile-2 {
-  display: none;
-}
-
-.team h2 {
-  position: relative;
-  top: 40px;
-}
-
-@media (max-width: 767px) {
-  .team-txt-1 {
-    margin: 10px 0px 0 0px;
-  }
-  .team h2 {
-    top: 0px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .team-txt-1 {
-    margin: 10px 0px 0 10px;
-  }
-  .team-txt-1 span {
-    font-size: 30px;
-  }
-  .team h2 {
-    top: 10px;
-  }
-  .team-txt-3 {
-    margin: 30px 0 50px 0;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1099px) {
-  .team h2 {
-    top: 20px;
-  }
-  .team-txt-1 {
-    margin: 25px 100px 0 0px;
-  }
-}
-
-@media (min-width: 1100px) and (max-width: 1199px) {
-  .team-txt-1 {
-    margin: 60px 30px 0 30px;
-  }
-}
-
-@media (min-width: 1321px) and (max-width: 1400px) {
-  .team h2 {
-    top: 20px;
-  }
-}
-
-@media (min-width: 1401px) and (max-width: 1499px) {
-  .team h2 {
-    top: 20px;
-  }
-}
-
-@media (min-width: 1500px) and (max-width: 1599px) {
-  .team h2 {
-    top: 20px;
   }
 }
 
