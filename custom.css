@@ -623,10 +623,17 @@ li a.active {
 /* --------------------- VISION SECTION ------------------------- */
 .vision-and-philosophy-section {
   margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.vision-and-philosophy-section .col-lg-12 {
+  position: relative;
 }
 
 .vision-and-philosophy-section img {
   border-radius: 15px;
+  width: 100%;
+  height: auto;
 }
 
 .vision-and-philosophy-img2 {
@@ -634,65 +641,99 @@ li a.active {
 }
 
 .vision-philosophy-txt {
+  position: absolute;
+  top: 20%;
+  left: 50px;
+  transform: translateY(-50%);
   color: #fff;
-  margin: -460px -0 0 50px;
-  height: 549px;
-  width: 700px;
+  width: 55%;
+  max-width: 700px;
+  z-index: 2;
+}
+
+.vision-philosophy-txt h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .vision-philosophy-txt h3 {
   font-size: 32px;
-  margin-top: 30px;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
 }
 
 .vision-philosophy-txt p {
   font-size: 24px;
+  margin-bottom: 10px;
 }
 
-@media (min-width: 1321px) and (max-width: 1400px) {
+@media (max-width: 1440px) {
   .vision-philosophy-txt {
-    margin: -440px -0 0 50px;
-    height: 530px;
-    width: 660px;
+    top: 25%;
+    left: 45px;
+    width: 60%;
   }
-}
-
-@media (min-width: 1200px) and (max-width: 1320px) {
-  .vision-philosophy-txt {
-    margin: -440px -0 0 50px;
-    height: 520px;
-    width: 660px;
-  }
-}
-
-@media (min-width: 1100px) and (max-width: 1199px) {
-  .vision-philosophy-txt {
-    margin: -385px -0 0 50px;
-    height: 450px;
-    width: 600px;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1099px) {
-  .vision-philosophy-txt {
-    margin: -380px -0 0 50px;
-    height: 450px;
-    width: 520px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .vision-philosophy-txt {
-    margin: -290px -0 0 20px;
-    height: 370px;
-    width: 460px;
+  .vision-philosophy-txt h2 {
+    font-size: 38px;
   }
   .vision-philosophy-txt h3 {
-    font-size: 25px;
+    font-size: 28px;
+    margin-top: 20px;
+  }
+  .vision-philosophy-txt p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .vision-philosophy-txt {
+    left: 40px;
+  }
+  .vision-philosophy-txt h2 {
+    font-size: 34px;
+  }
+  .vision-philosophy-txt h3 {
+    font-size: 26px;
     margin-top: 15px;
   }
   .vision-philosophy-txt p {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .vision-philosophy-txt {
+    left: 35px;
+    width: 62%;
+  }
+  .vision-philosophy-txt h2 {
+    font-size: 30px;
+  }
+  .vision-philosophy-txt h3 {
+    font-size: 24px;
+  }
+  .vision-philosophy-txt p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .vision-philosophy-txt {
+    left: 25px;
+    width: 55%;
+  }
+  .vision-philosophy-txt h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  .vision-philosophy-txt h3 {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .vision-philosophy-txt p {
+    font-size: 13px;
   }
 }
 
@@ -704,12 +745,72 @@ li a.active {
     display: block;
   }
   .vision-philosophy-txt {
-    margin: -590px 10px 0 10px;
-    height: 651px;
-    width: auto;
+    position: absolute;
+    top: 5%;
+    left: 50px;
+    transform: translateY(-50%);
+    width: 85%;
+  }
+  .vision-philosophy-txt h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+  }
+  .vision-philosophy-txt h3 {
+    font-size: 26px;
+    margin-top: 15px;
   }
   .vision-philosophy-txt p {
     font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .vision-philosophy-txt {
+    left: 20px;
+    width: 90%;
+    left: 40px;
+  }
+  .vision-philosophy-txt h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+  }
+  .vision-philosophy-txt h3 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  .vision-philosophy-txt p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vision-philosophy-txt {
+    left: 30px;
+  }
+  .vision-philosophy-txt h2 {
+    font-size: 30px;
+  }
+  .vision-philosophy-txt h3 {
+    font-size: 22px;
+  }
+  .vision-philosophy-txt p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .vision-philosophy-txt {
+    left: 30px;
+    width: 80%;
+  }
+  .vision-philosophy-txt h2 {
+    font-size: 26px;
+  }
+  .vision-philosophy-txt h3 {
+    font-size: 20px;
+  }
+  .vision-philosophy-txt p {
+    font-size: 15px;
   }
 }
 
