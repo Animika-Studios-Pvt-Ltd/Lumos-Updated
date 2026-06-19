@@ -621,113 +621,95 @@ li a.active {
 }
 
 /* --------------------- VISION SECTION ------------------------- */
-.vision img {
-  border-radius: 15px;
-}
-
-.vision {
+.vision-and-philosophy-section {
   margin-top: 30px;
 }
 
-.vision-2 {
+.vision-and-philosophy-section img {
+  border-radius: 15px;
+}
+
+.vision-and-philosophy-img2 {
   display: none;
 }
 
-.vision-txt {
+.vision-philosophy-txt {
   color: #fff;
   margin: -460px -0 0 50px;
   height: 549px;
   width: 700px;
 }
 
-.vision-txt p {
-  font-size: 27px;
-}
-
-.vision-txt h3 {
+.vision-philosophy-txt h3 {
   font-size: 32px;
   margin-top: 30px;
 }
 
-@media (max-width: 767px) {
-  .vision-1 {
-    display: none;
-  }
-  .vision-2 {
-    display: block;
-  }
-  .vision-txt {
-    margin: -590px 10px 0 10px;
-    height: 651px;
-    width: auto;
-  }
-  .vision-txt p {
-    font-size: 18px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .vision-txt {
-    margin: -290px -0 0 20px;
-    height: 370px;
-    width: 460px;
-  }
-  .vision-txt p {
-    font-size: 18px;
-  }
-  .vision-txt h3 {
-    font-size: 25px;
-    margin-top: 15px;
-  }
-  .mobile-1 {
-    display: none;
-  }
-  .mobile-2 {
-    display: block;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1099px) {
-  .vision-txt {
-    margin: -380px -0 0 50px;
-    height: 450px;
-    width: 520px;
-  }
-  .vision-txt p {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 1100px) and (max-width: 1199px) {
-  .vision-txt {
-    margin: -385px -0 0 50px;
-    height: 450px;
-    width: 600px;
-  }
-  .vision-txt p {
-    font-size: 23px;
-  }
-}
-
-@media (min-width: 1200px) and (max-width: 1320px) {
-  .vision-txt {
-    margin: -440px -0 0 50px;
-    height: 520px;
-    width: 660px;
-  }
-  .vision-txt p {
-    font-size: 25px;
-  }
+.vision-philosophy-txt p {
+  font-size: 24px;
 }
 
 @media (min-width: 1321px) and (max-width: 1400px) {
-  .vision-txt {
+  .vision-philosophy-txt {
     margin: -440px -0 0 50px;
     height: 530px;
     width: 660px;
   }
-  .vision-txt p {
+}
+
+@media (min-width: 1200px) and (max-width: 1320px) {
+  .vision-philosophy-txt {
+    margin: -440px -0 0 50px;
+    height: 520px;
+    width: 660px;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1199px) {
+  .vision-philosophy-txt {
+    margin: -385px -0 0 50px;
+    height: 450px;
+    width: 600px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1099px) {
+  .vision-philosophy-txt {
+    margin: -380px -0 0 50px;
+    height: 450px;
+    width: 520px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .vision-philosophy-txt {
+    margin: -290px -0 0 20px;
+    height: 370px;
+    width: 460px;
+  }
+  .vision-philosophy-txt h3 {
     font-size: 25px;
+    margin-top: 15px;
+  }
+  .vision-philosophy-txt p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .vision-and-philosophy-img1 {
+    display: none;
+  }
+  .vision-and-philosophy-img2 {
+    display: block;
+  }
+  .vision-philosophy-txt {
+    margin: -590px 10px 0 10px;
+    height: 651px;
+    width: auto;
+  }
+  .vision-philosophy-txt p {
+    font-size: 18px;
   }
 }
 
