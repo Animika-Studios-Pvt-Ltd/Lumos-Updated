@@ -1,0 +1,122 @@
+/* --------------------- ARTICLES SECTION ------------------------- */
+.article-txt {
+  text-align: center;
+  width: 333px;
+  margin: 0 auto;
+}
+
+.layer-3 .article-txt p {
+  font-family: "figtree-light";
+  font-size: 21px;
+}
+
+.article-arrow-bg img {
+  position: relative;
+  top: -33px;
+  width: 90px;
+  border-radius: 0;
+}
+
+.article-arrow-bg i {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 14px 15px;
+  margin: -60px auto 10px auto;
+  width: fit-content;
+  color: #000;
+  display: block;
+  position: relative;
+  transform: rotate(315deg);
+  transition: transform 0.6s ease;
+}
+
+.article-arrow-bg i:hover {
+  transform: rotate(675deg);
+}
+
+.article-card-hover {
+  color: black;
+  display: block;
+  text-decoration: none;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.article-img-wrapper {
+  border-radius: 15px;
+  overflow: hidden;
+  display: block;
+}
+
+.article-img-wrapper img {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+  transform-origin: center center;
+}
+
+.article-card-hover:hover .article-img-wrapper img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 1200px) {
+  .article-txt {
+    width: auto;
+  }
+  .layer-3 .article-txt p {
+    font-size: 18px; 
+  }
+}
+
+@media (max-width: 991px) {
+  .article-txt {
+    width: auto;
+  }
+  .layer-3 .article-txt p {
+    font-size: 16px;
+  }
+  .article-arrow-bg img {
+    top: -31px;
+    width: 81px;
+  }
+  .article-arrow-bg i {
+    padding: 12px 13px;
+    margin: -54px auto 10px auto;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .article-txt {
+    width: auto;
+  }
+  .layer-3 .article-txt p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 575px) {
+  .article-card-hover {
+    margin-bottom: 35px;
+  }
+  .article-img-wrapper {
+    display: block;
+    margin: 0 auto;
+  }
+  .article-img-wrapper img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .article-card-hover {
+    margin-bottom: 25px; 
+ }
+}
+
+@media (max-width: 360px) {
+  .article-card-hover {
+    margin-bottom: 15px; 
+ }
+}
