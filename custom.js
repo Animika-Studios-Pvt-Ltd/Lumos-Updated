@@ -44,8 +44,15 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!matched && page !== "index.html") {
     clearActiveLinks();
 
+    // Check if it's an article inside page
+    if (document.querySelector(".artcles-inside-page")) {
+      const resourcesToggle = Array.from(
+        document.querySelectorAll(".navbar-nav .dropdown-toggle"),
+      ).find((link) => link.textContent.trim().toLowerCase() === "resources");
+      if (resourcesToggle) resourcesToggle.classList.add("active");
+    }
     // Check if it's an industry page
-    if (page.includes("-industry") || page === "industries.html") {
+    else if (page.includes("-industry") || page === "industries.html") {
       const indLink = Array.from(
         document.querySelectorAll(".navbar-nav .nav-link"),
       ).find((link) => {
