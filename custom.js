@@ -349,16 +349,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   initSlickCarousel(
-    "#carouselCaptionsInner",
-    "#pagination-status",
-    "#carouselCaptionsInner-wrapper .carousel-control-prev",
-    "#carouselCaptionsInner-wrapper .carousel-control-next",
+    "#publicationCarouselInner",
+    "#publication-pagination-status",
+    "#publicationCarouselInner-wrapper .carousel-control-prev",
+    "#publicationCarouselInner-wrapper .carousel-control-next",
   );
   initSlickCarousel(
-    "#carouselCaptionsInner1",
-    "#pagination-status1",
-    "#carouselCaptionsInner1-wrapper .carousel-control-prev",
-    "#carouselCaptionsInner1-wrapper .carousel-control-next",
+    "#publicationCarouselInner1",
+    "#publication-pagination-status1",
+    "#publicationCarouselInner1-wrapper .carousel-control-prev",
+    "#publicationCarouselInner1-wrapper .carousel-control-next",
   );
 
   /* ------------------------ Clients Accordion Section ------------------------ */
