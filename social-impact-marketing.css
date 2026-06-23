@@ -1,0 +1,94 @@
+/* --------------------- SOCIAL IMPACT MARKETING SECTION ------------------------- */
+.social-impact-section {
+  padding: 40px 0;
+}
+
+.social-impact-section img {
+  border-radius: 15px;
+}
+
+.social-impact-section a {
+  color: #000;
+}
+
+.social-impact-section a:hover .fa-arrow-right {
+  color: #fff;
+  background: #f6802f;
+  transform: rotate(356deg);
+  border-color: #fff;
+}
+
+.social-impact-txt {
+  text-align: center;
+  width: 370px;
+  margin-bottom: 50px;
+}
+
+.social-impact-txt h3 {
+  background: linear-gradient(to right, rgb(244, 118, 39), rgb(252, 169, 81));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.social-impact-arrow-bg img {
+  position: relative;
+  top: -35px;
+  width: 90px;
+  border-radius: 0;
+}
+
+.social-impact-arrow-bg i {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 14px 15px;
+  margin: -60px auto 10px auto;
+  width: fit-content;
+  color: #000;
+  display: block;
+  position: relative;
+  transform: rotate(315deg);
+  transition: transform 0.6s ease;
+}
+
+.social-impact-arrow-bg i:hover {
+  transform: rotate(675deg);
+}
+
+@media (max-width: 1200px) {
+  .social-impact-section {
+    padding: 35px 0;
+  }
+  .social-impact-txt {
+    width: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .social-impact-section {
+    padding: 30px 0;
+  }
+  .social-impact-txt {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .social-impact-section {
+    padding: 25px 0;
+  }
+  .social-impact-txt {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .social-impact-section {
+    padding: 15px 0;
+  }
+  .social-impact-section img {
+    display: block;
+    margin: 0 auto;
+  }
+}
