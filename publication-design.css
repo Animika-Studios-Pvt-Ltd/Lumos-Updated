@@ -1,0 +1,256 @@
+/* --------------------- PUBLICATION / LITERATURE SECTION ------------------------- */
+.publications-section {
+  padding: 40px 0;
+}
+
+.publications-section h2 {
+  margin-bottom: 20px;
+}
+
+.publications {
+  border-top: 1px solid #000;
+  padding: 40px 0;
+  border-image: linear-gradient(90deg, #3c179b, #fa6e1e, #ffbb0d, #fdad02);
+  border-image-slice: 1;
+  width: 100%;
+}
+
+.publications img {
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin: 40px auto 0 auto;
+  display: block;
+}
+
+.publications p {
+  margin-bottom: 10px;
+}
+
+.publications .row span,
+.publications-slider span {
+  font-family: "figtree-light";
+  font-size: 20px;
+  margin: 10px 0 5px 0;
+  display: block;
+  text-align: center;
+}
+
+.publications .slide {
+  padding: 0;
+}
+
+.publications-carousel-container {
+  position: relative;
+}
+
+.publications-slider {
+  margin-bottom: 15px;
+}
+
+.publications-slider .slick-slide {
+  padding: 0 15px;
+}
+
+.publications-slider .slick-slide:focus {
+  outline: none;
+}
+
+.publications-carousel-controls {
+  position: absolute;
+  right: 3%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.publications-control-btn-1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.publications-control-btn-1 .carousel-control-prev,
+.publications-control-btn-1 .carousel-control-next {
+  position: static;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.publications-control-btn-1 i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-size: 12px;
+  background: none;
+  border: 1px solid #383b3e;
+  color: #383b3e;
+  border-radius: 100%;
+  transition: background 0.6s ease;
+}
+
+.publications-control-btn-1 i:hover {
+  background: #f57c2b;
+  border-color: #f67e2e;
+  color: #fff;
+}
+
+.publications .carousel-control-next,
+.publications .carousel-control-prev {
+  opacity: 1;
+}
+
+.publications .pagination-box {
+  font-size: 20px;
+  font-family: "barlow-regular";
+  width: fit-content;
+  color: #333;
+}
+
+@media (max-width: 1200px) {
+  .publications-section {
+    padding: 35px 0;
+  }
+  .publications {
+    padding: 35px 0;
+  }
+  .publications .row span,
+  .publications-slider span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .publications-section {
+    padding: 30px 0;
+  }
+  .publications {
+    padding: 30px 0;
+  }
+  .publications img {
+    margin: 20px auto 0 auto;
+  }
+  .publications .row span,
+  .publications-slider span {
+    font-size: 16px;
+  }
+  .publications-slider {
+    margin-bottom: 10px;
+  }
+  .publications-carousel-controls {
+    right: 40%;
+    left: auto;
+    bottom: -35px;
+  }
+  .publications-control-btn-1 i {
+    width: 27px;
+    height: 27px;
+    font-size: 11px;
+  }
+  .publications .pagination-box {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .publications-section {
+    padding: 25px 0;
+  }
+  .publications {
+    padding: 25px 0;
+  }
+  .publications .row span,
+  .publications-slider span {
+    font-size: 16px;
+  }
+  .publications-carousel-controls {
+    right: 40%;
+    left: auto;
+    bottom: -30px;
+  }
+  .publications-control-btn-1 i {
+    width: 25px;
+    height: 25px;
+    font-size: 10px;
+  }
+  .publications .pagination-box {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 575px) {
+  .publications-section {
+    padding: 15px 0;
+  }
+  .publications {
+    padding: 20px 0;
+  }
+  .publications p {
+    text-align: center;
+  }
+  .publications img {
+    width: 50%;
+    margin: 10px auto 0 auto;
+    display: block;
+    border: none;
+  }
+  .publications .row span,
+  .publications-slider span {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: 6px;
+  }
+  .publications-carousel-controls {
+    left: 50%;
+    right: auto;
+    bottom: -25px;
+    transform: translateX(-50%);
+  }
+  .publications-control-btn-1 i {
+    width: 22px;
+    height: 22px;
+    font-size: 9px;
+  }
+  .publications .pagination-box {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .publications {
+    padding: 15px 0;
+  }
+  .publications .row span,
+  .publications-slider span {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .publications-carousel-controls {
+    bottom: -20px;
+  }
+  .publications .pagination-box {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  .publications {
+    padding: 10px 0;
+  }
+  .publications .row span,
+  .publications-slider span {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .publications-carousel-controls {
+    bottom: -15px;
+  }
+  .publications .pagination-box {
+    font-size: 14px;
+  }
+}

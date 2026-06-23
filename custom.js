@@ -275,33 +275,91 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Carousel Pagination (reusable function)
-  function initCarouselPagination(carouselId, paginationId) {
-    const carousel = document.getElementById(carouselId);
-    const pagination = document.getElementById(paginationId);
-    if (!carousel || !pagination) return;
+  // Publications Section Slick Carousel initialization and custom pagination
+  function initSlickCarousel(
+    sliderSelector,
+    paginationId,
+    prevBtnSelector,
+    nextBtnSelector,
+  ) {
+    const $slider = $(sliderSelector);
+    const $pagination = $(paginationId);
+    if ($slider.length === 0) return;
 
-    const items = carousel.querySelectorAll(".carousel-item");
-    const total = items.length;
+    // Bind event first to catch init
+    $slider.on(
+      "init reInit afterChange",
+      function (event, slick, currentSlide) {
+        const current =
+          (currentSlide !== undefined
+            ? currentSlide
+            : slick
+              ? slick.currentSlide
+              : 0) + 1;
+        const total = slick ? slick.slideCount : 0;
+        if ($pagination.length > 0 && total > 0) {
+          $pagination.text(
+            `${String(current).padStart(2, "0")} / ${String(total).padStart(2, "0")}`,
+          );
+        }
+      },
+    );
 
-    const updatePagination = () => {
-      const activeIndex =
-        Array.from(items).findIndex((item) =>
-          item.classList.contains("active"),
-        ) + 1;
-
-      pagination.textContent = `${String(activeIndex).padStart(
-        2,
-        "0",
-      )}/${String(total).padStart(2, "0")}`;
-    };
-
-    carousel.addEventListener("slid.bs.carousel", updatePagination);
-    updatePagination(); // initial call
+    // Initialize slick
+    $slider.slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      prevArrow: prevBtnSelector,
+      nextArrow: nextBtnSelector,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
   }
 
-  initCarouselPagination("carouselCaptionsInner", "pagination-status");
-  initCarouselPagination("carouselCaptionsInner1", "pagination-status1");
+  initSlickCarousel(
+    "#carouselCaptionsInner",
+    "#pagination-status",
+    "#carouselCaptionsInner-wrapper .carousel-control-prev",
+    "#carouselCaptionsInner-wrapper .carousel-control-next",
+  );
+  initSlickCarousel(
+    "#carouselCaptionsInner1",
+    "#pagination-status1",
+    "#carouselCaptionsInner1-wrapper .carousel-control-prev",
+    "#carouselCaptionsInner1-wrapper .carousel-control-next",
+  );
 
   /* ------------------------ Clients Accordion Section ------------------------ */
   const headers = document.querySelectorAll(".clients-accordion-header");
@@ -364,7 +422,7 @@ function acceptCookies() {
       const scrollY = window.scrollY || window.pageYOffset;
       const scrollHeight = document.documentElement.scrollHeight;
       const clientHeight = document.documentElement.clientHeight;
-      const isAtBottom = (scrollY + clientHeight) >= (scrollHeight - 20);
+      const isAtBottom = scrollY + clientHeight >= scrollHeight - 20;
       if (rect.top <= 0 || isAtBottom) {
         scrollBtn.style.display = "block";
       } else {

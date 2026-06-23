@@ -11,6 +11,7 @@
 @import "lumos-team.css";
 @import "services-articles.css";
 @import "clients.css";
+@import "publication-design.css";
 
 @font-face {
   font-family: "barlowcondensed-medium";
@@ -1430,66 +1431,7 @@ li a.active {
 
 
 
-/* --------------------- PUBLICATION / LITERATURE SECTION ------------------------- */
-.publication {
-  margin-top: 50px;
-}
 
-.publication p,
-.publication-1 p {
-  font-family: "figtree-light";
-  font-size: 18px;
-  margin-bottom: 0;
-}
-
-.publication-1 {
-  border-bottom: 1px solid #000;
-  padding: 50px 0;
-  border-image: linear-gradient(90deg, #3c179b, #fa6e1e, #ffbb0d, #fdad02);
-  border-image-slice: 1;
-  width: 100%;
-}
-
-.publication-1 img {
-  border: 1px solid #ccc;
-  border-radius: 15px;
-  margin-top: 40px;
-}
-
-.publication-1 span {
-  font-family: "figtree-light";
-  font-size: 18px;
-  margin: 10px 0 0 0;
-  display: block;
-  text-align: center;
-}
-
-.publication-1 .slide {
-  padding: 0;
-}
-
-.publication-1 .carousel-inner {
-  margin-bottom: 15px;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .publication-1 img {
-    margin-top: 0px;
-  }
-  .publication {
-    margin-top: 30px;
-  }
-  .publication-1 {
-    padding: 30px 0;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1099px) {
-  .publication p,
-  .publication-1 p {
-    font-size: 15px;
-  }
-}
 
 /* --------------------- BRANDING PAGE SECTION ------------------------- */
 .why-branding .benefits {
