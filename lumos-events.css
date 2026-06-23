@@ -1,0 +1,158 @@
+/* --------------------- LUMOS EVENTS PAGE SECTION ------------------------- */
+.events-section {
+  padding: 40px 0;
+}
+
+.events-section h2 {
+  margin-bottom: 10px;
+}
+
+.events-desc {
+  margin-bottom: 20px;
+}
+
+.events-section img {
+  border-radius: 15px;
+}
+
+.events-section a {
+  color: #000;
+}
+
+.events-section a:hover .fa-arrow-right {
+  color: #fff;
+  background: #f6802f;
+  transform: rotate(356deg);
+  border-color: #fff;
+}
+
+.events-txt {
+  margin-bottom: 50px;
+  text-align: center;
+  width: 370px;
+}
+
+.events-txt h3 {
+  background: linear-gradient(to right, rgb(244, 118, 39), rgb(252, 169, 81));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.events-arrow-bg img {
+  position: relative;
+  top: -35px;
+  width: 90px;
+  border-radius: 0;
+}
+
+.events-arrow-bg i {
+  border: 1px solid #000;
+  border-radius: 50%;
+  padding: 14px 15px;
+  margin: -60px auto 10px auto;
+  width: fit-content;
+  color: #000;
+  display: block;
+  position: relative;
+  transform: rotate(315deg);
+  transition: transform 0.6s ease;
+}
+
+.events-arrow-bg i:hover {
+  transform: rotate(675deg);
+}
+
+@media (max-width: 1200px) {
+  .events-txt {
+    width: auto;
+  }
+}
+
+@media (max-width: 991px) {
+  .events-section {
+    padding: 30px 0;
+  }
+  .events-desc {
+    margin-bottom: 15px;
+  }
+  .events-txt {
+    margin-bottom: 25px;
+    width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .events-section {
+    padding: 25px 0;
+  }
+  .events-desc {
+    margin-bottom: 15px;
+  }
+  .events-section img {
+    display: block;
+    margin: 0 auto;
+  }
+  .events-txt {
+    margin-bottom: 20px;
+    width: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .events-section {
+    padding: 15px 0;
+  }
+  .events-desc {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .events-section {
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .events-section {
+    padding: 10px 0;
+  }
+}
+
+/* --------------------- LUMOS ALL EVENTS SECTION ------------------------- */
+.event-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+}
+
+.section-alt {
+  background: #f8f9fa;
+}
+
+.event-title {
+  margin-bottom: 10px;
+  -webkit-text-fill-color: rgba(0, 0, 0, 0);
+  background: linear-gradient(to right, rgb(244, 118, 39), rgb(252, 169, 81))
+    text;
+}
+
+.event-gallery img {
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.event-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
