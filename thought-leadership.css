@@ -1,0 +1,294 @@
+/* --------------------- THOUGHT LEADERSHIP SECTION ------------------------- */
+.thought-leadership-page {
+  padding: 40px 0;
+  display: block;
+}
+
+.thought-leadership-img img {
+  border-radius: 15px;
+  width: 100%;
+}
+
+.thought-leadership-title-box h2 {
+  font-size: 42px;
+  margin-bottom: 6px;
+}
+
+.thought-leadership-subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.thought-leadership-intro {
+  margin-bottom: 0;
+}
+
+.thought-leadership-desc {
+  margin: 10px 0 0 0;
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.thought-leadership-desc p {
+  margin-bottom: 0;
+}
+
+.thought-leadership-body-text {
+  margin-top: 30px;
+}
+
+.thought-leadership-body-text p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.mobile-only-desc {
+  display: none;
+}
+
+.desktop-only-text {
+  display: block;
+}
+
+.thought-leadership-benefits-heading {
+  font-family: "barlow-regular";
+  font-size: 26px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/* --------------------- BENEFITS LIST ------------------------- */
+.thought-leadership-benefits {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-left: 0;
+}
+
+.thought-leadership-benefits ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.thought-leadership-benefits span {
+  -webkit-text-fill-color: #0000;
+  background: linear-gradient(to right, #f47627, #fca951);
+  -webkit-background-clip: text;
+  font-family: "barlow-regular";
+  font-size: 40px;
+}
+
+.thought-leadership-benefits li {
+  font-family: "figtree-light";
+  font-size: 20px;
+}
+
+@media (max-width: 1440px) {
+  .thought-leadership-title-box h2 {
+    font-size: 34px;
+  }
+  .thought-leadership-subtitle {
+    font-size: 22px;
+  }
+  .thought-leadership-desc {
+    margin: 5px 0 0 0;
+  }
+  .thought-leadership-benefits span {
+    font-size: 38px;
+  }
+  .thought-leadership-benefits li {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .thought-leadership-page {
+    padding: 35px 0;
+  }
+  .thought-leadership-title-box h2 {
+    font-size: 32px;
+  }
+  .thought-leadership-benefits span {
+    font-size: 36px;
+  }
+  .thought-leadership-benefits li {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .thought-leadership-page {
+    padding: 35px 0;
+  }
+  .thought-leadership-title-box h2 {
+    font-size: 30px;
+  }
+  .thought-leadership-subtitle {
+    font-size: 20px;
+  }
+  .thought-leadership-benefits span {
+    font-size: 34px;
+  }
+  .thought-leadership-benefits li {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 991px) {
+  .thought-leadership-page {
+    padding: 30px 0;
+  }
+  .thought-leadership-title-box h2 {
+    font-size: 28px;
+  }
+  .thought-leadership-subtitle {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .desktop-only-text {
+    display: none !important;
+  }
+  .mobile-only-desc {
+    display: block !important;
+  }
+  .thought-leadership-body-text {
+    margin-top: 20px;
+  }
+  .thought-leadership-body-text p {
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  .thought-leadership-benefits-heading {
+    font-size: 22px;
+  }
+  .thought-leadership-benefits {
+    gap: 30px;
+  }
+  .thought-leadership-benefits span {
+    font-size: 32px;
+  }
+  .thought-leadership-benefits li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .thought-leadership-page {
+    padding: 20px 0;
+  }
+  .thought-leadership-title-box h2 {
+    font-size: 24px;
+  }
+  .thought-leadership-subtitle {
+    font-size: 16px;
+  }
+  .thought-leadership-page p {
+    text-align: justify;
+    line-height: 1.3;
+  }
+  .thought-leadership-page .row {
+    display: flex;
+    flex-direction: column;
+  }
+  .thought-leadership-page .row > div:nth-child(1) {
+    order: 2;
+  }
+  .thought-leadership-page .row > div:nth-child(2) {
+    order: 1;
+  }
+  .thought-leadership-page .row > div:nth-child(3) {
+    order: 3;
+  }
+  .thought-leadership-img {
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+  }
+  .thought-leadership-img img {
+    width: 70% !important;
+    margin: 0 auto;
+    display: block;
+  }
+  .thought-leadership-body-text {
+    margin-top: 15px;
+  }
+  .thought-leadership-body-text p {
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  .thought-leadership-benefits-heading {
+    font-size: 20px;
+  }
+  .thought-leadership-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 0px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+  }
+  .thought-leadership-benefits ul {
+    flex: 0 0 48%;
+    margin-bottom: 0px;
+  }
+  .thought-leadership-benefits span {
+    font-size: 30px;
+  }
+  .thought-leadership-benefits li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .thought-leadership-page {
+    padding: 10px 0;
+  }
+  .thought-leadership-title-box h2 {
+    font-size: 22px;
+  }
+  .thought-leadership-img {
+    margin-top: 6px;
+  }
+  .thought-leadership-img img {
+    width: 60% !important;
+  }
+  .thought-leadership-body-text p {
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+  .thought-leadership-benefits {
+    gap: 0;
+    margin-bottom: 10px;
+  }
+  .thought-leadership-benefits-heading {
+    font-size: 18px;
+  }
+  .thought-leadership-benefits ul {
+    flex: 0 0 48%;
+  }
+  .thought-leadership-benefits span {
+    font-size: 28px;
+  }
+  .thought-leadership-benefits li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .thought-leadership-benefits span {
+    font-size: 26px;
+  }
+  .thought-leadership-benefits li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .thought-leadership-benefits span {
+    font-size: 24px;
+  }
+  .thought-leadership-benefits li {
+    font-size: 14px;
+  }
+}
