@@ -122,37 +122,227 @@
 }
 
 /* --------------------- LUMOS ALL EVENTS SECTION ------------------------- */
-.event-card {
+.all-events-section {
+  padding: 40px 0;
+}
+
+.all-events-heading {
+  margin-bottom: 30px;
+}
+
+.all-events-card {
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
+  padding: 20px;
+  margin-bottom: 40px;
 }
 
-.event-card:hover {
+.all-events-card:hover {
   transform: translateY(-2px);
+}
+
+.all-events-header-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.all-events-img-col {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  text-align: left;
+}
+
+.all-events-info-col {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.all-events-title {
+  margin-bottom: 10px;
+  background: linear-gradient(to right, rgb(244, 118, 39), rgb(252, 169, 81));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.all-events-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.all-events-gallery-item {
+  flex: 0 0 calc(33.3333% - 16px);
+  max-width: calc(33.3333% - 16px);
+}
+
+.all-events-gallery img {
+  border-radius: 10px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s;
+  cursor: pointer;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.all-events-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
 
 .section-alt {
   background: #f8f9fa;
 }
 
-.event-title {
-  margin-bottom: 10px;
-  -webkit-text-fill-color: rgba(0, 0, 0, 0);
-  background: linear-gradient(to right, rgb(244, 118, 39), rgb(252, 169, 81))
-    text;
+@media (max-width: 1200px) {
+  .all-events-info-col {
+    flex: 0 0 58%;
+    max-width: 58%;
+  }
+
+  .all-events-gallery-item {
+    flex: 0 0 calc(33.3333% - 16px);
+    max-width: calc(33.3333% - 16px);
+  }
 }
 
-.event-gallery img {
-  border-radius: 10px;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s;
-  cursor: pointer;
+@media (max-width: 991px) {
+  .all-events-heading {
+    margin-bottom: 32px;
+  }
+
+  .all-events-card {
+    padding: 20px;
+    margin-bottom: 32px;
+  }
+
+  .all-events-header-row {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .all-events-img-col {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  .all-events-info-col {
+    flex: 0 0 55%;
+    max-width: 55%;
+  }
+
+  .all-events-gallery {
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .all-events-gallery-item {
+    flex: 0 0 calc(33.3333% - 12px);
+    max-width: calc(33.3333% - 12px);
+  }
 }
 
-.event-gallery img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+@media (max-width: 767px) {
+  .all-events-heading {
+    margin-bottom: 24px;
+  }
+
+  .all-events-card {
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+
+  .all-events-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .all-events-img-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .all-events-info-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .all-events-gallery {
+    gap: 12px;
+    margin-top: 12px;
+  }
+
+  .all-events-gallery-item {
+    flex: 0 0 calc(50% - 8px);
+    max-width: calc(50% - 8px);
+  }
+}
+
+@media (max-width: 575px) {
+  .all-events-heading {
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+
+  .all-events-card {
+    padding: 14px;
+    margin-bottom: 20px;
+  }
+
+  .all-events-gallery {
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .all-events-gallery-item {
+    flex: 0 0 calc(50% - 6px);
+    max-width: calc(50% - 6px);
+  }
+}
+
+@media (max-width: 480px) {
+  .all-events-heading {
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .all-events-card {
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+  }
+
+  .all-events-gallery-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .all-events-gallery {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .all-events-heading {
+    font-size: 20px;
+  }
+
+  .all-events-card {
+    padding: 10px;
+    margin-bottom: 14px;
+  }
+
+  .all-events-title {
+    font-size: 18px;
+  }
 }
