@@ -203,6 +203,10 @@
 }
 
 @media (max-width: 1200px) {
+  .all-events-section {
+    padding: 35px 0;
+  }
+
   .all-events-info-col {
     flex: 0 0 58%;
     max-width: 58%;
@@ -215,6 +219,10 @@
 }
 
 @media (max-width: 991px) {
+  .all-events-section {
+    padding: 30px 0;
+  }
+
   .all-events-heading {
     margin-bottom: 32px;
   }
@@ -251,6 +259,10 @@
 }
 
 @media (max-width: 767px) {
+  .all-events-section {
+    padding: 25px 0;
+  }
+
   .all-events-heading {
     margin-bottom: 24px;
   }
@@ -289,6 +301,9 @@
 }
 
 @media (max-width: 575px) {
+  .all-events-section {
+    padding: 15px 0;
+  }
   .all-events-heading {
     margin-bottom: 20px;
     font-size: 26px;
@@ -311,6 +326,10 @@
 }
 
 @media (max-width: 480px) {
+  .all-events-section {
+    padding: 10px 0;
+  }
+
   .all-events-heading {
     font-size: 22px;
     margin-bottom: 16px;
