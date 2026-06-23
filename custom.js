@@ -303,8 +303,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initCarouselPagination("carouselCaptionsInner", "pagination-status");
   initCarouselPagination("carouselCaptionsInner1", "pagination-status1");
 
-  /* ------------------------ Accordion Section ------------------------ */
-  const headers = document.querySelectorAll(".accordion-header");
+  /* ------------------------ Clients Accordion Section ------------------------ */
+  const headers = document.querySelectorAll(".clients-accordion-header");
   headers.forEach((header) => {
     header.addEventListener("click", () => {
       headers.forEach((h) => {
