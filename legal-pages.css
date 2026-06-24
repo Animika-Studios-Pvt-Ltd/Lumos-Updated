@@ -18,7 +18,7 @@
 .privacy-policy-content {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
 .privacy-policy-section p {
@@ -54,7 +54,7 @@
     margin-bottom: 10px;
   }
   .privacy-policy-content {
-    gap: 15px;
+    gap: 10px;
   }
 }
 
@@ -73,7 +73,7 @@
     margin-bottom: 8px;
   }
   .privacy-policy-content {
-    gap: 10px;
+    gap: 8px;
   }
 }
 
@@ -92,10 +92,206 @@
     margin-bottom: 6px;
   }
   .privacy-policy-content {
-    gap: 8px;
+    gap: 6px;
   }
 }
 
 /* --------------------- TERMS AND CONDITIONS PAGE ------------------------- */
+.terms-conditions-section {
+  padding: 40px 0;
+}
+
+.terms-conditions-section h2 {
+  margin-bottom: 8px;
+}
+
+.terms-conditions-section p.terms-conditions-meta {
+  font-family: "barlow-regular";
+  font-size: 20px;
+  color: #34039d;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+.terms-conditions-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.terms-conditions-section p {
+  font-family: "figtree-light";
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.terms-conditions-section h4 {
+  margin-bottom: 0px;
+}
+
+.terms-conditions-link {
+  color: #34039d;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.terms-conditions-link:hover {
+  color: #f37022;
+}
+
+@media (max-width: 991px) {
+  .terms-conditions-section {
+    padding: 30px 0;
+  }
+  .terms-conditions-section h2 {
+    font-size: 36px;
+  }
+  .terms-conditions-section p {
+    font-size: 17px;
+  }
+  .terms-conditions-section p.terms-conditions-meta {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .terms-conditions-content {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .terms-conditions-section {
+    padding: 20px 0;
+  }
+  .terms-conditions-section h2 {
+    font-size: 30px;
+  }
+  .terms-conditions-section p {
+    font-size: 16px;
+  }
+  .terms-conditions-section p.terms-conditions-meta {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .terms-conditions-content {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 575px) {
+  .terms-conditions-section {
+    padding: 10px 0;
+  }
+  .terms-conditions-section h2 {
+    font-size: 26px;
+  }
+  .terms-conditions-section p {
+    font-size: 15px;
+  }
+  .terms-conditions-section p.terms-conditions-meta {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .terms-conditions-content {
+    gap: 6px;
+  }
+}
 
 /* --------------------- CANCELLATION AND REFUND POLICY PAGE ------------------------- */
+.refund-policy-section {
+  padding: 40px 0;
+}
+
+.refund-policy-section h2 {
+  margin-bottom: 8px;
+}
+
+.refund-policy-section p.refund-policy-meta {
+  font-family: "barlow-regular";
+  font-size: 20px;
+  color: #34039d;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+.refund-policy-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.refund-policy-section p {
+  font-family: "figtree-light";
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.refund-policy-link {
+  color: #34039d;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.refund-policy-link:hover {
+  color: #f37022;
+}
+
+@media (max-width: 991px) {
+  .refund-policy-section {
+    padding: 30px 0;
+  }
+  .refund-policy-section h2 {
+    font-size: 36px;
+  }
+  .refund-policy-section p {
+    font-size: 17px;
+  }
+  .refund-policy-section p.refund-policy-meta {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .refund-policy-content {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .refund-policy-section {
+    padding: 20px 0;
+  }
+  .refund-policy-section h2 {
+    font-size: 30px;
+  }
+  .refund-policy-section p {
+    font-size: 16px;
+  }
+  .refund-policy-section p.refund-policy-meta {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .refund-policy-content {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 575px) {
+  .refund-policy-section {
+    padding: 10px 0;
+  }
+  .refund-policy-section h2 {
+    font-size: 26px;
+  }
+  .refund-policy-section p {
+    font-size: 15px;
+  }
+  .refund-policy-section p.refund-policy-meta {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .refund-policy-content {
+    gap: 6px;
+  }
+}
