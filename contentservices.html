@@ -22,6 +22,11 @@
       crossorigin="anonymous"
       media="screen"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" type="text/css" href="custom.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
@@ -273,32 +278,32 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid">
+    <div class="content-hero-section">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-md-5 col-sm-5 col-12">
-            <div
-              class="about-img"
+        <div class="row flex-column-reverse flex-md-row">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+            <img
+              src="static/lumos-in/content-inner.webp"
+              class="img-fluid"
+              alt="Content Inner for Contentservices brand identity and marketing assets by Lumos India"
               data-aos="fade-right"
               data-aos-duration="900"
               data-aos-easing="ease-out-cubic"
-            >
-              <img
-                src="static/lumos-in/content-inner.webp"
-                class="img-fluid"
-                alt="Content Inner for Contentservices brand identity and marketing assets by Lumos India"
-              />
-            </div>
+            />
           </div>
-          <div class="col-lg-7 col-md-7 col-sm-7 col-12">
-            <div
-              class="brand-txt"
-              data-aos="fade-left"
-              data-aos-duration="900"
-              data-aos-easing="ease-out-cubic"
-            >
-              <h2>Content</h2>
-              <p>
+          <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+            <div class="content-title-box">
+              <h2
+                data-aos="fade-left"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-cubic"
+              >Content</h2>
+              <p
+                class="mb-0"
+                data-aos="fade-left"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-cubic"
+              >
                 We bring over two decades experiences in building multi-channel,
                 multi-platform content mapped to diverse audience types. We
                 drive impacting customer experiences with consistency of the
@@ -309,201 +314,194 @@
               </p>
             </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-12">
-            <div
-              class="why-content pt-5"
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-duration="900"
-              data-aos-easing="ease-out-cubic"
-            >
-              <h2>CONTENT IS KING</h2>
-              <p>
-                Content continues to be one of the most powerful tools a brand
-                owns. It defines a brand’s philosophy, vision and intent in the
-                industry, and can be a transformative and catapulting agent in
-                the success story!
-              </p>
-              <br />
-              <h2 class="brand-s">WHY CONTENT MATTERS?</h2>
-              <ul class="benefits">
-                <li
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                  data-aos-duration="700"
-                >
-                  <span>01</span>
-                  <b>Shapes Brand Identity:</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="container why-content-sec">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+          <div
+            class="why-content"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-cubic"
+          >
+            <h2>WHY CONTENT MATTERS?</h2>
+            <p>
+              Content continues to be one of the most powerful tools a brand
+              owns. It defines a brand’s philosophy, vision and intent in the
+              industry, and can be a transformative and catapulting agent in
+              the success story!
+            </p>
+            <ul>
+              <li
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="700"
+              >
+                <span>01</span>
+                <div>
+                  <span class="why-content-title">Shapes Brand Identity:</span><br />
                   Content tells your brand’s story — its values, mission, and
                   voice. Every piece of content reinforces your brand’s
                   identity.
-                </li>
-                <li
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                  data-aos-duration="700"
-                >
-                  <span>02</span>
-                  <b>Builds Trust and Credibility:</b>
+                </div>
+              </li>
+              <li
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="700"
+              >
+                <span>02</span>
+                <div>
+                  <span class="why-content-title">Builds Trust and Credibility:</span><br />
                   Over a period of time, when a brand gives out credible and
                   engaging content, it gets positioned as a ‘thought leader.’
-                </li>
-                <li
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                  data-aos-duration="700"
-                >
-                  <span>03</span>
-                  <b>Drives Engagement:</b>
+                </div>
+              </li>
+              <li
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="700"
+              >
+                <span>03</span>
+                <div>
+                  <span class="why-content-title">Drives Engagement:</span><br />
                   Good content engages audiences, especially new and prospective
                   ones.
-                </li>
-                <li
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                  data-aos-duration="700"
-                >
-                  <span>04</span>
-                  <b>Boosts Visibility:</b>
+                </div>
+              </li>
+              <li
+                data-aos="fade-up"
+                data-aos-delay="100"
+                data-aos-duration="700"
+              >
+                <span>04</span>
+                <div>
+                  <span class="why-content-title">Boosts Visibility:</span><br />
                   Search engines love fresh, relevant content. Making sure your
                   content is SEO-enriched and nurtured, significantly boosts
                   visibility.
-                </li>
-              </ul>
-              <p>
-                Content is indeed a key player in every stage of the Customer
-                Journey. It plays a key role in building the entire lifecycle
-                from awareness to loyalty, from demonstrating value to
-                customers, eternally!
-              </p>
+                </div>
+              </li>
+            </ul>
+            <p class="mb-0">
+              Content is indeed a key player in every stage of the Customer
+              Journey. It plays a key role in building the entire lifecycle
+              from awareness to loyalty, from demonstrating value to
+              customers, eternally!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content-carousel">
+      <div class="row">
+        <div
+          class="col-lg-12 col-md-12 col-sm-12 col-12"
+          data-aos="fade-up"
+          data-aos-delay="200"
+          data-aos-duration="900"
+          data-aos-easing="ease-out-cubic"
+        >
+          <div id="contentCarouselCaptionsInner" class="slick-carousel-wrapper">
+            <div id="contentCarouselInner" class="content-carousel-inner">
+              <div class="content-slide-item">
+                <ul class="content-card-slide">
+                  <li>
+                    <h5>Content development</h5>
+                    <p>
+                      For all types of digital channels including
+                      website, marketing collaterals, corporate
+                      presentations, use cases, case studies, success
+                      stories, video scripts, sales pitches and more.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-slide-item">
+                <ul class="content-card-slide">
+                  <li>
+                    <h5>Content Writing</h5>
+                    <p>
+                      All types of writing including blogs, articles,
+                      translations, book authoring, analytical and
+                      research writing and more.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-slide-item">
+                <ul class="content-card-slide">
+                  <li>
+                    <h5>Social Media Content</h5>
+                    <p>
+                      Content for social media including LinkedIn,
+                      Twitter, Facebook and Instagram. The expertise
+                      includes content copies, profile writing, posts
+                      and promotions.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-slide-item">
+                <ul class="content-card-slide">
+                  <li>
+                    <h5>Thought Leadership Content</h5>
+                    <p>
+                      Branding and Leadership Content, Topics and
+                      Theme-specific Content to drive Thought
+                      Leadership.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-slide-item">
+                <ul class="content-card-slide">
+                  <li>
+                    <h5>Content & SEO Strategy</h5>
+                    <p>
+                      Drive organic traffic and relevant audiences for
+                      your products and services with a comprehensive
+                      Content and SEO Strategy. Click here to know
+                      content & seo strategy.
+                    </p>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div
-              class="col-lg-12 col-md-12 col-sm-12 col-12"
-              id="inner-slide"
-            >
-              <div
-                id="carouselCaptionsInner"
-                class="carousel slide"
-                data-bs-ride="carousel"
-                data-aos="fade-up"
-                data-aos-delay="200"
-                data-aos-duration="900"
-                data-aos-easing="ease-out-cubic"
-              >
-                <div class="carousel-inner">
-                  <div class="carousel-item carousel-item-1 active">
-                    <div class="card-10">
-                      <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                          <ul class="brand-slide">
-                            <li>
-                              <span>01</span>
-                              <h5>Content development</h5>
-                              <p>
-                                For all types of digital channels including
-                                website, marketing collaterals, corporate
-                                presentations, use cases, case studies, success
-                                stories, video scripts, sales pitches and more.
-                              </p>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                          <ul class="brand-slide">
-                            <li>
-                              <span>02</span>
-                              <h5>Content Wrirting</h5>
-                              <p>
-                                All types of writing including blogs, articles,
-                                translations, book authoring, analytical and
-                                research writing and more.
-                              </p>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item carousel-item-2">
-                    <div class="card-10">
-                      <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                          <ul class="brand-slide">
-                            <li>
-                              <span>03</span>
-                              <h5>Social Media Content</h5>
-                              <p>
-                                Content for social media including LinkedIn,
-                                Twitter, Facebook and Instagram. The expertise
-                                includes content copies, profile writing, posts
-                                and promotions.
-                              </p>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                          <ul class="brand-slide">
-                            <li>
-                              <span>04</span>
-                              <h5>Thought Leadership Content</h5>
-                              <p>
-                                Branding and Leadership Content, Topics and
-                                Theme-specific Content to drive Thought
-                                Leadership.
-                              </p>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item carousel-item-2">
-                    <div class="card-10">
-                      <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                          <ul class="brand-slide">
-                            <li>
-                              <span>05</span>
-                              <h5>Content & Seo Strategy</h5>
-                              <p>
-                                Drive organic traffic and relevant audiences for
-                                your products and services with a comprehensive
-                                Content and SEO Strategy. Click here to know
-                                content & seo strategy.
-                              </p>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-12"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="control-btn-1">
-                  <button
-                    class="carousel-control-next"
-                    type="button"
-                    data-bs-target="#carouselCaptionsInner"
-                    data-bs-slide="next"
-                    aria-label="Next Slide"
-                  >
-                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                  <button
-                    class="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#carouselCaptionsInner"
-                    data-bs-slide="prev"
-                    aria-label="Previous Slide"
-                  >
-                    <i class="fas fa-arrow-left" aria-hidden="true"></i>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                </div>
-                <div class="pagination-box">
-                  <span id="pagination-status">01 / 03</span>
-                </div>
+            <div class="content-carousel-controls-wrapper">
+              <div class="pagination-box">
+                <span id="content-pagination-status" class="content-carousel-num"
+                  >01 / 05</span
+                >
+              </div>
+              <div class="content-carousel-buttons">
+                <button
+                  class="carousel-control-prev content-carousel-btn"
+                  type="button"
+                  aria-label="Previous Slide"
+                >
+                  <i
+                    class="fas fa-arrow-left content-carousel-icon"
+                    aria-hidden="true"
+                  ></i>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button
+                  class="carousel-control-next content-carousel-btn"
+                  type="button"
+                  aria-label="Next Slide"
+                >
+                  <i
+                    class="fas fa-arrow-right content-carousel-icon"
+                    aria-hidden="true"
+                  ></i>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
             </div>
           </div>
