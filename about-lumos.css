@@ -1,7 +1,7 @@
 /* --------------------- ABOUT PAGE SECTION ------------------------- */
 /* HERO SECTION */
 .about-hero-section {
-  padding: 40px 0 30px;
+  padding: 40px 0 20px;
 }
 
 .about-img img {
@@ -10,7 +10,6 @@
 }
 
 .about-title-box h2 {
-  font-size: 42px;
   margin-bottom: 6px;
 }
 
@@ -21,248 +20,13 @@
   color: #333;
 }
 
-.about-intro {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 0;
-  color: #444;
-}
-
-.about-desc {
-  margin: 10px 0 0 0;
-  text-align: justify;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #444;
-}
-
-.about-desc p {
-  margin-bottom: 0;
-}
-
-/* --------------------- DETAILS & FEATURES ------------------------- */
-
-/* WHY CHOOSE US SECTION */
-.about-why-section {
-  padding: 40px 0;
-}
-
-/* TRACK RECORD SECTION */
-.about-track-record-section {
-  padding: 40px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-/* HALLMARK & GROWTH CALLOUT SECTION */
-.about-callout-section {
-  padding: 40px 0 50px;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.about-sec-title {
-  font-family: "barlowcondensed-medium";
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #111;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.about-why-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-  padding: 18px 24px;
-  background: #fff;
-  border-top: 1px solid rgba(0, 0, 0, 0.04);
-  border-right: 1px solid rgba(0, 0, 0, 0.04);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-  border-left: 4px solid #f47627;
-  border-radius: 0 12px 12px 0;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-  transition: all 0.3s ease;
-}
-
-.about-why-item:hover {
-  transform: translateX(5px);
-  background: #fdf7f3;
-  box-shadow: 0 8px 20px rgba(244, 118, 39, 0.06);
-}
-
-.why-item-icon {
-  font-size: 20px;
-  color: #f47627;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 2px;
-  transition: all 0.3s ease;
-}
-
-.about-why-item:hover .why-item-icon {
-  transform: scale(1.15);
-}
-
-.why-item-text p {
-  font-family: "figtree-light";
-  font-size: 18px;
-  color: #333;
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* EXCELLENCE CARDS */
-.about-excellence-card {
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 12px;
-  padding: 25px 20px;
-  height: 100%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-  transition: all 0.3s ease;
-}
-
-.about-excellence-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  border-color: rgba(8, 83, 181, 0.3);
-}
-
-.excellence-card-content {
-  display: flex;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-.excellence-icon {
-  width: 40px;
-  height: 40px;
-  background: rgba(8, 83, 181, 0.08);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.excellence-icon i {
-  color: #0853b5;
-  font-size: 18px;
-}
-
-.about-excellence-card p {
-  font-family: "figtree-light";
-  font-size: 17px;
-  color: #333;
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* CALLOUT CARDS */
-.about-callout-card {
-  background: #fdfdfd;
-  border-radius: 12px;
-  padding: 30px;
-  height: 100%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-  transition: all 0.3s ease;
-}
-
-.differentiator-card {
-  border-left: 5px solid #0853b5;
-  border-top: 1px solid rgba(0, 0, 0, 0.04);
-  border-right: 1px solid rgba(0, 0, 0, 0.04);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-}
-
-.growth-card {
-  border-left: 5px solid #f47627;
-  border-top: 1px solid rgba(0, 0, 0, 0.04);
-  border-right: 1px solid rgba(0, 0, 0, 0.04);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
-}
-
-.about-callout-card h3 {
-  font-family: "barlow-regular";
-  font-size: 26px;
-  margin-bottom: 15px;
-  color: #111;
-}
-
-.about-callout-card p {
-  font-family: "figtree-light";
-  font-size: 17px;
-  color: #444;
-  line-height: 1.6;
-}
-
-.about-annual-return {
-  margin-top: 25px;
-}
-
-.annual-return-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 24px;
-  border-radius: 30px;
-  background: #0853b5;
-  color: #fff !important;
-  font-family: "barlow-regular";
-  font-size: 16px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border: none;
-  box-shadow: 0 4px 12px rgba(8, 83, 181, 0.2);
-}
-
-.annual-return-btn:hover {
-  background: #f47627;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(244, 118, 39, 0.3);
-}
-
-/* RESPONSIVE STYLES */
 @media (max-width: 1440px) {
-  .about-title-box h2 {
-    font-size: 34px;
-  }
   .about-subtitle {
     font-size: 22px;
-  }
-  .about-desc {
-    margin: 5px 0 0 0;
-  }
-}
-
-@media (max-width: 1366px) {
-  .about-hero-section {
-    padding: 35px 0 25px;
-  }
-  .about-why-section,
-  .about-track-record-section {
-    padding: 35px 0;
-  }
-  .about-title-box h2 {
-    font-size: 32px;
   }
 }
 
 @media (max-width: 1200px) {
-  .about-hero-section {
-    padding: 30px 0 20px;
-  }
-  .about-why-section,
-  .about-track-record-section {
-    padding: 30px 0;
-  }
-  .about-callout-section {
-    padding: 30px 0 40px;
-  }
-  .about-title-box h2 {
-    font-size: 30px;
-  }
   .about-subtitle {
     font-size: 20px;
   }
@@ -270,54 +34,23 @@
 
 @media (max-width: 991px) {
   .about-hero-section {
-    padding: 25px 0 15px;
-  }
-  .about-why-section,
-  .about-track-record-section {
-    padding: 25px 0;
-  }
-  .about-callout-section {
-    padding: 25px 0 35px;
-  }
-  .about-title-box h2 {
-    font-size: 28px;
+    padding: 30px 0 15px;
   }
   .about-subtitle {
     font-size: 18px;
     margin-bottom: 0;
   }
-  .why-item-text p {
-    font-size: 16px;
-  }
-  .about-excellence-card p,
-  .about-callout-card p {
-    font-size: 15px;
-  }
-  .about-callout-card h3 {
-    font-size: 22px;
-  }
 }
 
 @media (max-width: 767px) {
   .about-hero-section {
-    padding: 20px 0 10px;
-  }
-  .about-why-section,
-  .about-track-record-section {
-    padding: 20px 0;
-  }
-  .about-callout-section {
-    padding: 20px 0 30px;
-  }
-  .about-title-box h2 {
-    font-size: 24px;
+    padding: 25px 0 15px;
   }
   .about-subtitle {
     font-size: 16px;
   }
   .about-img {
     text-align: center;
-    display: block;
     margin-top: 10px;
   }
   .about-img img {
@@ -325,41 +58,401 @@
     margin: 0 auto;
     display: block;
   }
-  .why-item-text p {
-    font-size: 15px;
-  }
-  .about-excellence-card p,
-  .about-callout-card p {
-    font-size: 14px;
-  }
 }
 
 @media (max-width: 575px) {
   .about-hero-section {
-    padding: 10px 0 5px;
-  }
-  .about-why-section,
-  .about-track-record-section,
-  .about-callout-section {
-    padding: 15px 0;
-  }
-  .about-title-box h2 {
-    font-size: 22px;
-  }
-  .about-img {
-    margin-top: 6px;
+    padding: 10px 0 10px;
   }
   .about-img img {
     width: 60% !important;
   }
+}
+
+/* WHY CHOOSE US */
+.about-why-section {
+  padding: 20px;
+}
+
+.about-why-section h3 {
+  font-family: "barlowcondensed-medium";
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #111;
+  display: inline-block;
+}
+
+.about-why-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about-why-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 10px 20px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-left: 4px solid transparent;
+  border-radius: 0 12px 12px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-why-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
+}
+
+.about-why-item:hover {
+  transform: translateX(5px);
+  background: #fdf7f3;
+}
+
+.about-why-item-icon {
+  font-size: 20px;
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.about-why-section p {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .about-why-section {
+    padding: 10px 20px 10px;
+  }
+  .about-why-list {
+    gap: 12px;
+  }
   .about-why-item {
+    gap: 10px;
+    padding: 10px 18px;
+  }
+  .about-why-item-icon {
+    font-size: 19px;
+  }
+  .about-why-section p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-why-section {
+    padding: 10px 15px 15px;
+  }
+  .about-why-list {
+    gap: 10px;
+  }
+  .about-why-item {
+    gap: 8px;
+    padding: 10px 16px;
+  }
+  .about-why-item-icon {
+    font-size: 18px;
+  }
+  .about-why-section p {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 575px) {
+  .about-why-section {
+    padding: 10px;
+  }
+  .about-why-list {
+    gap: 8px;
+  }
+  .about-why-item {
+    padding: 10px 16px;
+  }
+  .about-why-item-icon {
+    font-size: 15px;
+  }
+  .about-why-section p {
+    font-size: 18px;
+  }
+}
+
+/* TRACK RECORD */
+.about-track-record-section {
+  padding: 20px 20px;
+}
+
+.about-track-record-section h3 {
+  font-family: "barlowcondensed-medium";
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #111;
+  display: inline-block;
+}
+
+.about-track-record-section .row {
+  row-gap: 20px;
+}
+
+.about-excellence-card {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 18px;
+  height: 100%;
+  transition: 0.3s ease;
+}
+
+.about-excellence-card:hover {
+  transform: translateY(-5px);
+}
+
+.about-excellence-card-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.about-excellence-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(8, 83, 181, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-excellence-icon i {
+  font-size: 20px;
+  background: linear-gradient(90deg, #34039d, #e5642b, #f68c38, #fdac50);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.about-excellence-card p {
+  font-size: 20px;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .about-excellence-card {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-track-record-section {
+    padding: 15px 20px 10px;
+  }
+  .about-track-record-section .row {
+    row-gap: 15px;
+  }
+  .about-excellence-card {
+    padding: 14px;
+  }
+  .about-excellence-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .about-excellence-icon i {
+    font-size: 18px;
+  }
+  .about-excellence-card p {
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-track-record-section {
+    padding: 10px 20px 10px;
+  }
+  .about-track-record-section .row {
+    row-gap: 12px;
+  }
+  .about-excellence-card {
+    padding: 12px;
+  }
+  .about-excellence-card-content {
+    gap: 12px;
+  }
+  .about-excellence-icon {
+    width: 42px;
+    height: 42px;
+  }
+  .about-excellence-icon i {
+    font-size: 17px;
+  }
+  .about-excellence-card p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+    .about-track-record-section {
+    padding: 10px 15px 10px;
+  }
+  .about-excellence-card-content {
+    gap: 10px;
+  }
+  .about-track-record-section .row {
+    row-gap: 10px;
+  }
+  .about-excellence-icon {
+    width: 38px;
+    height: 38px;
+  }
+  .about-excellence-icon i {
+    font-size: 16px;
+  }
+  .about-excellence-card p {
+    font-size: 17px;
+  }
+}
+
+/* CALLOUT SECTION */
+.about-callout-section {
+  padding: 30px 20px;
+}
+
+.about-callout-card {
+  background: #fdfdfd;
+  border-radius: 12px;
+  padding: 20px;
+  height: 100%;
+  transition: 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.differentiator-card {
+  border-left: 5px solid transparent;
+}
+
+.differentiator-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
+}
+
+.growth-card {
+  border-left: 5px solid transparent;
+}
+
+.growth-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
+}
+
+.about-callout-card h3 {
+  font-family: "barlow-regular";
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.about-callout-card p {
+  font-size: 20px;
+}
+
+/* BUTTON */
+.annual-return-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "barlow-regular";
+  padding: 8px 20px;
+  border-radius: 30px;
+  background: #0853b5;
+  color: #fff !important;
+  transition: 0.3s ease;
+}
+
+.annual-return-btn:hover {
+  background: #f47627;
+}
+
+@media (max-width: 1200px) {
+  .about-callout-section {
+    padding: 25px 0 40px;
+  }
+
+  .about-callout-card {
     padding: 15px;
   }
-  .why-item-text p {
-    font-size: 14px;
+  .about-callout-card h3 {
+    font-size: 24px;
+  }
+  .about-callout-card p {
+    font-size: 19px;
+  }
+  .annual-return-btn {
+    padding: 6px 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  .about-callout-section {
+    padding: 25px 20px 30px;
+  }
+
+  .about-callout-section .row {
+    row-gap: 20px;
+  }
+  .about-callout-card h3 {
+    font-size: 22px;
+  }
+  .about-callout-card p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-callout-section {
+    padding: 20px 15px 25px;
+  }
+  .about-callout-card h3 {
+    font-size: 21px;
+  }
+  .about-callout-card p {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 575px) {
+  .about-callout-section {
+    padding: 15px 15px 10px;
   }
   .about-callout-card h3 {
     font-size: 20px;
+  }
+  .about-callout-card p {
+    font-size: 16px;
   }
 }
 
@@ -447,6 +540,10 @@
 }
 
 @media (max-width: 1200px) {
+  .vision-and-philosophy-section {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
   .vision-philosophy-txt {
     left: 35px;
     width: 62%;
@@ -463,6 +560,10 @@
 }
 
 @media (max-width: 991px) {
+  .vision-and-philosophy-section {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
   .vision-philosophy-txt {
     left: 25px;
     width: 55%;
@@ -481,6 +582,10 @@
 }
 
 @media (max-width: 767px) {
+  .vision-and-philosophy-section {
+    margin-top: 15px;
+    margin-bottom: 25px;
+  }
   .vision-and-philosophy-img1 {
     display: none;
   }
@@ -508,6 +613,10 @@
 }
 
 @media (max-width: 575px) {
+  .vision-and-philosophy-section {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
   .vision-philosophy-txt {
     left: 20px;
     width: 90%;
