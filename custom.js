@@ -404,6 +404,49 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Technology Page Carousel initialization
+  const $techSlider = $("#techCarouselInner");
+  const $techPagination = $("#tech-pagination-status");
+  if ($techSlider.length > 0) {
+    $techSlider.on(
+      "init reInit afterChange",
+      function (event, slick, currentSlide) {
+        const current =
+          (currentSlide !== undefined
+            ? currentSlide
+            : slick
+              ? slick.currentSlide
+              : 0) + 1;
+        const total = slick ? slick.slideCount : 0;
+        if ($techPagination.length > 0 && total > 0) {
+          $techPagination.text(
+            `${String(current).padStart(2, "0")} / ${String(total).padStart(2, "0")}`,
+          );
+        }
+      },
+    );
+
+    $techSlider.slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      prevArrow: "#techCarouselCaptionsInner .carousel-control-prev",
+      nextArrow: "#techCarouselCaptionsInner .carousel-control-next",
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  }
+
   /* ------------------------ Clients Accordion Section ------------------------ */
   const headers = document.querySelectorAll(".clients-accordion-header");
   headers.forEach((header) => {
