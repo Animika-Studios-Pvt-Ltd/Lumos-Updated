@@ -22,6 +22,11 @@
       crossorigin="anonymous"
       media="screen"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
     <link rel="stylesheet" type="text/css" href="custom.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
@@ -271,32 +276,32 @@
         </nav>
       </div>
     </div>
-    <div class="container-fluid">
+    <div class="marketing-hero-section">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-5 col-md-5 col-sm-5 col-12">
-            <div
-              class="about-img"
+        <div class="row flex-column-reverse flex-md-row">
+          <div class="col-lg-4 col-md-4 col-sm-12 col-12">
+            <img
+              src="static/lumos-in/marketing-inner.webp"
+              class="img-fluid"
+              alt="Marketing Inner for Marketingservices brand identity and marketing assets by Lumos India"
               data-aos="fade-right"
               data-aos-duration="900"
               data-aos-easing="ease-out-cubic"
-            >
-              <img
-                src="static/lumos-in/marketing-inner.webp"
-                class="img-fluid"
-                alt="Marketing Inner for Marketingservices brand identity and marketing assets by Lumos India"
-              />
-            </div>
+            />
           </div>
-          <div class="col-lg-7 col-md-7 col-sm-7 col-12">
-            <div
-              class="brand-txt"
-              data-aos="fade-left"
-              data-aos-duration="900"
-              data-aos-easing="ease-out-cubic"
-            >
-              <h2>Marketing</h2>
-              <p>
+          <div class="col-lg-8 col-md-8 col-sm-12 col-12">
+            <div class="marketing-title-box">
+              <h2
+                data-aos="fade-left"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-cubic"
+              >Marketing</h2>
+              <p
+                class="mb-0"
+                data-aos="fade-left"
+                data-aos-duration="900"
+                data-aos-easing="ease-out-cubic"
+              >
                 We build comprehensive marketing solutions from marketing
                 strategy and planning, to brand development, content and digital
                 marketing, web and design marketing, multi-channel and social
@@ -307,94 +312,97 @@
               </p>
             </div>
           </div>
-          <div
-            class="col-lg-12 col-md-12 col-sm-12 col-12"
-            id="inner-slide"
-            data-aos="fade-up"
-            data-aos-delay="150"
-            data-aos-duration="900"
-            data-aos-easing="ease-out-cubic"
-          >
-            <div
-              id="carouselCaptionsInner"
-              class="carousel slide"
-              data-bs-ride="carousel"
-            >
-              <div class="carousel-inner">
-                <div class="carousel-item carousel-item-1 active">
-                  <ul class="brand-slide">
-                    <li>
-                      <span>01</span>
-                      <h5>Search Engine Optimization</h5>
-                      <p>
-                        Did you know that 75% of web users never scroll past the
-                        first page of search results? We utilize every bit of
-                        energy and wisdom to make your website search engine
-                        friendly, ensuring it is useful to the visitor. Our
-                        approach is to make your website/portal easy to
-                        understand both for humans and search engines, giving
-                        visitors the best information available.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="carousel-item carousel-item-2">
-                  <ul class="brand-slide">
-                    <li>
-                      <span>02</span>
-                      <h5>Search Engine Marketing</h5>
-                      <p>
-                        Web application and development has flourished in India.
-                        Organizations now want their own websites to enhance
-                        business potential. Designing blogs, forums, shopping
-                        carts, or custom solutions will help bring in new
-                        visitors, multiply your customer base, and create a
-                        strong online presence.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-                <div class="carousel-item carousel-item-2">
-                  <ul class="brand-slide">
-                    <li>
-                      <span>03</span>
-                      <h5>Social Media Presence</h5>
-                      <p>
-                        One of our successful web portals includes our Web
-                        Content Management System (CMS), a tool that allows you
-                        to control and manage website content without technical
-                        training. CMS provides simple steps to add/delete images
-                        and edit text easily without the support of a technical
-                        team.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container marketing-carousel">
+      <div class="row">
+        <div
+          class="col-lg-12 col-md-12 col-sm-12 col-12"
+          data-aos="fade-up"
+          data-aos-delay="150"
+          data-aos-duration="900"
+          data-aos-easing="ease-out-cubic"
+        >
+          <div id="marketingCarouselCaptionsInner" class="slick-carousel-wrapper">
+            <div id="marketingCarouselInner" class="marketing-carousel-inner">
+              <div class="marketing-slide-item">
+                <ul class="marketing-card-slide">
+                  <li>
+                    <h5>Search Engine Optimization</h5>
+                    <p>
+                      Did you know that 75% of web users never scroll past the
+                      first page of search results? We utilize every bit of
+                      energy and wisdom to make your website search engine
+                      friendly, ensuring it is useful to the visitor. Our
+                      approach is to make your website/portal easy to
+                      understand both for humans and search engines, giving
+                      visitors the best information available.
+                    </p>
+                  </li>
+                </ul>
               </div>
-              <div class="control-btn-1">
-                <button
-                  class="carousel-control-next"
-                  type="button"
-                  data-bs-target="#carouselCaptionsInner"
-                  data-bs-slide="next"
-                  aria-label="Next Slide"
+              <div class="marketing-slide-item">
+                <ul class="marketing-card-slide">
+                  <li>
+                    <h5>Search Engine Marketing</h5>
+                    <p>
+                      Web application and development has flourished in India.
+                      Organizations now want their own websites to enhance
+                      business potential. Designing blogs, forums, shopping
+                      carts, or custom solutions will help bring in new
+                      visitors, multiply your customer base, and create a
+                      strong online presence.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="marketing-slide-item">
+                <ul class="marketing-card-slide">
+                  <li>
+                    <h5>Social Media Presence</h5>
+                    <p>
+                      One of our successful web portals includes our Web
+                      Content Management System (CMS), a tool that allows you
+                      to control and manage website content without technical
+                      training. CMS provides simple steps to add/delete images
+                      and edit text easily without the support of a technical
+                      team.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="marketing-carousel-controls-wrapper">
+              <div class="pagination-box">
+                <span id="marketing-pagination-status" class="marketing-carousel-num"
+                  >01 / 03</span
                 >
-                  <i class="fas fa-arrow-right" aria-hidden="true"></i>
-                  <span class="visually-hidden">Next</span>
-                </button>
+              </div>
+              <div class="marketing-carousel-buttons">
                 <button
-                  class="carousel-control-prev"
+                  class="carousel-control-prev marketing-carousel-btn"
                   type="button"
-                  data-bs-target="#carouselCaptionsInner"
-                  data-bs-slide="prev"
                   aria-label="Previous Slide"
                 >
-                  <i class="fas fa-arrow-left" aria-hidden="true"></i>
+                  <i
+                    class="fas fa-arrow-left marketing-carousel-icon"
+                    aria-hidden="true"
+                  ></i>
                   <span class="visually-hidden">Previous</span>
                 </button>
-              </div>
-              <div class="pagination-box">
-                <span id="pagination-status">01 / 03</span>
+                <button
+                  class="carousel-control-next marketing-carousel-btn"
+                  type="button"
+                  aria-label="Next Slide"
+                >
+                  <i
+                    class="fas fa-arrow-right marketing-carousel-icon"
+                    aria-hidden="true"
+                  ></i>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
             </div>
           </div>

@@ -447,6 +447,92 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Marketing Page Carousel initialization
+  const $marketingSlider = $("#marketingCarouselInner");
+  const $marketingPagination = $("#marketing-pagination-status");
+  if ($marketingSlider.length > 0) {
+    $marketingSlider.on(
+      "init reInit afterChange",
+      function (event, slick, currentSlide) {
+        const current =
+          (currentSlide !== undefined
+            ? currentSlide
+            : slick
+              ? slick.currentSlide
+              : 0) + 1;
+        const total = slick ? slick.slideCount : 0;
+        if ($marketingPagination.length > 0 && total > 0) {
+          $marketingPagination.text(
+            `${String(current).padStart(2, "0")} / ${String(total).padStart(2, "0")}`,
+          );
+        }
+      },
+    );
+
+    $marketingSlider.slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      prevArrow: "#marketingCarouselCaptionsInner .carousel-control-prev",
+      nextArrow: "#marketingCarouselCaptionsInner .carousel-control-next",
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  }
+
+  // Content & SEO Strategy Page Carousel initialization
+  const $seoSlider = $("#seoCarouselInner");
+  const $seoPagination = $("#seo-pagination-status");
+  if ($seoSlider.length > 0) {
+    $seoSlider.on(
+      "init reInit afterChange",
+      function (event, slick, currentSlide) {
+        const current =
+          (currentSlide !== undefined
+            ? currentSlide
+            : slick
+              ? slick.currentSlide
+              : 0) + 1;
+        const total = slick ? slick.slideCount : 0;
+        if ($seoPagination.length > 0 && total > 0) {
+          $seoPagination.text(
+            `${String(current).padStart(2, "0")} / ${String(total).padStart(2, "0")}`,
+          );
+        }
+      },
+    );
+
+    $seoSlider.slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      prevArrow: "#seoCarouselCaptionsInner .carousel-control-prev",
+      nextArrow: "#seoCarouselCaptionsInner .carousel-control-next",
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  }
+
   /* ------------------------ Clients Accordion Section ------------------------ */
   const headers = document.querySelectorAll(".clients-accordion-header");
   headers.forEach((header) => {
