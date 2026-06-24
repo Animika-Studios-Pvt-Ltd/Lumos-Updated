@@ -1,0 +1,101 @@
+/* --------------------- PRIVACY POLICY PAGE ------------------------- */
+.privacy-policy-section {
+  padding: 40px 0;
+}
+
+.privacy-policy-section h2 {
+  margin-bottom: 8px;
+}
+
+.privacy-policy-section p.privacy-policy-meta {
+  font-family: "barlow-regular";
+  font-size: 20px;
+  color: #34039d;
+  font-weight: 500;
+  margin: 0 0 20px 0;
+}
+
+.privacy-policy-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.privacy-policy-section p {
+  font-family: "figtree-light";
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.privacy-policy-link {
+  color: #34039d;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.privacy-policy-link:hover {
+  color: #f37022;
+}
+
+@media (max-width: 991px) {
+  .privacy-policy-section {
+    padding: 30px 0;
+  }
+  .privacy-policy-section h2 {
+    font-size: 36px;
+  }
+  .privacy-policy-section p {
+    font-size: 17px;
+  }
+  .privacy-policy-section p.privacy-policy-meta {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .privacy-policy-content {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .privacy-policy-section {
+    padding: 20px 0;
+  }
+  .privacy-policy-section h2 {
+    font-size: 30px;
+  }
+  .privacy-policy-section p {
+    font-size: 16px;
+  }
+  .privacy-policy-section p.privacy-policy-meta {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .privacy-policy-content {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 575px) {
+  .privacy-policy-section {
+    padding: 10px 0;
+  }
+  .privacy-policy-section h2 {
+    font-size: 26px;
+  }
+  .privacy-policy-section p {
+    font-size: 15px;
+  }
+  .privacy-policy-section p.privacy-policy-meta {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+  .privacy-policy-content {
+    gap: 8px;
+  }
+}
+
+/* --------------------- TERMS AND CONDITIONS PAGE ------------------------- */
+
+/* --------------------- CANCELLATION AND REFUND POLICY PAGE ------------------------- */
