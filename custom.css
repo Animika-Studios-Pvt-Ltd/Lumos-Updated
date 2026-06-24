@@ -16,6 +16,7 @@
 @import "videos.css";
 @import "social-impact-marketing.css";
 @import "thought-leadership.css";
+@import "brandingservices.css";
 
 @font-face {
   font-family: "barlowcondensed-medium";
@@ -1523,38 +1524,6 @@ li a.active {
   .benefits li {
     font-size: 15px;
   }
-}
-
-
-
-
-
-/* --------------------- BRANDING PAGE SECTION ------------------------- */
-.why-branding .benefits {
-  display: block;
-  margin: 20px 0 10px 0px;
-}
-
-.why-branding .benefits li {
-  margin-bottom: 12px;
-  font-size: 20px;
-  font-family: "figtree-light";
-  color: #333;
-}
-
-.why-branding .benefits li span {
-  font-family: "barlowcondensed-medium";
-  background: linear-gradient(to right, #f47627, #fca951);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 24px;
-  font-weight: 400;
-  margin-right: 10px;
-}
-
-.why-branding h5 {
-  font-family: "barlow-regular";
-  font-size: 25px;
 }
 
 /* --------------------- INDUSTRIES PAGE SECTION ------------------------- */

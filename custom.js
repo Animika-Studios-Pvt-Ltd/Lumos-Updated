@@ -361,6 +361,49 @@ document.addEventListener("DOMContentLoaded", () => {
     "#publicationCarouselInner1-wrapper .carousel-control-next",
   );
 
+  // Branding Page Carousel initialization
+  const $brandingSlider = $("#brandingCarouselInner");
+  const $brandingPagination = $("#pagination-status");
+  if ($brandingSlider.length > 0) {
+    $brandingSlider.on(
+      "init reInit afterChange",
+      function (event, slick, currentSlide) {
+        const current =
+          (currentSlide !== undefined
+            ? currentSlide
+            : slick
+              ? slick.currentSlide
+              : 0) + 1;
+        const total = slick ? slick.slideCount : 0;
+        if ($brandingPagination.length > 0 && total > 0) {
+          $brandingPagination.text(
+            `${String(current).padStart(2, "0")} / ${String(total).padStart(2, "0")}`,
+          );
+        }
+      },
+    );
+
+    $brandingSlider.slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      infinite: true,
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      prevArrow: "#carouselCaptionsInner .carousel-control-prev",
+      nextArrow: "#carouselCaptionsInner .carousel-control-next",
+      responsive: [
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    });
+  }
+
   /* ------------------------ Clients Accordion Section ------------------------ */
   const headers = document.querySelectorAll(".clients-accordion-header");
   headers.forEach((header) => {
