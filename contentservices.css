@@ -77,20 +77,11 @@
   line-height: 1.4;
 }
 
-.why-content ul li span {
-  font-family: "barlowcondensed-medium";
-  background: linear-gradient(to right, #f47627, #fca951);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 22px;
-  margin-right: 10px;
-  display: inline-block;
-  flex-shrink: 0;
-}
+
 
 .why-content-title {
   font-family: "barlow-regular";
-  background: linear-gradient(to right, #0853b5, #f36f21) !important;
+  background: linear-gradient(to right, #f47627, #fca951) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   display: inline-block;
@@ -110,9 +101,7 @@
   .why-content ul li {
     font-size: 18px;
   }
-  .why-content ul li span {
-    font-size: 20px;
-  }
+
 }
 
 @media (max-width: 991px) {
