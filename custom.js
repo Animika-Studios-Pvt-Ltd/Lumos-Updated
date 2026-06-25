@@ -68,8 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
       page.includes("branding-") ||
       page.includes("technology-") ||
       page.includes("marketing-") ||
-      page.includes("website-") ||
-      page.includes("casestudy")
+      page.includes("website-")
     ) {
       const servicesToggle = Array.from(
         document.querySelectorAll(".navbar-nav .dropdown-toggle"),
