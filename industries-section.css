@@ -3,6 +3,10 @@
   padding: 40px 0;
 }
 
+.industries-section h2 {
+  margin-bottom: 10px;
+}
+
 .industries-text {
   font-family: "figtree-light" !important;
   font-size: 22px !important;
