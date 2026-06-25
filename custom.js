@@ -141,6 +141,13 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       { passive: true },
     );
+    // Wrap all industry images in an overflow-hidden wrapper for containment on zoom-in
+    document.querySelectorAll(".industries-section-card > img.img-fluid").forEach(img => {
+      const wrapper = document.createElement("div");
+      wrapper.className = "industries-img-wrapper";
+      img.parentNode.insertBefore(wrapper, img);
+      wrapper.appendChild(img);
+    });
   }
 });
 
