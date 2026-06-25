@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     clearActiveLinks();
 
     // Check if it's an article inside page
-    if (document.querySelector(".artcles-inside-page")) {
+    if (document.querySelector(".articles-section-inside-page")) {
       const resourcesToggle = Array.from(
         document.querySelectorAll(".navbar-nav .dropdown-toggle"),
       ).find((link) => link.textContent.trim().toLowerCase() === "resources");
