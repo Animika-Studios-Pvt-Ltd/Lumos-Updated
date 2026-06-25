@@ -1,39 +1,91 @@
 /* ------------------------- Breadcrumb ------------------------- */
 .breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin-top: 10px;
   margin-bottom: 0px;
+  padding: 0;
+  list-style: none;
+  font-family: "barlow-regular";
+  --bs-breadcrumb-divider: ">";
+}
+
+.breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  font-family: "barlow-regular";
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  float: none;
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
+  padding-right: var(--bs-breadcrumb-item-padding-x, 0.5rem);
+  color: #6c757d;
+  font-family: "barlow-regular" !important;
+  font-weight: normal !important;
+  content: ">" !important;
+  line-height: 1;
+}
+
+.breadcrumb-item a,
+.breadcrumb-item.active {
+  font-family: "barlow-regular";
+  font-size: 16px;
+  line-height: 1.2;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
 
 .breadcrumb-item a {
-  font-family: "barlow-regular";
-  font-size: 18px;
-  color: #000;
-  transition: font-size 0.3s ease;
+  color: #555;
+  transition: color 0.2s ease-in-out;
 }
 
-.breadcrumb .active {
-  font-family: "barlow-regular";
-  font-size: 18px;
-  transition: font-size 0.3s ease;
+.breadcrumb-item a:hover {
+  color: #f47627;
+}
+
+.breadcrumb-item.active {
+  color: #000;
+  font-weight: 500;
+  pointer-events: none;
 }
 
 @media (max-width: 1200px) {
   .breadcrumb-item a,
-  .breadcrumb .active {
-    font-size: 16px;
+  .breadcrumb-item.active {
+    font-size: 15px;
   }
 }
 
 @media (max-width: 991px) {
   .breadcrumb-item a,
-  .breadcrumb .active {
-    font-size: 15px;
+  .breadcrumb-item.active {
+    font-size: 14px;
   }
 }
 
 @media (max-width: 575px) {
   .breadcrumb-item a,
-  .breadcrumb .active {
-    font-size: 14px;
+  .breadcrumb-item.active {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .breadcrumb-item a,
+  .breadcrumb-item.active {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .breadcrumb-item a,
+  .breadcrumb-item.active {
+    font-size: 11px;
   }
 }
