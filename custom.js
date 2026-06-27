@@ -1,4 +1,4 @@
-/* ------------------------ Navbar & Navigation Section ------------------------ */
+/* ---------------------------------- 1. NAVBAR & NAVIGATION SECTION ---------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
   const path = window.location.pathname;
   const page = path.split("/").pop() || "index.html";
@@ -142,16 +142,18 @@ document.addEventListener("DOMContentLoaded", () => {
       { passive: true },
     );
     // Wrap all industry images in an overflow-hidden wrapper for containment on zoom-in
-    document.querySelectorAll(".industries-section-card > img.img-fluid").forEach(img => {
-      const wrapper = document.createElement("div");
-      wrapper.className = "industries-img-wrapper";
-      img.parentNode.insertBefore(wrapper, img);
-      wrapper.appendChild(img);
-    });
+    document
+      .querySelectorAll(".industries-section-card > img.img-fluid")
+      .forEach((img) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "industries-img-wrapper";
+        img.parentNode.insertBefore(wrapper, img);
+        wrapper.appendChild(img);
+      });
   }
 });
 
-/* ------------------------ Banner/Hero Section------------------------ */
+/* ---------------------------------- 2. BANNER & HERO SLIDER SECTION ---------------------------------- */
 (function () {
   "use strict";
 
@@ -276,10 +278,9 @@ document.addEventListener("DOMContentLoaded", () => {
   vertical_slider.init();
 })();
 
-// Wait until DOM is loaded
+/* ---------------------------------- 3. DOM LOADED INITIALIZATIONS (CAROUSELS & ACCORDIONS) ---------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
-
-  // Publications Section Slick Carousel initialization and custom pagination
+  /* --- Helper Function: Init Slick Carousel --- */
   function initSlickCarousel(
     sliderSelector,
     paginationId,
@@ -352,6 +353,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* --- 3a. Publications Carousel --- */
   initSlickCarousel(
     "#publicationCarouselInner",
     "#publication-pagination-status",
@@ -365,7 +367,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "#publicationCarouselInner1-wrapper .carousel-control-next",
   );
 
-  // Branding Page Carousel initialization
+  /* --- 3b. Branding Page Carousel --- */
   const $brandingSlider = $("#brandingCarouselInner");
   const $brandingPagination = $("#pagination-status");
   if ($brandingSlider.length > 0) {
@@ -408,7 +410,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Technology Page Carousel initialization
+  /* --- 3c. Technology Page Carousel --- */
   const $techSlider = $("#techCarouselInner");
   const $techPagination = $("#tech-pagination-status");
   if ($techSlider.length > 0) {
@@ -451,7 +453,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Marketing Page Carousel initialization
+  /* --- 3d. Marketing Page Carousel --- */
   const $marketingSlider = $("#marketingCarouselInner");
   const $marketingPagination = $("#marketing-pagination-status");
   if ($marketingSlider.length > 0) {
@@ -494,7 +496,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Content & SEO Strategy Page Carousel initialization
+  /* --- 3e. Content & SEO Strategy Page Carousel --- */
   const $seoSlider = $("#seoCarouselInner");
   const $seoPagination = $("#seo-pagination-status");
   if ($seoSlider.length > 0) {
@@ -537,7 +539,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Content Page Carousel initialization
+  /* --- 3f. Content Page Carousel --- */
   const $contentSlider = $("#contentCarouselInner");
   const $contentPagination = $("#content-pagination-status");
   if ($contentSlider.length > 0) {
@@ -580,7 +582,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ------------------------ Clients Accordion Section ------------------------ */
+  /* --- 3g. Clients Accordion Section --- */
   const headers = document.querySelectorAll(".clients-accordion-header");
   headers.forEach((header) => {
     header.addEventListener("click", () => {
@@ -600,7 +602,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  /* ------------------------ Back to Top ------------------------ */
+  /* --- 3h. Back to Top Button Handler --- */
   const btn = document.getElementById("backToTop");
   if (btn) {
     const showAfter = 500;
@@ -614,7 +616,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-/* ------------------------ Cookies Section ------------------------ */
+/* ---------------------------------- 4. COOKIE CONSENT POPUP ---------------------------------- */
 window.onload = function () {
   if (!localStorage.getItem("cookiesAccepted")) {
     document.getElementById("cookie-popup").classList.add("visible");
@@ -626,7 +628,7 @@ function acceptCookies() {
   document.getElementById("cookie-popup").classList.remove("visible");
 }
 
-/* ------------------------ Side Button Section ------------------------ */
+/* ---------------------------------- 5. BACK TO TOP BUTTON SCROLL TRIGGER ---------------------------------- */
 (function () {
   document.addEventListener("DOMContentLoaded", function () {
     const scrollBtn = document.getElementById("backToTop");
