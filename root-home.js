@@ -22,20 +22,4 @@ function animateOnScroll() {
 
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("load", animateOnScroll);
-
-/* Mouse Section Javascript */
-document.addEventListener("scroll", () => {
-  const slider = document.querySelector(".slider");
-  const center = document.querySelector(".center");
-  const rect = slider.getBoundingClientRect();
-  const vh = window.innerHeight;
-
-  // Show only when slider is *mostly visible* in viewport
-  if (rect.top <= vh * 0.8 && rect.bottom >= vh * 0.2) {
-    center.style.opacity = "1";
-    center.style.pointerEvents = "auto";
-  } else {
-    center.style.opacity = "0";
-    center.style.pointerEvents = "none";
-  }
-});
+

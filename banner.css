@@ -135,82 +135,7 @@
   margin: 0 auto;
 }
 
-/* Center Scroll Down Indicator */
-.center {
-  position: fixed;
-  bottom: 50px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  z-index: 10;
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
 
-.wire {
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  height: 150px;
-  transform: translateX(-50%);
-}
-
-.wire path {
-  stroke: #000;
-  stroke-width: 1;
-  fill: none;
-}
-
-.down {
-  position: relative;
-  width: 30px;
-  height: 45px;
-  border-radius: 25px;
-  background: transparent;
-  border: 2px solid #000;
-  overflow: hidden;
-}
-
-.down:before {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #000;
-  left: 50%;
-  top: 10px;
-  transform: translate(-50%, 0);
-  animation: animate 1s linear infinite;
-}
-
-.down:after {
-  content: "";
-  position: absolute;
-  width: 6px;
-  height: 15px;
-  border-radius: 50%;
-  background: #000;
-  left: 50%;
-  top: 5px;
-  transform: translate(-50%, 0);
-  border-radius: 3px;
-}
-
-@keyframes animate {
-  0% {
-    transform: translate(-50%, 0px);
-    opacity: 0;
-  }
-  50% {
-    transform: translate(-50%, 40px);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, 80px);
-    opacity: 0;
-  }
-}
 
 @media (max-width: 1440px) {
   .slider {
@@ -242,10 +167,7 @@
     font-size: 24px;
   }
 
-  .center {
-    bottom: auto;
-    margin-top: -65px;
-  }
+
 }
 
 @media (max-width: 1366px) {
@@ -278,10 +200,7 @@
     font-size: 23px;
   }
 
-  .center {
-    bottom: auto;
-    margin-top: -55px;
-  }
+
 }
 
 @media (max-width: 1200px) {
@@ -311,10 +230,7 @@
     font-size: 22px;
   }
 
-  .center {
-    bottom: auto;
-    margin-top: -45px;
-  }
+
 }
 
 @media (max-width: 1024px) {
@@ -348,10 +264,7 @@
     font-size: 21px;
   }
 
-  .center {
-    bottom: auto;
-    margin-top: -40px;
-  }
+
 }
 
 @media (max-width: 991px) {
@@ -394,10 +307,7 @@
     font-size: 19px;
   }
 
-  .center {
-    bottom: auto;
-    margin-top: -45px;
-  }
+
 }
 
 @media (max-width: 767px) {
@@ -440,10 +350,7 @@
     font-size: 18px;
   }
 
-  .center {
-    bottom: auto;
-    margin-top: -40px;
-  }
+
 }
 
 @media (max-width: 575px) {
@@ -491,9 +398,7 @@
     font-size: 17px;
   }
 
-  .center {
-    display: none;
-  }
+
 }
 
 @media (max-width: 480px) {

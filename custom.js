@@ -216,6 +216,14 @@ document.addEventListener("DOMContentLoaded", () => {
           const inView = rect.top < window.innerHeight && rect.bottom > 0;
           if (!inView) return;
 
+          // Allow natural scroll to next/previous section when at slide boundaries
+          if (e.deltaY > 0 && currentSlide === slides.length - 1) {
+            return;
+          }
+          if (e.deltaY < 0 && currentSlide === 0) {
+            return;
+          }
+
           e.preventDefault();
 
           if (isScrolling) return;
@@ -270,16 +278,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Wait until DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {
-  // Down Arrow scroll
-  const downArrow = document.querySelector(".down");
-  if (downArrow) {
-    downArrow.addEventListener("click", () => {
-      const nextSection = document.querySelector("#next-layer");
-      if (nextSection) {
-        nextSection.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  }
 
   // Publications Section Slick Carousel initialization and custom pagination
   function initSlickCarousel(
