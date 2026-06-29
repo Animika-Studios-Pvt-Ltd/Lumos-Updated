@@ -1,11 +1,5 @@
 /* --------------------- CLIENTS SECTION ------------------------- */
-.clients-breadcrumb {
-  background-color: #f5f5f6;
-  padding-top: 0px;
-}
-
 .clients-page-section {
-  background: #f5f5f6;
   padding: 40px 0;
 }
 
@@ -74,14 +68,18 @@
 
 .tab-pane img {
   background: #fff;
-  border-radius: 0;
+  border-radius: 8px;
   filter: grayscale(1);
   margin-bottom: 30px;
   padding: 15px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 .tab-pane img:hover {
   filter: grayscale(0);
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .clients-mobile {
@@ -174,9 +172,6 @@
 }
 
 @media (max-width: 767px) {
-  .clients-breadcrumb {
-    background-color: #ffffff;
-  }
   .clients-mobile {
     display: block;
     padding: 15px 0 50px;
