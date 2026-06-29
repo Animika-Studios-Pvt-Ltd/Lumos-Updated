@@ -3,7 +3,7 @@
 .slider {
   position: relative;
   color: #fff;
-  background-color: #ebebeb;
+  background-color: #ffffff;
   height: 790px;
   padding: 0 65px;
   display: flex;
@@ -36,10 +36,22 @@
   border-radius: 0;
   padding: 0;
   line-height: 1;
+  color: #666;
+}
+
+.slide_navigation li a:hover {
+  background: linear-gradient(to right, rgb(244, 118, 39), rgb(252, 169, 81));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .slide_navigation li a.active {
   font-size: 28px;
+  background: linear-gradient(to right, rgb(244, 118, 39), rgb(252, 169, 81));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Slides Scroll Wrapper */
@@ -79,7 +91,7 @@
 .slide.slide-1,
 .slide.slide-2,
 .slide.slide-3 {
-  background-color: #ebebeb !important;
+  background-color: #ffffff !important;
   position: relative;
   z-index: 2;
 }
