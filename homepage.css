@@ -396,7 +396,7 @@
   width: 80%;
 }
 
-.lumos-anil-kumar-section h5 {
+.lumos-anil-kumar-section h3 {
   font-family: "barlowcondensed-regular";
   font-size: 28px;
   margin-bottom: 20px;
@@ -430,7 +430,7 @@
     margin: 25px 0px;
   }
 
-  .lumos-anil-kumar-section h5 {
+  .lumos-anil-kumar-section h3 {
     font-size: 26px;
   }
 
@@ -456,7 +456,7 @@
     flex-direction: column-reverse;
   }
 
-  .lumos-anil-kumar-section h5 {
+  .lumos-anil-kumar-section h3 {
     font-size: 24px;
     margin-bottom: 15px;
   }
@@ -484,7 +484,7 @@
     margin: 0 auto 15px;
   }
 
-  .lumos-anil-kumar-section h5 {
+  .lumos-anil-kumar-section h3 {
     font-size: 20px;
     margin-bottom: 10px;
   }
@@ -513,7 +513,7 @@
     margin: 20px auto 0;
   }
 
-  .lumos-anil-kumar-section h5 {
+  .lumos-anil-kumar-section h3 {
     font-size: 18px;
     margin-bottom: 6px;
   }
