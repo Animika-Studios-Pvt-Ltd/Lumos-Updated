@@ -306,11 +306,25 @@
     left: 0;
     right: 0;
     width: 100%;
-    background: #ffffff;
+    background: #ebebeb;
     z-index: 999;
     padding: 0 40px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-top: 1px solid #f26f17;
+    display: block !important;
+    height: auto !important;
+    clip-path: circle(0% at 92% 0%);
+    transition: clip-path 0.8s ease-in-out !important;
+  }
+
+  .navbar-expand-lg .navbar-collapse.show {
+    clip-path: circle(150% at 92% 0%);
+  }
+
+  .navbar-expand-lg .navbar-collapse.collapsing {
+    display: block !important;
+    height: auto !important;
+    clip-path: circle(0% at 92% 0%);
   }
 
   .navbar-nav {
@@ -344,7 +358,7 @@
     visibility: visible;
     transform: none;
     transition: none;
-    background-color: #f8f9fa;
+    background-color: #dedede;
     box-shadow: none;
     border: 0;
     padding: 4px 0 4px 15px;
