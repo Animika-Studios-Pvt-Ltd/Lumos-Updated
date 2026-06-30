@@ -56,6 +56,10 @@
   transition: left 0.3s ease;
 }
 
+.home .home-menu-item {
+  display: none !important;
+}
+
 /* ------------------------- Dropdown / Dropend ------------------------- */
 .dropdown-menu {
   border: 0;
@@ -307,7 +311,6 @@
     padding: 0 40px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-top: 1px solid #f26f17;
-    left: 0;
   }
 
   .navbar-nav {
@@ -368,11 +371,6 @@
   .navbar-nav .dropdown-menu a.dropdown-item:focus {
     color: #f26f17;
     background-color: transparent;
-  }
-
-  .SMN_effect-2 a:hover:after,
-  .SMN_effect-2 a:focus:after {
-    display: none;
   }
 }
 
