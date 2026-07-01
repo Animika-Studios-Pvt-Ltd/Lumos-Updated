@@ -1,4 +1,6 @@
-/* ------------------------- Menu / Logo Bar ------------------------- */
+/* ------------------------- HEADER/NAVBAR SECTION ------------------------- */
+
+/* Menu / Logo Bar */
 .menu {
   background-color: #ebebeb;
   padding: 20px 0 20px 65px;
@@ -27,7 +29,7 @@
   transform: scale(1.05);
 }
 
-/* ------------------------- Navbar Base ------------------------- */
+/* Navbar Base */
 .navbar {
   margin-top: 20px;
   padding: 0;
@@ -60,7 +62,7 @@
   display: none !important;
 }
 
-/* ------------------------- Dropdown / Dropend ------------------------- */
+/* Dropdown / Dropend */
 .dropdown-menu {
   border: 0;
   border-radius: 0;
@@ -160,7 +162,7 @@
   }
 }
 
-/* ------------------------- Inner Menu Bar (inner pages) ------------------------- */
+/* Inner Menu Bar (inner pages) */
 #inner-menu {
   background-color: transparent;
   border-bottom: 1px solid #000;

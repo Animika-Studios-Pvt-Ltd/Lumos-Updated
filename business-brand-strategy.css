@@ -9,7 +9,7 @@
   padding-left: 0;
   display: block;
   background-color: #ebebeb;
-  background-image: url("static/lumos-in/palowise-bg.webp");
+  background-image: url("/static/lumos-in/palowise-bg.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
