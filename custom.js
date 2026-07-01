@@ -280,46 +280,223 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /* ---------------------------------- 3. DOM LOADED INITIALIZATIONS (CAROUSELS & ACCORDIONS) ---------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
-  /* --- Helper Function: Init Slick Carousel --- */
-  function initSlickCarousel(
+  /* --- Helper Function: Init Custom Carousel --- */
+  function initCustomCarousel(
     sliderSelector,
     paginationId,
     prevBtnSelector,
     nextBtnSelector,
+    customOptions = {}
   ) {
-    const $slider = $(sliderSelector);
-    const $pagination = $(paginationId);
-    if ($slider.length === 0) return;
+    const track = document.querySelector(sliderSelector);
+    if (!track) return;
+    const wrapper = track.parentElement;
+    const pagination = document.querySelector(paginationId);
+    const prevBtn = document.querySelector(prevBtnSelector);
+    const nextBtn = document.querySelector(nextBtnSelector);
 
-    // Bind event first to catch init
-    $slider.on(
-      "init reInit afterChange",
-      function (event, slick, currentSlide) {
-        const current =
-          (currentSlide !== undefined
-            ? currentSlide
-            : slick
-              ? slick.currentSlide
-              : 0) + 1;
-        const total = slick ? slick.slideCount : 0;
-        if ($pagination.length > 0 && total > 0) {
-          $pagination.text(
-            `${String(current).padStart(2, "0")} / ${String(total).padStart(2, "0")}`,
-          );
+    // Create a viewport element dynamically around the track to prevent clipping controls
+    const viewport = document.createElement("div");
+    viewport.style.overflow = "hidden";
+    viewport.style.width = "100%";
+    
+    // Transfer margins from track to viewport (to handle negative margins correctly without clipping)
+    const trackStyle = window.getComputedStyle(track);
+    const marginLeft = trackStyle.marginLeft;
+    const marginRight = trackStyle.marginRight;
+    if (marginLeft && marginLeft !== "0px") {
+      viewport.style.marginLeft = marginLeft;
+      track.style.marginLeft = "0";
+    }
+    if (marginRight && marginRight !== "0px") {
+      viewport.style.marginRight = marginRight;
+      track.style.marginRight = "0";
+    }
+
+    // Insert viewport before track, then insert track inside the viewport
+    track.parentNode.insertBefore(viewport, track);
+    viewport.appendChild(track);
+
+    track.style.display = "flex";
+    track.style.width = "100%";
+    track.style.willChange = "transform";
+
+    const originalSlides = Array.from(track.children);
+    const originalSlideCount = originalSlides.length;
+    if (originalSlideCount === 0) return;
+
+    const options = {
+      slidesToShow: customOptions.slidesToShow || 1,
+      slidesToScroll: customOptions.slidesToScroll || 1,
+      autoplay: customOptions.autoplay !== false,
+      autoplaySpeed: customOptions.autoplaySpeed || 3000,
+      responsive: customOptions.responsive || []
+    };
+
+    let slidesToShow = options.slidesToShow;
+    let slidesToScroll = options.slidesToScroll;
+    let currentIndex = 0;
+    let isTransitioning = false;
+    let autoplayTimer = null;
+
+    function getResponsiveSettings() {
+      const width = window.innerWidth;
+      let activeShow = options.slidesToShow;
+      let activeScroll = options.slidesToScroll;
+      
+      const sorted = [...options.responsive].sort((a, b) => a.breakpoint - b.breakpoint);
+      for (const r of sorted) {
+        if (width <= r.breakpoint) {
+          activeShow = r.settings.slidesToShow || activeShow;
+          activeScroll = r.settings.slidesToScroll || activeScroll;
+          break;
         }
-      },
-    );
+      }
+      return { activeShow, activeScroll };
+    }
 
-    // Initialize slick
-    $slider.slick({
+    function rebuildCarousel() {
+      const settings = getResponsiveSettings();
+      slidesToShow = settings.activeShow;
+      slidesToScroll = settings.activeScroll;
+
+      track.innerHTML = "";
+      
+      originalSlides.forEach(slide => {
+        slide.style.flex = `0 0 ${100 / slidesToShow}%`;
+        slide.style.boxSizing = "border-box";
+        slide.style.padding = "0 15px"; // Add gaps between carousel images
+        track.appendChild(slide);
+      });
+
+      const prefixClones = [];
+      for (let i = originalSlideCount - slidesToShow; i < originalSlideCount; i++) {
+        const slideIndex = i < 0 ? i + originalSlideCount : i;
+        if (originalSlides[slideIndex]) {
+          const clone = originalSlides[slideIndex].cloneNode(true);
+          clone.classList.add("carousel-clone");
+          clone.style.flex = `0 0 ${100 / slidesToShow}%`;
+          clone.style.boxSizing = "border-box";
+          clone.style.padding = "0 15px"; // Add gaps to clones
+          prefixClones.push(clone);
+        }
+      }
+      prefixClones.reverse().forEach(clone => {
+        track.insertBefore(clone, track.firstChild);
+      });
+
+      for (let i = 0; i < slidesToShow; i++) {
+        if (originalSlides[i]) {
+          const clone = originalSlides[i].cloneNode(true);
+          clone.classList.add("carousel-clone");
+          clone.style.flex = `0 0 ${100 / slidesToShow}%`;
+          clone.style.boxSizing = "border-box";
+          clone.style.padding = "0 15px"; // Add gaps to clones
+          track.appendChild(clone);
+        }
+      }
+
+      updatePosition(false);
+      updatePagination();
+    }
+
+    function updatePosition(animate = true) {
+      if (animate) {
+        track.style.transition = "transform 0.4s ease-in-out";
+      } else {
+        track.style.transition = "none";
+      }
+      const targetIndex = currentIndex + slidesToShow;
+      const percentage = -targetIndex * (100 / slidesToShow);
+      track.style.transform = `translateX(${percentage}%)`;
+    }
+
+    function updatePagination() {
+      if (pagination) {
+        const current = ((currentIndex % originalSlideCount) + originalSlideCount) % originalSlideCount + 1;
+        pagination.textContent = `${String(current).padStart(2, "0")} / ${String(originalSlideCount).padStart(2, "0")}`;
+      }
+    }
+
+    function handleTransitionEnd() {
+      isTransitioning = false;
+      if (currentIndex < 0) {
+        currentIndex = originalSlideCount + currentIndex;
+        updatePosition(false);
+      } else if (currentIndex >= originalSlideCount) {
+        currentIndex = currentIndex - originalSlideCount;
+        updatePosition(false);
+      }
+    }
+
+    track.addEventListener("transitionend", handleTransitionEnd);
+
+    function move(direction) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+      currentIndex += direction * slidesToScroll;
+      updatePosition(true);
+      updatePagination();
+    }
+
+    function startAutoplay() {
+      if (options.autoplay) {
+        stopAutoplay();
+        autoplayTimer = setInterval(() => {
+          move(1);
+        }, options.autoplaySpeed);
+      }
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    if (prevBtn) {
+      prevBtn.onclick = (e) => {
+        e.preventDefault();
+        move(-1);
+        startAutoplay();
+      };
+    }
+
+    if (nextBtn) {
+      nextBtn.onclick = (e) => {
+        e.preventDefault();
+        move(1);
+        startAutoplay();
+      };
+    }
+
+    wrapper.onmouseenter = stopAutoplay;
+    wrapper.onmouseleave = startAutoplay;
+
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        rebuildCarousel();
+      }, 100);
+    });
+
+    rebuildCarousel();
+    startAutoplay();
+  }
+
+  /* --- 3a. Publications Carousel --- */
+  initCustomCarousel(
+    "#publicationCarouselInner",
+    "#publication-pagination-status",
+    "#publicationCarouselInner-wrapper .carousel-control-prev",
+    "#publicationCarouselInner-wrapper .carousel-control-next",
+    {
       slidesToShow: 4,
       slidesToScroll: 1,
-      infinite: true,
-      arrows: true,
       autoplay: true,
       autoplaySpeed: 3000,
-      prevArrow: prevBtnSelector,
-      nextArrow: nextBtnSelector,
       responsive: [
         {
           breakpoint: 1200,
@@ -350,54 +527,62 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    });
-  }
-
-  /* --- 3a. Publications Carousel --- */
-  initSlickCarousel(
-    "#publicationCarouselInner",
-    "#publication-pagination-status",
-    "#publicationCarouselInner-wrapper .carousel-control-prev",
-    "#publicationCarouselInner-wrapper .carousel-control-next",
+    }
   );
-  initSlickCarousel(
+  initCustomCarousel(
     "#publicationCarouselInner1",
     "#publication-pagination-status1",
     "#publicationCarouselInner1-wrapper .carousel-control-prev",
     "#publicationCarouselInner1-wrapper .carousel-control-next",
+    {
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 991,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 575,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    }
   );
 
   /* --- 3b. Branding Page Carousel --- */
-  const $brandingSlider = $("#brandingCarouselInner");
-  const $brandingPagination = $("#pagination-status");
-  if ($brandingSlider.length > 0) {
-    $brandingSlider.on(
-      "init reInit afterChange",
-      function (event, slick, currentSlide) {
-        const current =
-          (currentSlide !== undefined
-            ? currentSlide
-            : slick
-              ? slick.currentSlide
-              : 0) + 1;
-        const total = slick ? slick.slideCount : 0;
-        if ($brandingPagination.length > 0 && total > 0) {
-          $brandingPagination.text(
-            `${String(current).padStart(2, "0")} / ${String(total).padStart(2, "0")}`,
-          );
-        }
-      },
-    );
-
-    $brandingSlider.slick({
+  initCustomCarousel(
+    "#brandingCarouselInner",
+    "#pagination-status",
+    "#carouselCaptionsInner .carousel-control-prev",
+    "#carouselCaptionsInner .carousel-control-next",
+    {
       slidesToShow: 2,
       slidesToScroll: 1,
-      infinite: true,
-      arrows: true,
       autoplay: true,
       autoplaySpeed: 3000,
-      prevArrow: "#carouselCaptionsInner .carousel-control-prev",
-      nextArrow: "#carouselCaptionsInner .carousel-control-next",
       responsive: [
         {
           breakpoint: 991,
@@ -407,40 +592,20 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    });
-  }
+    }
+  );
 
   /* --- 3c. Technology Page Carousel --- */
-  const $techSlider = $("#techCarouselInner");
-  const $techPagination = $("#tech-pagination-status");
-  if ($techSlider.length > 0) {
-    $techSlider.on(
-      "init reInit afterChange",
-      function (event, slick, currentSlide) {
-        const current =
-          (currentSlide !== undefined
-            ? currentSlide
-            : slick
-              ? slick.currentSlide
-              : 0) + 1;
-        const total = slick ? slick.slideCount : 0;
-        if ($techPagination.length > 0 && total > 0) {
-          $techPagination.text(
-            `${String(current).padStart(2, "0")} / ${String(total).padStart(2, "0")}`,
-          );
-        }
-      },
-    );
-
-    $techSlider.slick({
+  initCustomCarousel(
+    "#techCarouselInner",
+    "#tech-pagination-status",
+    "#techCarouselCaptionsInner .carousel-control-prev",
+    "#techCarouselCaptionsInner .carousel-control-next",
+    {
       slidesToShow: 2,
       slidesToScroll: 1,
-      infinite: true,
-      arrows: true,
       autoplay: true,
       autoplaySpeed: 3000,
-      prevArrow: "#techCarouselCaptionsInner .carousel-control-prev",
-      nextArrow: "#techCarouselCaptionsInner .carousel-control-next",
       responsive: [
         {
           breakpoint: 991,
@@ -450,40 +615,20 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    });
-  }
+    }
+  );
 
   /* --- 3d. Marketing Page Carousel --- */
-  const $marketingSlider = $("#marketingCarouselInner");
-  const $marketingPagination = $("#marketing-pagination-status");
-  if ($marketingSlider.length > 0) {
-    $marketingSlider.on(
-      "init reInit afterChange",
-      function (event, slick, currentSlide) {
-        const current =
-          (currentSlide !== undefined
-            ? currentSlide
-            : slick
-              ? slick.currentSlide
-              : 0) + 1;
-        const total = slick ? slick.slideCount : 0;
-        if ($marketingPagination.length > 0 && total > 0) {
-          $marketingPagination.text(
-            `${String(current).padStart(2, "0")} / ${String(total).padStart(2, "0")}`,
-          );
-        }
-      },
-    );
-
-    $marketingSlider.slick({
+  initCustomCarousel(
+    "#marketingCarouselInner",
+    "#marketing-pagination-status",
+    "#marketingCarouselCaptionsInner .carousel-control-prev",
+    "#marketingCarouselCaptionsInner .carousel-control-next",
+    {
       slidesToShow: 2,
       slidesToScroll: 1,
-      infinite: true,
-      arrows: true,
       autoplay: true,
       autoplaySpeed: 3000,
-      prevArrow: "#marketingCarouselCaptionsInner .carousel-control-prev",
-      nextArrow: "#marketingCarouselCaptionsInner .carousel-control-next",
       responsive: [
         {
           breakpoint: 991,
@@ -493,40 +638,20 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    });
-  }
+    }
+  );
 
   /* --- 3e. Content & SEO Strategy Page Carousel --- */
-  const $seoSlider = $("#seoCarouselInner");
-  const $seoPagination = $("#seo-pagination-status");
-  if ($seoSlider.length > 0) {
-    $seoSlider.on(
-      "init reInit afterChange",
-      function (event, slick, currentSlide) {
-        const current =
-          (currentSlide !== undefined
-            ? currentSlide
-            : slick
-              ? slick.currentSlide
-              : 0) + 1;
-        const total = slick ? slick.slideCount : 0;
-        if ($seoPagination.length > 0 && total > 0) {
-          $seoPagination.text(
-            `${String(current).padStart(2, "0")} / ${String(total).padStart(2, "0")}`,
-          );
-        }
-      },
-    );
-
-    $seoSlider.slick({
+  initCustomCarousel(
+    "#seoCarouselInner",
+    "#seo-pagination-status",
+    "#seoCarouselCaptionsInner .carousel-control-prev",
+    "#seoCarouselCaptionsInner .carousel-control-next",
+    {
       slidesToShow: 2,
       slidesToScroll: 1,
-      infinite: true,
-      arrows: true,
       autoplay: true,
       autoplaySpeed: 3000,
-      prevArrow: "#seoCarouselCaptionsInner .carousel-control-prev",
-      nextArrow: "#seoCarouselCaptionsInner .carousel-control-next",
       responsive: [
         {
           breakpoint: 991,
@@ -536,40 +661,20 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    });
-  }
+    }
+  );
 
   /* --- 3f. Content Page Carousel --- */
-  const $contentSlider = $("#contentCarouselInner");
-  const $contentPagination = $("#content-pagination-status");
-  if ($contentSlider.length > 0) {
-    $contentSlider.on(
-      "init reInit afterChange",
-      function (event, slick, currentSlide) {
-        const current =
-          (currentSlide !== undefined
-            ? currentSlide
-            : slick
-              ? slick.currentSlide
-              : 0) + 1;
-        const total = slick ? slick.slideCount : 0;
-        if ($contentPagination.length > 0 && total > 0) {
-          $contentPagination.text(
-            `${String(current).padStart(2, "0")} / ${String(total).padStart(2, "0")}`,
-          );
-        }
-      },
-    );
-
-    $contentSlider.slick({
+  initCustomCarousel(
+    "#contentCarouselInner",
+    "#content-pagination-status",
+    "#contentCarouselCaptionsInner .carousel-control-prev",
+    "#contentCarouselCaptionsInner .carousel-control-next",
+    {
       slidesToShow: 2,
       slidesToScroll: 1,
-      infinite: true,
-      arrows: true,
       autoplay: true,
       autoplaySpeed: 3000,
-      prevArrow: "#contentCarouselCaptionsInner .carousel-control-prev",
-      nextArrow: "#contentCarouselCaptionsInner .carousel-control-next",
       responsive: [
         {
           breakpoint: 991,
@@ -579,8 +684,8 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    });
-  }
+    }
+  );
 
   /* --- 3g. Clients Accordion Section --- */
   const headers = document.querySelectorAll(".clients-accordion-header");
