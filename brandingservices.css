@@ -167,9 +167,203 @@
   }
 }
 
+/* BRANDING EXPERTISE SECTION */
+.branding-expertise-section {
+  padding: 20px 0;
+}
+
+.branding-expertise-section h3 {
+  font-family: "barlow-regular";
+  font-size: 32px;
+  margin-bottom: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.branding-expertise-row {
+  margin-top: 0px;
+}
+
+.branding-expertise-row > [class*="col-"] {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 24px;
+}
+
+.branding-expertise-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 15px 20px;
+  background: #ffffff;
+  border: 1px solid #eef0f2;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.branding-expertise-card:hover {
+  transform: translateY(-5px);
+  border-color: #f47627;
+  box-shadow: 0 10px 25px rgba(244, 118, 39, 0.08);
+  background: #fffcf9;
+}
+
+.branding-expertise-card .icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fcf3ec;
+  color: #f47627;
+  font-size: 24px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.branding-expertise-card:hover .icon-wrap {
+  background: #f47627;
+  color: #fff;
+}
+
+.branding-expertise-card h5 {
+  margin: 0;
+  font-family: "barlow-regular";
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.branding-expertise-footer-text {
+  margin-top: 16px;
+  padding: 20px 20px;
+  background: linear-gradient(135deg, #fdf7f3 0%, #fffbf8 100%);
+  border: 1px dashed rgba(244, 118, 39, 0.25);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.branding-expertise-footer-text p {
+  font-family: "figtree-light";
+  font-size: 20px;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .branding-expertise-card h5 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  .branding-expertise-section {
+    padding: 15px;
+  }
+  .branding-expertise-section h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .branding-expertise-row {
+    margin-top: 6px;
+  }
+  .branding-expertise-card {
+    padding: 14px 15px;
+    gap: 8px;
+  }
+  .branding-expertise-card h5 {
+    font-size: 16px;
+  }
+  .branding-expertise-card .icon-wrap {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+  .branding-expertise-footer-text {
+    padding: 15px 20px;
+    margin-top: 12px;
+  }
+  .branding-expertise-footer-text p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .branding-expertise-section {
+    padding: 15px 0;
+  }
+  .branding-expertise-section h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .branding-expertise-row {
+    margin-top: 0px;
+  }
+  .branding-expertise-row > [class*="col-"] {
+    margin-bottom: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .branding-expertise-card {
+    padding: 12px 15px;
+    border-radius: 10px;
+  }
+  .branding-expertise-card h5 {
+    font-size: 15px;
+  }
+  .branding-expertise-card .icon-wrap {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+  .branding-expertise-footer-text {
+    padding: 10px 15px;
+    margin-top: 10px;
+  }
+  .branding-expertise-footer-text p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .branding-expertise-section {
+    padding: 10px 20px;
+  }
+  .branding-expertise-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .branding-expertise-card {
+    padding: 10px 12px;
+    border-radius: 8px;
+    gap: 6px;
+  }
+  .branding-expertise-card h5 {
+    font-size: 13px;
+  }
+  .branding-expertise-card .icon-wrap {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+  .branding-expertise-footer-text {
+    padding: 6px 10px;
+    margin-top: 8px;
+  }
+  .branding-expertise-footer-text p {
+    font-size: 13px;
+  }
+}
+
 /* WHY BRANDING SECTION */
 .why-branding {
-  padding: 20px 15px;
+  padding: 20px 0px;
 }
 
 .why-branding h3 {
@@ -241,7 +435,7 @@
 
 @media (max-width: 991px) {
   .why-branding {
-    padding: 15px 15px 20px;
+    padding: 15px 15px;
   }
   .why-branding h3 {
     font-size: 28px;
@@ -410,7 +604,7 @@
 
 @media (max-width: 991px) {
   .branding-carousel {
-    padding: 15px 20px 30px;
+    padding: 15px 20px 25px;
   }
   .branding-carousel-inner {
     margin: 0 -15px;
@@ -439,7 +633,7 @@
 
 @media (max-width: 767px) {
   .branding-carousel {
-    padding: 10px 15px 25px;
+    padding: 10px 15px 20px;
   }
   .branding-carousel-inner {
     margin: 0 -10px;
@@ -468,7 +662,7 @@
 
 @media (max-width: 575px) {
   .branding-carousel {
-    padding: 10px 20px 20px;
+    padding: 10px 20px 15px;
   }
   .branding-card-slide h5 {
     font-size: 20px;
