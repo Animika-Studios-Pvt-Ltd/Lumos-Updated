@@ -4,9 +4,20 @@
   padding: 40px 0 20px;
 }
 
+.about-img {
+  float: left;
+  width: 32%;
+  margin-right: 30px;
+  margin-bottom: 15px;
+}
+
 .about-img img {
   border-radius: 15px;
   width: 100%;
+}
+
+.about-title-box {
+  overflow: hidden;
 }
 
 .about-title-box h2 {
@@ -15,20 +26,54 @@
 
 .about-subtitle {
   font-size: 24px;
-  font-weight: 500;
   margin-bottom: 6px;
-  color: #333;
+}
+
+.about-hero-section p {
+  margin-bottom: 0;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.about-p1,
+.about-p2,
+.about-p3 {
+  overflow: hidden;
+}
+
+.about-p4 {
+  clear: left;
+  display: block;
 }
 
 @media (max-width: 1440px) {
   .about-subtitle {
     font-size: 22px;
   }
+  .about-hero-section p {
+    margin-top: 6px;
+  }
 }
 
 @media (max-width: 1200px) {
   .about-subtitle {
     font-size: 20px;
+  }
+  .about-img {
+    width: 34%;
+    margin-right: 30px;
+  }
+  .about-hero-section p {
+    margin-top: 6px;
+  }
+
+  .about-p3 {
+    clear: left;
+    display: block;
+    overflow: visible;
+  }
+  .about-p4 {
+    clear: none;
   }
 }
 
@@ -40,6 +85,19 @@
     font-size: 18px;
     margin-bottom: 0;
   }
+  .about-img {
+    width: 36%;
+    margin-right: 25px;
+    margin-bottom: 12px;
+  }
+  .about-p2 {
+    clear: left;
+    display: block;
+    overflow: visible;
+  }
+  .about-p3 {
+    clear: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -49,14 +107,44 @@
   .about-subtitle {
     font-size: 16px;
   }
+  .about-hero-section .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-title-box {
+    order: 1;
+    overflow: visible;
+  }
+  .about-hero-section p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .about-p1 {
+    order: 2;
+    overflow: visible;
+  }
+  .about-p2 {
+    order: 3;
+    clear: none;
+    overflow: visible;
+  }
   .about-img {
+    order: 4; 
     text-align: center;
-    margin-top: 10px;
+    margin: 10px auto;
+    width: 100%;
+    float: none;
   }
   .about-img img {
     width: 70% !important;
     margin: 0 auto;
     display: block;
+  }
+  .about-p3 {
+    order: 5;
+  }
+  .about-p4 {
+    order: 6;
   }
 }
 
@@ -66,6 +154,9 @@
   }
   .about-img img {
     width: 60% !important;
+  }
+  .about-hero-section p {
+    margin-top: 3px;
   }
 }
 
@@ -305,7 +396,7 @@
 }
 
 @media (max-width: 575px) {
-    .about-track-record-section {
+  .about-track-record-section {
     padding: 10px 15px 10px;
   }
   .about-excellence-card-content {
