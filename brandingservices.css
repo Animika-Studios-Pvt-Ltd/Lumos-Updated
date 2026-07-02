@@ -361,6 +361,42 @@
   }
 }
 
+@media (max-width: 480px) {
+  .branding-expertise-card {
+    padding: 8px 10px;
+    gap: 5px;
+  }
+  .branding-expertise-card h5 {
+    font-size: 12px;
+  }
+  .branding-expertise-card .icon-wrap {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .branding-expertise-footer-text p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .branding-expertise-card {
+    padding: 6px 8px;
+    gap: 4px;
+  }
+  .branding-expertise-card h5 {
+    font-size: 11px;
+  }
+  .branding-expertise-card .icon-wrap {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .branding-expertise-footer-text p {
+    font-size: 11px;
+  }
+}
+
 /* WHY BRANDING SECTION */
 .why-branding {
   padding: 20px 0px;

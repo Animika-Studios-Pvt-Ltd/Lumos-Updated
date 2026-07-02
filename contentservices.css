@@ -361,6 +361,42 @@
   }
 }
 
+@media (max-width: 480px) {
+  .content-expertise-card {
+    padding: 8px 10px;
+    gap: 5px;
+  }
+  .content-expertise-card h5 {
+    font-size: 12px;
+  }
+  .content-expertise-card .icon-wrap {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .content-expertise-footer-text p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .content-expertise-card {
+    padding: 6px 8px;
+    gap: 4px;
+  }
+  .content-expertise-card h5 {
+    font-size: 11px;
+  }
+  .content-expertise-card .icon-wrap {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .content-expertise-footer-text p {
+    font-size: 11px;
+  }
+}
+
 /* WHY CONTENT SECTION */
 .why-content-sec {
   padding: 20px 15px 20px;

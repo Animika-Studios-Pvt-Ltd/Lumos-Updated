@@ -361,6 +361,42 @@
   }
 }
 
+@media (max-width: 480px) {
+  .seo-expertise-card {
+    padding: 8px 10px;
+    gap: 5px;
+  }
+  .seo-expertise-card h5 {
+    font-size: 12px;
+  }
+  .seo-expertise-card .icon-wrap {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .seo-expertise-footer-text p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .seo-expertise-card {
+    padding: 6px 8px;
+    gap: 4px;
+  }
+  .seo-expertise-card h5 {
+    font-size: 11px;
+  }
+  .seo-expertise-card .icon-wrap {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .seo-expertise-footer-text p {
+    font-size: 11px;
+  }
+}
+
 /* SEO CAROUSEL SECTION */
 .seo-carousel {
   padding: 20px 0 40px;

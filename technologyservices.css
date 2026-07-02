@@ -361,6 +361,42 @@
   }
 }
 
+@media (max-width: 480px) {
+  .tech-expertise-card {
+    padding: 8px 10px;
+    gap: 5px;
+  }
+  .tech-expertise-card h5 {
+    font-size: 12px;
+  }
+  .tech-expertise-card .icon-wrap {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .tech-expertise-footer-text p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .tech-expertise-card {
+    padding: 6px 8px;
+    gap: 4px;
+  }
+  .tech-expertise-card h5 {
+    font-size: 11px;
+  }
+  .tech-expertise-card .icon-wrap {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .tech-expertise-footer-text p {
+    font-size: 11px;
+  }
+}
+
 /* TECHNOLOGY CAROUSEL SECTION */
 .tech-carousel {
   padding: 20px 0 40px;
