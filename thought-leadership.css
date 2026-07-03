@@ -166,7 +166,7 @@
 
 /* EXPERTISE SECTION */
 .thought-leadership-expertise-section {
-  padding: 20px 15px;
+  padding: 20px 15px 40px;
 }
 
 .thought-leadership-expertise-section h3 {
@@ -261,7 +261,7 @@
 
 @media (max-width: 991px) {
   .thought-leadership-expertise-section {
-    padding: 15px;
+    padding: 15px 15px 30px;
   }
   .thought-leadership-expertise-section h3 {
     font-size: 26px;
@@ -293,7 +293,7 @@
 
 @media (max-width: 767px) {
   .thought-leadership-expertise-section {
-    padding: 15px;
+    padding: 15px 15px 25px;
   }
   .thought-leadership-expertise-section h3 {
     font-size: 22px;
@@ -330,7 +330,7 @@
 
 @media (max-width: 575px) {
   .thought-leadership-expertise-section {
-    padding: 10px;
+    padding: 10px 10px 15px;
   }
   .thought-leadership-expertise-section h3 {
     font-size: 20px;

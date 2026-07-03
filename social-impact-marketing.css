@@ -166,7 +166,7 @@
 
 /* EXPERTISE SECTION */
 .social-impact-expertise-section {
-  padding: 20px 15px;
+  padding: 20px 15px 40px;
 }
 
 .social-impact-expertise-section h3 {
@@ -261,7 +261,7 @@
 
 @media (max-width: 991px) {
   .social-impact-expertise-section {
-    padding: 15px;
+    padding: 15px 15px 30px;
   }
   .social-impact-expertise-section h3 {
     font-size: 26px;
@@ -293,7 +293,7 @@
 
 @media (max-width: 767px) {
   .social-impact-expertise-section {
-    padding: 15px;
+    padding: 15px 15px 25px;
   }
   .social-impact-expertise-section h3 {
     font-size: 22px;
@@ -330,7 +330,7 @@
 
 @media (max-width: 575px) {
   .social-impact-expertise-section {
-    padding: 10px;
+    padding: 10px 10px 15px;
   }
   .social-impact-expertise-section h3 {
     font-size: 20px;
