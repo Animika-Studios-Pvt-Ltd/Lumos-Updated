@@ -1,94 +1,395 @@
-/* --------------------- SOCIAL IMPACT MARKETING SECTION ------------------------- */
-.social-impact-section {
-  padding: 40px 0;
+/* --------------------- SOCIAL IMPACT MARKETING SERVICES SECTION ------------------------- */
+/* HERO SECTION */
+.social-impact-hero-section {
+  padding: 40px 0 20px;
 }
 
-.social-impact-section img {
+.social-impact-img {
+  float: left;
+  width: 32%;
+  margin-right: 30px;
+  margin-bottom: 15px;
+}
+
+.social-impact-img img {
   border-radius: 15px;
+  width: 100%;
 }
 
-.social-impact-section a {
-  color: #000;
+.social-impact-title-box {
+  overflow: hidden;
 }
 
-.social-impact-section a:hover .fa-arrow-right {
-  color: #fff;
-  background: #f6802f;
-  transform: rotate(356deg);
-  border-color: #fff;
+.social-impact-title-box h2 {
+  margin-bottom: 6px;
 }
 
-.social-impact-txt {
-  text-align: center;
-  width: 370px;
-  margin-bottom: 50px;
+.social-impact-subtitle {
+  font-size: 24px;
+  margin-bottom: 6px;
 }
 
-.social-impact-txt h3 {
-  background: linear-gradient(to right, rgb(244, 118, 39), rgb(252, 169, 81));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+.social-impact-hero-section p {
+  margin-bottom: 0;
+  margin-top: 10px;
+  line-height: 1.6;
 }
 
-.social-impact-arrow-bg img {
-  position: relative;
-  top: -35px;
-  width: 90px;
-  border-radius: 0;
+.social-impact-p1,
+.social-impact-p2 {
+  overflow: hidden;
 }
 
-.social-impact-arrow-bg i {
-  border: 1px solid #000;
-  border-radius: 50%;
-  padding: 14px 15px;
-  margin: -60px auto 10px auto;
-  width: fit-content;
-  color: #000;
+.social-impact-p3 {
+  clear: left;
   display: block;
-  position: relative;
-  transform: rotate(315deg);
-  transition: transform 0.6s ease;
+  margin-top: 24px;
 }
 
-.social-impact-arrow-bg i:hover {
-  transform: rotate(675deg);
+.social-impact-p4 {
+  display: block;
+  margin-top: 10px;
+}
+
+@media (max-width: 1440px) {
+  .social-impact-subtitle {
+    font-size: 22px;
+  }
+  .social-impact-hero-section p {
+    margin-top: 6px;
+  }
 }
 
 @media (max-width: 1200px) {
-  .social-impact-section {
-    padding: 35px 0;
+  .social-impact-subtitle {
+    font-size: 20px;
   }
-  .social-impact-txt {
-    width: auto;
+  .social-impact-img {
+    width: 34%;
+    margin-right: 30px;
+  }
+  .social-impact-hero-section p {
+    margin-top: 6px;
+  }
+  .social-impact-p3 {
+    clear: left;
+    display: block;
+    overflow: visible;
+  }
+  .social-impact-p4 {
+    clear: none;
   }
 }
 
 @media (max-width: 991px) {
-  .social-impact-section {
-    padding: 30px 0;
+  .social-impact-hero-section {
+    padding: 30px 0 15px;
   }
-  .social-impact-txt {
-    margin-bottom: 25px;
+  .social-impact-subtitle {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .social-impact-img {
+    width: 36%;
+    margin-right: 25px;
+    margin-bottom: 12px;
+  }
+  .social-impact-p2 {
+    clear: left;
+    display: block;
+    overflow: visible;
+  }
+  .social-impact-p3 {
+    clear: none;
   }
 }
 
 @media (max-width: 767px) {
-  .social-impact-section {
-    padding: 25px 0;
+  .social-impact-hero-section {
+    padding: 25px 0 15px;
   }
-  .social-impact-txt {
-    margin-bottom: 20px;
+  .social-impact-subtitle {
+    font-size: 16px;
+  }
+  .social-impact-hero-section .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .social-impact-title-box {
+    order: 1;
+    overflow: visible;
+  }
+  .social-impact-hero-section p {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .social-impact-p1 {
+    order: 2;
+    overflow: visible;
+  }
+  .social-impact-p2 {
+    order: 3;
+    clear: none;
+    overflow: visible;
+  }
+  .social-impact-img {
+    order: 4;
+    text-align: center;
+    margin: 10px auto;
+    width: 100%;
+    float: none;
+  }
+  .social-impact-img img {
+    width: 70% !important;
+    margin: 0 auto;
+    display: block;
+  }
+  .social-impact-p3 {
+    order: 5;
+  }
+  .social-impact-p4 {
+    order: 6;
   }
 }
 
 @media (max-width: 575px) {
-  .social-impact-section {
-    padding: 15px 0;
+  .social-impact-hero-section {
+    padding: 10px 0 10px;
   }
-  .social-impact-section img {
-    display: block;
-    margin: 0 auto;
+  .social-impact-img img {
+    width: 60% !important;
+  }
+  .social-impact-hero-section p {
+    margin-top: 3px;
+  }
+}
+
+/* EXPERTISE SECTION */
+.social-impact-expertise-section {
+  padding: 20px 15px;
+}
+
+.social-impact-expertise-section h3 {
+  font-family: "barlow-regular";
+  font-size: 32px;
+  margin-bottom: 20px;
+  display: inline-block;
+  position: relative;
+}
+
+.social-impact-expertise-row {
+  margin-top: 0px;
+}
+
+.social-impact-expertise-row > [class*="col-"] {
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 24px;
+}
+
+.social-impact-expertise-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 15px 20px;
+  background: #ffffff;
+  border: 1px solid #eef0f2;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.social-impact-expertise-card:hover {
+  transform: translateY(-5px);
+  border-color: #f47627;
+  box-shadow: 0 10px 25px rgba(244, 118, 39, 0.08);
+  background: #fffcf9;
+}
+
+.social-impact-expertise-card .icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fcf3ec;
+  color: #f47627;
+  font-size: 24px;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.social-impact-expertise-card:hover .icon-wrap {
+  background: #f47627;
+  color: #fff;
+}
+
+.social-impact-expertise-card h5 {
+  margin: 0;
+  font-family: "barlow-regular";
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.social-impact-expertise-footer-text {
+  margin-top: 16px;
+  padding: 20px 20px;
+  background: linear-gradient(135deg, #fdf7f3 0%, #fffbf8 100%);
+  border: 1px dashed rgba(244, 118, 39, 0.25);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.social-impact-expertise-footer-text p {
+  font-family: "figtree-light";
+  font-size: 20px;
+  color: #333;
+  line-height: 1.5;
+  margin: 0;
+}
+
+@media (max-width: 1200px) {
+  .social-impact-expertise-card h5 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 991px) {
+  .social-impact-expertise-section {
+    padding: 15px;
+  }
+  .social-impact-expertise-section h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+  .social-impact-expertise-row {
+    margin-top: 6px;
+  }
+  .social-impact-expertise-card {
+    padding: 14px 15px;
+    gap: 8px;
+  }
+  .social-impact-expertise-card h5 {
+    font-size: 16px;
+  }
+  .social-impact-expertise-card .icon-wrap {
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+  .social-impact-expertise-footer-text {
+    padding: 15px 20px;
+    margin-top: 12px;
+  }
+  .social-impact-expertise-footer-text p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .social-impact-expertise-section {
+    padding: 15px;
+  }
+  .social-impact-expertise-section h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+  .social-impact-expertise-row {
+    margin-top: 0px;
+  }
+  .social-impact-expertise-row > [class*="col-"] {
+    margin-bottom: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .social-impact-expertise-card {
+    padding: 12px 15px;
+    border-radius: 10px;
+  }
+  .social-impact-expertise-card h5 {
+    font-size: 15px;
+  }
+  .social-impact-expertise-card .icon-wrap {
+    width: 38px;
+    height: 38px;
+    font-size: 18px;
+  }
+  .social-impact-expertise-footer-text {
+    padding: 10px 15px;
+    margin-top: 10px;
+  }
+  .social-impact-expertise-footer-text p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .social-impact-expertise-section {
+    padding: 10px;
+  }
+  .social-impact-expertise-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .social-impact-expertise-card {
+    padding: 10px 12px;
+    border-radius: 8px;
+    gap: 6px;
+  }
+  .social-impact-expertise-card h5 {
+    font-size: 13px;
+  }
+  .social-impact-expertise-card .icon-wrap {
+    width: 34px;
+    height: 34px;
+    font-size: 16px;
+  }
+  .social-impact-expertise-footer-text {
+    padding: 6px 10px;
+    margin-top: 8px;
+  }
+  .social-impact-expertise-footer-text p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-impact-expertise-card {
+    padding: 8px 10px;
+    gap: 5px;
+  }
+  .social-impact-expertise-card h5 {
+    font-size: 12px;
+  }
+  .social-impact-expertise-card .icon-wrap {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  .social-impact-expertise-footer-text p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .social-impact-expertise-card {
+    padding: 6px 8px;
+    gap: 4px;
+  }
+  .social-impact-expertise-card h5 {
+    font-size: 11px;
+  }
+  .social-impact-expertise-card .icon-wrap {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  .social-impact-expertise-footer-text p {
+    font-size: 11px;
   }
 }
