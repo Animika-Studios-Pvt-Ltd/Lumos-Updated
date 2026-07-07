@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <link rel="icon" type="ico" href="static/lumos-in/favicon.ico" />
@@ -273,6 +273,7 @@
     <div class="clients-page-section">
       <div class="container">
         <h2
+          id="title"
           data-aos="fade-up"
           data-aos-duration="800"
           data-aos-easing="ease-out-cubic"
@@ -395,6 +396,19 @@
                 onClick="document.getElementById('title').scrollIntoView({ behavior: 'smooth'});"
               >
                 <span>Fashion & Lifestyle</span>
+              </a>
+              <a
+                class="nav-link"
+                id="unified"
+                data-bs-toggle="pill"
+                href="clients.html#finance"
+                role="tab"
+                aria-controls="v-pills-home"
+                aria-selected="false"
+                tabindex="-1"
+                onClick="document.getElementById('title').scrollIntoView({ behavior: 'smooth'});"
+              >
+                <span>Finance</span>
               </a>
               <a
                 class="nav-link"
@@ -904,6 +918,22 @@
               </div>
               <div
                 class="tab-pane fade"
+                id="finance"
+                role="tabpanel"
+                aria-labelledby="unified"
+              >
+                <div class="row">
+                  <div class="col-lg-3 col-md-3 col-sm-3 col-12">
+                    <img
+                      src="static/lumos-in/samastha-microfinance-logo.webp"
+                      class="img-fluid"
+                      alt="Lumos India company logo - branding and business strategy"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
                 id="hospitality"
                 role="tabpanel"
                 aria-labelledby="streamlined"
@@ -1364,9 +1394,6 @@
                       alt="Lumos India company logo - branding and business strategy"
                     />
                   </div>
-                  <!-- <div class="col-lg-3 col-md-3 col-sm-3 col-12">
-                                <img src="static/lumos-in/sri-soma-sai-skanda-logo.webp" class="img-fluid" alt="Lumos India company logo - branding and business strategy">
-                            </div> -->
                 </div>
               </div>
               <div
@@ -1849,6 +1876,18 @@
                 </div>
               </div>
               <div class="clients-accordion-item">
+                <button class="clients-accordion-header">Finance</button>
+                <div class="clients-accordion-content">
+                  <div class="clients-image">
+                    <img
+                      src="static/lumos-in/samastha-microfinance-logo.webp"
+                      class="img-fluid"
+                      alt="Lumos India company logo - branding and business strategy"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="clients-accordion-item">
                 <button class="clients-accordion-header">Hospitality</button>
                 <div class="clients-accordion-content">
                   <div class="clients-image">
@@ -2182,7 +2221,6 @@
                       class="img-fluid"
                       alt="Lumos India company logo - branding and business strategy"
                     />
-                    <!-- <img src="static/lumos-in/sri-soma-sai-skanda-logo.webp" class="img-fluid" alt="Lumos India company logo - branding and business strategy"> -->
                   </div>
                 </div>
               </div>
