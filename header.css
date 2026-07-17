@@ -316,17 +316,19 @@
     display: block !important;
     height: auto !important;
     clip-path: circle(0% at 92% 0%);
-    transition: clip-path 0.8s ease-in-out !important;
+    transition: clip-path 0.4s ease-in-out !important;
+    visibility: hidden;
   }
 
+  .navbar-toggler[aria-expanded="true"] ~ .navbar-collapse,
   .navbar-expand-lg .navbar-collapse.show {
     clip-path: circle(150% at 92% 0%);
+    visibility: visible;
   }
 
   .navbar-expand-lg .navbar-collapse.collapsing {
     display: block !important;
     height: auto !important;
-    clip-path: circle(0% at 92% 0%);
   }
 
   .navbar-nav {
