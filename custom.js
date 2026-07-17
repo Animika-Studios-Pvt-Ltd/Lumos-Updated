@@ -719,6 +719,26 @@ document.addEventListener("DOMContentLoaded", () => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
+
+  /* --- 3i. FAQ Accordion Section --- */
+  const faqHeaders = document.querySelectorAll(".faq-section .accordion-header");
+  faqHeaders.forEach((header) => {
+    header.addEventListener("click", () => {
+      faqHeaders.forEach((h) => {
+        if (h !== header) {
+          h.classList.remove("active");
+          if (h.nextElementSibling) {
+            h.nextElementSibling.classList.remove("open");
+          }
+        }
+      });
+
+      header.classList.toggle("active");
+      if (header.nextElementSibling) {
+        header.nextElementSibling.classList.toggle("open");
+      }
+    });
+  });
 });
 
 /* ---------------------------------- 4. COOKIE CONSENT POPUP ---------------------------------- */
