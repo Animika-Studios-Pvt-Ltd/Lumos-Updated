@@ -1,0 +1,483 @@
+/* --------------------- LUMOS CAREERS PAGE SECTION ------------------------- */
+.lumos-careers-page {
+  padding: 40px 0;
+}
+
+@media (max-width: 991px) {
+  .lumos-careers-page {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .lumos-careers-page {
+    padding: 25px 0;
+  }
+}
+
+
+
+
+.lumos-careers-page .job-title-header {
+  color: #111111;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.lumos-careers-page .job-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.lumos-careers-page .job-meta-item {
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.03);
+  padding: 6px 14px;
+  border-radius: 4px;
+}
+
+.lumos-careers-page .job-meta-item i {
+  color: #f37022;
+}
+
+.lumos-careers-page h3.section-title {
+  color: #f37022;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.lumos-careers-page .job-desc {
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* List Styling matching the 'Choose Us' section of Lumos website */
+.lumos-careers-page .job-list {
+  margin-bottom: 25px;
+}
+
+.lumos-careers-page .job-list-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.lumos-careers-page .job-list-item-icon {
+  margin-right: 12px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.lumos-careers-page .job-list-item-icon i {
+  color: #f37022;
+}
+
+.lumos-careers-page .job-list-item p {
+  color: #444;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Form Upload Input Integration */
+.lumos-careers-page .file-upload-wrapper {
+  border-bottom: 1px solid #f37022;
+  padding-bottom: 8px;
+  margin-bottom: 22px;
+}
+
+.lumos-careers-page .file-upload-wrapper label {
+  color: #f37022;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.lumos-careers-page .file-upload-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lumos-careers-page .file-upload-container i {
+  color: #f37022;
+  font-size: 15px;
+}
+
+.lumos-careers-page .file-upload-container input[type="file"] {
+  width: 100%;
+  color: #555;
+  outline: none;
+}
+
+.lumos-careers-page .file-upload-container input[type="file"]::file-selector-button {
+  background: #f37022;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background 0.3s;
+}
+
+.lumos-careers-page .file-upload-container input[type="file"]::file-selector-button:hover {
+  background: #d85c16;
+}
+
+
+
+/* Apply Now CTA Button on Careers Page */
+.lumos-careers-page .apply-btn-wrapper {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.lumos-careers-page .apply-now-btn {
+  display: inline-block;
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-family: "barlow-semi-bold", sans-serif;
+  font-size: 16px;
+  color: #ffffff !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 15px rgba(243, 112, 34, 0.25);
+  text-decoration: none;
+}
+
+.lumos-careers-page .apply-now-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(243, 112, 34, 0.35);
+}
+
+
+
+/* Beautiful Drag and Drop Resume Field */
+.lumos-careers-page .drag-drop-zone {
+  border: 2px dashed #f37022;
+  background: rgba(243, 112, 34, 0.02);
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.lumos-careers-page .drag-drop-zone:hover,
+.lumos-careers-page .drag-drop-zone.dragover {
+  background: rgba(243, 112, 34, 0.06);
+  border-color: #d85c16;
+}
+
+.lumos-careers-page .drag-drop-zone i {
+  font-size: 36px;
+  color: #f37022;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.lumos-careers-page .drag-drop-zone p {
+  font-family: "figtree-light", sans-serif;
+  font-size: 15px;
+  color: #555;
+  margin: 0;
+}
+
+.lumos-careers-page .drag-drop-zone input[type="file"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.lumos-careers-page .file-selected-info {
+  display: none;
+  margin-top: 12px;
+  font-family: "barlow-regular", sans-serif;
+  font-size: 14px;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .lumos-careers-page .apply-card-container {
+    padding: 30px 20px;
+  }
+  .lumos-careers-page .apply-card-title {
+    font-size: 28px;
+  }
+}
+
+/* Job Board Grid & Card Layout */
+.lumos-careers-page .job-board-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.lumos-careers-page .job-listing-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lumos-careers-page .job-listing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  border-color: #f37022;
+}
+
+.lumos-careers-page .job-listing-title {
+  font-family: "barlowcondensed-medium";
+  font-size: 28px;
+  color: #111;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.lumos-careers-page .job-listing-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.lumos-careers-page .job-listing-meta-item {
+  font-family: "barlow-regular";
+  font-size: 14px;
+  color: #777;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lumos-careers-page .job-listing-meta-item i {
+  color: #f37022;
+}
+
+.lumos-careers-page .job-listing-desc {
+  font-family: "figtree-light";
+  font-size: 15px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.lumos-careers-page .job-listing-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.lumos-careers-page .job-listing-btn {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-family: "barlow-regular";
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.lumos-careers-page .job-listing-btn.btn-primary-custom {
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
+  color: #fff !important;
+  box-shadow: 0 4px 10px rgba(243, 112, 34, 0.2);
+}
+
+.lumos-careers-page .job-listing-btn.btn-primary-custom:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 15px rgba(243, 112, 34, 0.3);
+}
+
+.lumos-careers-page .job-listing-btn.btn-secondary-custom {
+  border: 1px solid #ccc;
+  color: #555 !important;
+}
+
+.lumos-careers-page .job-listing-btn.btn-secondary-custom:hover {
+  border-color: #f37022;
+  color: #f37022 !important;
+}
+
+@media (max-width: 991px) {
+
+  
+  .lumos-careers-page .job-board-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  .lumos-careers-page .job-meta {
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+  
+  .lumos-careers-page .job-meta-item {
+    font-size: 13px;
+    padding: 4px 10px;
+  }
+
+  .lumos-careers-page .job-listing-title {
+    font-size: 22px;
+  }
+  
+  .lumos-careers-page .job-listing-desc {
+    font-size: 14px;
+  }
+
+  .lumos-careers-page p,
+  .lumos-careers-page .job-desc,
+  .lumos-careers-page .job-list-item p {
+    font-size: 16px;
+  }
+
+  .lumos-careers-page h3.section-title {
+    font-size: 20px;
+  }
+
+  .lumos-careers-page .contact-form-intro {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .lumos-careers-page p,
+  .lumos-careers-page .job-desc,
+  .lumos-careers-page .job-list-item p {
+    font-size: 17px;
+  }
+
+  .lumos-careers-page h3.section-title {
+    font-size: 21px;
+  }
+
+  .lumos-careers-page .contact-form-intro {
+    font-size: 17px;
+  }
+}
+
+
+/* Premium Success Modal Styling */
+.success-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  backdrop-filter: blur(5px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.success-modal-overlay.active {
+  opacity: 1;
+}
+
+.success-modal-content {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  max-width: 450px;
+  width: 90%;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  transform: scale(0.8);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  position: relative;
+}
+
+.success-modal-overlay.active .success-modal-content {
+  transform: scale(1);
+}
+
+.success-modal-icon {
+  font-size: 60px;
+  color: #f37022;
+  margin-bottom: 20px;
+  animation: bounceIn 0.6s ease;
+}
+
+.success-modal-content h3 {
+  font-family: "barlowcondensed-medium", sans-serif;
+  font-size: 28px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.success-modal-content p {
+  font-family: "figtree-light", sans-serif;
+  font-size: 16px;
+  color: #555555;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.success-modal-close-btn {
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
+  color: #ffffff;
+  border: none;
+  padding: 10px 25px;
+  font-family: "barlow-semi-bold", sans-serif;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(243, 112, 34, 0.25);
+  text-transform: uppercase;
+}
+
+.success-modal-close-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(243, 112, 34, 0.35);
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+  70% { transform: scale(0.9); opacity: 0.9; }
+  100% { transform: scale(1); opacity: 1; }
+}
+

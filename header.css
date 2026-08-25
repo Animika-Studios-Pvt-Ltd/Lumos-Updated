@@ -444,3 +444,90 @@
     margin: 5px 0;
   }
 }
+
+/* Careers Link - Top Utility Bar */
+.top-careers-bar {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 65px;
+  margin-top: 10px;
+  margin-bottom: -15px;
+  position: relative;
+  z-index: 1001;
+}
+
+.top-careers-link {
+  font-family: "barlow-regular", sans-serif;
+  font-size: 18px;
+  color: #272a32;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.top-careers-link::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 2px;
+  width: 0;
+  background-color: #f26f17;
+  transition: width 0.3s ease-in-out;
+}
+
+.top-careers-link:hover,
+.top-careers-link.active {
+  color: #f5782e;
+}
+
+.top-careers-link:hover::before,
+.top-careers-link.active::before {
+  width: 100%;
+}
+
+.mobile-careers-item {
+  display: none !important;
+}
+
+@media (max-width: 1440px) {
+  .top-careers-bar {
+    padding-right: 50px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .top-careers-bar {
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .top-careers-bar {
+    padding-right: 30px;
+    margin-bottom: -10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .top-careers-bar {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .top-careers-bar {
+    display: none !important;
+  }
+  .mobile-careers-item {
+    display: block !important;
+  }
+}
+
+
+

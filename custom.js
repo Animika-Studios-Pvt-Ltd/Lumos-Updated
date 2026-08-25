@@ -1,7 +1,34 @@
 /* ---------------------------------- 1. NAVBAR & NAVIGATION SECTION ---------------------------------- */
 document.addEventListener("DOMContentLoaded", () => {
+  // Dynamically inject Careers link in the extreme end of the header - above the primary menu
+  const menuContainer = document.querySelector(".menu");
+  if (menuContainer) {
+    const topBar = document.createElement("div");
+    topBar.className = "top-careers-bar";
+    topBar.innerHTML = `<a href="careers.html" class="top-careers-link">Careers</a>`;
+    menuContainer.insertBefore(topBar, menuContainer.firstChild);
+  }
+
+  // Dynamically inject Careers link in primary menu navigation for mobile hamburger view
+  const navList = document.querySelector(".navbar-nav");
+  if (navList) {
+    const mobileLi = document.createElement("li");
+    mobileLi.className = "nav-item mobile-careers-item";
+    mobileLi.innerHTML = `<a class="nav-link" href="careers.html">Careers</a>`;
+    navList.appendChild(mobileLi);
+  }
+
   const path = window.location.pathname;
   const page = path.split("/").pop() || "index.html";
+
+  // Toggle active class on Careers links
+  const careersLinks = document.querySelectorAll(".top-careers-link, .mobile-careers-item .nav-link");
+  if (careersLinks.length > 0) {
+    if (page === "careers.html" || page === "apply.html" || page.startsWith("job-") || page === "sales-development-representative.html") {
+      careersLinks.forEach(link => link.classList.add("active"));
+    }
+  }
+
 
   // Helper to remove active class from all navigation links
   const clearActiveLinks = () => {
