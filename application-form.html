@@ -356,10 +356,7 @@
                   </div>
                   <i class="fas fa-briefcase"></i>
                   <ul class="careers-page-apply-custom-options-list">
-                    <li data-value="sdr-bda">
-                      Sales Development Representative (SDR) / Business
-                      Development Associate (BDA)
-                    </li>
+                    <li data-value="sdr-bda">Sales Development Representative (SDR) / Business Development Associate (BDA)</li>
                   </ul>
                 </div>
 
@@ -782,7 +779,7 @@
           option.addEventListener("click", function (e) {
             e.stopPropagation();
             const value = this.getAttribute("data-value");
-            const text = this.textContent;
+            const text = this.textContent.replace(/\s+/g, ' ').trim();
             selectOption(value, text, this);
           });
         });
