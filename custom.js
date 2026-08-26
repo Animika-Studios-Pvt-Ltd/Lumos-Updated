@@ -1,11 +1,14 @@
 /* ---------------------------------- 1. NAVBAR & NAVIGATION SECTION ---------------------------------- */
+
 document.addEventListener("DOMContentLoaded", () => {
   // Dynamically inject Careers link in the extreme end of the header - above the primary menu
   const menuContainer = document.querySelector(".menu");
   if (menuContainer) {
     const topBar = document.createElement("div");
     topBar.className = "top-careers-bar";
-    topBar.innerHTML = `<a href="careers.html" class="top-careers-link">Careers</a>`;
+    topBar.innerHTML = `
+      <a href="careers.html" class="top-careers-link">Careers</a>
+    `;
     menuContainer.insertBefore(topBar, menuContainer.firstChild);
   }
 
@@ -14,137 +17,174 @@ document.addEventListener("DOMContentLoaded", () => {
   if (navList) {
     const mobileLi = document.createElement("li");
     mobileLi.className = "nav-item mobile-careers-item";
-    mobileLi.innerHTML = `<a class="nav-link" href="careers.html">Careers</a>`;
+    mobileLi.innerHTML = `
+      <a class="nav-link" href="careers.html">Careers</a>
+    `;
     navList.appendChild(mobileLi);
   }
 
+  // Get current pathname
   const path = window.location.pathname;
   const page = path.split("/").pop() || "index.html";
 
-  // Toggle active class on Careers links
-  const careersLinks = document.querySelectorAll(".top-careers-link, .mobile-careers-item .nav-link");
-  if (careersLinks.length > 0) {
-    if (page === "careers.html" || page === "application-form.html" || page.startsWith("job-") || page === "sales-development-representative.html") {
-      careersLinks.forEach(link => link.classList.add("active"));
-    }
-  }
-
-
-  // Helper to remove active class from all navigation links
+  // Remove active class from all navigation links
   const clearActiveLinks = () => {
-    document.querySelectorAll(".navbar-nav .nav-link").forEach((nav) => {
-      nav.classList.remove("active");
-    });
+    document
+      .querySelectorAll(".navbar-nav .nav-link, .top-careers-link")
+      .forEach((nav) => {
+        nav.classList.remove("active");
+      });
   };
+
+  // Toggle active class on Careers links
+  const careersLinks = document.querySelectorAll(
+    ".top-careers-link, .mobile-careers-item .nav-link",
+  );
+  const isCareersPage =
+    page === "careers.html" ||
+    page === "application-form.html" ||
+    page === "sales-development-representative.html" ||
+    page.startsWith("job-");
+
+  if (isCareersPage) {
+    careersLinks.forEach((link) => {
+      link.classList.add("active");
+    });
+  }
 
   let matched = false;
   const navbarLinks = document.querySelectorAll(
     ".navbar-nav a:not(.dropdown-toggle)",
   );
 
-  // 1. Direct matching: check dropdown items and direct links
+  // Check dropdown items and direct navigation links
   navbarLinks.forEach((link) => {
     const href = link.getAttribute("href");
-    if (href) {
-      // Extract clean filename from link href (ignoring hash anchors)
-      const linkPage = href.split("#")[0].split("/").pop();
-      if (linkPage && page === linkPage) {
-        clearActiveLinks();
-        const parentDropdown = link.closest(".dropdown");
-        if (parentDropdown) {
-          const toggle = parentDropdown.querySelector(
-            ".nav-link.dropdown-toggle",
-          );
-          if (toggle) {
-            toggle.classList.add("active");
-            matched = true;
-          }
-        } else {
-          link.classList.add("active");
+    if (!href || href.startsWith("#") || href.startsWith("javascript:")) {
+      return;
+    }
+
+    const linkPage = href.split("#")[0].split("/").pop();
+
+    // Ignore Careers here because it has its own section-based active state
+    if (
+      link.classList.contains("mobile-careers-item") ||
+      link.closest(".mobile-careers-item")
+    ) {
+      return;
+    }
+
+    if (linkPage && page === linkPage) {
+      clearActiveLinks();
+      const parentDropdown = link.closest(".dropdown");
+      if (parentDropdown) {
+        const toggle = parentDropdown.querySelector(
+          ".nav-link.dropdown-toggle",
+        );
+        if (toggle) {
+          toggle.classList.add("active");
           matched = true;
         }
+      } else {
+        link.classList.add("active");
+        matched = true;
       }
     }
   });
 
-  // 2. Section-based fallback matching for subpages or case studies
+  // Section-based fallback matching for subpages or case studies
   if (!matched && page !== "index.html") {
-    clearActiveLinks();
-
-    // Check if it's an article inside page
-    if (document.querySelector(".articles-section-inside-page")) {
-      const resourcesToggle = Array.from(
-        document.querySelectorAll(".navbar-nav .dropdown-toggle"),
-      ).find((link) => link.textContent.trim().toLowerCase() === "resources");
-      if (resourcesToggle) resourcesToggle.classList.add("active");
-    }
-    // Check if it's an industry page
-    else if (page.includes("-industry") || page === "industries.html") {
-      const indLink = Array.from(
-        document.querySelectorAll(".navbar-nav .nav-link"),
-      ).find((link) => {
-        const href = link.getAttribute("href");
-        return href && href.includes("industries.html");
+    if (isCareersPage) {
+      careersLinks.forEach((link) => {
+        link.classList.add("active");
       });
-      if (indLink) indLink.classList.add("active");
-    }
-    // Check if it's under the "Services" section (branding, technology, marketing, content, seo, etc.)
-    else if (
-      page.includes("services") ||
-      page.includes("brand-") ||
-      page.includes("branding-") ||
-      page.includes("technology-") ||
-      page.includes("marketing-") ||
-      page.includes("website-")
-    ) {
-      const servicesToggle = Array.from(
-        document.querySelectorAll(".navbar-nav .dropdown-toggle"),
-      ).find((link) => link.textContent.trim().toLowerCase() === "services");
-      if (servicesToggle) servicesToggle.classList.add("active");
-    }
-    // Check if it's under "Consultative Services"
-    else if (
-      page.includes("thought-") ||
-      page.includes("social-impact") ||
-      page.includes("advisory-")
-    ) {
-      const consultativeToggle = Array.from(
-        document.querySelectorAll(".navbar-nav .dropdown-toggle"),
-      ).find(
-        (link) =>
-          link.textContent.trim().toLowerCase() === "consultative services",
-      );
-      if (consultativeToggle) consultativeToggle.classList.add("active");
-    }
-    // Check if it's under "Resources"
-    else if (
-      page.includes("article") ||
-      page.includes("event") ||
-      page.includes("video") ||
-      page.includes("publication") ||
-      page.includes("client")
-    ) {
-      const resourcesToggle = Array.from(
-        document.querySelectorAll(".navbar-nav .dropdown-toggle"),
-      ).find((link) => link.textContent.trim().toLowerCase() === "resources");
-      if (resourcesToggle) resourcesToggle.classList.add("active");
+    } else {
+      clearActiveLinks();
+
+      // Check if it's an article inside page
+      if (document.querySelector(".articles-section-inside-page")) {
+        const resourcesToggle = Array.from(
+          document.querySelectorAll(".navbar-nav .dropdown-toggle"),
+        ).find((link) => link.textContent.trim().toLowerCase() === "resources");
+        if (resourcesToggle) {
+          resourcesToggle.classList.add("active");
+        }
+      }
+      // Check if it's an industry page
+      else if (page.includes("-industry") || page === "industries.html") {
+        const indLink = Array.from(
+          document.querySelectorAll(".navbar-nav .nav-link"),
+        ).find((link) => {
+          const href = link.getAttribute("href");
+          return href && href.includes("industries.html");
+        });
+        if (indLink) {
+          indLink.classList.add("active");
+        }
+      }
+      // Check if it's under the Services section
+      else if (
+        page.includes("services") ||
+        page.includes("brand-") ||
+        page.includes("branding-") ||
+        page.includes("technology-") ||
+        page.includes("marketing-") ||
+        page.includes("website-")
+      ) {
+        const servicesToggle = Array.from(
+          document.querySelectorAll(".navbar-nav .dropdown-toggle"),
+        ).find((link) => link.textContent.trim().toLowerCase() === "services");
+        if (servicesToggle) {
+          servicesToggle.classList.add("active");
+        }
+      }
+      // Check if it's under Consultative Services
+      else if (
+        page.includes("thought-") ||
+        page.includes("social-impact") ||
+        page.includes("advisory-")
+      ) {
+        const consultativeToggle = Array.from(
+          document.querySelectorAll(".navbar-nav .dropdown-toggle"),
+        ).find(
+          (link) =>
+            link.textContent.trim().toLowerCase() === "consultative services",
+        );
+        if (consultativeToggle) {
+          consultativeToggle.classList.add("active");
+        }
+      }
+      // Check if it's under Resources
+      else if (
+        page.includes("article") ||
+        page.includes("event") ||
+        page.includes("video") ||
+        page.includes("publication") ||
+        page.includes("client")
+      ) {
+        const resourcesToggle = Array.from(
+          document.querySelectorAll(".navbar-nav .dropdown-toggle"),
+        ).find((link) => link.textContent.trim().toLowerCase() === "resources");
+        if (resourcesToggle) {
+          resourcesToggle.classList.add("active");
+        }
+      }
     }
   }
 
-  // 3. Auto-close mobile hamburger menu when clicking outside or scrolling
+  // Mobile hamburger menu behavior
   const navCollapse = document.getElementById("navbarSupportedContent");
   if (navCollapse) {
     const toggler = document.querySelector(".navbar-toggler");
-    // Ensure toggler has collapsed class initially on load if closed
     if (toggler && toggler.getAttribute("aria-expanded") !== "true") {
       toggler.classList.add("collapsed");
     }
 
     const closeMenu = () => {
       if (navCollapse.classList.contains("show")) {
-        const t = document.querySelector(".navbar-toggler");
-        if (t && !t.classList.contains("collapsed")) {
-          t.click();
+        const toggleButton = document.querySelector(".navbar-toggler");
+        if (toggleButton && !toggleButton.classList.contains("collapsed")) {
+          toggleButton.click();
         }
       }
     };
@@ -168,16 +208,23 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       { passive: true },
     );
-    // Wrap all industry images in an overflow-hidden wrapper for containment on zoom-in
-    document
-      .querySelectorAll(".industries-section-card > img.img-fluid")
-      .forEach((img) => {
-        const wrapper = document.createElement("div");
-        wrapper.className = "industries-img-wrapper";
-        img.parentNode.insertBefore(wrapper, img);
-        wrapper.appendChild(img);
-      });
   }
+
+  // Wrap industry images in an overflow-hidden wrapper for containment on zoom-in
+  document
+    .querySelectorAll(".industries-section-card > img.img-fluid")
+    .forEach((img) => {
+      if (
+        img.parentElement &&
+        img.parentElement.classList.contains("industries-img-wrapper")
+      ) {
+        return;
+      }
+      const wrapper = document.createElement("div");
+      wrapper.className = "industries-img-wrapper";
+      img.parentNode.insertBefore(wrapper, img);
+      wrapper.appendChild(img);
+    });
 });
 
 /* ---------------------------------- 2. BANNER & HERO SLIDER SECTION ---------------------------------- */
@@ -313,7 +360,7 @@ document.addEventListener("DOMContentLoaded", () => {
     paginationId,
     prevBtnSelector,
     nextBtnSelector,
-    customOptions = {}
+    customOptions = {},
   ) {
     const track = document.querySelector(sliderSelector);
     if (!track) return;
@@ -326,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const viewport = document.createElement("div");
     viewport.style.overflow = "hidden";
     viewport.style.width = "100%";
-    
+
     // Transfer margins from track to viewport (to handle negative margins correctly without clipping)
     const trackStyle = window.getComputedStyle(track);
     const marginLeft = trackStyle.marginLeft;
@@ -357,7 +404,7 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesToScroll: customOptions.slidesToScroll || 1,
       autoplay: customOptions.autoplay !== false,
       autoplaySpeed: customOptions.autoplaySpeed || 3000,
-      responsive: customOptions.responsive || []
+      responsive: customOptions.responsive || [],
     };
 
     let slidesToShow = options.slidesToShow;
@@ -370,8 +417,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const width = window.innerWidth;
       let activeShow = options.slidesToShow;
       let activeScroll = options.slidesToScroll;
-      
-      const sorted = [...options.responsive].sort((a, b) => a.breakpoint - b.breakpoint);
+
+      const sorted = [...options.responsive].sort(
+        (a, b) => a.breakpoint - b.breakpoint,
+      );
       for (const r of sorted) {
         if (width <= r.breakpoint) {
           activeShow = r.settings.slidesToShow || activeShow;
@@ -388,8 +437,8 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesToScroll = settings.activeScroll;
 
       track.innerHTML = "";
-      
-      originalSlides.forEach(slide => {
+
+      originalSlides.forEach((slide) => {
         slide.style.flex = `0 0 ${100 / slidesToShow}%`;
         slide.style.boxSizing = "border-box";
         slide.style.padding = "0 15px"; // Add gaps between carousel images
@@ -397,7 +446,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const prefixClones = [];
-      for (let i = originalSlideCount - slidesToShow; i < originalSlideCount; i++) {
+      for (
+        let i = originalSlideCount - slidesToShow;
+        i < originalSlideCount;
+        i++
+      ) {
         const slideIndex = i < 0 ? i + originalSlideCount : i;
         if (originalSlides[slideIndex]) {
           const clone = originalSlides[slideIndex].cloneNode(true);
@@ -408,7 +461,7 @@ document.addEventListener("DOMContentLoaded", () => {
           prefixClones.push(clone);
         }
       }
-      prefixClones.reverse().forEach(clone => {
+      prefixClones.reverse().forEach((clone) => {
         track.insertBefore(clone, track.firstChild);
       });
 
@@ -440,7 +493,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updatePagination() {
       if (pagination) {
-        const current = ((currentIndex % originalSlideCount) + originalSlideCount) % originalSlideCount + 1;
+        const current =
+          (((currentIndex % originalSlideCount) + originalSlideCount) %
+            originalSlideCount) +
+          1;
         pagination.textContent = `${String(current).padStart(2, "0")} / ${String(originalSlideCount).padStart(2, "0")}`;
       }
     }
@@ -554,7 +610,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    }
+    },
   );
   initCustomCarousel(
     "#publicationCarouselInner1",
@@ -596,7 +652,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    }
+    },
   );
 
   /* --- 3b. Branding Page Carousel --- */
@@ -619,7 +675,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    }
+    },
   );
 
   /* --- 3c. Technology Page Carousel --- */
@@ -642,7 +698,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    }
+    },
   );
 
   /* --- 3d. Marketing Page Carousel --- */
@@ -665,7 +721,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    }
+    },
   );
 
   /* --- 3e. Content & SEO Strategy Page Carousel --- */
@@ -688,7 +744,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    }
+    },
   );
 
   /* --- 3f. Content Page Carousel --- */
@@ -711,7 +767,7 @@ document.addEventListener("DOMContentLoaded", () => {
           },
         },
       ],
-    }
+    },
   );
 
   /* --- 3g. Clients Accordion Section --- */
@@ -748,7 +804,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* --- 3i. FAQ Accordion Section --- */
-  const faqHeaders = document.querySelectorAll(".faq-section .accordion-header");
+  const faqHeaders = document.querySelectorAll(
+    ".faq-section .accordion-header",
+  );
   faqHeaders.forEach((header) => {
     header.addEventListener("click", () => {
       faqHeaders.forEach((h) => {
