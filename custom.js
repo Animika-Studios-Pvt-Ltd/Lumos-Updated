@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Toggle active class on Careers links
   const careersLinks = document.querySelectorAll(".top-careers-link, .mobile-careers-item .nav-link");
   if (careersLinks.length > 0) {
-    if (page === "careers.html" || page === "apply.html" || page.startsWith("job-") || page === "sales-development-representative.html") {
+    if (page === "careers.html" || page === "application-form.html" || page.startsWith("job-") || page === "sales-development-representative.html") {
       careersLinks.forEach(link => link.classList.add("active"));
     }
   }
