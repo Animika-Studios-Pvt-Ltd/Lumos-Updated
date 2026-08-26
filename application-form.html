@@ -333,6 +333,8 @@
                     id="phoneNum"
                     name="phone"
                     placeholder="Phone Number*"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
                     required
                   />
                   <i class="fas fa-phone" style="transform: scaleX(-1)"></i>
@@ -394,7 +396,7 @@
                     id="coverLetter"
                     name="cover_letter"
                     rows="4"
-                    placeholder="Brief note / Cover letter (Optional)"
+                    placeholder="Brief Note / Cover Letter (Optional)"
                   ></textarea>
                   <i class="fas fa-comment-alt"></i>
                 </div>
@@ -735,6 +737,14 @@
         }
       });
 
+      // Phone number input restriction (allow only digits)
+      const phoneInput = document.getElementById("phoneNum");
+      if (phoneInput) {
+        phoneInput.addEventListener("input", function (e) {
+          this.value = this.value.replace(/[^0-9]/g, "");
+        });
+      }
+
       // Custom Dropdown Logic
       const selectContainer = document.querySelector(
         ".careers-page-apply-custom-select-container",
@@ -816,6 +826,13 @@
         const coverVal = document.getElementById("coverLetter").value.trim();
         const fileInput = document.getElementById("resume");
         const file = fileInput.files[0];
+
+        // Validate 10-digit mobile number
+        if (!/^[0-9]{10}$/.test(phoneVal)) {
+          alert("Please enter a valid 10-digit mobile number.");
+          document.getElementById("phoneNum").focus();
+          return;
+        }
 
         submitBtn.disabled = true;
         submitBtn.textContent = "Sending...";
