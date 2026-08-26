@@ -928,3 +928,189 @@
     margin-bottom: 10px;
   }
 }
+
+/* Careers Apply Client Showcase Card styling */
+.careers-page-apply-main .careers-apply-clients-card {
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.careers-page-apply-main .careers-apply-clients-card h3 {
+  font-family: "barlowcondensed-medium", sans-serif;
+  font-size: 32px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.careers-page-apply-main .careers-apply-clients-card h3::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #f37022;
+}
+
+.careers-page-apply-main .clients-intro-text {
+  font-family: "figtree-light", sans-serif;
+  font-size: 14.5px;
+  color: #555555;
+  line-height: 1.6;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+/* Paginated Grid Slider styling */
+.careers-page-apply-main .clients-grid-container {
+  position: relative;
+  height: 340px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.careers-page-apply-main .clients-grid-slide {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 10px);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 70px);
+  gap: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s ease;
+  z-index: 1;
+}
+
+.careers-page-apply-main .clients-grid-slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.careers-page-apply-main .client-logo-box {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.01);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  height: 70px;
+}
+
+.careers-page-apply-main .client-logo-box:hover {
+  border-color: rgba(243, 112, 34, 0.25);
+  box-shadow: 0 8px 20px rgba(243, 112, 34, 0.06);
+  transform: translateY(-3px);
+}
+
+.careers-page-apply-main .client-logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.65;
+  transition: all 0.3s ease;
+}
+
+.careers-page-apply-main .client-logo-box:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Dots Navigation */
+.careers-page-apply-main .clients-slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.careers-page-apply-main .clients-slider-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.careers-page-apply-main .clients-slider-dots .dot.active {
+  background: #f37022;
+  transform: scale(1.2);
+}
+
+.careers-page-apply-main .hr-contact-info {
+  background: linear-gradient(135deg, #fdfcf9, rgba(243, 112, 34, 0.02));
+  border-left: 4px solid #f37022;
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.01);
+  margin-top: 35px;
+}
+
+.careers-page-apply-main .hr-contact-info h4 {
+  font-family: "barlow-semi-bold", sans-serif;
+  font-size: 19px;
+  color: #111111;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.careers-page-apply-main .hr-contact-info p {
+  font-family: "figtree-light", sans-serif;
+  font-size: 14px;
+  color: #555555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.careers-page-apply-main .hr-contact-info a {
+  color: #f37022;
+  text-decoration: none;
+  font-family: "barlow-semi-bold", sans-serif;
+  transition: color 0.2s;
+  border-bottom: 1px dashed #f37022;
+}
+
+.careers-page-apply-main .hr-contact-info a:hover {
+  color: #d85c16;
+  border-bottom-style: solid;
+}
+
+/* Tablet overrides */
+@media (max-width: 991px) {
+  .careers-page-apply-main .careers-apply-clients-card {
+    margin-top: 50px;
+  }
+}
+
+/* Form page two-column spacing matching contact page */
+.careers-page-apply-main .contact-column-left {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 992px) {
+  .lumos-careers-page .contact-column-left {
+    margin-bottom: 0;
+    padding-right: 40px;
+  }
+  .lumos-careers-page .contact-column-right {
+    padding-left: 40px;
+  }
+}

@@ -269,7 +269,7 @@
         <!-- Heading Block -->
 
         <div class="row justify-content-md-start justify-content-center">
-          <div class="col-lg-8 col-md-10 col-12">
+          <div class="col-lg-7 col-12 contact-column-left">
             <!-- Premium Application Card Container -->
             <div
               class="careers-page-apply-contact-form-card"
@@ -396,6 +396,34 @@
                   </button>
                 </div>
               </form>
+            </div>
+          </div>
+          
+          <div class="col-lg-5 col-12 contact-column-right">
+            <!-- Client Showcase Card with Autoscrolling Grid -->
+            <div
+              class="careers-apply-clients-card"
+              data-aos="fade-left"
+              data-aos-duration="900"
+              data-aos-easing="ease-out-cubic"
+            >
+              <h3>Brands We Partner With</h3>
+              <p class="clients-intro-text">At Lumos, you will have the opportunity to collaborate on high-impact campaigns and marketing strategies for some of the region's leading enterprises and global brands.</p>
+              
+              <div class="clients-grid-container" id="clientsGridContainer">
+                <!-- Populated dynamically via JS -->
+              </div>
+
+              <!-- Slider Navigation dots -->
+              <div class="clients-slider-dots" id="clientsSliderDots">
+                <!-- Populated dynamically via JS -->
+              </div>
+              
+              <!-- HR Contact info -->
+              <div class="hr-contact-info">
+                <h4>Need Help?</h4>
+                <p>If you encounter any issues with the application form, please write to us at <a href="mailto:india.lumos@gmail.com">india.lumos@gmail.com</a>.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -824,6 +852,103 @@
           closeModal();
         }
       });
+
+      // Dynamic rendering of all 115 client logos from clients.html
+      const clientLogos = [
+        "ab-carter-logo.webp", "abi-group-logo.webp", "advaya-logo.webp", "agathya-logo.webp", 
+        "agratha-mega-food-park-logo.webp", "ajnh-logo.webp", "allovedas-logo.webp", "arv-logo.webp", 
+        "asn-group-logo.webp", "audio-planet-logo.webp", "avantis-logo.webp", "bbs-logo.webp", 
+        "beamsvilles-logo.webp", "bec-logo.webp", "bgs-logo.webp", "bhoomi-logo.webp", 
+        "bhutra-logo.webp", "bluewaters-logo.webp", "bob-technologies-logo.webp", "bonbon-logo.webp", 
+        "brains-logo.webp", "bsr-group-logo.webp", "cirak-1-logo.webp", "cir-q-tech-logo.webp", 
+        "cocoon-logo.webp", "columbiaasia-logo.webp", "complus-logo.webp", "crossdomain-logo.webp", 
+        "ctc-logo.webp", "ctc-sanjeevini-logo.webp", "dimo-castings-logo.webp", "divyasree-logo.webp", 
+        "diys-foundation-logo.webp", "dr-shobha-logo.webp", "edu-genii-logo.webp", "em-logo.webp", 
+        "esd-logo.webp", "first-foot-productions-logo.webp", "geeravani-logo.webp", "guts-logo.webp", 
+        "happyness-logo.webp", "hcl-logo.webp", "herbal-logo.webp", "incite-logo.webp", 
+        "india-incense-sticks-logo.webp", "indus-logo.webp", "innov-build-logo.webp", "iria-logo.webp", 
+        "isobel-logo.webp", "jayashree-logo.webp", "jei-logo.webp", "joshis-logo-inner.webp", 
+        "kalinga-foundation-logo.webp", "katrasoft-logo.webp", "kelsi-logo.webp", "kerala-ayurveda-logo.webp", 
+        "la-marvella-logo.webp", "langshott-logo.webp", "leterre-logo.webp", "little-scholars-logo.webp", 
+        "lv-logo.webp", "madhusilks-logo.webp", "mef-logo.webp", "melgiri-logo.webp", 
+        "milkywave-logo.webp", "minebea-logo.webp", "mythreyi-group-logo.webp", "narayani-vidyalaya-logo.webp", 
+        "nash-logo.webp", "niranthara-logo.webp", "nova-medical-centers-logo.webp", "nyagatare-logo.webp", 
+        "ohana-logo.webp", "omega-hospitals-logo.webp", "paskan-design-logo.webp", "peedam-logo.webp", 
+        "polylavis-logo.webp", "pragnya-logo.webp", "prominent-logo.webp", "puravankara-logo.webp", 
+        "rajas-kabel-logo.webp", "ramot-lv-logo.webp", "saikoti-baba-logo.webp", "samastha-microfinance-logo.webp", 
+        "samruddhi-logo.webp", "sbl-logo.webp", "sealtite-logo.webp", "sharavanababa-foundation-logo.webp", 
+        "shree-lakshmi-ivf-logo.webp", "shriram-logo.webp", "sita-logo.webp", "sky-tea-logo.webp", 
+        "spandana-logo.webp", "sri-mayyia-logo.webp", "sri-paving-tiling-logo.webp", "sripuram-logo.webp", 
+        "sripuram-store-logo.webp", "sri-sugam-logo.webp", "sri-venkateshwara-eye-logo.webp", "stag-logo.webp", 
+        "subhsree-logo.webp", "swaasthya-logo.webp", "techkey-logo.webp", "the-gateway-hotel.webp", 
+        "total-travel-and-leisure-solutions-logo.webp", "trigno-engineering-logo.webp", "unishire-logo.webp", "varna-bhoomi-logo.webp", 
+        "vidyanjali-logo.webp", "vishwam-ventures-logo.webp", "vistara-logo.webp", "vsf-logo.webp", 
+        "wipro-logo.webp", "ysa-logo.webp"
+      ];
+
+      const gridContainer = document.getElementById("clientsGridContainer");
+      const dotsContainer = document.getElementById("clientsSliderDots");
+      const itemsPerPage = 12;
+      const totalPages = Math.ceil(clientLogos.length / itemsPerPage);
+
+      // Render grid pages
+      for (let i = 0; i < totalPages; i++) {
+        const slide = document.createElement("div");
+        slide.className = `clients-grid-slide${i === 0 ? ' active' : ''}`;
+        
+        const start = i * itemsPerPage;
+        const end = Math.min(start + itemsPerPage, clientLogos.length);
+        const pageLogos = clientLogos.slice(start, end);
+
+        pageLogos.forEach(logo => {
+          const box = document.createElement("div");
+          box.className = "client-logo-box";
+          
+          // Nicely formatted title
+          const cleanName = logo.replace("-logo", "").replace(".webp", "").replace("-", " ");
+          const altText = cleanName.charAt(0).toUpperCase() + cleanName.slice(1);
+
+          box.innerHTML = `<img src="static/lumos-in/${logo}" alt="${altText}" />`;
+          slide.appendChild(box);
+        });
+
+        gridContainer.appendChild(slide);
+
+        // Render dot
+        const dot = document.createElement("span");
+        dot.className = `dot${i === 0 ? ' active' : ''}`;
+        dot.addEventListener("click", () => setClientsSlide(i));
+        dotsContainer.appendChild(dot);
+      }
+
+      let currentClientsSlide = 0;
+      const clientSlides = document.querySelectorAll('.clients-grid-slide');
+      const clientDots = document.querySelectorAll('.clients-slider-dots .dot');
+      let clientsInterval;
+
+      function setClientsSlide(index) {
+        if (clientSlides.length === 0) return;
+        clientSlides[currentClientsSlide].classList.remove('active');
+        clientDots[currentClientsSlide].classList.remove('active');
+        currentClientsSlide = index;
+        clientSlides[currentClientsSlide].classList.add('active');
+        clientDots[currentClientsSlide].classList.add('active');
+        resetClientsTimer();
+      }
+
+      function nextClientsSlide() {
+        const nextIndex = (currentClientsSlide + 1) % clientSlides.length;
+        setClientsSlide(nextIndex);
+      }
+
+      function resetClientsTimer() {
+        clearInterval(clientsInterval);
+        clientsInterval = setInterval(nextClientsSlide, 5000);
+      }
+
+      if (clientSlides.length > 0) {
+        resetClientsTimer();
+      }
     </script>
   </body>
 </html>
