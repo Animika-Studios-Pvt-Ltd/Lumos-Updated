@@ -454,11 +454,12 @@
 }
 
 .careers-page-apply-contact-layout .careers-page-apply-contact-form-card {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 0px 0px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  height: 100%;
 }
 
 .careers-page-apply-contact-layout .careers-page-apply-contact-form-card h3 {
@@ -691,11 +692,11 @@
   border: 2px dashed #f37022;
   background: rgba(243, 112, 34, 0.02);
   border-radius: 8px;
-  padding: 30px 20px;
+  padding: 12px 15px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   position: relative;
 }
 
@@ -706,15 +707,15 @@
 }
 
 .careers-page-apply-main .careers-page-apply-drag-drop-zone i {
-  font-size: 36px;
+  font-size: 24px;
   color: #f37022;
-  margin-bottom: 15px;
+  margin-bottom: 6px;
   display: block;
 }
 
 .careers-page-apply-main .careers-page-apply-drag-drop-zone p {
   font-family: "figtree-light";
-  font-size: 15px;
+  font-size: 14px;
   color: #555;
   margin: 0;
 }
@@ -942,6 +943,7 @@
   border: 1px solid rgba(0, 0, 0, 0.05);
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+  height: 100%;
 }
 
 .careers-page-apply-main .careers-apply-clients-card h3 {
@@ -994,7 +996,9 @@
   gap: 15px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s ease;
+  transition:
+    opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 0.8s ease;
   z-index: 1;
 }
 
@@ -1110,11 +1114,18 @@
 }
 
 @media (min-width: 992px) {
-  .lumos-careers-page .contact-column-left {
+  .careers-page-apply-main .contact-column-left {
     margin-bottom: 0;
-    padding-right: 40px;
+    padding-right: 25px;
   }
-  .lumos-careers-page .contact-column-right {
-    padding-left: 40px;
+  .careers-page-apply-main .contact-column-right {
+    padding-left: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .careers-page-apply-contact-layout .careers-page-apply-contact-form-card,
+  .careers-page-apply-main .careers-apply-clients-card {
+    padding: 20px 15px;
   }
 }
