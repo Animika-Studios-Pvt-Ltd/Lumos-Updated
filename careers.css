@@ -212,12 +212,14 @@
     font-size: 20px;
   }
   .careers-page-main .careers-page-job-listing-actions {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     gap: 10px;
   }
   .careers-page-main .careers-page-job-listing-btn {
-    width: 100%;
-    text-align: center;
+    width: auto;
+    padding: 4px 12px;
+    font-size: 13px;
   }
   .careers-page-main .careers-page-job-board-grid {
     margin-top: 15px;
@@ -226,9 +228,6 @@
 }
 
 @media (max-width: 480px) {
-  .careers-page-main {
-    padding: 12px 0;
-  }
   .careers-page-heading {
     margin-bottom: 15px;
   }
@@ -367,6 +366,7 @@
     font-size: 21px;
   }
   .careers-page-job-main .careers-page-job-apply-btn-wrapper {
+    justify-content: center;
     margin-top: 25px;
     margin-bottom: 20px;
   }
@@ -405,8 +405,9 @@
     margin-bottom: 15px;
   }
   .careers-page-job-main .careers-page-job-apply-now-btn {
-    width: 100%;
-    text-align: center;
+    width: auto;
+    padding: 4px 14px;
+    font-size: 15px;
   }
   .careers-page-job-main .careers-page-job-list {
     margin-bottom: 15px;
@@ -414,9 +415,6 @@
 }
 
 @media (max-width: 480px) {
-  .careers-page-job-main {
-    padding: 12px 0;
-  }
   .careers-page-job-main .careers-page-job-apply-btn-wrapper {
     margin-top: 15px;
     margin-bottom: 12px;
@@ -879,6 +877,9 @@
   .careers-page-apply-main .careers-page-apply-drag-drop-zone {
     margin-bottom: 20px;
   }
+  .careers-page-apply-contact-layout .careers-page-apply-submit-btn-wrapper {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 576px) {
@@ -892,8 +893,9 @@
     justify-content: center;
   }
   .careers-page-apply-contact-layout button[type="submit"] {
-    width: 100%;
-    text-align: center;
+    width: auto;
+    padding: 6px 14px;
+    font-size: 15px;
   }
   .careers-page-apply-contact-layout .careers-page-apply-contact-form-intro {
     margin-bottom: 15px;
@@ -904,12 +906,6 @@
 }
 
 @media (max-width: 480px) {
-  .careers-page-apply-main {
-    padding: 12px 0;
-  }
-  .careers-page-apply-contact-layout {
-    padding: 12px 0;
-  }
   .careers-page-apply-contact-layout .careers-page-apply-contact-form-intro {
     margin-bottom: 12px;
   }
