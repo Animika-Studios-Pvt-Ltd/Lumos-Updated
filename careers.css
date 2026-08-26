@@ -260,8 +260,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -270,9 +270,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(0, 0, 0, 0.03);
+  background: transparent;
+  border: 1px solid #f37022;
   padding: 6px 14px;
   border-radius: 4px;
+  font-family: "barlow-regular";
+  font-size: 18px;
 }
 
 .careers-page-job-main .careers-page-job-meta-item i {
@@ -281,7 +284,7 @@
 
 .careers-page-job-main h3.careers-page-job-section-title {
   color: #f37022;
-  margin-top: 20px;
+  margin-top: 12px;
   margin-bottom: 5px;
   letter-spacing: 0.5px;
 }
@@ -289,17 +292,17 @@
 .careers-page-job-main .careers-page-job-desc {
   color: #444;
   line-height: 1.7;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .careers-page-job-main .careers-page-job-list {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .careers-page-job-main .careers-page-job-list-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
 }
 
 .careers-page-job-main .careers-page-job-list-item-icon {
@@ -319,7 +322,7 @@
 }
 
 .careers-page-job-main .careers-page-job-apply-btn-wrapper {
-  margin-top: 40px;
+  margin-top: 20px;
   display: flex;
   justify-content: flex-start;
 }
@@ -329,7 +332,7 @@
   background: linear-gradient(45deg, #f37022, #fbaa4f);
   padding: 6px 16px;
   border-radius: 30px;
-  font-family: "barlow-semi-bold", sans-serif;
+  font-family: "barlow-semi-bold";
   font-size: 16px;
   color: #ffffff !important;
   text-transform: uppercase;
@@ -351,7 +354,7 @@
     padding: 25px 0;
   }
   .careers-page-job-main .careers-page-job-apply-btn-wrapper {
-    margin-top: 30px;
+    margin-top: 15px;
     margin-bottom: 25px;
   }
 }
@@ -370,7 +373,7 @@
   }
   .careers-page-job-main .careers-page-job-apply-btn-wrapper {
     justify-content: center;
-    margin-top: 25px;
+    margin-top: 15px;
     margin-bottom: 20px;
   }
   .careers-page-job-main .careers-page-job-meta {
@@ -404,7 +407,7 @@
   }
   .careers-page-job-main .careers-page-job-apply-btn-wrapper {
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 15px;
   }
   .careers-page-job-main .careers-page-job-apply-now-btn {
@@ -419,7 +422,7 @@
 
 @media (max-width: 480px) {
   .careers-page-job-main .careers-page-job-apply-btn-wrapper {
-    margin-top: 15px;
+    margin-top: 10px;
     margin-bottom: 12px;
   }
   .careers-page-job-main .careers-page-job-meta {
@@ -433,7 +436,7 @@
     padding: 10px 0;
   }
   .careers-page-job-main .careers-page-job-apply-btn-wrapper {
-    margin-top: 12px;
+    margin-top: 8px;
     margin-bottom: 10px;
   }
   .careers-page-job-main .careers-page-job-meta {
@@ -710,7 +713,7 @@
 }
 
 .careers-page-apply-main .careers-page-apply-drag-drop-zone p {
-  font-family: "figtree-light", sans-serif;
+  font-family: "figtree-light";
   font-size: 15px;
   color: #555;
   margin: 0;
@@ -730,7 +733,7 @@
 .careers-page-apply-main .careers-page-apply-file-selected-info {
   display: none;
   margin-top: 12px;
-  font-family: "barlow-regular", sans-serif;
+  font-family: "barlow-regular";
   font-size: 14px;
   color: #2e7d32;
   font-weight: 600;
@@ -782,7 +785,7 @@
 }
 
 .careers-page-apply-success-modal-content h3 {
-  font-family: "barlowcondensed-medium", sans-serif;
+  font-family: "barlowcondensed-medium";
   font-size: 28px;
   color: #111111;
   text-transform: uppercase;
@@ -791,7 +794,7 @@
 }
 
 .careers-page-apply-success-modal-content p {
-  font-family: "figtree-light", sans-serif;
+  font-family: "figtree-light";
   font-size: 16px;
   color: #555555;
   line-height: 1.6;
@@ -803,7 +806,7 @@
   color: #ffffff;
   border: none;
   padding: 10px 25px;
-  font-family: "barlow-semi-bold", sans-serif;
+  font-family: "barlow-semi-bold";
   font-size: 16px;
   border-radius: 30px;
   cursor: pointer;
@@ -942,7 +945,7 @@
 }
 
 .careers-page-apply-main .careers-apply-clients-card h3 {
-  font-family: "barlowcondensed-medium", sans-serif;
+  font-family: "barlowcondensed-medium";
   font-size: 32px;
   color: #111111;
   text-transform: uppercase;
@@ -963,7 +966,7 @@
 }
 
 .careers-page-apply-main .clients-intro-text {
-  font-family: "figtree-light", sans-serif;
+  font-family: "figtree-light";
   font-size: 14.5px;
   color: #555555;
   line-height: 1.6;
@@ -1067,7 +1070,7 @@
 }
 
 .careers-page-apply-main .hr-contact-info h4 {
-  font-family: "barlow-semi-bold", sans-serif;
+  font-family: "barlow-semi-bold";
   font-size: 19px;
   color: #111111;
   margin: 0 0 8px 0;
@@ -1076,7 +1079,7 @@
 }
 
 .careers-page-apply-main .hr-contact-info p {
-  font-family: "figtree-light", sans-serif;
+  font-family: "figtree-light";
   font-size: 14px;
   color: #555555;
   margin: 0;
@@ -1086,7 +1089,7 @@
 .careers-page-apply-main .hr-contact-info a {
   color: #f37022;
   text-decoration: none;
-  font-family: "barlow-semi-bold", sans-serif;
+  font-family: "barlow-semi-bold";
   transition: color 0.2s;
   border-bottom: 1px dashed #f37022;
 }
@@ -1096,14 +1099,12 @@
   border-bottom-style: solid;
 }
 
-/* Tablet overrides */
 @media (max-width: 991px) {
   .careers-page-apply-main .careers-apply-clients-card {
     margin-top: 50px;
   }
 }
 
-/* Form page two-column spacing matching contact page */
 .careers-page-apply-main .contact-column-left {
   margin-bottom: 30px;
 }
