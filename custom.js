@@ -1,15 +1,16 @@
 /* ---------------------------------- 1. NAVBAR & NAVIGATION SECTION ---------------------------------- */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Dynamically inject Careers link in the extreme end of the header - above the primary menu
-  const menuContainer = document.querySelector(".menu");
-  if (menuContainer) {
+  // Dynamically inject Careers link inside the menu column - above the primary menu
+  const menuNavContainer =
+    document.querySelector(".menu nav.navbar")?.parentElement;
+  if (menuNavContainer) {
     const topBar = document.createElement("div");
     topBar.className = "top-careers-bar";
     topBar.innerHTML = `
       <a href="careers.html" class="top-careers-link">Careers</a>
     `;
-    menuContainer.insertBefore(topBar, menuContainer.firstChild);
+    menuNavContainer.insertBefore(topBar, menuNavContainer.firstChild);
   }
 
   // Dynamically inject Careers link in primary menu navigation for mobile hamburger view
