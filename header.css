@@ -22,6 +22,15 @@
   justify-content: space-between;
 }
 
+.menu .row > div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.menu .row > div:first-child > a {
+  flex-shrink: 0;
+}
+
 .menu img {
   width: 100%;
   max-width: 175px;
@@ -36,19 +45,20 @@
 
 .logo-tagline {
   font-family: "barlow-regular";
-  font-size: 19px;
-  padding-left: 15px;
+  font-size: 22px;
+  padding-left: 35px;
   color: #18375e;
-  margin-top: -3px;
+  margin-top: 0;
   text-align: left;
   letter-spacing: 0.5px;
   line-height: 1.2;
+  white-space: nowrap;
 }
 
 .logo-tagline .orange-i {
   color: #ef7021;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 31px;
 }
 
 .top-careers-bar {
@@ -241,11 +251,12 @@
     max-width: 160px;
   }
   .logo-tagline {
-    font-size: 18px;
+    font-size: 21px;
+    padding-left: 30px;
     margin-top: -2px;
   }
   .logo-tagline .orange-i {
-    font-size: 26px;
+    font-size: 29px;
   }
   .top-careers-bar {
     padding-right: 55px;
@@ -275,11 +286,12 @@
     max-width: 150px;
   }
   .logo-tagline {
-    font-size: 17px;
+    font-size: 20px;
+    padding-left: 28px;
     margin-top: -2px;
   }
   .logo-tagline .orange-i {
-    font-size: 25px;
+    font-size: 28px;
   }
   .top-careers-bar {
     padding-right: 35px;
@@ -309,11 +321,12 @@
     max-width: 130px;
   }
   .logo-tagline {
-    font-size: 15px;
+    font-size: 18px;
+    padding-left: 25px;
     margin-top: -1px;
   }
   .logo-tagline .orange-i {
-    font-size: 22px;
+    font-size: 25px;
   }
   .top-careers-bar {
     padding-right: 25px;
@@ -344,11 +357,12 @@
     max-width: 120px;
   }
   .logo-tagline {
-    font-size: 12px;
+    font-size: 15px;
+    padding-left: 22px;
     margin-top: -1px;
   }
   .logo-tagline .orange-i {
-    font-size: 18px;
+    font-size: 21px;
   }
   .top-careers-bar {
     padding-right: 15px;
@@ -385,11 +399,12 @@
     max-width: 130px;
   }
   .logo-tagline {
-    font-size: 13px;
+    font-size: 16px;
+    padding-left: 22px;
     margin-top: -2px;
   }
   .logo-tagline .orange-i {
-    font-size: 19px;
+    font-size: 22px;
   }
   .top-careers-bar {
     display: none !important;
@@ -519,11 +534,12 @@
     max-width: 120px;
   }
   .logo-tagline {
-    font-size: 12px;
+    font-size: 15px;
+    padding-left: 20px;
     margin-top: -1px;
   }
   .logo-tagline .orange-i {
-    font-size: 18px;
+    font-size: 21px;
   }
   .navbar-nav a {
     padding: 6px 0;
@@ -535,12 +551,12 @@
     max-width: 105px;
   }
   .logo-tagline {
-    font-size: 11px;
+    font-size: 13px;
     margin-top: 0px;
-    padding-left: 10px;
+    padding-left: 16px;
   }
   .logo-tagline .orange-i {
-    font-size: 16px;
+    font-size: 18px;
   }
   .navbar-nav a {
     padding: 4px 0;
@@ -555,11 +571,12 @@
     max-width: 100px;
   }
   .logo-tagline {
-    font-size: 11px;
+    font-size: 13px;
+    padding-left: 16px;
     margin-top: 0px;
   }
   .logo-tagline .orange-i {
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 
@@ -571,11 +588,12 @@
     max-width: 90px;
   }
   .logo-tagline {
-    font-size: 9px;
+    font-size: 11px;
+    padding-left: 14px;
     margin-top: 0px;
   }
   .logo-tagline .orange-i {
-    font-size: 13px;
+    font-size: 15px;
   }
   .bar {
     width: 26px;
