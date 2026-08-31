@@ -7,7 +7,7 @@
   margin-bottom: 10px;
 }
 
-.industries-text {
+.industries-section p {
   font-family: "figtree-light" !important;
   font-size: 22px !important;
   margin-bottom: 20px !important;
@@ -25,12 +25,6 @@
   color: #000;
   display: block;
   text-decoration: none;
-}
-
-.industries-section p {
-  font-family: "barlow-regular";
-  font-size: 24px;
-  margin-bottom: 30px;
 }
 
 .industries-section a:hover .fa-arrow-right {
@@ -142,13 +136,9 @@
   .industries-section {
     padding: 30px 0;
   }
-  .industries-text {
+  .industries-section p {
     font-size: 20px !important;
     margin-bottom: 10px !important;
-  }
-  .industries-section p {
-    font-size: 22px;
-    margin-bottom: 25px;
   }
   .industries-section-card {
     margin-bottom: 25px;
@@ -166,12 +156,8 @@
   .industries-section {
     padding: 20px 0;
   }
-  .industries-text {
-    font-size: 18px !important;
-  }
   .industries-section p {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 18px !important;
   }
   .industries-section-card {
     margin-bottom: 20px;
@@ -191,12 +177,8 @@
   .industries-section {
     padding: 15px 0;
   }
-  .industries-text {
-    font-size: 16px !important;
-  }
   .industries-section p {
-    font-size: 18px !important;
-    margin-bottom: 15px;
+    font-size: 16px !important;
   }
   .industries-img-wrapper {
     display: block;
