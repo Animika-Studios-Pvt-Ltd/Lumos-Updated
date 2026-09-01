@@ -1,7 +1,6 @@
 /* -----------------------------PORTFOLIO SECTION-------------------------------- */
-/* Portfolio Layout & Spacing */
 .portfolio-section {
-  padding: 40px 0;
+  padding: 30px 0;
   text-align: left;
 }
 
@@ -12,6 +11,7 @@
   letter-spacing: 0.5px;
   margin-bottom: 10px;
   line-height: 1.2;
+  color: #000;
 }
 
 .portfolio-section h2 {
@@ -19,11 +19,12 @@
   margin-bottom: 15px;
   line-height: 1.1;
   font-size: 35px;
+  color: #1a1a1a;
 }
 
 .portfolio-section p {
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .portfolio-images img {
@@ -63,7 +64,6 @@
   margin-top: 40px;
 }
 
-/* Navigation (Prev / Next / Back) */
 .other-portfolios {
   margin: 60px auto 30px;
   max-width: 60%;
@@ -180,7 +180,7 @@
 
 @media (max-width: 1200px) {
   .portfolio-section {
-    padding: 35px 0;
+    padding: 30px 0;
   }
   .portfolio-section h1 {
     font-size: 39px;
@@ -215,7 +215,7 @@
 
 @media (max-width: 991px) {
   .portfolio-section {
-    padding: 30px 0;
+    padding: 25px 0;
   }
   .portfolio-section h1 {
     font-size: 35px;
