@@ -1,4 +1,3 @@
-/* ---------------------  PALOWISE PAGE SECTION ------------------------- */
 /* HERO SECTION */
 .palowise-hero {
   position: relative;
@@ -7,7 +6,8 @@
   height: auto;
   min-height: 720px;
   padding-left: 0;
-  display: block;
+  display: flex;
+  align-items: center;
   background-color: #ebebeb;
   background-image: url("static/lumos-in/palowise-bg.webp");
   background-size: cover;
@@ -47,8 +47,8 @@
 .palowise-hero-inner {
   position: relative;
   z-index: 2;
-  min-height: auto;
-  padding: 110px 15px;
+  width: 100%;
+  padding: 50px 15px;
 }
 
 .palowise-hero-copy span {
@@ -60,6 +60,9 @@
 }
 
 .palowise-hero-copy h1 {
+  font-family: "barlowcondensed-medium";
+  font-size: 58px;
+  line-height: 1.15;
   margin: 12px 0 24px;
   color: #012348;
 }
@@ -259,7 +262,11 @@
 /* BRAND INTELLIGENCE */
 .brand-intelligence-section {
   background-color: #012348;
-  padding: 60px 0;
+  padding: 40px 0;
+}
+
+.brand-intelligence-section .row > [class*="col-"] {
+  margin-bottom: 24px;
 }
 
 .intelligence-header {
@@ -320,7 +327,11 @@
 /* CAPABILITIES */
 .capabilities-section {
   background-color: #ebebeb;
-  padding: 60px 0;
+  padding: 40px 0;
+}
+
+.capabilities-section .row > [class*="col-"] {
+  margin-bottom: 24px;
 }
 
 #capabilities h2 {
@@ -359,8 +370,12 @@
 /* TARGET SEGMENTS */
 #target-segments {
   background: #fff;
-  padding: 80px 0;
+  padding: 40px 0;
   margin: 0;
+}
+
+.target-segments-section .row > [class*="col-"] {
+  margin-bottom: 24px;
 }
 
 #target-segments h2 {
@@ -412,7 +427,7 @@
 /* FAQ SECTION */
 #faq {
   background-color: #f5f5f6;
-  padding: 80px 0;
+  padding: 40px 0;
 }
 
 #faq h2 {
@@ -427,7 +442,6 @@
   font-size: 19px;
 }
 
-/* Accordion Item Styling */
 .faq-section .accordion-item {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.08);
@@ -452,7 +466,9 @@
   position: relative;
   user-select: none;
   background-color: #ffffff;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .faq-section .accordion-header::after {
@@ -487,7 +503,10 @@
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease, opacity 0.3s ease;
+  transition:
+    max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.35s ease,
+    opacity 0.3s ease;
 }
 
 .faq-section .accordion-content.open {
@@ -496,38 +515,14 @@
   opacity: 1;
 }
 
-@media (max-width: 1199px) {
-  .partnership-section {
-    padding: 60px 0;
+@media (max-width: 1440px) {
+  .palowise-hero-copy h1 {
+    font-size: 52px;
   }
+}
 
-  .brand-intelligence-section {
-    padding: 60px 0;
-  }
-
-  .capabilities-section {
-    padding: 60px 0;
-  }
-
-  #target-segments {
-    padding: 60px 0;
-  }
-
-  #faq {
-    padding: 60px 0;
-  }
-
-  #partnership h2,
-  #target-segments h2,
-  #faq h2 {
-    font-size: 36px;
-  }
-
-  #capabilities h2 {
-    font-size: 38px;
-  }
-
-  #business-intelligence .intelligence-header h2 {
+@media (max-width: 1200px) {
+  .palowise-hero-copy h1 {
     font-size: 46px;
   }
 
@@ -536,11 +531,51 @@
     font-size: 16px !important;
     padding: 10px 22px !important;
   }
+
+  .partnership-section {
+    padding: 35px 0;
+  }
+
+  #partnership h2 {
+    font-size: 36px;
+  }
+
+  .brand-intelligence-section {
+    padding: 35px 0;
+  }
+
+  #business-intelligence .intelligence-header h2 {
+    font-size: 46px;
+  }
+
+  .capabilities-section {
+    padding: 35px 0;
+  }
+
+  #capabilities h2 {
+    font-size: 38px;
+  }
+
+  #target-segments {
+    padding: 35px 0;
+  }
+
+  #target-segments h2 {
+    font-size: 36px;
+  }
+
+  #faq {
+    padding: 35px 0;
+  }
+
+  #faq h2 {
+    font-size: 36px;
+  }
 }
 
 @media (max-width: 991px) {
   .palowise-hero-inner {
-    padding: 60px 15px;
+    padding: 35px 15px;
   }
 
   .palowise-hero-copy span {
@@ -556,60 +591,12 @@
     max-width: 100%;
   }
 
+  .palowise-hero-globe-wrap {
+    margin-top: 15px;
+  }
+
   .globe-3d-shell {
     max-width: 380px;
-  }
-
-  .partnership-section {
-    padding: 45px 0;
-  }
-
-  .brand-intelligence-section {
-    padding: 45px 0;
-  }
-
-  .capabilities-section {
-    padding: 40px 0;
-  }
-
-  #target-segments {
-    padding: 45px 0;
-  }
-
-  #faq {
-    padding: 45px 0;
-  }
-
-  #capabilities .row.mb-5,
-  #target-segments .row.mb-5,
-  #faq .row.mb-5 {
-    margin-bottom: 24px !important;
-  }
-
-  #partnership h2,
-  #target-segments h2,
-  #faq h2 {
-    font-size: 30px;
-  }
-
-  #capabilities h2 {
-    font-size: 30px;
-  }
-
-  #business-intelligence .intelligence-header h2 {
-    font-size: 36px;
-  }
-
-  #partnership p,
-  #business-intelligence .intelligence-header p,
-  #capabilities p,
-  #target-segments p.section-desc,
-  #faq p {
-    font-size: 16px;
-  }
-
-  #partnership li {
-    font-size: 16px;
   }
 
   .palowise-hero .button,
@@ -618,20 +605,98 @@
     padding: 9px 18px !important;
   }
 
+  .partnership-section {
+    padding: 30px 0;
+  }
+
+  #partnership h2 {
+    font-size: 30px;
+  }
+
+  #partnership p,
+  #partnership li {
+    font-size: 16px;
+  }
+
+  .partnership-img {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .brand-intelligence-section {
+    padding: 30px 0;
+  }
+
+  .intelligence-header {
+    margin-bottom: 28px;
+  }
+
+  #business-intelligence .intelligence-header h2 {
+    font-size: 36px;
+  }
+
+  #business-intelligence .intelligence-header p {
+    font-size: 16px;
+  }
+
   #business-intelligence .bi-card {
     padding: 24px 20px;
+  }
+
+  .capabilities-section {
+    padding: 30px 0;
+  }
+
+  #capabilities h2 {
+    font-size: 30px;
+  }
+
+  #capabilities p {
+    font-size: 16px;
   }
 
   #capabilities .capability-card {
     padding: 20px;
   }
 
+  #capabilities .row:first-child {
+    margin-bottom: 20px;
+  }
+
+  #target-segments {
+    padding: 30px 0;
+  }
+
+  #target-segments h2 {
+    font-size: 30px;
+  }
+
+  #target-segments p.section-desc {
+    font-size: 16px;
+  }
+
   #target-segments .segment-card {
     padding: 30px 20px;
   }
 
-  .intelligence-header {
-    margin-bottom: 28px;
+  #target-segments .row:first-child {
+    margin-bottom: 20px;
+  }
+
+  #faq {
+    padding: 30px 0;
+  }
+
+  #faq h2 {
+    font-size: 30px;
+  }
+
+  #faq p {
+    font-size: 16px;
+  }
+
+  #faq .row:first-child {
+    margin-bottom: 20px;
   }
 }
 
@@ -641,7 +706,7 @@
   }
 
   .palowise-hero-inner {
-    padding: 40px 15px;
+    padding: 25px 15px;
   }
 
   .palowise-hero-copy span {
@@ -683,52 +748,15 @@
   }
 
   .partnership-section {
-    padding: 35px 0;
+    padding: 25px 0;
   }
 
-  .brand-intelligence-section {
-    padding: 35px 0;
-  }
-
-  .capabilities-section {
-    padding: 30px 0;
-  }
-
-  #target-segments {
-    padding: 35px 0;
-  }
-
-  #faq {
-    padding: 35px 0;
-  }
-
-  #capabilities .row.mb-5,
-  #target-segments .row.mb-5,
-  #faq .row.mb-5 {
-    margin-bottom: 16px !important;
-  }
-
-  #partnership h2,
-  #capabilities h2,
-  #target-segments h2,
-  #faq h2 {
+  #partnership h2 {
     font-size: 24px;
     margin-bottom: 10px;
   }
 
-  #business-intelligence .intelligence-header h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-
   #partnership p,
-  #business-intelligence .intelligence-header p,
-  #capabilities p,
-  #target-segments p.section-desc,
-  #faq p {
-    font-size: 14px;
-  }
-
   #partnership li {
     font-size: 14px;
   }
@@ -742,6 +770,23 @@
     line-height: 1.4 !important;
   }
 
+  .brand-intelligence-section {
+    padding: 25px 0;
+  }
+
+  .brand-intelligence-section .row > [class*="col-"] {
+    margin-bottom: 16px;
+  }
+
+  #business-intelligence .intelligence-header h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  #business-intelligence .intelligence-header p {
+    font-size: 14px;
+  }
+
   #business-intelligence .bi-card {
     padding: 18px 14px;
   }
@@ -750,11 +795,53 @@
     font-size: 12px;
   }
 
+  .intelligence-header {
+    margin-bottom: 20px;
+  }
+
+  .capabilities-section {
+    padding: 25px 0;
+  }
+
+  .capabilities-section .row > [class*="col-"] {
+    margin-bottom: 16px;
+  }
+
+  #capabilities h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #capabilities p {
+    font-size: 14px;
+  }
+
   #capabilities .capability-card {
     padding: 16px;
   }
 
   #capabilities .capability-card h3 {
+    font-size: 14px;
+  }
+
+  #capabilities .row:first-child {
+    margin-bottom: 15px;
+  }
+
+  #target-segments {
+    padding: 25px 0;
+  }
+
+  .target-segments-section .row > [class*="col-"] {
+    margin-bottom: 16px;
+  }
+
+  #target-segments h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #target-segments p.section-desc {
     font-size: 14px;
   }
 
@@ -766,14 +853,31 @@
     font-size: 17px;
   }
 
-  .intelligence-header {
-    margin-bottom: 20px;
+  #target-segments .row:first-child {
+    margin-bottom: 15px;
+  }
+
+  #faq {
+    padding: 25px 0;
+  }
+
+  #faq h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  #faq p {
+    font-size: 14px;
+  }
+
+  #faq .row:first-child {
+    margin-bottom: 15px;
   }
 }
 
 @media (max-width: 575px) {
   .palowise-hero-inner {
-    padding: 20px 12px;
+    padding: 15px 15px;
   }
 
   .palowise-hero-copy span {
@@ -798,40 +902,11 @@
   }
 
   .partnership-section {
-    padding: 25px 0;
+    padding: 15px 0;
   }
 
-  .brand-intelligence-section {
-    padding: 25px 0;
-  }
-
-  .capabilities-section {
-    padding: 20px 0;
-  }
-
-  #target-segments {
-    padding: 25px 0;
-  }
-
-  #faq {
-    padding: 25px 0;
-  }
-
-  #capabilities .row.mb-5,
-  #target-segments .row.mb-5,
-  #faq .row.mb-5 {
-    margin-bottom: 12px !important;
-  }
-
-  #partnership h2,
-  #capabilities h2,
-  #target-segments h2,
-  #faq h2 {
+  #partnership h2 {
     font-size: 20px;
-  }
-
-  #business-intelligence .intelligence-header h2 {
-    font-size: 22px;
   }
 
   .partnership-cta .button {
@@ -839,28 +914,87 @@
     padding: 8px 12px !important;
   }
 
+  .brand-intelligence-section {
+    padding: 15px 0;
+  }
+
+  .brand-intelligence-section .row > [class*="col-"] {
+    margin-bottom: 12px;
+  }
+
+  #business-intelligence .intelligence-header h2 {
+    font-size: 22px;
+  }
+
   #business-intelligence .bi-card {
     padding: 14px 12px;
+  }
+
+  #business-intelligence .bi-card h3 {
+    font-size: 12px;
+  }
+
+  .intelligence-header {
+    margin-bottom: 16px;
+  }
+
+  .capabilities-section {
+    padding: 15px 0;
+  }
+
+  .capabilities-section .row > [class*="col-"] {
+    margin-bottom: 12px;
+  }
+
+  #capabilities h2 {
+    font-size: 20px;
   }
 
   #capabilities .capability-card {
     padding: 14px;
   }
 
-  #target-segments .segment-card {
-    padding: 20px 14px;
-  }
-
-  #business-intelligence .bi-card h3,
   #capabilities .capability-card h3 {
     font-size: 12px;
+  }
+
+  #capabilities .row:first-child {
+    margin-bottom: 12px;
+  }
+
+  #target-segments {
+    padding: 15px 0;
+  }
+
+  .target-segments-section .row > [class*="col-"] {
+    margin-bottom: 12px;
+  }
+
+  #target-segments h2 {
+    font-size: 20px;
+  }
+
+  #target-segments .segment-card {
+    padding: 20px 14px;
   }
 
   #target-segments .segment-card h3 {
     font-size: 15px;
   }
 
-  .intelligence-header {
-    margin-bottom: 16px;
+  #target-segments .row:first-child {
+    margin-bottom: 12px;
+  }
+
+  #faq {
+    padding: 15px 0;
+  }
+
+  #faq h2 {
+    font-size: 20px;
+  }
+
+  #faq .row:first-child {
+    margin-bottom: 12px;
   }
 }
