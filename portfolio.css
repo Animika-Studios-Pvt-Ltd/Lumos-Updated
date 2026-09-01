@@ -6,8 +6,9 @@
 
 .portfolio-section h1 {
   font-family: "barlowcondensed-regular";
-  font-size: 45px;
-  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 100;
+  text-transform: capitalize;
   letter-spacing: 0.5px;
   margin-bottom: 10px;
   line-height: 1.2;
@@ -15,7 +16,8 @@
 }
 
 .portfolio-section h2 {
-  font-family: "barlowcondensed-medium";
+  font-family: "barlowcondensed-regular";
+  text-transform: capitalize;
   margin-bottom: 15px;
   line-height: 1.1;
   font-size: 35px;
@@ -150,7 +152,7 @@
 
 @media (max-width: 1440px) {
   .portfolio-section h1 {
-    font-size: 43px;
+    font-size: 38px;
   }
   .portfolio-section h2 {
     font-size: 33px;
@@ -167,7 +169,7 @@
 
 @media (max-width: 1366px) {
   .portfolio-section h1 {
-    font-size: 41px;
+    font-size: 36px;
   }
   .portfolio-section h2 {
     font-size: 31px;
@@ -183,7 +185,7 @@
     padding: 30px 0;
   }
   .portfolio-section h1 {
-    font-size: 39px;
+    font-size: 34px;
   }
   .portfolio-section h2 {
     font-size: 29px;
@@ -199,7 +201,7 @@
 
 @media (max-width: 1024px) {
   .portfolio-section h1 {
-    font-size: 37px;
+    font-size: 32px;
   }
   .portfolio-section h2 {
     font-size: 27px;
@@ -218,7 +220,7 @@
     padding: 25px 0;
   }
   .portfolio-section h1 {
-    font-size: 35px;
+    font-size: 30px;
   }
   .portfolio-section h2 {
     font-size: 25px;
@@ -241,7 +243,7 @@
     padding: 20px 0;
   }
   .portfolio-section h1 {
-    font-size: 32px;
+    font-size: 27px;
   }
   .portfolio-section h2 {
     font-size: 22px;
@@ -263,7 +265,7 @@
     padding: 15px 15px;
   }
   .portfolio-section h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
   .portfolio-section h2 {
     font-size: 20px;
@@ -285,7 +287,7 @@
     padding: 10px 15px;
   }
   .portfolio-section h1 {
-    font-size: 25px;
+    font-size: 22px;
   }
   .portfolio-section h2 {
     font-size: 18px;
@@ -300,7 +302,7 @@
 
 @media (max-width: 360px) {
   .portfolio-section h1 {
-    font-size: 22px;
+    font-size: 20px;
   }
   .portfolio-section h2 {
     font-size: 16px;
