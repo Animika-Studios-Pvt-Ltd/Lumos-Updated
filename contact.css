@@ -10,7 +10,7 @@
   padding-bottom: 20px;
 }
 
-.lumos-contact-page .heading h2 {
+.lumos-contact-page .heading h1 {
   font-family: "barlowcondensed-medium";
   font-size: 96px;
   color: #f37022;
@@ -31,7 +31,7 @@
   .lumos-contact-page .heading {
     padding-bottom: 15px;
   }
-  .lumos-contact-page .heading h2 {
+  .lumos-contact-page .heading h1 {
     font-size: 72px;
   }
   .lumos-contact-page .heading p {
@@ -44,7 +44,7 @@
   .lumos-contact-page .heading {
     padding-bottom: 10px;
   }
-  .lumos-contact-page .heading h2 {
+  .lumos-contact-page .heading h1 {
     font-size: 54px;
   }
   .lumos-contact-page .heading p {
@@ -54,7 +54,7 @@
 }
 
 @media (max-width: 576px) {
-  .lumos-contact-page .heading h2 {
+  .lumos-contact-page .heading h1 {
     font-size: 42px;
   }
   .lumos-contact-page .heading p {
@@ -499,7 +499,7 @@
     margin-bottom: 25px;
   }
 
-  .lumos-contact-page .heading h2 {
+  .lumos-contact-page .heading h1 {
     font-size: 44px;
   }
 
@@ -534,7 +534,7 @@
     margin-bottom: 20px;
   }
 
-  .lumos-contact-page .heading h2 {
+  .lumos-contact-page .heading h1 {
     font-size: 38px;
   }
 
@@ -600,7 +600,7 @@
     margin-bottom: 15px;
   }
 
-  .lumos-contact-page .heading h2 {
+  .lumos-contact-page .heading h1 {
     font-size: 32px;
   }
 
@@ -656,7 +656,7 @@
     margin-bottom: 10px;
   }
 
-  .lumos-contact-page .heading h2 {
+  .lumos-contact-page .heading h1 {
     font-size: 28px;
   }
 
