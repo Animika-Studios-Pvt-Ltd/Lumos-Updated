@@ -1,19 +1,20 @@
 /* ---------------------------------- 1. NAVBAR & NAVIGATION SECTION ---------------------------------- */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Dynamically inject Careers link inside the menu column - above the primary menu
+  // Dynamically inject Book a Meeting & Careers link inside the menu column - above the primary menu
   const menuNavContainer =
     document.querySelector(".menu nav.navbar")?.parentElement;
   if (menuNavContainer) {
     const topBar = document.createElement("div");
     topBar.className = "top-careers-bar";
     topBar.innerHTML = `
+      <a href="https://app.lumos.in/" target="_blank" rel="noopener noreferrer" class="top-appointment-btn">BOOK A MEETING</a>
       <a href="careers.html" class="top-careers-link">Careers</a>
     `;
     menuNavContainer.insertBefore(topBar, menuNavContainer.firstChild);
   }
 
-  // Dynamically inject Careers link in primary menu navigation for mobile hamburger view
+  // Dynamically inject Careers & Book a Meeting link in primary menu navigation for mobile hamburger view
   const navList = document.querySelector(".navbar-nav");
   if (navList) {
     const mobileLi = document.createElement("li");
@@ -22,6 +23,13 @@ document.addEventListener("DOMContentLoaded", () => {
       <a class="nav-link" href="careers.html">Careers</a>
     `;
     navList.appendChild(mobileLi);
+
+    const mobileApptLi = document.createElement("li");
+    mobileApptLi.className = "nav-item mobile-appointment-item";
+    mobileApptLi.innerHTML = `
+      <a class="nav-link" href="https://app.lumos.in/" target="_blank" rel="noopener noreferrer">Book a Meeting</a>
+    `;
+    navList.appendChild(mobileApptLi);
   }
 
   // Get current pathname
@@ -67,10 +75,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const linkPage = href.split("#")[0].split("/").pop();
 
-    // Ignore Careers here because it has its own section-based active state
+    // Ignore Careers and mobile appointment here because they have their own section-based active state
     if (
       link.classList.contains("mobile-careers-item") ||
-      link.closest(".mobile-careers-item")
+      link.closest(".mobile-careers-item") ||
+      link.classList.contains("mobile-appointment-item") ||
+      link.closest(".mobile-appointment-item")
     ) {
       return;
     }

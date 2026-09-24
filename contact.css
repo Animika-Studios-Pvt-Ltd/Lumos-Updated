@@ -211,6 +211,47 @@
   line-height: 1.5;
 }
 
+/* Book a Meeting Button inside Contact Info Card */
+.lumos-contact-page .contact-meeting-btn-wrap {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px dashed rgba(243, 112, 34, 0.25);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.lumos-contact-page .btn-book-meeting {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f26f17;
+  color: #ffffff;
+  font-family: "barlow-semi-bold", "barlow-regular", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 11px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(242, 111, 23, 0.25);
+  transition: all 0.3s ease;
+  line-height: 1.2;
+}
+
+.lumos-contact-page .btn-book-meeting:hover {
+  background-color: #d95a05;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(242, 111, 23, 0.35);
+}
+
+.lumos-contact-page .btn-book-meeting i {
+  font-size: 15px;
+  margin-right: 8px;
+}
+
 /* Map Card and Bouncing Pin Styling */
 .lumos-contact-page .contact-custom-map {
   display: block;
