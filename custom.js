@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const topBar = document.createElement("div");
     topBar.className = "top-careers-bar";
     topBar.innerHTML = `
-      <a href="https://app.lumos.in/" target="_blank" rel="noopener noreferrer" class="top-appointment-btn">BOOK A MEETING</a>
+      <a href="https://app.lumos.in/" rel="noopener noreferrer" class="top-appointment-btn">BOOK A MEETING</a>
       <a href="careers.html" class="top-careers-link">Careers</a>
     `;
     menuNavContainer.insertBefore(topBar, menuNavContainer.firstChild);

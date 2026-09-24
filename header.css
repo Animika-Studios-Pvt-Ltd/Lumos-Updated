@@ -22,12 +22,12 @@
   justify-content: space-between;
 }
 
-.menu .row > div:first-child {
+.menu .row>div:first-child {
   display: flex;
   align-items: center;
 }
 
-.menu .row > div:first-child > a {
+.menu .row>div:first-child>a {
   flex-shrink: 0;
 }
 
@@ -68,7 +68,7 @@
   align-items: center;
   gap: 24px;
   padding-right: 85px;
-  margin-top: -10px;
+  margin-top: -14px;
   margin-bottom: 0px;
   position: relative;
   z-index: 1001;
@@ -111,17 +111,16 @@
 }
 
 .top-appointment-btn {
-  background-color: #f26f17;
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
   color: #ffffff !important;
-  font-family: "barlow-semi-bold", "barlow-regular", sans-serif;
-  font-size: 13.5px;
-  font-weight: 600;
+  font-family: "barlow-regular";
+  font-size: 14px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 8px 18px 9px 18px;
+  padding: 8px 18px;
   border-radius: 0 0 8px 8px;
-  box-shadow: 0 3.5px 0 0 #c75308;
+  box-shadow: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -130,8 +129,8 @@
 }
 
 .top-appointment-btn:hover {
-  background-color: #d95a05;
-  box-shadow: 0 4px 0 0 #b34300;
+  background: linear-gradient(45deg, #e56417, #f99c37);
+  box-shadow: none;
   color: #ffffff !important;
   transform: translateY(1px);
 }
@@ -193,6 +192,7 @@
 }
 
 @media (min-width: 992px) {
+
   .navbar-nav .dropdown,
   .navbar-nav .dropend {
     position: relative;
@@ -218,20 +218,20 @@
     z-index: 1000;
   }
 
-  .navbar-nav .dropdown:hover > .dropdown-menu,
-  .navbar-nav .dropend:hover > .dropdown-menu {
+  .navbar-nav .dropdown:hover>.dropdown-menu,
+  .navbar-nav .dropend:hover>.dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
 
-  .navbar-nav .dropend > .dropdown-menu {
+  .navbar-nav .dropend>.dropdown-menu {
     top: 0;
     left: 100%;
     transform: translateX(15px);
   }
 
-  .navbar-nav .dropend:hover > .dropdown-menu {
+  .navbar-nav .dropend:hover>.dropdown-menu {
     transform: translateX(0);
   }
 
@@ -282,6 +282,7 @@
   .nav-item {
     margin: 0 6px;
   }
+
   .navbar-nav a {
     font-size: 17px;
   }
@@ -291,40 +292,50 @@
   .menu {
     padding: 10px 0 10px 50px;
   }
+
   .menu img {
     max-width: 160px;
   }
+
   .logo-tagline {
     font-size: 19px;
     padding-left: 18px;
     margin-top: -2px;
   }
+
   .logo-tagline .orange-i {
     font-size: 26px;
   }
+
   .top-careers-bar {
     padding-right: 55px;
     margin-top: -10px;
     gap: 18px;
   }
+
   .top-careers-link {
     font-size: 17px;
     padding-top: 5px;
   }
+
   .top-appointment-btn {
     font-size: 13px;
     padding: 7px 15px 8px 15px;
   }
+
   .navbar {
     margin-top: 8px;
   }
+
   .navbar-expand-lg .navbar-collapse {
     left: 0;
     padding-right: 40px;
   }
+
   .nav-item {
     margin: 0 5px;
   }
+
   .navbar-nav a {
     font-size: 16px;
   }
@@ -334,40 +345,50 @@
   .menu {
     padding: 10px 0 10px 40px;
   }
+
   .menu img {
     max-width: 150px;
   }
+
   .logo-tagline {
     font-size: 18px;
     padding-left: 16px;
     margin-top: -2px;
   }
+
   .logo-tagline .orange-i {
     font-size: 25px;
   }
+
   .top-careers-bar {
     padding-right: 35px;
     margin-top: -10px;
     gap: 16px;
   }
+
   .top-careers-link {
     font-size: 16px;
     padding-top: 5px;
   }
+
   .top-appointment-btn {
     font-size: 12px;
     padding: 6px 13px 7px 13px;
   }
+
   .navbar {
     margin-top: 6px;
   }
+
   .navbar-expand-lg .navbar-collapse {
     left: 0;
     padding-right: 20px;
   }
+
   .nav-item {
     margin: 0 4px;
   }
+
   .navbar-nav a {
     font-size: 14px;
   }
@@ -377,41 +398,51 @@
   .menu {
     padding: 8px 0 8px 30px;
   }
+
   .menu img {
     max-width: 110px;
   }
+
   .logo-tagline {
     font-size: 16px;
     padding-left: 14px;
     margin-top: -1px;
   }
+
   .logo-tagline .orange-i {
     font-size: 22px;
   }
+
   .top-careers-bar {
     padding-right: 25px;
     margin-top: -8px;
     gap: 14px;
     margin-bottom: 0px;
   }
+
   .top-careers-link {
     font-size: 14px;
     padding-top: 4px;
   }
+
   .top-appointment-btn {
     font-size: 11.5px;
     padding: 5px 11px 6px 11px;
   }
+
   .navbar {
     margin-top: 4px;
   }
+
   .navbar-expand-lg .navbar-collapse {
     left: 0;
     padding-right: 10px;
   }
+
   .nav-item {
     margin: 0 3px;
   }
+
   .navbar-nav a {
     font-size: 14px;
   }
@@ -421,40 +452,50 @@
   .menu {
     padding: 8px 0 8px 20px;
   }
+
   .menu img {
     max-width: 105px;
   }
+
   .logo-tagline {
     font-size: 13px;
     padding-left: 12px;
     margin-top: -1px;
   }
+
   .logo-tagline .orange-i {
     font-size: 18px;
   }
+
   .top-careers-bar {
     padding-right: 15px;
     margin-top: -8px;
     gap: 12px;
   }
+
   .top-careers-link {
     font-size: 14px;
     padding-top: 4px;
   }
+
   .top-appointment-btn {
     font-size: 11px;
     padding: 5px 10px 6px 10px;
   }
+
   .navbar {
     margin-top: 2px;
   }
+
   .navbar-expand-lg .navbar-collapse {
     left: 0;
     padding-right: 0;
   }
+
   .nav-item {
     margin: 0 2px;
   }
+
   .navbar-nav a {
     font-size: 14px;
   }
@@ -464,44 +505,55 @@
   .menu {
     padding: 6px 20px;
   }
+
   .menu .row {
     flex-wrap: nowrap;
   }
-  .menu .row > div {
+
+  .menu .row>div {
     width: auto !important;
     flex: 0 0 auto;
   }
+
   .menu img {
     max-width: 130px;
   }
+
   .logo-tagline {
     font-size: 14px;
     padding-left: 12px;
     margin-top: -2px;
   }
+
   .logo-tagline .orange-i {
     font-size: 19px;
   }
+
   .top-careers-bar {
     display: none !important;
   }
+
   .mobile-careers-item,
   .mobile-appointment-item {
     display: block !important;
   }
+
   .navbar {
     margin-top: 0;
     position: static;
   }
+
   .navbar-toggler {
     border: 0;
     padding: 0;
     margin: 0;
     background: transparent;
   }
+
   .navbar-toggler:focus {
     box-shadow: none;
   }
+
   .bar {
     background: #f26f17;
     border-radius: 5px;
@@ -514,15 +566,19 @@
       background-color 0.3s ease-in-out;
     width: 30px;
   }
+
   .navbar-toggler[aria-expanded="true"] .bar:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
   }
+
   .navbar-toggler[aria-expanded="true"] .bar:nth-child(2) {
     opacity: 0;
   }
+
   .navbar-toggler[aria-expanded="true"] .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+
   .navbar-expand-lg .navbar-collapse {
     position: absolute;
     top: 100%;
@@ -540,35 +596,42 @@
     transition: clip-path 0.4s ease-in-out !important;
     visibility: hidden;
   }
-  .navbar-toggler[aria-expanded="true"] ~ .navbar-collapse,
+
+  .navbar-toggler[aria-expanded="true"]~.navbar-collapse,
   .navbar-expand-lg .navbar-collapse.show {
     clip-path: circle(150% at 92% 0%);
     visibility: visible;
   }
+
   .navbar-expand-lg .navbar-collapse.collapsing {
     display: block !important;
     height: auto !important;
   }
+
   .navbar-nav {
     flex-direction: column;
     width: 100%;
   }
+
   .nav-item {
     margin: 5px 0;
     width: 100%;
   }
+
   .navbar-nav a {
     font-size: 16px;
     display: block;
     padding: 8px 0;
     color: #272a32;
   }
+
   .navbar-nav .nav-link:hover,
   .navbar-nav .nav-link.active {
     color: #f26f17;
     padding-left: 10px;
     border-left: 2px solid #f26f17;
   }
+
   .navbar-nav .dropdown-menu {
     position: static;
     float: none;
@@ -583,9 +646,11 @@
     margin-top: 2px;
     display: none;
   }
+
   .navbar-nav .dropdown-menu.show {
     display: block;
   }
+
   .navbar-nav .dropdown-menu a.dropdown-item {
     color: #272a32;
     padding: 4px 10px;
@@ -596,6 +661,7 @@
     font-family: "barlow-regular";
     transition: color 0.2s ease;
   }
+
   .navbar-nav .dropdown-menu a.dropdown-item:hover,
   .navbar-nav .dropdown-menu a.dropdown-item:focus {
     color: #f26f17;
@@ -607,17 +673,21 @@
   .menu {
     padding: 5px 15px;
   }
+
   .menu img {
     max-width: 120px;
   }
+
   .logo-tagline {
     font-size: 13px;
     padding-left: 10px;
     margin-top: -1px;
   }
+
   .logo-tagline .orange-i {
     font-size: 18px;
   }
+
   .navbar-nav a {
     padding: 6px 0;
   }
@@ -627,14 +697,17 @@
   .menu img {
     max-width: 105px;
   }
+
   .logo-tagline {
     font-size: 12px;
     margin-top: 0px;
     padding-left: 8px;
   }
+
   .logo-tagline .orange-i {
     font-size: 16px;
   }
+
   .navbar-nav a {
     padding: 4px 0;
   }
@@ -644,14 +717,17 @@
   .menu {
     padding: 4px 12px;
   }
+
   .menu img {
     max-width: 100px;
   }
+
   .logo-tagline {
     font-size: 11px;
     padding-left: 8px;
     margin-top: 0px;
   }
+
   .logo-tagline .orange-i {
     font-size: 15px;
   }
@@ -661,17 +737,21 @@
   .menu {
     padding: 3px 10px;
   }
+
   .menu img {
     max-width: 90px;
   }
+
   .logo-tagline {
     font-size: 10px;
     padding-left: 6px;
     margin-top: 0px;
   }
+
   .logo-tagline .orange-i {
     font-size: 13px;
   }
+
   .bar {
     width: 26px;
     margin: 5px 0;

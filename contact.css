@@ -217,15 +217,15 @@
   padding-top: 18px;
   border-top: 1px dashed rgba(243, 112, 34, 0.25);
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: left;
 }
 
 .lumos-contact-page .btn-book-meeting {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #f26f17;
+  background: linear-gradient(45deg, #f37022, #fbaa4f);
   color: #ffffff;
   font-family: "barlow-semi-bold", "barlow-regular", sans-serif;
   font-size: 15px;
@@ -241,7 +241,7 @@
 }
 
 .lumos-contact-page .btn-book-meeting:hover {
-  background-color: #d95a05;
+  background: linear-gradient(45deg, #e56417, #f99c37);
   color: #ffffff;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(242, 111, 23, 0.35);
