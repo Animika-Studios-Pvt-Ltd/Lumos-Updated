@@ -135,8 +135,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       /* ---------------------------------- INDUSTRIES ---------------------------------- */
-      // Check if it's an industry page
-      else if (page.includes("-industry") || path === "/industries") {
+      // Check if it's an industry page or portfolio page
+      else if (
+        page.includes("-industry") || 
+        path === "/industries" || 
+        document.querySelector(".portfolio-section")
+      ) {
         const indLink = Array.from(
           document.querySelectorAll(".navbar-nav .nav-link"),
         ).find((link) => {
