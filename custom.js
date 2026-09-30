@@ -121,8 +121,12 @@ document.addEventListener("DOMContentLoaded", () => {
           resourcesToggle.classList.add("active");
         }
       }
-      // Check if it's an industry page
-      else if (page.includes("-industry") || page === "industries.html") {
+      // Check if it's an industry page or portfolio page
+      else if (
+        page.includes("-industry") || 
+        page === "industries.html" || 
+        document.querySelector(".portfolio-section")
+      ) {
         const indLink = Array.from(
           document.querySelectorAll(".navbar-nav .nav-link"),
         ).find((link) => {
