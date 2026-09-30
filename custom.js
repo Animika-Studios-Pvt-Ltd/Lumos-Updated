@@ -123,8 +123,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       // Check if it's an industry page or portfolio page
       else if (
-        page.includes("-industry") || 
-        page === "industries.html" || 
+        page.includes("-industry") ||
+        page === "industries.html" ||
         document.querySelector(".portfolio-section")
       ) {
         const indLink = Array.from(
